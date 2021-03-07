@@ -1,0 +1,8 @@
+"slaveofgmod"
+{
+	"base"		"base"
+	"title"		"Slave of GMod"
+	"maps"		"^sog_"
+	"menusystem"	"1"
+	"workshopid" 	"249207064"
+}

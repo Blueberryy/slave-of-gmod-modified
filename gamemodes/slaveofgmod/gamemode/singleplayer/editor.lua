@@ -2315,7 +2315,7 @@ function AddTriggerTab( p )
 	end
 	
 	hd_b.DoClick = function( self )
-		TextEditForm( "Add HUD Message", translate.Get("sog_hud_obj_leave_area"), hd_msg )
+		TextEditForm( "Add HUD Message", "Leave Area", hd_msg )
 	end
 	
 	local function light_msg( txt )

@@ -208,7 +208,7 @@ SCENE.Triggers = {
 	}, ["t20"] = {
 	 ["pos"] = Vector( -488, -307, -7 ), ["CheckTriggers"] = {
 		 "t21" 
-		}, ["action"] = "hudmessage", ["data"] = translate.Get("sog_hud_obj_leave_area"), ["size"] = 34 
+		}, ["action"] = "hudmessage", ["data"] = "Leave Area", ["size"] = 34 
 	}, ["t11"] = {
 	 ["pos"] = Vector( 876, -42, 73 ), ["size"] = 42, ["action"] = "spawn", ["CheckTriggers"] = {
 		 "t12" 
@@ -268,7 +268,7 @@ SCENE.Dialogues = {
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 translate.Get("sog_dialogue_outide_2013_1_npc"), "sog_dialogue_outide_2013_2_npc", "Wanna play a wave or two?" 
+	 "Oh, hey man!", "Been waiting for you whole morning.", "Wanna play a wave or two?" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {

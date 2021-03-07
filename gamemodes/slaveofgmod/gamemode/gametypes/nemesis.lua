@@ -13,7 +13,7 @@ function GM:CoOpInitialize()
 	
 	GAMEMODE.UseCharacters = { "pr1", "pr2", "pr3", "pr4" }
 	
-	GAMEMODE.GametypeName = translate.Get("sog_gametype_name_nemesis")
+	GAMEMODE.GametypeName = "Nemesis"
 
 	print"Gametype Initialized"
 	
@@ -990,9 +990,9 @@ function GM:CoOpInitialize()
 		end*/
 		
 		function self:DrawAdditionalInfo()
-			local info = translate.Format("sog_hud_wave_x", (self:GetWave()) or 1 )
+			local info = "wave "..( self:GetWave() or 1 )
 			if self:GetWave() == 6 then
-				info = translate.Get("sog_hud_final_wave")
+				info = "final wave"
 			end
 			return info
 		end
@@ -1007,7 +1007,7 @@ function GM:CoOpInitialize()
 				
 			local x, y = 60, h*0.85
 						
-			local text = IsValid( MySelf:GetObserverTarget() ) and translate.Format("sog_hud_spectating_x", MySelf:GetObserverTarget():Name()) or translate.Get("sog_hud_you_are_dead")
+			local text = IsValid( MySelf:GetObserverTarget() ) and "Spectating "..MySelf:GetObserverTarget():Name() or "You are dead!"
 							
 			draw.SimpleText( text, "NumbersSmall", x + 3, y + 3, Color( 10, 10, 10, 185), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 			draw.SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -1017,7 +1017,7 @@ function GM:CoOpInitialize()
 	
 			x, y = 60, h*0.85 + 38	
 						
-			text = translate.Get("sog_hud_change_character")
+			text = "Press SPACEBAR to change preferred character"
 						
 			draw.SimpleText( text, "NumbersSmall", x + 3, y + 3, Color( 10, 10, 10, 185), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 			draw.SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -1031,5 +1031,5 @@ function GM:CoOpInitialize()
 
 end
 
-GM:AddAvalaibleGametype( "nemesis", translate.Get("sog_gametype_name_nemesis_help") )
+GM:AddAvalaibleGametype( "nemesis", "Nemesis (4 player Co-Op)" )
 GM.Gametypes["nemesis"] = GM.CoOpInitialize

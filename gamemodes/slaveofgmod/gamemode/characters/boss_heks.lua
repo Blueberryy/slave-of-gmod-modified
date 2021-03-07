@@ -1452,7 +1452,7 @@ function CreateAlternateHUD()
 		
 		if wep then
 			
-			local text = translate.Format("sog_hud_x_rounds", wep:Clip1())
+			local text = wep:Clip1().." rnds"
 			local ammo_delta = math_Clamp( 1 - wep:Clip1() / wep.Primary.ClipSize, 0, 1 )
 			
 			local shake_x = math_Rand( -3 * ammo_delta - 0.1, 3 * ammo_delta + 0.1 )

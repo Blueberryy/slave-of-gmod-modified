@@ -2,13 +2,13 @@ ACTS = ACTS or {}
 SCENES = SCENES or {}
 
 local ActNames = {
-	"sog_act_name_dmca",
-	"sog_act_name_ddos",
-	"sog_act_name_pride",
-	"sog_act_name_greed",
-	"sog_act_name_terror",
-	"sog_act_name_dead_end",
-	"sog_act_name_development_hell"
+	"DMCA",
+	"DDOS",
+	"Pride",
+	"Greed",
+	"Terror",
+	"Dead End",
+	"Development Hell"
 }
 
 local ActCovers = {
@@ -102,7 +102,7 @@ for k, v in pairs( SCENES ) do
 		if not ACTS[ SCENES[ k ].Act ] then
 			ACTS[ SCENES[ k ].Act ] = {}
 			if ActNames[ SCENES[ k ].Act ] then
-				ACTS[ SCENES[ k ].Act ].Name = translate.Get(ActNames[ SCENES[ k ].Act ])
+				ACTS[ SCENES[ k ].Act ].Name = ActNames[ SCENES[ k ].Act ]
 			else
 				ACTS[ SCENES[ k ].Act ].Name = "Untitled"
 			end
@@ -358,7 +358,7 @@ if game.SinglePlayer() and SINGLEPLAYER then
 			
 		end)
 		
-		//Entity(1):PopHUDMessage( translate.Get("sog_hud_obj_leave_area") )
+		//Entity(1):PopHUDMessage( "Leave Area" )
 		
 	end
 	

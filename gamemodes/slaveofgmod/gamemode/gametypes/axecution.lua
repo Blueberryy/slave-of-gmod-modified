@@ -33,7 +33,7 @@ function GM:AxecutionInitialize()
 	
 	GAMEMODE.UseCharacters = { "axe guy", "carl", "steve" }
 	
-	GAMEMODE.GametypeName = translate.Get("sog_gametype_name_axecution")
+	GAMEMODE.GametypeName = "Axecution"
 
 	print"Gametype Initialized"
 	TEAM_AXE = 6 //Clavus and his ideas about "Axe guy"
@@ -983,7 +983,7 @@ function GM:AxecutionInitialize()
 			
 				local x, y = 60, h*0.85
 					
-				local text = IsValid( MySelf:GetObserverTarget() ) and MySelf:GetObserverTarget().Name and translate.Format("sog_hud_spectating_x", MySelf:GetObserverTarget():Name()) or translate.Get("sog_hud_you_are_dead")
+				local text = IsValid( MySelf:GetObserverTarget() ) and MySelf:GetObserverTarget().Name and "Spectating "..MySelf:GetObserverTarget():Name() or "You are dead!"
 						
 				draw.SimpleText( text, "NumbersSmall", x + 3, y + 3, Color( 10, 10, 10, 185), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 				draw.SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -995,7 +995,7 @@ function GM:AxecutionInitialize()
 	
 				x, y = 60, h*0.85 + 38	
 							
-				text = translate.Get("sog_hud_change_character")
+				text = "Press SPACEBAR to change preferred character"
 							
 				draw.SimpleText( text, "NumbersSmall", x + 3, y + 3, Color( 10, 10, 10, 185), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 				draw.SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -1008,5 +1008,5 @@ function GM:AxecutionInitialize()
 
 end
 
-GM:AddAvalaibleGametype( "axecution", translate.Get("sog_gametype_name_axecution") )
+GM:AddAvalaibleGametype( "axecution", "Axecution" )
 GM.Gametypes["axecution"] = GM.AxecutionInitialize

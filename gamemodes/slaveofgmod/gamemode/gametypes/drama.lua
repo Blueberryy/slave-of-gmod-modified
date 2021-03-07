@@ -14,7 +14,7 @@ function GM:SDInitialize()
 	
 	GAMEMODE.UseCharacters = { "server owner", "cop kid", "kid", "admin" } //which classes we should use
 	
-	GAMEMODE.GametypeName = translate.Get("sog_gametype_name_serious_drama")
+	GAMEMODE.GametypeName = "Serious Drama"
 
 	print"Gametype Initialized"
 	TEAM_EVIL = 6 //they want to ddos
@@ -774,7 +774,7 @@ function GM:SDInitialize()
 				
 				local x, y = 60, h*0.85
 						
-				local text = IsValid( MySelf:GetObserverTarget() ) and translate.Format("sog_hud_spectating_x", MySelf:GetObserverTarget():Name()) or translate.Get("sog_hud_you_are_dead")
+				local text = IsValid( MySelf:GetObserverTarget() ) and "Spectating "..MySelf:GetObserverTarget():Name() or "You are dead!"
 							
 				draw.SimpleText( text, "NumbersSmall", x + 3, y + 3, Color( 10, 10, 10, 185), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 				draw.SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -784,7 +784,7 @@ function GM:SDInitialize()
 	
 				x, y = 60, h*0.85 + 38	
 						
-				text = translate.Get("sog_hud_change_character_drama")
+				text = "Press SPACEBAR to change character"
 						
 				draw.SimpleText( text, "NumbersSmall", x + 3, y + 3, Color( 10, 10, 10, 185), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 				draw.SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -798,5 +798,5 @@ function GM:SDInitialize()
 	
 end
 
-GM:AddAvalaibleGametype( "drama", translate.Get("sog_gametype_name_serious_drama_pvp") )
+GM:AddAvalaibleGametype( "drama", "Serious Drama (PvP)" )
 GM.Gametypes["drama"] = GM.SDInitialize

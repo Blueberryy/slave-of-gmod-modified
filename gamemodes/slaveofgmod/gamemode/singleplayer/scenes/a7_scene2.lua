@@ -207,7 +207,7 @@ SCENE.Triggers = {
 	}, ["t28"] = {
 	 ["pos"] = Vector( 8, -346, 1 ), ["CheckTriggers"] = {
 		 "t29" 
-		}, ["data"] = translate.Get("sog_hud_obj_leave_area"), ["stages"] = {
+		}, ["data"] = "Leave Area", ["stages"] = {
 		 3 
 		}, ["action"] = "hudmessage", ["size"] = 10, ["trigger_once"] = true 
 	}, ["t20"] = {

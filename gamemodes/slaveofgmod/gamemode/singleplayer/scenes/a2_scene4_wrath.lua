@@ -151,7 +151,7 @@ SCENE.Triggers = {
 	}, ["t37"] = {
 	 ["pos"] = Vector( 386, -1781, 1 ), ["size"] = 10, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t38" 
-		}, ["data"] = translate.Get("sog_hud_obj_leave_area") 
+		}, ["data"] = "Leave Area" 
 	}, ["t11"] = {
 	 ["pos"] = Vector( 1244, -843, 1 ), ["size"] = 34, ["event"] = "OnDialogueFinished", ["action"] = "event", ["data"] = {
 		 "d3" 

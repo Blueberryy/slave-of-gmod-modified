@@ -676,7 +676,7 @@ function DrawCutscene( scene, func, cv )
 			surface.SetFont("PixelCutsceneScaled")
 			local textw, texth = surface.GetTextSize(sc.Scenery.Intro)
 			
-			draw.DrawText( translate.Get(sc.Scenery.Intro), "PixelCutsceneScaled", tw/2, th/2-texth/2, Color(210, 210, 210, 255*(self.TextFadeInTime >= CurTime() and delta1 or delta2) ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+			draw.DrawText( sc.Scenery.Intro, "PixelCutsceneScaled", tw/2, th/2-texth/2, Color(210, 210, 210, 255*(self.TextFadeInTime >= CurTime() and delta1 or delta2) ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 
 			if sc.Scenery.Act then
 				surface.SetFont("PixelCutsceneBiggerScaled")
@@ -738,7 +738,7 @@ for k,v in pairs(GM.Cutscenes) do
 end
 
 GM.Cutscenes["_sog_demo1"][0] = {
-	Intro = "sog_intro_the_bottom_2013",
+	Intro = "2013\nThe Bottom",
 	SoundTrack = 111429172,
 	Volume = 25,
 	Main = { mdl = Model( "models/hunter/plates/plate5x6.mdl" ), seq = "idle"},
@@ -2637,7 +2637,7 @@ GM.SingleplayerCutscenes["lesson"] = {
 }
 
 GM.SingleplayerCutscenes["takedown"] = {
-	Intro = "sog_intro_outide_2013",
+	Intro = "2013\nOutside",
 	SoundTrack = 95416884,
 	Volume = 40,
 	Main = { mdl = Model( "models/hunter/plates/plate3x3.mdl" ), seq = "idle", mat = ""},
@@ -2659,22 +2659,22 @@ GM.SingleplayerCutscenes["takedown"] = {
 		{ mdl = Model( "models/props_trainstation/bench_indoor001a.mdl"), offset = Vector(-35, -37, 24) , ang = Angle(0, -90, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.pr, translate.Get("sog_dialogue_outide_2013_1"), "sog_dialogue_outide_2013_2" )
-		AddDialogueLine( sc.phone, translate.Get("sog_dialogue_outide_2013_3"), "sog_dialogue_outide_2013_4", "sog_dialogue_outide_2013_5", "sog_dialogue_outide_2013_6" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_7", "sog_dialogue_outide_2013_8" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_9" )
-		AddDialogueLine( sc.phone, "sog_dialogue_outide_2013_10", "sog_dialogue_outide_2013_11" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_12" )
-		AddDialogueLine( sc.phone, "sog_dialogue_outide_2013_13", "sog_dialogue_outide_2013_14", "sog_dialogue_outide_2013_15", "sog_dialogue_outide_2013_16" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_17", "sog_dialogue_outide_2013_18" )
-		AddDialogueLine( sc.phone, "sog_dialogue_outide_2013_19", "sog_dialogue_outide_2013_20" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_21", "sog_dialogue_outide_2013_22" )
-		AddDialogueLine( sc.dude, "sog_dialogue_outide_2013_23", "sog_dialogue_outide_2013_24", "sog_dialogue_outide_2013_25", "sog_dialogue_outide_2013_26" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_27" )
-		AddDialogueLine( sc.dude, "sog_dialogue_outide_2013_28", "sog_dialogue_outide_2013_29", "sog_dialogue_outide_2013_30" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_31", "sog_dialogue_outide_2013_32" )
-		AddDialogueLine( sc.dude, "sog_dialogue_outide_2013_33", "sog_dialogue_outide_2013_34", "sog_dialogue_outide_2013_35", "sog_dialogue_outide_2013_36", "sog_dialogue_outide_2013_37" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_38" )
+		AddDialogueLine( sc.pr, ". . .", "Come on. . ." )
+		AddDialogueLine( sc.phone, "*beep*", "'Sorry, this addon has been locked behind the paywall. . .'", "'Please spend your 60$, if you want to\nreceive newest updates. . .'", "*beep*" )
+		AddDialogueLine( sc.pr, "*sigh*", "Not another one. . ." )
+		AddDialogueLine( sc.pr, "Wonder, where the hell is Carl." )
+		AddDialogueLine( sc.phone, "*beep*", "'Hello?'" )
+		AddDialogueLine( sc.pr, "Carl!" )
+		AddDialogueLine( sc.phone, "'Oh hey, man!'", "'Listen. . .'", "'I'm in a middle of a game, right now.'", "'Could you join Frankie's ZS server?'" )
+		AddDialogueLine( sc.pr, "Uh. . .", "Sure." )
+		AddDialogueLine( sc.phone, "'Okay, then. See you there!'", "*beep*" )
+		AddDialogueLine( sc.pr, "Frankie's ZS server. . .", "I had no idea that it's still active." )
+		AddDialogueLine( sc.dude, "This update. . .", "Something doesn't feels right. . .", "I can't even see my bus. . .", "Something has changed. . ." )
+		AddDialogueLine( sc.pr, ". . ." )
+		AddDialogueLine( sc.dude, "Something bad is coming.", "I can feel that. . .", "Something really bad. . ." )
+		AddDialogueLine( sc.pr, ". . .", "Do you know the quick way to Frankie's ZS server?" )
+		AddDialogueLine( sc.dude, ". . .", "It's 20 mins away in this direction. . .", ". . .", "Oh god. . .", "This is so fucked up. . ." )
+		AddDialogueLine( sc.pr, ". . ." )
 	end
 }
 

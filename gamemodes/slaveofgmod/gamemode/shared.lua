@@ -30,14 +30,12 @@ game.AddDecal( "BloodHugeBlack4", "decals/black_blood4")
 GM.Gametypes = GM.Gametypes or {}
 GM.AvalaibleGametypes = GM.AvalaibleGametypes or {}
 
-include("sh_translate.lua")
-
 //i know it is kinda shitty way
 function GM:AddAvalaibleGametype( key, n )
 	self.AvalaibleGametypes[key] = { name = n, votes = 0}
 end
 
-GM:AddAvalaibleGametype( "none", translate.Get("sog_gametype_name_rdm") )
+GM:AddAvalaibleGametype( "none", "Random Deathmatch" )
 
 ROUND_PLAY_TIME = 15*60//todo: use convars
 
@@ -80,32 +78,30 @@ STORY = true
 
 GM.Name 		= "Slave of GMod"
 GM.Author 		= "Necrossin"
-
-GM.Version		= "v 29/12/2020" 
-
+GM.Version		= "v 29/01/2021" 
 GM.Email 		= ""
 GM.Website 		= ""
 
 team.SetUp(TEAM_DM, "DEATHMATCH", Color(255,255,21,255))
 
 GM.Achievements = {
-	["envy"] = { Name = "sog_achievement_envy", Desc = "sog_achievement_envy_desc", DescClosed = "sog_achievement_envy_closed" },
-	["wrath"] = { Name = "sog_achievement_wrath", Desc = "sog_achievement_wrath_desc", DescClosed = "sog_achievement_wrath_closed" },
-	["pride"] = { Name = "sog_achievement_pride", Desc = "sog_achievement_pride_desc", DescClosed = "sog_achievement_pride_closed" },
-	["greed"] = { Name = "sog_achievement_greed", Desc = "sog_achievement_greed_desc", DescClosed = "sog_achievement_greed_closed" },
-	["lust"] = { Name = "sog_achievement_lust", Desc = "sog_achievement_lust_desc", DescClosed = "sog_achievement_lust_closed" },
-	["gluttony"] = { Name = "sog_achievement_gluttony", Desc = "sog_achievement_gluttony_desc", DescClosed = "sog_achievement_gluttony_closed" },
-	["sloth"] = { Name = "sog_achievement_sloth", Desc = "sog_achievement_sloth_desc", DescClosed = "sog_achievement_sloth_closed" },
-	["sorry"] = { Name = "sog_achievement_sorry", Desc = "sog_achievement_sorry_desc", DescClosed = "sog_achievement_sorry_closed" },
-	["safety"] = { Name = "sog_achievement_safety", Desc = "sog_achievement_safety_desc", DescClosed = "sog_achievement_safety_closed" },
-	["sog"] = { Name = "sog_achievement_sog", Desc = "sog_achievement_sog_desc", DescClosed = "sog_achievement_sog_closed" },
-	["20x"] = { Name = "sog_achievement_combo", Desc = "sog_achievement_combo_desc", DescClosed = "sog_achievement_combo_closed" },
-	["comfy"] = { Name = "sog_achievement_comfy", Desc = "sog_achievement_comfy_desc", DescClosed = "sog_achievement_comfy_closed" },
-	["shadycar"] = { Name = "sog_achievement_shadycar", Desc = "sog_achievement_shadycar_desc", DescClosed = "sog_achievement_shadycar_closed" },
-	["bsm"] = { Name = "sog_achievement_bsm", Desc = "sog_achievement_bsm_desc", DescClosed = "sog_achievement_bsm_closed" },
-	["cptedge"] = { Name = "sog_achievement_cptedge", Desc = "sog_achievement_cptedge_desc", DescClosed = "sog_achievement_cptedge_closed" },
-	["protagonist"] = { Name = "sog_achievement_protagonist", Desc = "sog_achievement_protagonist_desc", DescClosed = "sog_achievement_protagonist_closed" },
-	["remnant"] = { Name = "sog_achievement_remnant", Desc = "sog_achievement_remnant_desc", DescClosed = "sog_achievement_remnant_closed" },
+	["envy"] = { Name = "Envy", Desc = "Defeat Ase and Lick", DescClosed = "Defeat ---" },
+	["wrath"] = { Name = "Wrath", Desc = "Defeat Stanley", DescClosed = "Defeat ---" },
+	["pride"] = { Name = "Pride", Desc = "Defeat LetsTortureGMod", DescClosed = "Defeat ---" },
+	["greed"] = { Name = "Greed", Desc = "Defeat Mark", DescClosed = "Defeat ---" },
+	["lust"] = { Name = "Lust", Desc = "Defeat Top Five Donators", DescClosed = "Defeat ---" },
+	["gluttony"] = { Name = "Gluttony", Desc = "You couldn't defeat Master", DescClosed = "---" },
+	["sloth"] = { Name = "Sloth", Desc = "garry doesn't gives a shit", DescClosed = "---" },
+	["sorry"] = { Name = "I'm sorry, boss", Desc = "Your cop 'friend' survived the bottom", DescClosed = "He will watch you die" },
+	["safety"] = { Name = "It's dangerous", Desc = "You don't need these hooks", DescClosed = "In a place like this" },
+	["sog"] = { Name = "Slave of GMod", Desc = "You have finished the vanilla game", DescClosed = "I still don't understand" },
+	["20x"] = { Name = "Not so bad", Desc = "Get a 20x combo in story mode", DescClosed = "Get a 20x combo in story mode" },
+	["comfy"] = { Name = "Extra comfy", Desc = "Clear out mansion without leaving your chair", DescClosed = "Clear out mansion without leaving your chair" },
+	["shadycar"] = { Name = "Man vs car", Desc = "Defeat shady car driver", DescClosed = "Survive an unexpected surprise attack" },
+	["bsm"] = { Name = "Gmod is safe", Desc = "Defeat Marishka and Big Server Men", DescClosed = "Defeat an ugly girly monstrosity" },
+	["cptedge"] = { Name = "to be die", Desc = "Defeat Punished Dean", DescClosed = "Next time stop relying on godmode" },
+	["protagonist"] = { Name = "make it stop", Desc = "Defeat your previous self", DescClosed = "End their torment" },
+	["remnant"] = { Name = "remnant", Desc = "Defeat Heks and put an end to all this", DescClosed = "One last job" },
 }
 
 GM.PlayerAchievements = {}

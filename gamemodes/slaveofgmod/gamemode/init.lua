@@ -1,6 +1,5 @@
 AddCSLuaFile("shared.lua")
 AddCSLuaFile("cl_init.lua")
-AddCSLuaFile("sh_translate.lua")
 
 AddCSLuaFile("vgui/cl_charactermenu.lua")
 AddCSLuaFile("vgui/cl_menubackground.lua")
@@ -11,7 +10,6 @@ AddCSLuaFile("vgui/cl_loading.lua")
 AddCSLuaFile("vgui/cl_miscmenus.lua")
 
 include( "shared.lua" )
-include("sh_translate.lua")
 include("sv_obj_player_extend.lua")
 
 include("boneanimlib_v2/sh_boneanimlib.lua")
@@ -97,14 +95,14 @@ end)
 function GM:AddResources()
 	
 
-	resource.AddSingleFile("resource/fonts/minecraftia_sup.ttf")
-	resource.AddSingleFile("resource/fonts/ShogunsClan_chr.ttf")
+	resource.AddSingleFile("resource/fonts/minecraftia.ttf")
+	resource.AddSingleFile("resource/fonts/shogunsclan.ttf")
 	resource.AddSingleFile("resource/fonts/super_retro_italic.ttf")
 	resource.AddSingleFile("resource/fonts/wnd.ttf")
 	
 	//additional check for dedicated serevrs
-	resource.AddSingleFile("cache/workshop/resource/fonts/minecraftia_sup.ttf")
-	resource.AddSingleFile("cache/workshop/resource/fonts/ShogunsClan_chr.ttf")
+	resource.AddSingleFile("cache/workshop/resource/fonts/minecraftia.ttf")
+	resource.AddSingleFile("cache/workshop/resource/fonts/shogunsclan.ttf")
 	resource.AddSingleFile("cache/workshop/resource/fonts/super_retro_italic.ttf")
 	resource.AddSingleFile("cache/workshop/resource/fonts/wnd.ttf")
 
@@ -133,16 +131,16 @@ GM.MeleeWeapons = GM.MeleeWeapons or {}
 GM.ThrowableWeapons = GM.ThrowableWeapons or {}
 
 GM.GlobalHints = {
-	"sog_play_tip_battle",
-	"sog_play_tip_music",
-	"sog_play_tip_vote",
-	"sog_play_tip_options",
-	"sog_play_tip_mute_menu",
-	"sog_play_tips",
+	"[RMB] to pick up/throw. [SPACEBAR] to execute.",
+	"Use [MOUSE WHEEL] to adjust volume. [F2] to enable/disable music.",
+	"Press [F3] to vote for a new map/gametype.",
+	"Press [F1] to open options.",
+	"Press [F4] to open a mute menu.",
+	"Small reminder: [F1] - Menu; [F2] - Toggle music; [F3] - RTV; [F4] - Player list",
 }
 
 function GM:GetRandomHint()
-	return translate.Get(self.GlobalHints[math.random(#self.GlobalHints)])
+	return self.GlobalHints[math.random(#self.GlobalHints)]
 end
 
 function GM:RestartRoundIn( time, args )
@@ -578,7 +576,7 @@ function GM:PlayerSpawn( pl )
 		local col = pl:GetCharTable().OverrideColor or color_white //team.GetColor( pl:Team() )	
 		pl:SetPlayerColor( Vector( col.r/255, col.g/255, col.b/255) )
 		if not pl.ShowHelp and pl:Team() ~= TEAM_SPECTATOR and pl:Team() ~= TEAM_CONNECTING then
-			pl:SetGoal( translate.Get("sog_play_tips"), 35 )
+			pl:SetGoal( "Small reminder: [F1] - Menu; [F2] - Toggle music; [F3] - RTV; [F4] - Player list", 35 )
 			pl.ShowHelp = true
 		end
 	end
@@ -1801,7 +1799,7 @@ end
 
 GM.BlockedAreas = {}
 
-local nav_meta = FindMetaTable( "CNavArea" )
+/*local nav_meta = FindMetaTable( "CNavArea" )
 if nav_meta then 
 	
 	nav_meta.OldIsBlocked = nav_meta.IsBlocked
@@ -1816,7 +1814,7 @@ if nav_meta then
 		
 	end
 	
-end 
+end */
 
 
 function GM:BlockNavAreas( ent )

@@ -154,7 +154,7 @@ function DrawMenu( background, gametype )
 				gametype = "Story Mode"
 			end
 			Derma_DrawBackgroundBlur( self, self.m_fCreateTime )
-			draw.SimpleText( translate.Get(GAMEMODE.Version) or "error", "PixelSmaller", tw-10, 25, Color(250, 250, 250, 205), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
+			draw.SimpleText( GAMEMODE.Version or "error", "PixelSmaller", tw-10, 25, Color(250, 250, 250, 205), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
 			draw.SimpleText( gametype or "error", "PixelSmaller", tw-10, 50, Color(250, 250, 250, 205), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
 		end 
 	end
@@ -209,13 +209,10 @@ function DrawMenu( background, gametype )
 				local element = el( MainMenu, Collumn )
 			end
 			btn.Paint = function( self, sw, sh )
-			if self ~= name then
-				TextPaint( self, sw, sh, translate.Get(name) or "Error" )
-			else
-				TextPaint( self, sw, sh, translate.Format(name) or "Error" )
+			
+				TextPaint( self, sw, sh, name or "Error" )
 				
 			end
-		end
 			
 			step = step + bh + spacing
 		end
@@ -336,7 +333,7 @@ local function Resume( parent, list )
 	return
 end
 
-AddToMainMenu( "sog_menu_resume", Resume, "sog_menu_start_game" )
+AddToMainMenu( "Resume", Resume, "Start game" )
 
 local function Campaign( parent, list )
 	
@@ -351,7 +348,7 @@ local function Campaign( parent, list )
 	
 	local TopName = Collumn:Add( "DPanel" )
 	TopName:SetSize( parent:GetWide(), 50 )
-	TopName.Text = translate.Get("sog_story_mode_act_selection")
+	TopName.Text = "Act Selection"
 	TopName.Paint = function( self, pw, ph ) 
 		
 		local shift = math.sin(RealTime()*3.2)*9 + 11
@@ -430,7 +427,7 @@ local function Campaign( parent, list )
 		self.Overed = false
 	end
 	back.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_back") )
+		TextPaint( self, sw, sh, "Back" )
 	end
 	back.DoClick = function( self )
 		if Manager.Mode == "scenes" then
@@ -474,7 +471,7 @@ local function Campaign( parent, list )
 		
 		local wholew = bw * num + spacing * ( num - 1 )
 		
-		TopName.Text = translate.Get("sog_story_mode_act_selection")
+		TopName.Text = "Act Selection"
 		LowerName.Text = ""
 		
 		for ind, act_tbl in pairs( ACTS ) do
@@ -487,16 +484,16 @@ local function Campaign( parent, list )
 			btn:SetPos( self:GetWide()/2 - wholew/2 + step , self:GetTall()/2 - bh/2 )
 			btn.OnCursorEntered = function( self )
 				self.Overed = true
-				TopName.Text = translate.Format("sog_story_mode_act_x", ind)
+				TopName.Text = "Act #"..ind
 				if ind > 6 then
-					TopName.Text = translate.Get("sog_story_mode_bonus_act")
+					TopName.Text = "Bonus Act"
 				end
 				TrackName.Text = ""
 				LowerName.Text = act_tbl.Name
 			end
 			btn.OnCursorExited = function( self )
 				self.Overed = false
-				TopName.Text = translate.Get("sog_story_mode_act_selection")
+				TopName.Text = "Act Selection"
 				TrackName.Text = ""
 				LowerName.Text = ""
 			end
@@ -558,7 +555,7 @@ local function Campaign( parent, list )
 		
 		local wholew = bw * num + spacing * ( num - 1 )
 		
-		TopName.Text = translate.Get("sog_scene_selection_title")
+		TopName.Text = "Scene Selection"
 		LowerName.Text = ""
 		
 		for ind, scene_tbl in pairs( act_tbl ) do
@@ -571,17 +568,17 @@ local function Campaign( parent, list )
 			btn:SetPos( self:GetWide()/2 - wholew/2 + step , self:GetTall()/2 - bh/2 )
 			btn.OnCursorEntered = function( self )
 				self.Overed = true
-				TopName.Text = translate.Format("sog_scene_x", scene_tbl.Order)
+				TopName.Text = "Scene #"..scene_tbl.Order
 				if scene_tbl.MusicText then
-					TrackName.Text = "♫ "..scene_tbl.MusicText.." ♫"//translate.Format("sog_song_x", scene_tbl.MusicText)
+					TrackName.Text = "♫ "..scene_tbl.MusicText.." ♫"//"Song: "..scene_tbl.MusicText
 				else
 					TrackName.Text = ""
 				end
-				LowerName.Text = translate.Get(scene_tbl.Name)
+				LowerName.Text = scene_tbl.Name
 			end
 			btn.OnCursorExited = function( self )
 				self.Overed = false
-				TopName.Text = translate.Get("sog_scene_selection_title")
+				TopName.Text = "Scene Selection"
 				TrackName.Text = ""
 				LowerName.Text = ""
 			end
@@ -641,7 +638,7 @@ local function Campaign( parent, list )
 		
 		local wholew = bw * num + spacing * ( num - 1 )
 		
-		TopName.Text = translate.Get("sog_play_intro_title")
+		TopName.Text = "Play intro?"
 		LowerName.Text = ""
 		
 		for i = 1, 2 do
@@ -654,7 +651,7 @@ local function Campaign( parent, list )
 			btn:SetPos( self:GetWide()/2 - wholew/2 + step , self:GetTall()/2 - bh/2 )
 			btn.OnCursorEntered = function( self )
 				self.Overed = true
-				LowerName.Text = play and translate.Get("sog_play_intro_yes_option") or translate.Get("sog_play_intro_no_option")
+				LowerName.Text = play and "YES" or "NO"
 			end
 			btn.OnCursorExited = function( self )
 				self.Overed = false
@@ -700,7 +697,7 @@ end
 
 //temp
 if game.SinglePlayer() then
-	AddToMainMenu( "sog_menu_story_mode", Campaign )
+	AddToMainMenu( "Story Mode", Campaign )
 end
 
 //basically a mini copy of normal options
@@ -729,14 +726,14 @@ local function MusicOptions( parent, list )
 	b:Dock( TOP )
 	b.OnCursorEntered = function( self )
 		self.Overed = true
-		desc.Text = translate.Get("sog_menu_autoplay_music_help")
+		desc.Text = "Enable or disable level music."
 	end
 	b.OnCursorExited = function( self )
 		self.Overed = false
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Format("sog_menu_autoplay_music_x", (SOG_AUTOPLAY_MUSIC) and translate.Get("sog_menu_option_on") or translate.Get("sog_menu_option_off")), "Numbers" ) 
+		TextPaint( self, sw, sh, "autoplay level music   -   "..(SOG_AUTOPLAY_MUSIC and "on" or "off"), "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		RunConsoleCommand("sog_autoplaymusic", SOG_AUTOPLAY_MUSIC and "0" or "1")
@@ -750,14 +747,14 @@ local function MusicOptions( parent, list )
 	b:Dock( TOP )
 	b.OnCursorEntered = function( self )
 		self.Overed = true
-		desc.Text = translate.Get("sog_menu_music_help")
+		desc.Text = "Enable or disable music in menu."
 	end
 	b.OnCursorExited = function( self )
 		self.Overed = false
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Format("sog_menu_music_x", (SOG_MENU_MUSIC) and translate.Get("sog_menu_option_on") or translate.Get("sog_menu_option_off")), "Numbers" ) 
+		TextPaint( self, sw, sh, "menu music   -   "..(SOG_MENU_MUSIC and "on" or "off"), "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		RunConsoleCommand("sog_menumusic", SOG_MENU_MUSIC and "0" or "1")
@@ -771,14 +768,14 @@ local function MusicOptions( parent, list )
 	b:Dock( TOP )
 	b.OnCursorEntered = function( self )
 		self.Overed = true
-		desc.Text = translate.Get("sog_menu_cutscene_music_help")
+		desc.Text = "Enable or disable music in cutscenes."
 	end
 	b.OnCursorExited = function( self )
 		self.Overed = false
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Format("sog_menu_cutscene_music_x", (SOG_CUTSCENE_MUSIC) and translate.Get("sog_menu_option_on") or translate.Get("sog_menu_option_off")), "Numbers" ) 
+		TextPaint( self, sw, sh, "cutscene music   -   "..(SOG_CUTSCENE_MUSIC and "on" or "off"), "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		RunConsoleCommand("sog_cutscenemusic", SOG_CUTSCENE_MUSIC and "0" or "1")
@@ -796,7 +793,7 @@ local function MusicOptions( parent, list )
 		self.Overed = false
 	end
 	back.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_back") )
+		TextPaint( self, sw, sh, "Back" )
 	end
 	back.DoClick = function( self )
 		Collumn:Remove()
@@ -878,7 +875,7 @@ local function Cutscenes( parent, list )
 		self.Overed = false
 	end
 	back.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_back") )
+		TextPaint( self, sw, sh, "Back" )
 	end
 	back.DoClick = function( self )
 		Collumn:Remove()
@@ -914,14 +911,14 @@ local function Options( parent, list )
 	b:Dock( TOP )
 	b.OnCursorEntered = function( self )
 		self.Overed = true
-		desc.Text = translate.Get("sog_menu_viev_tilt_help")
+		desc.Text = "Enable or disable view tilt."
 	end
 	b.OnCursorExited = function( self )
 		self.Overed = false
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Format("sog_menu_viev_tilt_x", (SOG_VIEW_TILT and translate.Get("sog_menu_option_on") or translate.Get("sog_menu_option_off"))), "Numbers" ) 
+		TextPaint( self, sw, sh, "view tilt   -   "..(SOG_VIEW_TILT and "on" or "off"), "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		RunConsoleCommand("sog_viewtilt", SOG_VIEW_TILT and "0" or "1")
@@ -934,14 +931,14 @@ local function Options( parent, list )
 	b:Dock( TOP )
 	b.OnCursorEntered = function( self )
 		self.Overed = true
-		desc.Text = translate.Get("sog_menu_corpse_limit_help")
+		desc.Text = "Increase via left click. Decrease via right click."
 	end
 	b.OnCursorExited = function( self )
 		self.Overed = false
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Format("sog_menu_corpse_limit_x", tostring(SOG_MAX_CORPSES)).."", "Numbers" ) 
+		TextPaint( self, sw, sh, "corpse limit   -   "..tostring(SOG_MAX_CORPSES).."", "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		RunConsoleCommand("sog_maxcorpses", tostring( math.Clamp( SOG_MAX_CORPSES + 1, 0, 40) ))
@@ -957,14 +954,14 @@ local function Options( parent, list )
 	b:Dock( TOP )
 	b.OnCursorEntered = function( self )
 		self.Overed = true
-		desc.Text = translate.Get("sog_menu_hud_help")
+		desc.Text = "Enable or disable hud."
 	end
 	b.OnCursorExited = function( self )
 		self.Overed = false
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Format("sog_menu_hud_x", (SOG_HUD) and translate.Get("sog_menu_option_on") or translate.Get("sog_menu_option_off")), "Numbers" ) 
+		TextPaint( self, sw, sh, "ingame hud   -   "..(SOG_HUD and "on" or "off"), "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		RunConsoleCommand("sog_hud", SOG_HUD and "0" or "1")
@@ -984,7 +981,7 @@ local function Options( parent, list )
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Format("sog_menu_crosshair_color_x", tostring(GAMEMODE.CrosshairColors[SOG_CROSSHAIR_COLOR]) and GAMEMODE.CrosshairColors[SOG_CROSSHAIR_COLOR].name or translate.Get("sog_crosshair_color_white").."", "Numbers" )) 
+		TextPaint( self, sw, sh, "crosshair color   -   "..tostring(GAMEMODE.CrosshairColors[SOG_CROSSHAIR_COLOR] and GAMEMODE.CrosshairColors[SOG_CROSSHAIR_COLOR].name or "white").."", "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		local new = SOG_CROSSHAIR_COLOR + 1
@@ -1015,7 +1012,7 @@ local function Options( parent, list )
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_music_options"), "Numbers" ) 
+		TextPaint( self, sw, sh, "music options", "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		//RunConsoleCommand("sog_viewtilt", util.tobool(GetConVarNumber("sog_viewtilt")) and "0" or "1")
@@ -1034,7 +1031,7 @@ local function Options( parent, list )
 		self.Overed = false
 	end
 	back.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_back") )
+		TextPaint( self, sw, sh, "Back" )
 	end
 	back.DoClick = function( self )
 		Collumn:Remove()
@@ -1045,7 +1042,7 @@ local function Options( parent, list )
 	return Collumn
 end
 
-AddToMainMenu( "sog_menu_options", Options )
+AddToMainMenu( "Options", Options )
 
 local function Editor( parent, list )
 
@@ -1070,7 +1067,7 @@ end
 
 //hm
 if game.SinglePlayer() and !EDITOR_TEST and !SINGLEPLAYER and !(EditorPanel and EditorPanel:IsValid()) and SOG_EDITOR_TEST then
-	AddToMainMenu( "sog_menu_editor", Editor )
+	AddToMainMenu( "Editor", Editor )
 end
 
 local function AchievementList( parent, list )
@@ -1106,15 +1103,15 @@ local function AchievementList( parent, list )
 			
 		b.OnCursorEntered = function( self )
 			self.Overed = true//GAMEMODE.PlayerAchievements[key] and true or false
-			desc.Text = GAMEMODE.PlayerAchievements[key] and translate.Get(tbl.Desc) or translate.Get(tbl.DescClosed)
+			desc.Text = GAMEMODE.PlayerAchievements[key] and tbl.Desc or tbl.DescClosed
 		end
 		b.OnCursorExited = function( self )
 			self.Overed = false
 			desc.Text = ""
 		end
 		b.Paint = function( self, sw, sh )
-			local status = GAMEMODE.PlayerAchievements[key] and translate.Get("sog_achievements_unlocked") or translate.Get("sog_achievements_locked")
-			local text = translate.Get(tbl.Name).." - "..status
+			local status = GAMEMODE.PlayerAchievements[key] and "unlocked" or "locked"
+			local text = tbl.Name.." - "..status
 			TextPaint( self, sw, sh, text, "Numbers", GAMEMODE.PlayerAchievements[key] and Color( 220, 220, 220, 255) or Color( 80, 80, 80, 255) ) 
 		end
 		b.DoClick = function( self )
@@ -1135,7 +1132,7 @@ local function AchievementList( parent, list )
 		self.Overed = false
 	end
 	back.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_back") )
+		TextPaint( self, sw, sh, "Back" )
 	end
 	back.DoClick = function( self )
 		Collumn:Remove()
@@ -1178,7 +1175,7 @@ local function Achievements( parent, list )
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_cutscenes"), "Numbers" ) 
+		TextPaint( self, sw, sh, "cutscenes", "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		Cutscenes( parent, Collumn )
@@ -1198,7 +1195,7 @@ local function Achievements( parent, list )
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_achievements"), "Numbers" ) 
+		TextPaint( self, sw, sh, "achievements", "Numbers" ) 
 	end
 	b.DoClick = function( self )
 		//Cutscenes( parent, Collumn )
@@ -1217,7 +1214,7 @@ local function Achievements( parent, list )
 		self.Overed = false
 	end
 	back.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Get("sog_menu_back") )
+		TextPaint( self, sw, sh, "Back" )
 	end
 	back.DoClick = function( self )
 		Collumn:Remove()
@@ -1229,7 +1226,7 @@ local function Achievements( parent, list )
 	
 end
 
-AddToMainMenu( "sog_menu_progress", Achievements )
+AddToMainMenu( "Progress", Achievements )
 
 local function Quit( parent, list )
 	
@@ -1245,7 +1242,7 @@ local function Quit( parent, list )
 	return 
 end
 
-AddToMainMenu( EDITOR_TEST and SINGLEPLAYER and "sog_menu_back_to_editor" or "sog_menu_quit_game", Quit )
+AddToMainMenu( EDITOR_TEST and SINGLEPLAYER and "Back to Editor" or "Quit game", Quit )
 
 -------------------------------------------------------------
 
@@ -1389,12 +1386,12 @@ function CallFakeMenu()
 		MenuElements[ k ] = nil
 	end
 	
-	AddToMainMenu( "sog_menu_start_game", fake_element )
-	AddToMainMenu( "sog_menu_story_mode", fake_element )
-	AddToMainMenu( "sog_menu_options", fake_element )
-	AddToMainMenu( "sog_menu_editor", fake_element )
-	AddToMainMenu( "sog_menu_progress", fake_element )
-	AddToMainMenu( "sog_menu_quit_game", fake_element )
+	AddToMainMenu( "Start game", fake_element )
+	AddToMainMenu( "Story Mode", fake_element )
+	AddToMainMenu( "Options", fake_element )
+	AddToMainMenu( "Editor", fake_element )
+	AddToMainMenu( "Progress", fake_element )
+	AddToMainMenu( "Quit game", fake_element )
 	
 	BLACK_AND_WHITE = false
 	NORMAL_BACKGROUND = true

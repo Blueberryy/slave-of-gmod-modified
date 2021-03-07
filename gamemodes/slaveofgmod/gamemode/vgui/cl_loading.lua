@@ -618,36 +618,36 @@ function CreateLoadingScreen( name, number, duration, fade, func )
 	local w,h = ScrW(), ScrH()
 	local MySelf = LocalPlayer()
 	
-	local text = name or translate.Get("sog_scene_loading_name_untitled")
+	local text = name or "untitled"
 	
-	local desc = translate.Format("sog_scene_loading_x_th", number)
+	local desc = number.."th"
 	
-	if number == -1 then desc = translate.Get("sog_scene_loading_bonus") end
-	if number == 0 then desc = translate.Get("sog_scene_loading_new") end
-	if number == 1 then desc = translate.Get("sog_scene_loading_first") end
-	if number == 2 then desc = translate.Get("sog_scene_loading_second") end
-	if number == 3 then desc = translate.Get("sog_scene_loading_third") end
-	if number == 4 then desc = translate.Get("sog_scene_loading_fourth") end
-	if number == 5 then desc = translate.Get("sog_scene_loading_fifth") end
-	if number == 6 then desc = translate.Get("sog_scene_loading_sixth") end
-	if number == 7 then desc = translate.Get("sog_scene_loading_seventh") end
-	if number == 8 then desc = translate.Get("sog_scene_loading_eighth") end
+	if number == -1 then desc = "bonus" end
+	if number == 0 then desc = "new" end
+	if number == 1 then desc = "first" end
+	if number == 2 then desc = "second" end
+	if number == 3 then desc = "third" end
+	if number == 4 then desc = "fourth" end
+	if number == 5 then desc = "fifth" end
+	if number == 6 then desc = "sixth" end
+	if number == 7 then desc = "seventh" end
+	if number == 8 then desc = "eighth" end
 	
 	if number > 20 then
 		local last = tostring( number )
 		if string.EndsWith( last, "2" ) then
-			desc = translate.Format("sog_scene_loading_second_x", number)
+			desc = number.."nd"
 		end
 		if string.EndsWith( last, "3" ) then
-			desc = translate.Format("sog_scene_loading_third_x", number)
+			desc = number.."rd"
 		end
 	end
 	
 	if SCENE and SCENE.Final then
-		desc = translate.Get("sog_scene_loading_final")
+		desc = "final"
 	end
 	
-	desc = translate.Format("sog_scene_loading_scene_x", desc)
+	desc = desc.." scene"
 	desc = string.upper(desc)
 	
 	if dead then desc = "" end

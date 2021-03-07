@@ -88,7 +88,7 @@ SCENE.Characters = {
 SCENE.Name = "backstab"
 SCENE.Triggers = {
  ["t7"] = {
-	 ["pos"] = Vector( 367, -267, 17 ), ["data"] = translate.Get("sog_hud_obj_leave_area"), ["action"] = "hudmessage", ["size"] = 42, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 367, -267, 17 ), ["data"] = "Leave Area", ["action"] = "hudmessage", ["size"] = 42, ["CheckTriggers"] = {
 		 "t8" 
 		} 
 	}, ["t6"] = {

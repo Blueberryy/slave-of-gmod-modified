@@ -70,7 +70,7 @@ function DrawVoteMenu( time )
 			
 		local shift = math.sin(RealTime()*3)*1.5 + 3
 			
-		local text = translate.Format("sog_vote_menu_vote_end_in_x", math.Clamp(math.ceil(TimeToClose-CurTime()),0,999))
+		local text = "CLOSE (Voting ends in "..math.Clamp(math.ceil(TimeToClose-CurTime()),0,999)..")"
 			
 		if self.Overed then
 			draw.SimpleText( text, "PixelCutsceneScaled", tw/2 , th/2, gettextcolor( 55 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
@@ -108,7 +108,7 @@ function DrawVoteMenu( time )
 	MapHeader:DockMargin( 0,0,0,8 )
 	
 	MapHeader.Paint = function( self, tw, th )
-		draw.SimpleText( translate.Get("sog_vote_menu_maps"), "PixelCutsceneScaled", tw, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "MAPS", "PixelCutsceneScaled", tw, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
 	end
 	
 	
@@ -166,7 +166,7 @@ function DrawVoteMenu( time )
 	GtHeader:DockMargin( 0,0,0,8 )
 	
 	GtHeader.Paint = function( self, tw, th )
-		draw.SimpleText( translate.Get("sog_vote_menu_gametypes"), "PixelCutsceneScaled", 0, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "GAMETYPES", "PixelCutsceneScaled", 0, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
 	end
 	
 	for k, v in pairs(GAMEMODE.AvalaibleGametypes) do
@@ -260,7 +260,7 @@ function DrawPlayerMenu()
 			
 		local shift = math.sin(RealTime()*3)*1.5 + 3
 			
-		local text = translate.Get("sog_player_menu_close")
+		local text = "CLOSE"
 			
 		if self.Overed then
 			draw.SimpleText( text, "PixelCutsceneScaled", tw/2 , th/2, gettextcolor( 55 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
@@ -288,7 +288,7 @@ function DrawPlayerMenu()
 	ListHeader:DockMargin( 0,0,0,0 )
 	
 	ListHeader.Paint = function( self, tw, th )
-		draw.SimpleText( translate.Get("sog_mute_players_title"), "PixelCutsceneScaled", tw/2, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "PLAYERS AND SCREAMING KIDS", "PixelCutsceneScaled", tw/2, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 	
 	//second header
@@ -299,7 +299,7 @@ function DrawPlayerMenu()
 	ListHeader:DockMargin( 0,0,0,50 )
 	
 	ListHeader.Paint = function( self, tw, th )
-		draw.SimpleText( translate.Get("sog_mute_players_help"), "PixelSmall", tw/2, th/2, Color(210, 210, 210, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "click on any to mute/unmute", "PixelSmall", tw/2, th/2, Color(210, 210, 210, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 	
 	for k,v in ipairs( player.GetAll() ) do
@@ -317,7 +317,7 @@ function DrawPlayerMenu()
 			
 			local shift = math.sin(RealTime()*3)*1.5 + 3
 
-			local muted = self.Player:IsMuted() and translate.Get("sog_mute_players_muted") or ""
+			local muted = self.Player:IsMuted() and "  [MUTED]" or ""
 			local text = self.Player:Name()..""..muted
 			
 			if self.Overed then
@@ -427,7 +427,7 @@ function CheckMapsMenu()
 			
 		local shift = math.sin(RealTime()*3)*1.5 + 3
 			
-		local text = translate.Get("sog_missing_addons_close")
+		local text = "CLOSE"
 			
 		if self.Overed then
 			draw.SimpleText( text, "PixelCutsceneScaled", tw/2 , th/2, gettextcolor( 55 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
@@ -455,7 +455,7 @@ function CheckMapsMenu()
 	ListHeader:DockMargin( 0,0,0,0 )
 	
 	ListHeader.Paint = function( self, tw, th )
-		draw.SimpleText( translate.Get("sog_missing_addons_title"), "PixelCutsceneScaled", tw/2, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "YOU NEED THESE MAPS IN ORDER TO PLAY STORY MODE", "PixelCutsceneScaled", tw/2, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 	
 	//second header
@@ -466,7 +466,7 @@ function CheckMapsMenu()
 	ListHeader:DockMargin( 0,0,0,50 )
 	
 	ListHeader.Paint = function( self, tw, th )
-		draw.SimpleText( translate.Get("sog_missing_addons_help"), "PixelSmall", tw/2, th/2, Color(210, 210, 210, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "click on missing maps, so you can download them", "PixelSmall", tw/2, th/2, Color(210, 210, 210, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 	
 	for id,name in pairs( maps ) do
@@ -487,8 +487,8 @@ function CheckMapsMenu()
 				
 			local shift = math.sin(RealTime()*3)*1.5 + 3
 
-			local inst = installed and translate.Format("sog_missing_addons_installed_x", (enabled) and translate.Get("sog_missing_addons_enabled") or translate.Get("sog_missing_addons_disabled")).."]" or translate.Get("sog_missing_addons_missing")
-			local enb = enabled and "" or translate.Get("sog_missing_addons_enable_help")
+			local inst = installed and "  [INSTALLED, "..(enabled and "ENABLED" or "DISABLED").."]" or " [MISSING] <-- click here to download it"
+			local enb = enabled and "" or " <-- enable it in 'Addons' menu"
 			local text = name..""..inst..""..enb
 			
 			if self.Overed then
@@ -570,11 +570,11 @@ function CheckMulticore()
 			
 		local shift = math.sin(RealTime()*3)*1.5 + 3
 			
-		local text = translate.Get("sog_multicore_yes_option")
+		local text = "YES"
 			
 		if self.Overed then
-			draw.SimpleText( translate.Format("sog_multicore_yes_option_x", text), "PixelCutsceneScaled", tw - 60 , th/2, gettextcolor( 55 ), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
-			draw.SimpleText( translate.Format("sog_multicore_yes_option_x", text), "PixelCutsceneScaled", tw - 60 - shift , th/2 - shift, Color(250, 250, 250, 255), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+			draw.SimpleText( text..", I want good FPS", "PixelCutsceneScaled", tw - 60 , th/2, gettextcolor( 55 ), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+			draw.SimpleText( text..", I want good FPS", "PixelCutsceneScaled", tw - 60 - shift , th/2 - shift, Color(250, 250, 250, 255), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
 		else
 			draw.SimpleText( text, "PixelCutsceneScaled", tw - 60, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
 		end
@@ -605,11 +605,11 @@ function CheckMulticore()
 			
 		local shift = math.sin(RealTime()*3)*1.5 + 3
 			
-		local text = translate.Get("sog_multicore_no_option")
+		local text = "NO"
 			
 		if self.Overed then
-			draw.SimpleText( translate.Format("sog_multicore_no_option_x", text), "PixelCutsceneScaled", 60 , th/2, gettextcolor( 55 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
-			draw.SimpleText( translate.Format("sog_multicore_no_option_x", text), "PixelCutsceneScaled", 60 - shift , th/2 - shift, Color(250, 250, 250, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+			draw.SimpleText( text..", I want shitty FPS", "PixelCutsceneScaled", 60 , th/2, gettextcolor( 55 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+			draw.SimpleText( text..", I want shitty FPS", "PixelCutsceneScaled", 60 - shift , th/2 - shift, Color(250, 250, 250, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 		else
 			draw.SimpleText( text, "PixelCutsceneScaled", 60, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER )
 		end
@@ -636,7 +636,7 @@ function CheckMulticore()
 	ListHeader:DockMargin( 0,100,0,0 )
 	
 	ListHeader.Paint = function( self, tw, th )
-		draw.SimpleText( translate.Get("sog_multicore_title"), "PixelCutsceneScaled", tw/2, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "ENABLE MULTICORE RENDERING?", "PixelCutsceneScaled", tw/2, th/2, Color(250, 250, 250, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 	
 	//second header
@@ -647,7 +647,7 @@ function CheckMulticore()
 	ListHeader:DockMargin( 0,0,0,50 )
 	
 	ListHeader.Paint = function( self, tw, th )
-		draw.SimpleText( translate.Get("sog_multicore_help"), "PixelSmall", tw/2, th/2, Color(210, 210, 210, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "you will get more FPS, obviously", "PixelSmall", tw/2, th/2, Color(210, 210, 210, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 	
 end

@@ -80,7 +80,7 @@ SCENE.PickupsPersistance = true
 SCENE.SoundTrack = 209251402//107188096
 SCENE.Triggers = {
  ["t2"] = {
-	 ["pos"] = Vector( 546, 1356, 3 ), ["data"] = translate.Get("sog_hud_obj_leave_area"), ["action"] = "hudmessage", ["CheckTriggers"] = {
+	 ["pos"] = Vector( 546, 1356, 3 ), ["data"] = "Leave Area", ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t3" 
 		}, ["size"] = 60 
 	}, ["t1"] = {

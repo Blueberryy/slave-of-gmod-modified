@@ -1,22 +1,22 @@
 local exp = {
-	"sog_exp_scary", "sog_exp_custom", "sog_exp_terrible", "sog_exp_paid", "sog_exp_corrupted", "sog_exp_realistic", "sog_exp_disgusting", "sog_exp_pointless", "sog_exp_true", "sog_exp_awkward", "sog_exp_false",
-	"sog_exp_boring", "sog_exp_dark", "sog_exp_stupid", "sog_exp_exciting", "sog_exp_sarcastic", "sog_exp_satiric", "sog_exp_violent", "sog_exp_hopeless", "sog_exp_pointy", "sog_exp_dead", "sog_exp_milked", "sog_exp_gruesome",
-	"sog_exp_fake", "sog_exp_vip", "sog_exp_fucked_up", "sog_exp_your", "sog_exp_banned", "sog_exp_ddosed", "sog_exp_dmca", "sog_exp_rusty", "sog_exp_educational", "sog_exp_generic", "sog_exp_tyrannical", "sog_exp_childish", "sog_exp_ambitious"
+	"scary", "custom", "terrible", "paid", "corrupted", "realistic", "disgusting", "pointless", "true", "awkward", "false",
+	"boring", "dark", "stupid", "exciting", "sarcastic", "satiric", "violent", "hopeless", "pointy", "dead", "milked", "gruesome",
+	"fake", "vip", "fucked up", "your", "banned", "ddosed", "dmca", "rusty", "educational", "generic", "tyrannical", "childish", "ambitious"
 }
 
 //And this is why we can't have nice stuff in GMod anymore
 local tags = {
-	"sog_tag_pointshop", "sog_tag_shitty_admins" , "sog_tag_paid_admins", "sog_tag_zero_k_start", "sog_tag_custom", "sog_tag_puberty", "sog_tag_fun", "sog_tag_mul_thee_fun", "sog_tag_plus_three_admins",
-	"sog_tag_mature", "sog_tag_boys_only", "sog_tag_poop_swep", "sog_tag_generic", "sog_tag_no_lag", "sog_tag_no_fun", "sog_tag_jihad", "sog_tag_noob_friendly", "sog_tag_no_parents",
-	"sog_tag_slow_dl", "sog_tag_coderhire_scripts", "sog_tag_pay_to_win", "sog_tag_rtv", "sog_tag_horse_player_models", "sog_tag_toys", "sog_tag_all_day", "sog_tag_lazy_staff", "sog_tag_drugs", "sog_tag_corn",
-	"sog_tag_k9m", "sog_tag_atm", "sog_tag_semi_srs", "sog_tag_free_perp", "sog_tag_custom_loading_screen", "sog_tag_gym", "sog_tag_dmca", "sog_tag_youpube_addon", "sog_tag_twelve_yo_gentlemen", "sog_tag_wirymod",
-	"sog_tag_hiring_janitors", "sog_tag_new", "sog_tag_scors", "sog_tag_one_yo_owner", "sog_tag_ballpit", "sog_tag_respect_the_admins", "sog_tag_haha", "sog_tag_nude", "sog_tag_not_so_unique", "sog_tag_diapers",
-	"sog_tag_two_custom_taunts", "sog_tag_new_uniqye_servr", "sog_tag_new_hets", "sog_tag_more_horses", "sog_tag_minyacravt_map", "sog_tag_approved_by_gary", "sog_tag_better_than_others", "sog_tag_join_ass",
-	"sog_tag_pro_kids", "sog_tag_donate_to_join", "sog_tag_low_karma", "sog_tag_ccccustom", "sog_tag_excitement", "sog_tag_moustaches", "sog_tag_rdm_or_kick", "sog_tag_lorepray", "sog_tag_screaming_kids", 
-	"sog_tag_moni_printers", "sog_tag_epic", "sog_tag_more_custom", "sog_tag_join_today", "sog_tag_terrible_tags", "sog_tag_join_now_ask_later", "sog_tag_pinion_powered", "sog_tag_popporn",
-	"sog_tag_vip", "sog_tag_custom_doors", "sog_tag_clean_seats", "sog_tag_sixtynine_tick", "sog_tag_xp", "sog_tag_dev_version", "sog_tag_unique_rank_system", "sog_tag_heavily_customized", "sog_tag_onehundred_original", "sog_tag_chairs", "sog_tag_onehundredforty_useless_jobs",
-	"sog_tag_loading_screens_with_dubstep", "sog_tag_real_admins", "sog_tag_kfc", "sog_tag_juicy", "sog_tag_leaked_addons", "sog_tag_amazing_donator_bjs", "sog_tag_make_my_mommy_proud", "sog_tag_the_best", "sog_tag_pointpop_two_dot_zero", 
-	"sog_tag_drama_free", "sog_tag_secksy", "sog_tag_everybody_vape" 
+	"POINTSHOP", "Shitty Admins" , "Paid Admins", "0 k start", "CUSTOM!!!", "Puberty", "Fun", "3X FUN!!1", "3+ Admins",
+	"Mature", "Boys only", "Poop SWEP", "GENERIC", "No Lag", "No Fun", "Jihad", "N00B FRIENDLY", "No Parents",
+	"SlowDL", "CoderHire scripts", "PAY 2 WIN", "RTV", "HORSE PLAYERMODELS!!!", "Toys", "7/24", "Lazy Staff", "Drugs", "Corn",
+	"K9M", "ATM", "Semi-srs", "Free PERP", "Custom Loading Screen!", "Gym", "DMCA", "YouPube addon", "12-year old gentlemen", "Wiryamod",
+	"Hiring Janitors", "NEW", "SCors", "1-year old owner", "BallPit!", "Respect the Admins!", "xDDD", "Nude", "Not so Unique", "Diapers",
+	"2 custom taunts", "new uniqye servr", "New Hets", "More Horses", "Minyacravt Map!", "Approved by gary!!!", "Better than others!", "JOIN ASS",
+	"Professional kids", "Donate to join", "Low Karma", "C-C-C-CUSTOM", "Excitement", "Moustaches", "RDM or kick", "Lorepray", "SCREAMING KIDS", 
+	"Moni Printers", "-=EPIC=-", "Even more CUSTOM", "JOIN TODAY!", "Terrible tags", "JOIN NOW, ASK LATER", "Pinion-Powered", "POPPORN",
+	"VIP", "CUSTOM DOORS", "Clean seats", "69Tick", "XP!", "DEV VERSION", "Unique Rank System", "Heavily Customized", "100% Original", "Chairs", "140+ useless jobs!",
+	"Loading screen with Dubstep!", "Real Admins", "KFC", "Juicy", "Leaked Addons!", "Amazing Donator BJs", "MAKE MY MOMMY PROUD!", "The Best", "Pointpop 2.0!", 
+	"DRAMA-FREE", "Secksy!", "Everybody vape!" 
 }
 
 /*local function textspin( freq )
@@ -39,7 +39,7 @@ function CreateMenuBackground( parent )
 	local p = parent:Add( "DPanel" )
 	p:SetSize( parent:GetSize() )
 	p:SetPos( 0, 0 )
-	p.TitleText = translate.Get("sog_gm_name")
+	p.TitleText = "slave of Gmod"
 	
 	if SOG_MENU_MUSIC then
 		if game.SinglePlayer() then
@@ -70,7 +70,7 @@ function CreateMenuBackground( parent )
 	
 		p.shittags[i] = ""
 		for _, shit in ipairs( shittags ) do
-			p.shittags[i] = translate.Get(shit).." | "..p.shittags[i]
+			p.shittags[i] = shit.." | "..p.shittags[i]
 		end
 	
 	end
@@ -137,11 +137,11 @@ function CreateMenuBackground( parent )
 		self.NextWord = self.NextWord or 0
 		
 		if not self.CurWord then
-			self.CurWord = translate.Get(exp[math.random(#exp)])
+			self.CurWord = exp[math.random(#exp)]
 		end
 		
 		if self.NextWord < CurTime() and pushout < 0 then
-			self.CurWord = translate.Get(exp[math.random(#exp)])
+			self.CurWord = exp[math.random(#exp)]
 			self.NextWord = CurTime() + 1.5
 		end
 		
@@ -190,12 +190,12 @@ function CreateMenuBackground( parent )
 					col = Color( 190 + pushout*3*i, 190 + pushout*3*i, 190 + pushout*3*i, 255 )
 				end
 				
-				draw.TextRotated(translate.Format("sog_title_x_exp", self.CurWord), sw/2 + rotation*(i/am * pushout), sh/5 + rotation2*(i/am * pushout) + 90 , col,"NumbersSmall", spin, 1.5)
+				draw.TextRotated(self.CurWord.." gmod experience", sw/2 + rotation*(i/am * pushout), sh/5 + rotation2*(i/am * pushout) + 90 , col,"NumbersSmall", spin, 1.5)
 				
 				//if game.SinglePlayer() then
-				//	draw.TextRotated(translate.Format("sog_title_x_exp", self.CurWord), sw/2 + rotation*(i/am * pushout), sh/5 + rotation2*(i/am * pushout) + 90 ,Color( 250, 107 + pushout*3*i, 31, 255),"NumbersSmall", spin, 1.5)
+				//	draw.TextRotated(self.CurWord.." gmod experience", sw/2 + rotation*(i/am * pushout), sh/5 + rotation2*(i/am * pushout) + 90 ,Color( 250, 107 + pushout*3*i, 31, 255),"NumbersSmall", spin, 1.5)
 				//else
-					//draw.TextRotated(translate.Format("sog_title_x_exp", self.CurWord), sw/2 + rotation*(i/am * pushout), sh/5 + rotation2*(i/am * pushout) + 90 ,Color( 107 + pushout*3*i, 0, 37, 255),"NumbersSmall", spin, 1.5)
+					//draw.TextRotated(self.CurWord.." gmod experience", sw/2 + rotation*(i/am * pushout), sh/5 + rotation2*(i/am * pushout) + 90 ,Color( 107 + pushout*3*i, 0, 37, 255),"NumbersSmall", spin, 1.5)
 				//end
 			end
 			
@@ -210,8 +210,8 @@ function CreateMenuBackground( parent )
 		if SINGLEPLAYER then
 			gametype = "Story Mode"
 		end
-		draw.SimpleText( translate.Get(GAMEMODE.Version) or translate.Get("sog_menu_error"), "PixelSmaller", sw-10, 25, Color(10, 10, 10, 155), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
-		draw.SimpleText( gametype or translate.Get("sog_menu_error"), "PixelSmaller", sw-10, 50, Color(10, 10, 10, 155), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
+		draw.SimpleText( GAMEMODE.Version or "error", "PixelSmaller", sw-10, 25, Color(10, 10, 10, 155), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
+		draw.SimpleText( gametype or "error", "PixelSmaller", sw-10, 50, Color(10, 10, 10, 155), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
 
 
 	end

@@ -310,10 +310,10 @@ function DrawDialogue( req_finish )
 		surface.SetDrawColor( Color( 200, 200, 200, 185 ) )
 		surface.DrawRect( 0, ( sh/5 * delta )-4, sw, 3 )
 		
-		draw.DrawText( translate.Get("sog_dialogue_menu_skip"), "PixelSmaller", 130 , ( sh/5 - 40 ) * delta, Color( 110, 110, 110, 255), TEXT_ALIGN_LEFT )
+		draw.DrawText( "HOLD [RMB] TO SKIP", "PixelSmaller", 130 , ( sh/5 - 40 ) * delta, Color( 110, 110, 110, 255), TEXT_ALIGN_LEFT )
 		
 		surface.SetFont( "PixelSmaller" )
-		local barw, barh = surface.GetTextSize( translate.Get("sog_dialogue_menu_skip") ) 
+		local barw, barh = surface.GetTextSize( "HOLD [RMB] TO SKIP" ) 
 		
 		local bar_delta = 1
 		

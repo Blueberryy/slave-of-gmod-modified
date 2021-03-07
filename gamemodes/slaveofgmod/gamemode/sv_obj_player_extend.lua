@@ -383,7 +383,7 @@ function meta:AddScore( toadd, ent )
 	if IsValid( ent ) then
 		local pos = ent:GetPos() + vector_up * 58
 		
-		self:AddScoreMessage( translate.Format("sog_hud_x_points_screen", toadd), pos, 1 )
+		self:AddScoreMessage( toadd.."pts", pos, 1 )
 		
 	end
 	

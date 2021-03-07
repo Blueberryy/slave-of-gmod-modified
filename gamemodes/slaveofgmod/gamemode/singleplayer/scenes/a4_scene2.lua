@@ -68,7 +68,7 @@ SCENE.Triggers = {
 	}, ["t6"] = {
 	 ["pos"] = Vector( 65, 452, 17 ), ["CheckTriggers"] = {
 		 "t7" 
-		}, ["action"] = "hudmessage", ["size"] = 38, ["data"] = translate.Get("sog_hud_obj_leave_area") 
+		}, ["action"] = "hudmessage", ["size"] = 38, ["data"] = "Leave Area" 
 	}, ["t9"] = {
 	 ["pos"] = Vector( -956, -623, 17 ), ["size"] = 42, ["event"] = "OnAllEnemiesKilled", ["action"] = "event", ["objects"] = {
 		 "t8" 

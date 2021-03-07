@@ -1,5 +1,4 @@
 include( 'shared.lua' )
-include("sh_translate.lua")
 include( "boneanimlib_v2/cl_boneanimlib.lua" )
 
 include( "vgui/cl_charactermenu.lua" )
@@ -64,13 +63,13 @@ GM.MapCenter[ "sog_office_v6" ] = Vector(256, 576, 0)
 GM.MapCenter[ "sog_garage_v1" ] = Vector(1301, -694, 0)
 
 GM.CrosshairColors = {
-	[1] = { name = translate.Get("sog_crosshair_color_white"), col = Color( 255, 255, 255, 250 ) },
-	[2] = { name = translate.Get("sog_crosshair_color_green"), col = Color( 0, 255, 0, 250 ) },
-	[3] = { name = translate.Get("sog_crosshair_color_red"), col = Color( 255, 0, 0, 250 ) },
-	[4] = { name = translate.Get("sog_crosshair_color_blue"), col = Color( 0, 60, 255, 250 ) },
-	[5] = { name = translate.Get("sog_crosshair_color_yellow"), col = Color( 255, 255, 0, 250 ) },
-	[6] = { name = translate.Get("sog_crosshair_color_orange"), col = Color( 255, 127, 0, 250 ) },
-	[7] = { name = translate.Get("sog_crosshair_color_cyan"), col = Color( 0, 255, 255, 250 ) },
+	[1] = { name = "white", col = Color( 255, 255, 255, 250 ) },
+	[2] = { name = "green", col = Color( 0, 255, 0, 250 ) },
+	[3] = { name = "red", col = Color( 255, 0, 0, 250 ) },
+	[4] = { name = "blue", col = Color( 0, 60, 255, 250 ) },
+	[5] = { name = "yellow", col = Color( 255, 255, 0, 250 ) },
+	[6] = { name = "orange", col = Color( 255, 127, 0, 250 ) },
+	[7] = { name = "cyan", col = Color( 0, 255, 255, 250 ) },
 }
 
 
@@ -87,7 +86,7 @@ DRAW_NAMES = false
 //for some things
 DRAW_DISTANCE = 470
 
-GM.GametypeName = translate.Get("sog_gametype_name_rdm")
+GM.GametypeName = "Random Deathmatch"
 
 function GM:DrawGametypeName()
 	self:AddHugeMessage( self.GametypeName, 6 )
@@ -141,8 +140,6 @@ local gui_MouseX = gui.MouseX
 local gui_MouseY = gui.MouseY
 local gui_MousePos = gui.MousePos
 local LerpVector = LerpVector
-
-local translate = translate
 
 local render_SetMaterial = render.SetMaterial
 local render_RenderView = render.RenderView
@@ -337,33 +334,33 @@ function GM:Initialize( )
 
 
 
-	surface_CreateFont( "NumbersBig",{font = "Super Retro M54", size = 63,weight = 500,antialias = true,extended = true})
-	surface_CreateFont( "NumbersBigger",{font = "Super Retro M54", size = 53,weight = 500,antialias = true,extended = true})
-	surface_CreateFont( "Numbers",{font = "Super Retro M54", size = 43,weight = 500,antialias = true,extended = true})
-	surface_CreateFont( "NumbersSmaller",{font = "Super Retro M54", size = 38,weight = 500,antialias = true,extended = true})
-	surface_CreateFont( "NumbersTimer",{font = "Super Retro M54", size = 33,weight = 500,antialias = true,extended = true})
-	surface_CreateFont( "NumbersSmallerBold",{font = "Super Retro M54", size = 38,weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "ScoreboardHeader",{font = "Super Retro M54", size = 28,weight = 500,antialias = true,extended = true})
-	surface_CreateFont( "NumbersSmall",{font = "Super Retro M54", size = 30,weight = 500,antialias = true,extended = true})
-	surface_CreateFont( "NumbersSmallest",{font = "Super Retro M54", size = 23,weight = 500,antialias = true,extended = true})
-	surface_CreateFont( "NumbersTiny",{font = "Super Retro M54", size = 18,weight = 500,antialias = true,extended = true})
-	//surface_CreateFont( "ComboMeter",{font = "WindCTT", size = 170, weight = 500,extended = true})
-	surface_CreateFont( "ComboMeter",{font = "Bullet In Your Head", size = 170, weight = 500,extended = true})
-	surface_CreateFont( "MenuHeaderOld",{font = "WindCTT", size = 220, weight = 500,extended = true})
+	surface_CreateFont( "NumbersBig",{font = "Super Retro M54", size = 63,weight = 500,antialias = true})
+	surface_CreateFont( "NumbersBigger",{font = "Super Retro M54", size = 53,weight = 500,antialias = true})
+	surface_CreateFont( "Numbers",{font = "Super Retro M54", size = 43,weight = 500,antialias = true})
+	surface_CreateFont( "NumbersSmaller",{font = "Super Retro M54", size = 38,weight = 500,antialias = true})
+	surface_CreateFont( "NumbersTimer",{font = "Super Retro M54", size = 33,weight = 500,antialias = true})
+	surface_CreateFont( "NumbersSmallerBold",{font = "Super Retro M54", size = 38,weight = 1000,antialias = true})
+	surface_CreateFont( "ScoreboardHeader",{font = "Super Retro M54", size = 28,weight = 500,antialias = true})
+	surface_CreateFont( "NumbersSmall",{font = "Super Retro M54", size = 30,weight = 500,antialias = true})
+	surface_CreateFont( "NumbersSmallest",{font = "Super Retro M54", size = 23,weight = 500,antialias = true})
+	surface_CreateFont( "NumbersTiny",{font = "Super Retro M54", size = 18,weight = 500,antialias = true})
+	//surface_CreateFont( "ComboMeter",{font = "WindCTT", size = 170, weight = 500})
+	surface_CreateFont( "ComboMeter",{font = "Bullet In Your Head", size = 170, weight = 500})
+	surface_CreateFont( "MenuHeaderOld",{font = "WindCTT", size = 220, weight = 500})
 	
-	surface_CreateFont( "MenuHeader",{font = "Shoguns Clan_chr", size = 120, weight = 500,extended = true})
-	surface_CreateFont( "HugeMessage",{font = "Shoguns Clan_chr", size = 190, weight = 500,extended = true})
-	surface_CreateFont( "HugeMessageOutlined",{font = "Shoguns Clan_chr", size = 290, weight = 500, outline = true,antialias = true,extended = true})
+	surface_CreateFont( "MenuHeader",{font = "Shoguns Clan", size = 120, weight = 500})
+	surface_CreateFont( "HugeMessage",{font = "Shoguns Clan", size = 190, weight = 500})
+	surface_CreateFont( "HugeMessageOutlined",{font = "Shoguns Clan", size = 290, weight = 500, outline = true,antialias = true})
 	
-	surface_CreateFont( "Scene",{font = "D3 Digitalism", size = 50,weight = 500,antialias = true,extended = true})
+	surface_CreateFont( "Scene",{font = "D3 Digitalism", size = 50,weight = 500,antialias = true})
 	
-	surface_CreateFont( "PixelObj",{font = "Minecraftia", size = NewScreenScale( 35 ),weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelCutscene",{font = "Minecraftia", size = 60,weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelCutsceneScaled",{font = "Minecraftia", size = NewScreenScale( 60 ),weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelCutsceneBiggerScaled",{font = "Minecraftia", size = NewScreenScale( 80 ),weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelCutsceneScaledSmall",{font = "Minecraftia", size = NewScreenScale( 40 ),weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelSmall",{font = "Minecraftia", size = 35,weight = 500,antialias = false,extended = true})
-	surface_CreateFont( "PixelSmaller",{font = "Minecraftia", size = 25,weight = 500,antialias = false,extended = true})
+	surface_CreateFont( "PixelObj",{font = "Minecraftia", size = NewScreenScale( 35 ),weight = 1000,antialias = true})
+	surface_CreateFont( "PixelCutscene",{font = "Minecraftia", size = 60,weight = 1000,antialias = true})
+	surface_CreateFont( "PixelCutsceneScaled",{font = "Minecraftia", size = NewScreenScale( 60 ),weight = 1000,antialias = true})
+	surface_CreateFont( "PixelCutsceneBiggerScaled",{font = "Minecraftia", size = NewScreenScale( 80 ),weight = 1000,antialias = true})
+	surface_CreateFont( "PixelCutsceneScaledSmall",{font = "Minecraftia", size = NewScreenScale( 40 ),weight = 1000,antialias = true})
+	surface_CreateFont( "PixelSmall",{font = "Minecraftia", size = 35,weight = 500,antialias = false})
+	surface_CreateFont( "PixelSmaller",{font = "Minecraftia", size = 25,weight = 500,antialias = false})
 
 	GAMEMODE.ShowScoreboard = false
 	
@@ -1181,7 +1178,7 @@ function GM:HUDPaint()
 	
 	currentpoints = points == 0 and 0 or math_Round(math_Approach( currentpoints, points, RealFrameTime() * 3500))
 
-	local text = translate.Format("sog_hud_x_points", currentpoints)
+	local text = currentpoints.." pts"
 	
 	local shift = math_sin(RealTime()*3)*2 + 5
 	local shift_reverse = math_cos(RealTime()*3)*2 + 5
@@ -1230,18 +1227,18 @@ function GM:HUDPaint()
 	
 	local wep = buddy_wep or IsValid(MySelf:GetActiveWeapon()) and MySelf:GetActiveWeapon()
 	
-	local text = translate.Get("sog_hud_no_gun")
+	local text = "No Gun"
 	
 	if not wep or wep and wep.Primary.ClipSize == -1 then 
-		text = translate.Get("sog_hud_no_gun")
+		text = "No Gun"
 		goalweppos = -400
 	else
 		local clip = buddy_wep and buddy:GetDTInt( 2 ) or wep:Clip1()
-		text = clip > 0 and translate.Format("sog_hud_x_rnd", clip)..(clip == 1 and "" or translate.Get("sog_hud_x_rnds")) or translate.Get("sog_hud_empty")
+		text = clip > 0 and clip.." rnd"..(clip == 1 and "" or "s") or "Empty"
 		/*if wep.MaxReloads and wep.Reloads and MySelf:GetCharTable().AllowReloads then
 			local clips = wep.MaxReloads - wep.Reloads
 			
-			text = text.."  "..( clips > 0 and ( translate.Format("sog_hud_x_clips", clips) ) or "" )
+			text = text.."  "..( clips > 0 and ( clips.." clips" ) or "" )
 		end*/
 				
 		if wep.GetReloads and MySelf:GetCharTable().AllowReload and wep.Akimbo then
@@ -1251,7 +1248,7 @@ function GM:HUDPaint()
 				clips = clips * 2
 			end
 			
-			text = text.."    "..( clips > 0 and ( translate.Format("sog_hud_x_clips", clips) ) or "" )
+			text = text.."    "..( clips > 0 and ( clips.." clips" ) or "" )
 		end
 		
 		if wep.OverrideAmmoText then
@@ -2392,22 +2389,22 @@ function GM:ToggleRadio()
 	if self.RadioEnabled then
 		if self.RadioPaused then return end
 		self:RemoveRadio()
-		LocalPlayer():ChatPrintTranslated("sog_music_off")
+		LocalPlayer():ChatPrint("Music off.")
 	else
 		self:MakeRadio()
-		LocalPlayer():ChatPrintTranslated("sog_music_on")
-		LocalPlayer():ChatPrintTranslated("sog_music_help")
-		LocalPlayer():ChatPrintTranslated("sog_music_help2")
+		LocalPlayer():ChatPrint("Music on.")
+		LocalPlayer():ChatPrint("You can always change volume with your mouse wheel or disable it (F2).")
+		LocalPlayer():ChatPrint("Also you can use F3 to rock the vote when nessesary.")
 	end
 	/*if self.Radio and self.Radio:Valid() then
 		if self.Radio.Paused then return end //just to prevent some stuff
 		self:RemoveRadio()
-		LocalPlayer():ChatPrintTranslated("sog_music_off")
+		LocalPlayer():ChatPrint("Music off.")
 	else
 		self:MakeRadio()
-		LocalPlayer():ChatPrintTranslated("sog_music_on")
-		LocalPlayer():ChatPrintTranslated("sog_music_help")
-		LocalPlayer():ChatPrintTranslated("sog_music_help2")
+		LocalPlayer():ChatPrint("Music on.")
+		LocalPlayer():ChatPrint("You can always change volume with your mouse wheel or disable it (F2).")
+		LocalPlayer():ChatPrint("Also you can use F3 to rock the vote when nessesary.")
 	end*/
 end
 
@@ -3711,7 +3708,7 @@ function GM:DrawDeathHUD()
 			
 	local x, y = 60, h*0.85	
 		
-	local text = translate.Get("sog_hud_you_are_dead")
+	local text = "You are dead!"
 			
 	draw_SimpleText( text, "NumbersSmall", x + 3, y + 3, col_shadow, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 	draw_SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -3723,7 +3720,7 @@ function GM:DrawDeathHUD()
 		
 		x, y = 60, h*0.85 + 38	
 				
-		text = translate.Get("sog_hud_change_style")
+		text = "Press spacebar to change style"
 				
 		draw_SimpleText( text, "NumbersSmall", x + 3, y + 3, col_shadow, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 		draw_SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -3737,7 +3734,7 @@ function GM:DrawDeathHUD()
 		
 		x, y = 60, h*0.85 + 38	
 				
-		text = translate.Get("sog_hud_change_character")
+		text = "Press spacebar to change character"
 				
 		draw_SimpleText( text, "NumbersSmall", x + 3, y + 3, col_shadow, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 		draw_SimpleText( text, "NumbersSmall", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -3786,7 +3783,7 @@ function GM:DrawAchievement( id )
 	local ach = vgui.Create( "DPanel" )
 	
 	if id and self.Achievements[ id ] and self.Achievements[ id ].Name then
-		ach.Text = translate.Get(self.Achievements[ id ].Name)
+		ach.Text = self.Achievements[ id ].Name
 	end
 	
 	ach.DieTime = CurTime() + 8 - 1 * ( active_achievements )
@@ -3820,8 +3817,8 @@ function GM:DrawAchievement( id )
 		local x, y = pw/2, ph/3
 		local text = string.upper( self.Text or "error" )
 		
-		draw_SimpleTextOutlined( translate.Get("sog_achievement_unlocked"), "PixelSmaller", x, y, Color( 186, 13, 190, 255 * fade), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER, 1, Color( 0, 0, 0, 255  * fade ) )
-		draw_SimpleTextOutlined( translate.Get("sog_achievement_unlocked"), "PixelSmaller", x - 3, y - 3, Color( 235 - shift, 116 - shift, 235 - shift, 255 * fade), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER, 1, Color( 0, 0, 0, 255  * fade ) )
+		draw_SimpleTextOutlined( "Achievement unlocked:", "PixelSmaller", x, y, Color( 186, 13, 190, 255 * fade), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER, 1, Color( 0, 0, 0, 255  * fade ) )
+		draw_SimpleTextOutlined( "Achievement unlocked:", "PixelSmaller", x - 3, y - 3, Color( 235 - shift, 116 - shift, 235 - shift, 255 * fade), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER, 1, Color( 0, 0, 0, 255  * fade ) )
 		
 		x, y = pw/2, 2*ph/3
 		
@@ -3903,11 +3900,11 @@ function GM:HUDDrawScoreBoard()
 		local add = 0
 		
 		if pl.Header then
-			text = translate.Get("sog_scoreboard_name")
-			maxscore = translate.Get("sog_scoreboard_max_score")
-			score = self:GetGametype() == "axecution" and translate.Get("sog_scoreboard_axe_wins") or self:GetGametype() == "drama" and translate.Get("sog_scoreboard_team_score") or translate.Get("sog_scoreboard_score")
+			text = "Name"
+			maxscore = "Max Score"
+			score = self:GetGametype() == "axecution" and "Axe wins" or self:GetGametype() == "drama" and "Team score" or "Score"
 			font = "ScoreboardHeader"
-			ping = translate.Get("sog_scoreboard_ping")
+			ping = "ping"
 			add = 14
 		else
 			text = pl:Name()
@@ -4107,7 +4104,7 @@ net.Receive("LevelClear", function(len)
 	
 	GAMEMODE:PauseMusic()
 	GAMEMODE:PlayAmbient()
-	GAMEMODE:AddHugeMessage( t == TEAM_MOB and translate.Get("sog_hud_you_lost") or t == TEAM_STUPID and translate.Get("sog_hud_you_lost") or translate.Get("sog_hud_level_clear") )
+	GAMEMODE:AddHugeMessage( t == TEAM_MOB and "You lost" or t == TEAM_STUPID and "You lost" or "Level Clear" )
 	
 	surface.PlaySound( "music/stingers/hl1_stinger_song28.mp3" )
 	

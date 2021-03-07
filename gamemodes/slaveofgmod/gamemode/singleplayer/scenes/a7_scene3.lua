@@ -103,7 +103,7 @@ SCENE.Pickups = {
 	 ["wep"] = "sogm_pot", ["pos"] = Vector( 3238, 3083, 9 ) 
 	} 
 }
-SCENE.MusicText = "THE ENCOUNTER - Pure"
+SCENE.MusicText = "Vêtu de Noir - Midnight In Hell (Feat. Chien Lune)"
 SCENE.Dialogues = {
  ["d2"] = {
 	 {
@@ -177,12 +177,12 @@ SCENE.Dialogues = {
 } 
 	} 
 }
-SCENE.StartFrom = 28500
+SCENE.StartFrom = 30400 //28500
 SCENE.Characters = {
  "watch" 
 }
 SCENE.AmbientStartFrom = 3000
-SCENE.Volume = 85
+SCENE.Volume = 55
 SCENE.ShowLastEnemies = true
 SCENE.Triggers = {
  ["t10"] = {
@@ -215,7 +215,7 @@ SCENE.Triggers = {
 		} 
 	}, ["t18"] = {
 	 ["pos"] = Vector( 3765, 2887, 1 ), ["data"] = {
-		 ["start"] = 116100, ["endpos"] = 252000 
+		 ["start"] = 229500, ["endpos"] = 429000 
 		}, ["action"] = "music_time", ["size"] = 10, ["CheckTriggers"] = {
 		 "t19" 
 		} 
@@ -341,8 +341,8 @@ SCENE.Triggers = {
 		} 
 	} 
 }
-SCENE.EndAt = 115500
-SCENE.SoundTrack = 309414904
+SCENE.EndAt = 182200//115500
+SCENE.SoundTrack = 927953923//309414904
 SCENE.Ambient = 298081381
 SCENE.Vehicle = {
  ["type"] = 10, ["pos"] = Vector( 4061, 3099, 36 ), ["mdl"] = "models/props_vehicles/car005a.mdl", ["ang"] = Angle( 0, -77, 0 ) 

@@ -116,7 +116,15 @@ local goop_mat2 = CreateMaterial( "coffin4",
 
 local mat = Material( "models/spawn_effect2" )
 
-local dev_mat = Material( "!devwall_model" )
+//local dev_mat = Material( "!devwall_model" )
+local dev_mat = CreateMaterial( 
+	"devmat_model", 
+	"VertexLitGeneric", 
+	{
+		["$basetexture"] = "dev/dev_measurewall01d", 
+		["$model"] = 1,
+	}
+)
 
 function ENT:Draw()
 	

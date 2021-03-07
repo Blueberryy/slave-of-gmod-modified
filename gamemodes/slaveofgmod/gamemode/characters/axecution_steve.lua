@@ -1,7 +1,7 @@
 CHARACTER.Reference = "steve"
 
-CHARACTER.Name = "Steve"
-CHARACTER.Description = "Ex detective.  CoderFired cleaner."
+CHARACTER.Name = "sog_character_steve_name"
+CHARACTER.Description = "sog_character_steve_desc"
 
 CHARACTER.Health = 210
 CHARACTER.Speed = 340

@@ -96,99 +96,99 @@ SCENE.Dialogues = {
  ["d5"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Holy shit, that fps drop!", ". . .", "I bet it's even worse on the left side." 
+	 "sog_dialogue_chargeback_2013_14_npc", "sog_dialogue_chargeback_2013_15_npc", "sog_dialogue_chargeback_2013_16_npc" 
 	} 
 } 
 	}, ["d2"] = {
 	 {
  ["person"] = "e7", ["text"] = {
-	 "*cough*", "What the hell is going on?" 
+	 "sog_dialogue_chargeback_2013_19_npc", "sog_dialogue_chargeback_2013_20_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Wow, you look like shit, mark!", "Is that how you welcome your guests?" 
+	 "sog_dialogue_chargeback_2013_21_npc", "sog_dialogue_chargeback_2013_22_npc" 
 	} 
 }, {
  ["person"] = "e7", ["text"] = {
-	 "What the fuck. . .", "Matthias?", "What the fuck you think you are doing?!!" 
+	 "sog_dialogue_chargeback_2013_23_npc", "sog_dialogue_chargeback_2013_24_npc", "sog_dialogue_chargeback_2013_25_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Just wanted to say \"Hi\".", "Hi." 
+	 "sog_dialogue_chargeback_2013_26_npc", "sog_dialogue_chargeback_2013_27_npc" 
 	} 
 }, {
  ["person"] = "e7", ["text"] = {
-	 "*cough*", "You fucking asshole!" 
+	 "sog_dialogue_chargeback_2013_28_npc", "sog_dialogue_chargeback_2013_29_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Well, there is no need to be so rude.", "I just want to make a proposition." 
+	 "sog_dialogue_chargeback_2013_30_npc", "sog_dialogue_chargeback_2013_31_npc" 
 	} 
 }, {
  ["person"] = "e7", ["text"] = {
-	 "What the fuck do you want from me?" 
+	 "sog_dialogue_chargeback_2013_32_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Just all. . .", ". . .this." 
+	 "sog_dialogue_chargeback_2013_33_npc", "sog_dialogue_chargeback_2013_34_npc" 
 	} 
 }, {
  ["person"] = "e7", ["text"] = {
-	 "What?! You are fucked up.", "I told you to make your own business before.", "*cough*", "Show some creativity, at least!" 
+	 "sog_dialogue_chargeback_2013_35_npc", "sog_dialogue_chargeback_2013_36_npc", "sog_dialogue_chargeback_2013_37_npc", "sog_dialogue_chargeback_2013_38_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Funny to hear that from someone,\\nwho gets paid for ruining the server browser." 
+	 "sog_dialogue_chargeback_2013_39_npc" 
 	} 
 }, {
  ["person"] = "e7", ["text"] = {
-	 "Then you are not getting any of my business!", "It's mine! You didn't do shit to get all of this." 
+	 "sog_dialogue_chargeback_2013_40_npc", "sog_dialogue_chargeback_2013_41_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "It's never too late then.", "You see. . .", "I appreciate your work, in some way. . .", ". . .", "But times are changing.", "Your sales are not that impressive anymore." 
+	 "sog_dialogue_chargeback_2013_42_npc", "sog_dialogue_chargeback_2013_43_npc", "sog_dialogue_chargeback_2013_44_npc", "sog_dialogue_chargeback_2013_45_npc", "sog_dialogue_chargeback_2013_46_npc", "sog_dialogue_chargeback_2013_47_npc" 
 	} 
 }, {
  ["person"] = "e7", ["text"] = {
-	 ". . .", "Don't you even think about. . ." 
+	 "sog_dialogue_chargeback_2013_48_npc", "sog_dialogue_chargeback_2013_49_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Anyway. . .", "You are fired." 
+	 "sog_dialogue_chargeback_2013_50_npc", "sog_dialogue_chargeback_2013_51_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Sooo. . .", ". . .", "Let's pay our best friend a visit, shall we?" 
+	 "sog_dialogue_chargeback_2013_1_npc", "sog_dialogue_chargeback_2013_2_npc", "sog_dialogue_chargeback_2013_3_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . .", "I've brought more dudes, just in case.", "This place is heavily guarded.\\nAnd it's laggy as shit." 
+	 "sog_dialogue_chargeback_2013_4_npc", "sog_dialogue_chargeback_2013_5_npc", "sog_dialogue_chargeback_2013_6_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "No shit.", "Of course, it is!", "You take care of nearby rooms,\\nI'll go through the right entrance. . .", "We need to make sure that\\nnobody will stab us in the back.", "And then we can walk into the office and say \"Hi!\".", "Got it?" 
+	 "sog_dialogue_chargeback_2013_7_npc", "sog_dialogue_chargeback_2013_8_npc", "sog_dialogue_chargeback_2013_9_npc", "sog_dialogue_chargeback_2013_10_npc", "sog_dialogue_chargeback_2013_11_npc", "sog_dialogue_chargeback_2013_12_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Yeah!" 
+	 "sog_dialogue_chargeback_2013_13_npc" 
 	} 
 } 
 	}, ["d4"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "That's better!", "Let's head to the office." 
+	 "sog_dialogue_chargeback_2013_17_npc", "sog_dialogue_chargeback_2013_18_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Damn, I should rename this place later. . .", ". . .", "Something that describes the goods\\nand the customers. . .", "With a single word. . .", "Something like. . .uh. . .", ". . .\"ScriptToddler\" or so. . .", "Either way, tonight we are celebrating!" 
+	 "sog_dialogue_chargeback_2013_52_npc", "sog_dialogue_chargeback_2013_53_npc", "sog_dialogue_chargeback_2013_54_npc", "sog_dialogue_chargeback_2013_55_npc", "sog_dialogue_chargeback_2013_56_npc", "sog_dialogue_chargeback_2013_57_npc", "sog_dialogue_chargeback_2013_58_npc" 
 	} 
 }, {
  ["person"] = "e31", ["text"] = {
-	 "Nice!" 
+	 "sog_dialogue_chargeback_2013_59_npc" 
 	} 
 } 
 	} 
@@ -196,7 +196,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "matthias" 
 }
-SCENE.Name = "chargeback"
+SCENE.Name = "scene_name_chargeback"
 SCENE.BloodMoonScreen = true
 SCENE.DisableNextbotLights = true
 SCENE.StartFrom = 8500
@@ -206,13 +206,13 @@ SCENE.Triggers = {
 		 "t4" 
 		} 
 	}, ["t8"] = {
-	 ["pos"] = Vector( -905, -541, 1 ), ["data"] = "Go to the office", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
+	 ["pos"] = Vector( -905, -541, 1 ), ["data"] = "sog_hud_obj_go_to_the_office", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
 		 "t9" 
 		} 
 	}, ["t19"] = {
 	 ["pos"] = Vector( -746, -211, 1 ), ["CheckTriggers"] = {
 		 "t20" 
-		}, ["action"] = "hudmessage", ["data"] = translate.Get("sog_hud_obj_leave_area"), ["size"] = 10 
+		}, ["action"] = "hudmessage", ["data"] = "sog_hud_obj_leave_area", ["size"] = 10 
 	}, ["t16"] = {
 	 ["pos"] = Vector( -754, -40, 1 ), ["size"] = 59, ["action"] = "linker", ["CheckTriggers"] = {
 		 "t17" 

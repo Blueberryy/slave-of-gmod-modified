@@ -24,7 +24,7 @@ CHARACTER.Model = Model( "models/player/group03/female_02.mdl" )
 
 function CHARACTER:OnSpawn( pl )
 	
-	pl:SetGoal( "Hold [SPACEBAR] to slide. You avoid ALL damage while sliding.", 25 )
+	pl:SetGoal( translate.Get("sog_play_tip_protagonist2"), 25 )
 
 end
 

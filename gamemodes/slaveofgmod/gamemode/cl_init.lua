@@ -64,13 +64,13 @@ GM.MapCenter[ "sog_office_v6" ] = Vector(256, 576, 0)
 GM.MapCenter[ "sog_garage_v1" ] = Vector(1301, -694, 0)
 
 GM.CrosshairColors = {
-	[1] = { name = translate.Get("sog_crosshair_color_white"), col = Color( 255, 255, 255, 250 ) },
-	[2] = { name = translate.Get("sog_crosshair_color_green"), col = Color( 0, 255, 0, 250 ) },
-	[3] = { name = translate.Get("sog_crosshair_color_red"), col = Color( 255, 0, 0, 250 ) },
-	[4] = { name = translate.Get("sog_crosshair_color_blue"), col = Color( 0, 60, 255, 250 ) },
-	[5] = { name = translate.Get("sog_crosshair_color_yellow"), col = Color( 255, 255, 0, 250 ) },
-	[6] = { name = translate.Get("sog_crosshair_color_orange"), col = Color( 255, 127, 0, 250 ) },
-	[7] = { name = translate.Get("sog_crosshair_color_cyan"), col = Color( 0, 255, 255, 250 ) },
+	[1] = { name = "sog_crosshair_color_white", col = Color( 255, 255, 255, 250 ) },
+	[2] = { name = "sog_crosshair_color_green", col = Color( 0, 255, 0, 250 ) },
+	[3] = { name = "sog_crosshair_color_red", col = Color( 255, 0, 0, 250 ) },
+	[4] = { name = "sog_crosshair_color_blue", col = Color( 0, 60, 255, 250 ) },
+	[5] = { name = "sog_crosshair_color_yellow", col = Color( 255, 255, 0, 250 ) },
+	[6] = { name = "sog_crosshair_color_orange", col = Color( 255, 127, 0, 250 ) },
+	[7] = { name = "sog_crosshair_color_cyan", col = Color( 0, 255, 255, 250 ) },
 }
 
 
@@ -87,10 +87,10 @@ DRAW_NAMES = false
 //for some things
 DRAW_DISTANCE = 470
 
-GM.GametypeName = translate.Get("sog_gametype_name_rdm")
+GM.GametypeName = "sog_gametype_name_rdm"
 
 function GM:DrawGametypeName()
-	self:AddHugeMessage( self.GametypeName, 6 )
+	self:AddHugeMessage( translate.Get(self.GametypeName), 6 )
 end
 
 local render = render
@@ -355,15 +355,15 @@ function GM:Initialize( )
 	surface_CreateFont( "HugeMessage",{font = "Shoguns Clan_chr", size = 190, weight = 500,extended = true})
 	surface_CreateFont( "HugeMessageOutlined",{font = "Shoguns Clan_chr", size = 290, weight = 500, outline = true,antialias = true,extended = true})
 	
-	surface_CreateFont( "Scene",{font = "D3 Digitalism", size = 50,weight = 500,antialias = true,extended = true})
+	surface_CreateFont( "Scene",{font = "D3 Digitalism_chr", size = 50,weight = 500,antialias = true,extended = true})
 	
-	surface_CreateFont( "PixelObj",{font = "Minecraftia", size = NewScreenScale( 35 ),weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelCutscene",{font = "Minecraftia", size = 60,weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelCutsceneScaled",{font = "Minecraftia", size = NewScreenScale( 60 ),weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelCutsceneBiggerScaled",{font = "Minecraftia", size = NewScreenScale( 80 ),weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelCutsceneScaledSmall",{font = "Minecraftia", size = NewScreenScale( 40 ),weight = 1000,antialias = true,extended = true})
-	surface_CreateFont( "PixelSmall",{font = "Minecraftia", size = 35,weight = 500,antialias = false,extended = true})
-	surface_CreateFont( "PixelSmaller",{font = "Minecraftia", size = 25,weight = 500,antialias = false,extended = true})
+	surface_CreateFont( "PixelObj",{font = "Minecraftia_fix", size = NewScreenScale( 35 ),weight = 1000,antialias = true,extended = true})
+	surface_CreateFont( "PixelCutscene",{font = "Minecraftia_fix", size = 60,weight = 1000,antialias = true,extended = true})
+	surface_CreateFont( "PixelCutsceneScaled",{font = "Minecraftia_fix", size = NewScreenScale( 60 ),weight = 1000,antialias = true,extended = true})
+	surface_CreateFont( "PixelCutsceneBiggerScaled",{font = "Minecraftia_fix", size = NewScreenScale( 80 ),weight = 1000,antialias = true,extended = true})
+	surface_CreateFont( "PixelCutsceneScaledSmall",{font = "Minecraftia_fix", size = NewScreenScale( 40 ),weight = 1000,antialias = true,extended = true})
+	surface_CreateFont( "PixelSmall",{font = "Minecraftia_fix", size = 35,weight = 500,antialias = false,extended = true})
+	surface_CreateFont( "PixelSmaller",{font = "Minecraftia_fix", size = 25,weight = 500,antialias = false,extended = true})
 
 	GAMEMODE.ShowScoreboard = false
 	
@@ -1644,7 +1644,7 @@ function GM:CheckThunder()
 		if self:GetFirstPerson() then
 			util.ScreenShake( LocalPlayer():GetPos(), math.random( 6, 9 ), 0.5, SoundDuration( t )/math_Rand(3,4), 1000 )
 			 
-			if SCENE and SCENE.Name == "return end" then
+			if SCENE and SCENE.Name == "scene_name_return_end" then
 				local e = EffectData()
 					e:SetOrigin( Vector( -911.946350, -57.817841, -7068.935059 ) )
 				util.Effect( "dev_lightning", e )
@@ -1852,7 +1852,7 @@ function GM:PreDrawTranslucentRenderables( depth, skybox )
 	
 	if MUSIC_SYNC then
 	
-		if game.GetMap() == "sog_horsebang" and SCENE and SCENE.Name == "this is fine" and self.MusicStarted then
+		if game.GetMap() == "sog_horsebang" and SCENE and SCENE.Name == "scene_name_this_is_fine" and self.MusicStarted then
 			
 			local glob_sin = math_sin( RealTime() * 0.7 )
 			local radius = 250 + glob_sin * 50
@@ -2283,7 +2283,7 @@ function GM:RenderScreenspaceEffects()
 		DrawBloom( 0.94, 2.85, 9.49, 12.73, 5, 1.7, 0.3, 0.1, 0 ) 
 	end
 	
-	if render.SupportsPixelShaders_2_0() and game.GetMap() == "sog_horsebang" and SCENE and SCENE.Name == "this is fine" and self.MusicStarted then
+	if render.SupportsPixelShaders_2_0() and game.GetMap() == "sog_horsebang" and SCENE and SCENE.Name == "scene_name_this_is_fine" and self.MusicStarted then
 		local vec = Vector( -1019, -2434, 64 )
 		//local power = math_Clamp( 1 - math_Clamp( vec:Distance( LocalPlayer():GetPos() ), 0, 300 ) / 300, 0, 1 ) * 0.2
 		local power = math_Clamp( 1 - math_Clamp( vec:DistToSqr( LocalPlayer():GetPos() ), 0, 90000 ) / 90000, 0, 1 ) * 0.2
@@ -3353,7 +3353,7 @@ function GM:AddScoreMessage( text, pos, decay )
 	
 	local msg = {}
 	
-	msg.text = text or ""
+	msg.text = translate.Format(text) or ""
 	msg.pos = pos or vector_origin
 	msg.decay = decay or 1
 	msg.time = CurTime()
@@ -3554,7 +3554,7 @@ function GM:DrawGoal()
 	surface_SetDrawColor( Color(10,10,10,175) )
 	surface_DrawRect( tx-(tw+border)/2, ty-border/2, tw+border, th+border )
 	
-	draw.DrawText( cur_goal, "PixelObj", tx, ty, Color(210, 210, 210, 205 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+	draw.DrawText( translate.Get(cur_goal), "PixelObj", tx, ty, Color(210, 210, 210, 205 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	
 	
 end
@@ -4107,7 +4107,7 @@ net.Receive("LevelClear", function(len)
 	
 	GAMEMODE:PauseMusic()
 	GAMEMODE:PlayAmbient()
-	GAMEMODE:AddHugeMessage( t == TEAM_MOB and translate.Get("sog_hud_you_lost") or t == TEAM_STUPID and translate.Get("sog_hud_you_lost") or translate.Get("sog_hud_level_clear") )
+	GAMEMODE:AddHugeMessage( t == TEAM_MOB and "You lost" or t == TEAM_STUPID and "You lost" or "Level Clear" )
 	
 	surface.PlaySound( "music/stingers/hl1_stinger_song28.mp3" )
 	
@@ -4228,6 +4228,6 @@ local function AddFog()
 	return true
 
 end
-if SCENE and SCENE.Name == "flashbacks" then
+if SCENE and SCENE.Name == "scene_name_flashbacks" then
 	hook.Add( "SetupWorldFog","AddFog", AddFog )
 end

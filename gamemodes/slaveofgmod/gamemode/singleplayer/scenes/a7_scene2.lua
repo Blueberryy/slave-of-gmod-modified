@@ -81,79 +81,79 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Well well well. . .", "Is that the best you've got?", "All you, big server men, can do is to\\ntalk about how cool you are!" 
+	 "sog_dialogue_overdrive_2016_17_npc", "sog_dialogue_overdrive_2016_18_npc", "sog_dialogue_overdrive_2016_19_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "What the hell, you are still here?!", "Security!" 
+	 "sog_dialogue_overdrive_2016_20_npc", "sog_dialogue_overdrive_2016_21_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "How about you get down from there, boy?", "Before I have to do it the hard way." 
+	 "sog_dialogue_overdrive_2016_22_npc", "sog_dialogue_overdrive_2016_23_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . .", "That's it!", "Keep the camera on!", "I'm gonna make you burn hard, you stupid mingebag!" 
+	 "sog_dialogue_overdrive_2016_24_npc", "sog_dialogue_overdrive_2016_25_npc", "sog_dialogue_overdrive_2016_26_npc", "sog_dialogue_overdrive_2016_27_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "A what?!" 
+	 "sog_dialogue_overdrive_2016_28_npc", "sog_dialogue_overdrive_2016_29_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Alright, good work guys!", "Only one scene left and this sequel will be perfect!", "Now let's. . ." 
+	 "sog_dialogue_overdrive_2016_1_npc", "sog_dialogue_overdrive_2016_2_npc", "sog_dialogue_overdrive_2016_3_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Nice cars you've got there!", "I bet they are very expensive. . .", ". . .for a normal player." 
+	 "sog_dialogue_overdrive_2016_4_npc", "sog_dialogue_overdrive_2016_5_npc", "sog_dialogue_overdrive_2016_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "What the. . ." 
+	 "sog_dialogue_overdrive_2016_7_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Detective Watch here!", "You are all under arrest!" 
+	 "sog_dialogue_overdrive_2016_8_npc", "sog_dialogue_overdrive_2016_9_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Dude, what the hell you think you're doing?" 
+	 "sog_dialogue_overdrive_2016_10_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Oh, I know what I am doing. . .", ". . .mister big server men!" 
+	 "sog_dialogue_overdrive_2016_11_npc", "sog_dialogue_overdrive_2016_12_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "What?", "Guys, get this music and camera on!", "We won't let this idiot ruin our video!" 
+	 "sog_dialogue_overdrive_2016_13_npc", "sog_dialogue_overdrive_2016_14_npc", "sog_dialogue_overdrive_2016_15_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Watch me. . ." 
+	 "sog_dialogue_overdrive_2016_16_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Yep. . .", "Doesn't looks like these were big server men after all.", "Damn it!", "I know you are you out there somewhere,\\nbig server men!", "And I will find you!" 
+	 "sog_dialogue_overdrive_2016_30_npc", "sog_dialogue_overdrive_2016_31_npc", "sog_dialogue_overdrive_2016_32_npc", "sog_dialogue_overdrive_2016_33_npc", "sog_dialogue_overdrive_2016_34_npc" 
 	} 
 }, {
  ["person"] = "e16", ["text"] = {
-	 "No, you won't!" 
+	 "sog_dialogue_overdrive_2016_35_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Yes, I will!" 
+	 "sog_dialogue_overdrive_2016_36_npc", "sog_dialogue_overdrive_2016_37_npc" 
 	} 
 }, {
  ["person"] = "e16", ["text"] = {
-	 "Won't!" 
+	 "sog_dialogue_overdrive_2016_38_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_overdrive_2016_39_npc" 
 	} 
 } 
 	} 
@@ -164,7 +164,7 @@ SCENE.Vehicle = {
 SCENE.Characters = {
  "watch" 
 }
-SCENE.Name = "overdrive"
+SCENE.Name = "scene_name_overdrive"
 SCENE.Triggers = {
  ["t18"] = {
 	 ["pos"] = Vector( 771, 43, 17 ), ["size"] = 10, ["trigger_once"] = true, ["action"] = "arrow", ["CheckTriggers"] = {
@@ -207,7 +207,7 @@ SCENE.Triggers = {
 	}, ["t28"] = {
 	 ["pos"] = Vector( 8, -346, 1 ), ["CheckTriggers"] = {
 		 "t29" 
-		}, ["data"] = translate.Get("sog_hud_obj_leave_area"), ["stages"] = {
+		}, ["data"] = "sog_hud_obj_leave_area", ["stages"] = {
 		 3 
 		}, ["action"] = "hudmessage", ["size"] = 10, ["trigger_once"] = true 
 	}, ["t20"] = {

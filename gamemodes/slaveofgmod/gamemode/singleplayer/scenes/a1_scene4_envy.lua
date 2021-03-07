@@ -26,29 +26,29 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "\". . .\"Happy Torturer\" candy factory. . .\"", ". . .", "\". . .best sweets for your little players. . .\"", "hm. . ." 
+	 "sog_dialogue_underscore_2013_6_npc", "sog_dialogue_underscore_2013_7_npc", "sog_dialogue_underscore_2013_8_npc", "sog_dialogue_underscore_2013_9_npc", "sog_dialogue_underscore_2013_10_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Who the hell are you?!" 
+	 "sog_dialogue_underscore_2013_1_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "I told you to get lost." 
+	 "sog_dialogue_underscore_2013_2_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "You don't fuck with a DMCA takedown, boy." 
+	 "sog_dialogue_underscore_2013_3_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Takedown fucks you!" 
+	 "sog_dialogue_underscore_2013_4_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_underscore_2013_5_npc" 
 	} 
 } 
 	} 
@@ -56,7 +56,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "protagonist" 
 }
-SCENE.Name = "underscore"
+SCENE.Name = "scene_name_underscore"
 SCENE.Triggers = {
  ["t9"] = {
 	 ["pos"] = Vector( -1120, -2, 73 ), ["size"] = 118, ["action"] = "nextlevel" 
@@ -79,7 +79,7 @@ SCENE.Triggers = {
 	}, ["t13"] = {
 	 ["pos"] = Vector( 421, -209, 1 ), ["CheckTriggers"] = {
 		 "t14" 
-		}, ["action"] = "hudmessage", ["size"] = 55, ["data"] = translate.Get("sog_hud_obj_leave_area") 
+		}, ["action"] = "hudmessage", ["size"] = 55, ["data"] = "sog_hud_obj_leave_area" 
 	}, ["t7"] = {
 	 ["pos"] = Vector( 124, -235, 1 ), ["CheckTriggers"] = {
 		 "t8" 

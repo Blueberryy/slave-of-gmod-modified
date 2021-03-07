@@ -44,8 +44,8 @@ if BADASS_MODE then
 else
 CHARACTER.Styles = {
 	{ 	
-		Name = "Classic", 
-		Description = "",//Spawn with Uzi's. 
+		Name = "sog_character_classic", 
+		Description = "sog_character_classic_desc",//Spawn with Uzi's. 
 		Icon = Material( "sog/style_uzi.png", "smooth" ),
 		func = function( pl ) 
 			pl:Give("sogm_uzi") 
@@ -53,8 +53,8 @@ CHARACTER.Styles = {
 			pl.BodyguardWeapon = "sogm_uzi" 
 		end },
 	{ 
-		Name = "No Russian", 
-		Description = "", //Spawn with AK-47's.
+		Name = "sog_character_no_russian", 
+		Description = "sog_character_no_russian_desc", //Spawn with AK-47's.
 		Icon = Material( "sog/style_ak.png", "smooth" ),
 		func = function( pl ) 
 			pl:Give("sogm_ak47") 
@@ -62,8 +62,8 @@ CHARACTER.Styles = {
 			pl.BodyguardWeapon = "sogm_ak47" 
 		end },
 	{ 
-		Name = "Raw Power", 
-		Description = "",//Spawn with shotguns.
+		Name = "sog_character_raw_power", 
+		Description = "sog_character_raw_power_desc",//Spawn with shotguns.
 		Icon = Material( "sog/style_shotgun.png", "smooth" ),		
 		func = function( pl ) 
 			pl:Give("sogm_shotgun") 

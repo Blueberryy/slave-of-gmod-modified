@@ -27,7 +27,7 @@ CHARACTER.RemoveDefaultFists = true
 
 function CHARACTER:OnSpawn( pl )
 	
-	pl:SetGoal( "Hold [RMB] to charge at foes. You take reduced bullet damage when charging.", 25 )
+	pl:SetGoal( translate.Get("sog_play_tip_protagonist4"), 25 )
 	//local armor = pl:SpawnBodywear( "models/player/group03m/male_08.mdl" )
 	//pl:SetModelScale( 1.2, 0 )
 end

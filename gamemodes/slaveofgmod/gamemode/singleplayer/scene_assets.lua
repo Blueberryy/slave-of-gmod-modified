@@ -3,7 +3,7 @@ if CLIENT then return end
 
 GM.SceneAssets = {}
 
-GM.SceneAssets["legacy"] = function()
+GM.SceneAssets["scene_name_legacy"] = function()
 	
 	//pole
 	local p = ents.Create( "prop_dynamic" )
@@ -52,7 +52,7 @@ GM.SceneAssets["legacy"] = function()
 	
 end
 
-GM.SceneAssets["big server men"] = function()
+GM.SceneAssets["scene_name_big_server_men"] = function()
 	
 	local p = ents.Create( "prop_dynamic_override" )
 	p:SetModel( "models/props_junk/TrashDumpster01a.mdl" )
@@ -102,7 +102,7 @@ GM.SceneAssets["big server men"] = function()
 	
 end
 
-GM.SceneAssets["served cold"] = function()
+GM.SceneAssets["scene_name_served_cold"] = function()
 	
 	GAMEMODE.MapProps = {} //small hack to let use fire lasers through these props
 	
@@ -240,7 +240,7 @@ GM.SceneAssets["served cold"] = function()
 
 end
 
-GM.SceneAssets["this is fine"] = function()
+GM.SceneAssets["scene_name_this_is_fine"] = function()
 	
 	/*local ent = ents.Create("env_projectedtexture")
 	if ent:IsValid() then
@@ -258,7 +258,7 @@ GM.SceneAssets["this is fine"] = function()
 	
 end
 
-GM.SceneAssets["wild ride"] = function()
+GM.SceneAssets["scene_name_wild_ride"] = function()
 	
 	local ent = ents.Create("ent_menacingheli")
 	if ent:IsValid() then
@@ -278,7 +278,7 @@ GM.SceneAssets["wild ride"] = function()
 
 end
 
-GM.SceneAssets["white kingdom"] = function()
+GM.SceneAssets["scene_name_white_kingdom"] = function()
 	
 	GAMEMODE.MapProps = {}
 	
@@ -387,7 +387,7 @@ GM.SceneAssets["white kingdom"] = function()
 		
 end
 
-GM.SceneAssets["flashbacks"] = function()
+GM.SceneAssets["scene_name_flashbacks"] = function()
 	
 	local p = ents.Create( "ent_destruct_coffin" )
 	//p:SetModel( "models/props_c17/gravestone_coffinpiece002a.mdl" )

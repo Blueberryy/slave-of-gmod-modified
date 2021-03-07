@@ -85,39 +85,39 @@ SCENE.Dialogues = {
  ["d1"] = {
 	 {
  ["person"] = "e2", ["text"] = {
-	 "Who the fuck are you?!" 
+	 "sog_dialogue_sponsors_2013_1_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Relax, son.", ". . .", "We are your so-called sponsors, remember?" 
+	 "sog_dialogue_sponsors_2013_2_npc", "sog_dialogue_sponsors_2013_3_npc", "sog_dialogue_sponsors_2013_4_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "You were supposed to help me 2 months ago!", "Two. Months. Ago." 
+	 "sog_dialogue_sponsors_2013_5_npc", "sog_dialogue_sponsors_2013_6_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Better late than never." 
+	 "sog_dialogue_sponsors_2013_7_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "And besides that,\\nyou killed almost the entire server." 
+	 "sog_dialogue_sponsors_2013_8_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "It's just a small misunderstanding. . .", "I'm sure you will get over this.", ". . .", "Because we are here to help you, after all.", "Don't you agree?" 
+	 "sog_dialogue_sponsors_2013_9_npc", "sog_dialogue_sponsors_2013_10_npc", "sog_dialogue_sponsors_2013_11_npc", "sog_dialogue_sponsors_2013_12_npc", "sog_dialogue_sponsors_2013_13_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "I doubt there is something you can offer me now." 
+	 "sog_dialogue_sponsors_2013_14_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Have you heard of that place,\\nwhere CoderFired dumps the toxic waste?", ". . .", "That stuff is pure poison.", "You drop one of these onto a server. . .", "*poof*", "The server is gone." 
+	 "sog_dialogue_sponsors_2013_15_npc", "sog_dialogue_sponsors_2013_16_npc", "sog_dialogue_sponsors_2013_17_npc", "sog_dialogue_sponsors_2013_18_npc", "sog_dialogue_sponsors_2013_19_npc", "sog_dialogue_sponsors_2013_20_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 ". . .", "Go on. . ." 
+	 "sog_dialogue_sponsors_2013_21_npc", "sog_dialogue_sponsors_2013_22_npc" 
 	} 
 } 
 	} 
@@ -125,7 +125,7 @@ SCENE.Dialogues = {
 SCENE.Vehicle = {
  ["pos"] = Vector( -1288, -1388, -335 ), ["mdl"] = "models/props/de_train/utility_truck.mdl", ["type"] = 6, ["glass_mdl"] = "models/props/de_train/utility_truck_windows.mdl", ["ang"] = Angle( 0, -273, 0 ) 
 }
-SCENE.Name = "sponsors"
+SCENE.Name = "scene_name_sponsors"
 SCENE.Triggers = {
  ["t5"] = {
 	 ["pos"] = Vector( 1688, 558, -159 ), ["size"] = 60, ["event"] = "OnDialogueFinished", ["action"] = "event", ["data"] = {
@@ -164,7 +164,7 @@ SCENE.Triggers = {
 		 "d1" 
 		} 
 	}, ["t4"] = {
-	 ["action"] = "hudmessage", ["pos"] = Vector( 1468, 611, -159 ), ["size"] = 160, ["data"] = "Talk to server owner" 
+	 ["action"] = "hudmessage", ["pos"] = Vector( 1468, 611, -159 ), ["size"] = 160, ["data"] = "sog_hud_obj_talk_to_server_owner" 
 	}, ["t3"] = {
 	 ["action"] = "pauseenemies", ["pos"] = Vector( 1271, 533, -159 ), ["size"] = 60, ["data"] = "true" 
 	} 

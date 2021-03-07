@@ -73,41 +73,41 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "So beautiful. . .", ". . ." 
+	 "sog_dialogue_competition_2013_4_npc", "sog_dialogue_competition_2013_5_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hey, you!" 
+	 "sog_dialogue_competition_2013_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Whaaa. . .", "Who are you?!" 
+	 "sog_dialogue_competition_2013_7_npc", "sog_dialogue_competition_2013_8_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Where the fuck is your owner?" 
+	 "sog_dialogue_competition_2013_9_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "I. . .", "I don't know." 
+	 "sog_dialogue_competition_2013_10_npc", "sog_dialogue_competition_2013_11_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Whatever. . .", "Tell your shitty boss, that this is my server now.", "And if he won't accept it. . .", "We will DDoS the shit out of this place." 
+	 "sog_dialogue_competition_2013_12_npc", "sog_dialogue_competition_2013_13_npc", "sog_dialogue_competition_2013_14_npc", "sog_dialogue_competition_2013_15_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "B-b-but. . ." 
+	 "sog_dialogue_competition_2013_16_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Now shut the fuck up." 
+	 "sog_dialogue_competition_2013_17_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "What a fucking shithole.", ". . .", "No wonder, why they always get more players." 
+	 "sog_dialogue_competition_2013_1_npc", "sog_dialogue_competition_2013_2_npc", "sog_dialogue_competition_2013_3_npc" 
 	} 
 } 
 	} 
@@ -115,7 +115,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "server owner" 
 }
-SCENE.Name = "competition"
+SCENE.Name = "scene_name_competition"
 SCENE.Triggers = {
  ["t5"] = {
 	 ["action"] = "pauseenemies", ["pos"] = Vector( 325, -64, 1 ), ["size"] = 63, ["data"] = "true" 
@@ -126,7 +126,7 @@ SCENE.Triggers = {
 		 "t9", "t8", "t7" 
 		} 
 	}, ["t9"] = {
-	 ["pos"] = Vector( 432, -190, 1 ), ["data"] = translate.Get("sog_hud_obj_leave_area"), ["action"] = "hudmessage", ["CheckTriggers"] = {
+	 ["pos"] = Vector( 432, -190, 1 ), ["data"] = "sog_hud_obj_leave_area", ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t10" 
 		}, ["size"] = 29 
 	}, ["t1"] = {
@@ -150,7 +150,7 @@ SCENE.Triggers = {
 	}, ["t4"] = {
 	 ["action"] = "pauseenemies", ["pos"] = Vector( 68, -63, 1 ), ["size"] = 63, ["data"] = "true" 
 	}, ["t3"] = {
-	 ["action"] = "hudmessage", ["pos"] = Vector( 281, -259, 1 ), ["size"] = 126, ["data"] = "Interrogate" 
+	 ["action"] = "hudmessage", ["pos"] = Vector( 281, -259, 1 ), ["size"] = 126, ["data"] = "sog_hud_obj_interrogate" 
 	} 
 }
 SCENE.EndAt = 577000

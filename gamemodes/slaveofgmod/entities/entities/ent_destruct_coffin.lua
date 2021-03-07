@@ -159,7 +159,7 @@ function ENT:OnTakeDamage( dmginfo )
 					owner.SpecialAttack = nil
 					self:SetFinishLevel( true )
 					
-					Entity(1):PopHUDMessage( "Finish the job" )
+					Entity(1):PopHUDMessage( "sog_hud_finish_the_job" )
 					
 					local bone = self:GetBossRagdoll():LookupBone("ValveBiped.Bip01_Head1")
 					if bone then
@@ -353,9 +353,9 @@ function ENT:Draw()
 	
 		if self.LastHitNumber ~= self:GetHitNumber() then
 			self:AddFakeError()
-			print( "[ERROR] "..tostring(self)..": unexpected attacker "..tostring( Entity( 1 ) ).." near '<eof>'" )
+			print( translate.ClientFormat(self, "sog_error_message_console", tostring(self), tostring( Entity( 1 ) ) ))
 			if self:GetHitNumber() > 6 then
-				print( "Can't find Entity 'trigger_nextlevel', falling back to main menu" )
+				print( translate.ClientGet(self, "sog_error_message2_console"))
 			end
 			self.LastHitNumber = self:GetHitNumber()
 		end
@@ -593,7 +593,7 @@ local matAlert = Material( "icon16/error.png" )
 local FakeErrors = {}
 
 function ENT:AddFakeError()
-	local text = "Someone is creating script errors"
+	local text = "sog_error_message_someone_creating_errors"
 
 	local error = {
 		first	= SysTime(),
@@ -601,7 +601,7 @@ function ENT:AddFakeError()
 		times	= 1,
 		title	= addontitle,
 		x		= 32,
-		text	= text
+		text	= translate.Get(text)
 	}
 
 	FakeErrors[ 0 ] = error

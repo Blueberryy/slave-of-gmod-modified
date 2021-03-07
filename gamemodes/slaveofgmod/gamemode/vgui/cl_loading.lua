@@ -618,36 +618,36 @@ function CreateLoadingScreen( name, number, duration, fade, func )
 	local w,h = ScrW(), ScrH()
 	local MySelf = LocalPlayer()
 	
-	local text = name or translate.Get("sog_scene_loading_name_untitled")
+	local text = name or translate.ClientGet(self, "sog_scene_loading_name_untitled")
 	
-	local desc = translate.Format("sog_scene_loading_x_th", number)
+	local desc = translate.ClientFormat(self, "sog_scene_loading_x_th", number)
 	
-	if number == -1 then desc = translate.Get("sog_scene_loading_bonus") end
-	if number == 0 then desc = translate.Get("sog_scene_loading_new") end
-	if number == 1 then desc = translate.Get("sog_scene_loading_first") end
-	if number == 2 then desc = translate.Get("sog_scene_loading_second") end
-	if number == 3 then desc = translate.Get("sog_scene_loading_third") end
-	if number == 4 then desc = translate.Get("sog_scene_loading_fourth") end
-	if number == 5 then desc = translate.Get("sog_scene_loading_fifth") end
-	if number == 6 then desc = translate.Get("sog_scene_loading_sixth") end
-	if number == 7 then desc = translate.Get("sog_scene_loading_seventh") end
-	if number == 8 then desc = translate.Get("sog_scene_loading_eighth") end
+	if number == -1 then desc = "sog_scene_loading_bonus" end
+	if number == 0 then desc = "sog_scene_loading_new" end
+	if number == 1 then desc = "sog_scene_loading_first" end
+	if number == 2 then desc = "sog_scene_loading_second" end
+	if number == 3 then desc = "sog_scene_loading_third" end
+	if number == 4 then desc = "sog_scene_loading_fourth" end
+	if number == 5 then desc = "sog_scene_loading_fifth" end
+	if number == 6 then desc = "sog_scene_loading_sixth" end
+	if number == 7 then desc = "sog_scene_loading_seventh" end
+	if number == 8 then desc = "sog_scene_loading_eighth" end
 	
 	if number > 20 then
 		local last = tostring( number )
 		if string.EndsWith( last, "2" ) then
-			desc = translate.Format("sog_scene_loading_second_x", number)
+			desc = translate.ClientFormat(self, "sog_scene_loading_second_x", number)
 		end
 		if string.EndsWith( last, "3" ) then
-			desc = translate.Format("sog_scene_loading_third_x", number)
+			desc = translate.ClientFormat(self, "sog_scene_loading_third_x", number)
 		end
 	end
 	
 	if SCENE and SCENE.Final then
-		desc = translate.Get("sog_scene_loading_final")
+		desc = translate.ClientGet(self, "sog_scene_loading_final")
 	end
 	
-	desc = translate.Format("sog_scene_loading_scene_x", desc)
+	desc = translate.ClientFormat(self, "sog_scene_loading_scene_x", translate.ClientFormat(self, desc))
 	desc = string.upper(desc)
 	
 	if dead then desc = "" end
@@ -879,9 +879,9 @@ function CreateLoadingScreen( name, number, duration, fade, func )
 			end
 			
 			if i == 0 or i == am then
-				draw.TextRotated( text, sw/2, sh/2+add, Color(r,g,b,250), "HugeMessage",textspin(1,5,0.9*i/am) + 0.1 * add, scale + 0.01*i, 1 )
+				draw.TextRotated( translate.Format(text), sw/2, sh/2+add, Color(r,g,b,250), "HugeMessage",textspin(1,5,0.9*i/am) + 0.1 * add, scale + 0.01*i, 1 )
 			else
-				draw.TextRotated( text, sw/2, sh/2+add, Color(r,g,b,250), "HugeMessage",textspin(1,5,0.9*i/am) + 0.1 * add, scale + 0.01*i, false )
+				draw.TextRotated( translate.Format(text), sw/2, sh/2+add, Color(r,g,b,250), "HugeMessage",textspin(1,5,0.9*i/am) + 0.1 * add, scale + 0.01*i, false )
 			end
 
 			

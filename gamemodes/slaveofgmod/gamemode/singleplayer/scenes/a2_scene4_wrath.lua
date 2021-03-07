@@ -38,75 +38,75 @@ SCENE.Dialogues = {
  ["d6"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "The hell is this place?", ". . .", "All these hubs. . .", "It's like someone is using them to DDOS servers." 
+	 "sog_dialogue_devnull_2013_13_npc", "sog_dialogue_devnull_2013_14_npc", "sog_dialogue_devnull_2013_15_npc", "sog_dialogue_devnull_2013_16_npc" 
 	} 
 }, {
  ["person"] = "e5", ["text"] = {
-	 "Heeee iiissss heeeereeeee. . ." 
+	 "sog_dialogue_devnull_2013_17_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Where?" 
+	 "sog_dialogue_devnull_2013_18_npc", "sog_dialogue_devnull_2013_19_npc" 
 	} 
 }, {
  ["person"] = "e6", ["text"] = {
-	 "Behind you, asshole!" 
+	 "sog_dialogue_devnull_2013_20_npc" 
 	} 
 } 
 	}, ["d5"] = {
 	 {
  ["person"] = "e4", ["text"] = {
-	 "Or perhaps I should send your organs in a box. . .", "That abomination from 'ShitGamers' loves\\nhis players freshhh. . ." 
+	 "sog_dialogue_devnull_2013_10_npc", "sog_dialogue_devnull_2013_11_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_devnull_2013_12_npc" 
 	} 
 } 
 	}, ["d7"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Ugh. . .", "Looks like an order.", ". . .", "\". . .requesting 3 meat packages. . .\"", "\". . .for the needs of 'ShitGamers' community. . .\"", "\". . .also need a bunch of DMCA sheets. . .\"", "\". . .with the \"Property of Ase \"Master\" Lick\" on it. . .\"", "\". . expect these 2 idiots within few days.\\n- 'Master', the head owner of 'ShitGamers'\"", "hm. . ." 
+	 "sog_dialogue_devnull_2013_21_npc", "sog_dialogue_devnull_2013_22_npc", "sog_dialogue_devnull_2013_23_npc", "sog_dialogue_devnull_2013_24_npc", "sog_dialogue_devnull_2013_25_npc", "sog_dialogue_devnull_2013_26_npc", "sog_dialogue_devnull_2013_27_npc", "sog_dialogue_devnull_2013_28_npc", "sog_dialogue_devnull_2013_29_npc" 
 	} 
 } 
 	}, ["d2"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "You are not welcome. . ." 
+	 "sog_dialogue_devnull_2013_2_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Jesus christ!", "What happened to your face?" 
+	 "sog_dialogue_devnull_2013_3_npc", "sog_dialogue_devnull_2013_4_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "You'd better leave now. . ." 
+	 "sog_dialogue_devnull_2013_5_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Looks like this is the right place. . ." 
+	 "sog_dialogue_devnull_2013_1_npc" 
 	} 
 } 
 	}, ["d4"] = {
 	 {
  ["person"] = "e3", ["text"] = {
-	 "I am not going to warn you again. . ." 
+	 "sog_dialogue_devnull_2013_8_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What the hell is wrong with you all?" 
+	 "sog_dialogue_devnull_2013_9_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "e2", ["text"] = {
-	 "You don't know what you are walking into. . ." 
+	 "sog_dialogue_devnull_2013_6_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_devnull_2013_7_npc" 
 	} 
 } 
 	} 
@@ -114,7 +114,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "protagonist" 
 }
-SCENE.Name = "devnull"
+SCENE.Name = "scene_name_devnull"
 SCENE.Triggers = {
  ["t1"] = {
 	 ["pos"] = Vector( 2495, 334, 1 ), ["size"] = 13, ["action"] = "dialogue", ["CheckTriggers"] = {
@@ -135,7 +135,7 @@ SCENE.Triggers = {
 	}, ["t36"] = {
 	 ["pos"] = Vector( 2483, 170, 1 ), ["size"] = 149, ["action"] = "nextlevel" 
 	}, ["t5"] = {
-	 ["pos"] = Vector( 2259, -75, 1 ), ["data"] = "Pull back", ["action"] = "hudmessage", ["size"] = 34, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 2259, -75, 1 ), ["data"] = "sog_hud_obj_pull_back", ["action"] = "hudmessage", ["size"] = 34, ["CheckTriggers"] = {
 		 "t6" 
 		} 
 	}, ["t15"] = {
@@ -151,7 +151,7 @@ SCENE.Triggers = {
 	}, ["t37"] = {
 	 ["pos"] = Vector( 386, -1781, 1 ), ["size"] = 10, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t38" 
-		}, ["data"] = translate.Get("sog_hud_obj_leave_area") 
+		}, ["data"] = "sog_hud_obj_leave_area" 
 	}, ["t11"] = {
 	 ["pos"] = Vector( 1244, -843, 1 ), ["size"] = 34, ["event"] = "OnDialogueFinished", ["action"] = "event", ["data"] = {
 		 "d3" 
@@ -187,7 +187,7 @@ SCENE.Triggers = {
 	}, ["t12"] = {
 	 ["pos"] = Vector( 499, -1280, 1 ), ["size"] = 13, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t16" 
-		}, ["data"] = "I warned you. . ." 
+		}, ["data"] = "sog_hud_obj_i_warned_you" 
 	}, ["t31"] = {
 	 ["pos"] = Vector( -1510, -1634, 1 ), ["size"] = 60, ["event"] = "OnDialogueStarted", ["action"] = "event", ["data"] = {
 		 "d6" 
@@ -209,7 +209,7 @@ SCENE.Triggers = {
 	}, ["t20"] = {
 	 ["pos"] = Vector( -264, -1822, 1 ), ["size"] = 20, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t21" 
-		}, ["data"] = "none" 
+		}, ["data"] = "sog_hud_obj_none" 
 	}, ["t8"] = {
 	 ["pos"] = Vector( 1470, -708, 1 ), ["size"] = 34, ["action"] = "spawn", ["CheckTriggers"] = {
 		 "t9" 
@@ -275,7 +275,7 @@ SCENE.Triggers = {
 		 "d4" 
 		} 
 	}, ["t10"] = {
-	 ["pos"] = Vector( 1368, -738, 1 ), ["data"] = "go away", ["action"] = "hudmessage", ["size"] = 34, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 1368, -738, 1 ), ["data"] = "sog_hud_obj_go_away", ["action"] = "hudmessage", ["size"] = 34, ["CheckTriggers"] = {
 		 "t11" 
 		} 
 	}, ["t17"] = {

@@ -117,14 +117,14 @@ SCENE.Dialogues = {
  ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Well. . .", "It looks like our job is done here!", "Now grab anything that looks expensive and let's go!" 
+	 "sog_dialogue_hatred_2014_1_npc", "sog_dialogue_hatred_2014_2_npc", "sog_dialogue_hatred_2014_3_npc" 
 	} 
 } 
 	} 
 }
 SCENE.NoMapProps = true
 SCENE.DisableNextbotLights = false
-SCENE.Name = "hatred"
+SCENE.Name = "scene_name_hatred"
 SCENE.Volume = 35
 SCENE.Triggers = {
  ["t6"] = {
@@ -132,7 +132,7 @@ SCENE.Triggers = {
 		 "t5" 
 		} 
 	}, ["t5"] = {
-	 ["pos"] = Vector( 1527, 571, 1 ), ["data"] = translate.Get("sog_hud_obj_leave_area"), ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 1527, 571, 1 ), ["data"] = "sog_hud_obj_leave_area", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
 		 "t6" 
 		} 
 	}, ["t7"] = {

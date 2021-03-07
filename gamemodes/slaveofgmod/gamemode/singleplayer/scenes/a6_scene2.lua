@@ -66,69 +66,69 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Jesus. . .", "I need to get out of here.", "Wonder if their car is still around somewhere. . ." 
+	 "sog_dialogue_resort_2014_29_npc", "sog_dialogue_resort_2014_30_npc", "sog_dialogue_resort_2014_31_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "This place isn't as happy as thought. . .", "What the hell happened in here?", ". . ." 
+	 "sog_dialogue_resort_2014_1_npc", "sog_dialogue_resort_2014_2_npc", "sog_dialogue_resort_2014_3_npc", "sog_dialogue_resort_2014_4_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Hm. . .", "You must be the new guy, huh?", "What's your name?" 
+	 "sog_dialogue_resort_2014_5_npc", "sog_dialogue_resort_2014_6_npc", "sog_dialogue_resort_2014_7_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Steve. . ." 
+	 "sog_dialogue_resort_2014_8_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Nice!" 
+	 "sog_dialogue_resort_2014_9_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "What exactly are we doing in here?" 
+	 "sog_dialogue_resort_2014_10_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Observing the damage." 
+	 "sog_dialogue_resort_2014_11_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_resort_2014_12_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Let's just say. . .", "Someone, who made this game. . .", ". . .promised our boss a good amount of money. . .", ". . .to get rid of the content and community." 
+	 "sog_dialogue_resort_2014_13_npc", "sog_dialogue_resort_2014_14_npc", "sog_dialogue_resort_2014_15_npc", "sog_dialogue_resort_2014_16_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_resort_2014_17_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "'To tie up the loose ends'" 
+	 "sog_dialogue_resort_2014_18_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Oh no. . ." 
+	 "sog_dialogue_resort_2014_19_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "So as you can see. . .", "Boss has a specific taste, when it comes\\nto destroying stuff.", "But don't worry.", "He says that 'it will be all over soon'." 
+	 "sog_dialogue_resort_2014_20_npc", "sog_dialogue_resort_2014_21_npc", "sog_dialogue_resort_2014_22_npc", "sog_dialogue_resort_2014_23_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_resort_2014_24_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 ". . .the cough. . .", ". . .this can not be. . ." 
+	 "sog_dialogue_resort_2014_25_npc", "sog_dialogue_resort_2014_26_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Oh shit!", "That thing is still breathing, eh?" 
+	 "sog_dialogue_resort_2014_27_npc", "sog_dialogue_resort_2014_28_npc" 
 	} 
 } 
 	} 
@@ -138,11 +138,11 @@ SCENE.NoPickups = true
 SCENE.Characters = {
  "protagonist" 
 }
-SCENE.Name = "resort"
+SCENE.Name = "scene_name_resort"
 SCENE.EndAt = 283000
 SCENE.Triggers = {
  ["t7"] = {
-	 ["pos"] = Vector( 366, -677, 1 ), ["data"] = "Escape", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 366, -677, 1 ), ["data"] = "sog_hud_obj_escape", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
 		 "t8" 
 		} 
 	}, ["t6"] = {

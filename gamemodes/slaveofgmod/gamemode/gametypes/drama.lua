@@ -27,12 +27,12 @@ function GM:SDInitialize()
 	
 	OBJECTIVE_CLASS = "ent_server"
 	
-	team.SetUp(TEAM_EVIL, "DDOS-Gamers.tk", Color(205,16,16,255))//"Generic Community 1"
-	team.SetUp(TEAM_STUPID, "3-Year-Old-Gaming.mom", Color(180,180,180,255))//"Generic Community 2"
+	team.SetUp(TEAM_EVIL, translate.Get("sog_team_name_evil"), Color(205,16,16,255))//"Generic Community 1"
+	team.SetUp(TEAM_STUPID, translate.Get("sog_team_name_stupid"), Color(180,180,180,255))//"Generic Community 2"
 	
 	self.Goals = {}
-	self.Goals[TEAM_EVIL] = "Use the package [hold USE KEY] to overload the server"
-	self.Goals[TEAM_STUPID] = "Protect the server!"
+	self.Goals[TEAM_EVIL] = translate.Get("sog_drama_team_evil_tip")
+	self.Goals[TEAM_STUPID] = translate.Get("sog_drama_team_stupid_tip")
 	
 	function self:PlayerShouldTakeDamage(pl, attacker)
 		if attacker.Team then
@@ -530,9 +530,9 @@ function GM:SDInitialize()
 				
 			end
 			
-			pl:ChatPrint("Round "..CUR_ROUND.." out of "..DRAMA_ROUNDS)
+			pl:ChatPrint(translate.Format("sog_drama_round_x_out_of_x", CUR_ROUND, DRAMA_ROUNDS))
 			if self:ShouldSwitchTeams() then
-				pl:ChatPrint("Teams have been switched!")
+				pl:ChatPrint(translate.Get("sog_drama_teams_have_been_switched"))
 			end
 						
 		end
@@ -549,7 +549,7 @@ function GM:SDInitialize()
 			end
 			
 			if self.Goals[pl:Team()] then
-				pl:SetGoal( self.Goals[pl:Team()], 20 )
+				pl:SetGoal( translate.Get(self.Goals[pl:Team()]), 20 )
 			end
 			
 			for k, v in ipairs( SERVER_ENTITY ) do
@@ -579,8 +579,8 @@ function GM:SDInitialize()
 				//BALANCING_TEAMS = true
 				
 				for k,v in ipairs(player.GetAll()) do				
-					v:ChatPrint(team.GetName( pl:Team() ).." has no alive players!")
-					v:ChatPrint("Starting a new round in 5 seconds...")
+					v:ChatPrint(translate.Format("sog_drama_team_x_has_no_alive_players", translate.Get(team.GetName( pl:Team() ))))
+					v:ChatPrint(translate.Get("sog_drama_starting_a_new_round_in_few_seconds"))
 				end
 				
 				self:RestartRoundIn( 5 )
@@ -617,7 +617,7 @@ function GM:SDInitialize()
 					team.AddScore( winner, 1 )
 					
 					for k,v in ipairs(player.GetAll()) do
-						v:ChatPrint(team.GetName(pl:Team()).." was slain!")
+						v:ChatPrint(translate.Format("sog_drama_x_was_slain", translate.Get(team.GetName(pl:Team()))))
 					end
 
 				end
@@ -640,7 +640,7 @@ function GM:SDInitialize()
 				self:SetRoundState( ROUNDSTATE_RESTARTING )
 				
 				for k,v in ipairs(player.GetAll()) do
-					v:ChatPrint("Starting new round in 5 seconds...")
+					v:ChatPrint(translate.Get("sog_drama_starting_a_new_round_in_few_seconds"))
 				end
 				self:RestartRoundIn( 5 )
 								
@@ -798,5 +798,5 @@ function GM:SDInitialize()
 	
 end
 
-GM:AddAvalaibleGametype( "drama", translate.Get("sog_gametype_name_serious_drama_pvp") )
+GM:AddAvalaibleGametype( "drama", "sog_gametype_name_serious_drama_pvp" )
 GM.Gametypes["drama"] = GM.SDInitialize

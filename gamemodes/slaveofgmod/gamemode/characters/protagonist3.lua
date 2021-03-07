@@ -46,9 +46,9 @@ function CHARACTER:OnSpawn( pl )
 	
 	b:Give( "sogm_shotgun", true )
 	
-	pl:SetGoal( "Press [LMB] to swing axe. [RMB] to shoot. Chris picks up guns when out of ammo.", 25 )
+	pl:SetGoal( translate.Get("sog_play_tip_protagonist3"), 25 )
 	
-	//pl:SetGoal( "Press [LMB] to shoot. [RMB] to swing axe.", 15 )//  Walk over the guns when out of ammo.
+	//pl:SetGoal( translate.Get("sog_play_tip2_protagonist3"), 15 )//  Walk over the guns when out of ammo.
 
 end
 

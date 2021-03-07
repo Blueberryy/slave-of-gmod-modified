@@ -1,7 +1,7 @@
 SCENE.Order = 11
 SCENE.Act = 3
 SCENE.Map = "sog_oxy_v1"
-SCENE.Name = "whistleblower"
+SCENE.Name = "scene_name_whistleblower"
 SCENE.ShowLastEnemies = true
 SCENE.Pickups = {
  //["w1"] = {
@@ -62,7 +62,7 @@ SCENE.Triggers = {
 	}, ["t1"] = {
 	 ["pos"] = Vector( -631, 2248, 1 ), ["data"] = "true", ["action"] = "pauseenemies", ["size"] = 60, ["trigger_once"] = true 
 	}, ["t9"] = {
-	 ["pos"] = Vector( 307, -207, 1 ), ["data"] = "Interrogate", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 307, -207, 1 ), ["data"] = "sog_hud_obj_interrogate", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
 		 "t10" 
 		} 
 	}, ["t10"] = {
@@ -109,41 +109,41 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Nooo. . .", "Don't kill me!" 
+	 "sog_dialogue_whisteblower_2013_5_npc", "sog_dialogue_whisteblower_2013_6_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Why shouldn't I?", "You, little shits, are all the same to me." 
+	 "sog_dialogue_whisteblower_2013_7_npc", "sog_dialogue_whisteblower_2013_8_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Noooo. . .", "I just wanted to check out LetsTortureGMod's show!", "And then these guys appeared out of nowhere!", "And started threating me if I won't buy their stuff!" 
+	 "sog_dialogue_whisteblower_2013_9_npc", "sog_dialogue_whisteblower_2013_10_npc", "sog_dialogue_whisteblower_2013_11_npc", "sog_dialogue_whisteblower_2013_12_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Well, I don't care what they. . .", "Wait a fucking second. . .", "A show, you say?" 
+	 "sog_dialogue_whisteblower_2013_13_npc", "sog_dialogue_whisteblower_2013_14_npc", "sog_dialogue_whisteblower_2013_15_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "LetsTortureGMod is supposed to name the winners\\nof his contest. . .", "Where you were supposed to record\\nsomething fun and send it to him. . ." 
+	 "sog_dialogue_whisteblower_2013_16_npc", "sog_dialogue_whisteblower_2013_17_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Where it will be?!", "The show or whatever the fuck he calls it. . ." 
+	 "sog_dialogue_whisteblower_2013_18_npc", "sog_dialogue_whisteblower_2013_19_npc", "sog_dialogue_whisteblower_2013_20_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Somewhere near \"Stay Rusty\" bar.", "Look, I just wanted to get some. . ." 
+	 "sog_dialogue_whisteblower_2013_21_npc", "sog_dialogue_whisteblower_2013_22_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "\"Stay Rusty\" bar. . .", ". . .this is your lucky day." 
+	 "sog_dialogue_whisteblower_2013_23_npc", "sog_dialogue_whisteblower_2013_24_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "This is starting to piss me off. . .", "CoderFired. . .", "Fucking great.", "As if there were not enough assholes already." 
+	 "sog_dialogue_whisteblower_2013_1_npc", "sog_dialogue_whisteblower_2013_2_npc", "sog_dialogue_whisteblower_2013_3_npc", "sog_dialogue_whisteblower_2013_4_npc" 
 	} 
 } 
 	} 

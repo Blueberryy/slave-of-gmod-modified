@@ -25,85 +25,85 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_return_end_41_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "You still do not realise how pointless it is.", "All what you are doing." 
+	 "sog_dialogue_return_end_42_npc", "sog_dialogue_return_end_43_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_return_end_44_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "!gy̵o̴u̵.̴ ̵.̵ ̶.̵", "Staring at everything from above." 
+	 "sog_dialogue_return_end_45_npc", "sog_dialogue_return_end_46_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_return_end_47_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Let's see if you are as confident\\nwhen you are down there." 
+	 "sog_dialogue_return_end_48_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_return_end_49_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . .", "You. . .", "A freelancer and a coder named James. . .", "Also known as Matt's personal bodyguard and his bitch. . .", ". . .when it comes to jobs where he is afraid\\nto get his own hands dirty." 
+	 "sog_dialogue_return_end_1_npc", "sog_dialogue_return_end_2_npc", "sog_dialogue_return_end_3_npc", "sog_dialogue_return_end_4_npc", "sog_dialogue_return_end_5_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_return_end_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "You should've given up back then, James.", "When you had a chance.", "But no. . .", "This community is as stubborn\\nas it is good at making things worse. . .", "You are no exception." 
+	 "sog_dialogue_return_end_7_npc", "sog_dialogue_return_end_8_npc", "sog_dialogue_return_end_9_npc", "sog_dialogue_return_end_10_npc", "sog_dialogue_return_end_11_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Who the hell are you?" 
+	 "sog_dialogue_return_end_12_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Does it matter?", "I used to be a server owner.", "And a very good one!", "Not like these shitheads. . .", ". . .that should not even allowed to be in charge." 
+	 "sog_dialogue_return_end_13_npc", "sog_dialogue_return_end_14_npc", "sog_dialogue_return_end_15_npc", "sog_dialogue_return_end_16_npc", "sog_dialogue_return_end_17_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_return_end_18_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Unlike you, I wanted to make gmod better.", "So I did my part.", "I made a fantastic banlist addon.", "It was pretty strict, but better safe than sorry.", "But this salty community was not happy about it.", "Because of them - garry has locked me in here. ", "And look how the tides have turned now!", "Look around you." 
+	 "sog_dialogue_return_end_19_npc", "sog_dialogue_return_end_20_npc", "sog_dialogue_return_end_21_npc", "sog_dialogue_return_end_22_npc", "sog_dialogue_return_end_23_npc", "sog_dialogue_return_end_24_npc", "sog_dialogue_return_end_25_npc", "sog_dialogue_return_end_26_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_return_end_27_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "They and their servers are all gone.", "I have been there for so long. . .", ". . .that I guess now I am a part of gmod too.", "And you know what this means?" 
+	 "sog_dialogue_return_end_28_npc", "sog_dialogue_return_end_29_npc", "sog_dialogue_return_end_30_npc", "sog_dialogue_return_end_31_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "No?" 
+	 "sog_dialogue_return_end_32_npc", "sog_dialogue_return_end_33_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "This means that I am a goddamn savior of gmod!", "This small remnant of gmod will still exist.", "As long as I'm here.", "So, I'd say your task to kill gmod is not over yet.", "Don't you agree?" 
+	 "sog_dialogue_return_end_34_npc", "sog_dialogue_return_end_35_npc", "sog_dialogue_return_end_36_npc", "sog_dialogue_return_end_37_npc", "sog_dialogue_return_end_38_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_return_end_39_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "I will fix that." 
+	 "sog_dialogue_return_end_40_npc" 
 	} 
 } 
 	} 
@@ -117,7 +117,7 @@ SCENE.Characters = {
  "james" 
 }
 SCENE.AmbientStartFrom = 28000
-SCENE.Name = "return end"
+SCENE.Name = "scene_name_return_end"
 SCENE.Triggers = {
  ["t5"] = {
 	 ["pos"] = Vector( -965, 247, 69 ), ["size"] = 10, ["event"] = "OnDialogueFinished", ["stages"] = {

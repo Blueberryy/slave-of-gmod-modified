@@ -80,29 +80,29 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Let's get the fuck out of here.", "We've got a really huge profit coming towards us." 
+	 "sog_dialogue_cough_2014_9_npc", "sog_dialogue_cough_2014_10_npc", "sog_dialogue_cough_2014_11_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Here we go!", "Soon there will be nothing but rotting players." 
+	 "sog_dialogue_cough_2014_1_npc", "sog_dialogue_cough_2014_2_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "You sick fucks!!!", "You won't get away this time!" 
+	 "sog_dialogue_cough_2014_3_npc", "sog_dialogue_cough_2014_4_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "It's the cops!" 
+	 "sog_dialogue_cough_2014_5_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What a bunch of pathetic babies.", "You think you can get your \"good ol' gmod\" back?" 
+	 "sog_dialogue_cough_2014_6_npc", "sog_dialogue_cough_2014_7_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_cough_2014_8_npc" 
 	} 
 } 
 	} 
@@ -110,7 +110,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "matthias" 
 }
-SCENE.Name = "cough"
+SCENE.Name = "scene_name_cough"
 SCENE.Triggers = {
  ["t6"] = {
 	 ["pos"] = Vector( -114, 1202, 9 ), ["size"] = 10, ["event"] = "OnLevelClear", ["action"] = "event", ["objects"] = {

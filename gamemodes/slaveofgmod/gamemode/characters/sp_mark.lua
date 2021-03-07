@@ -1,7 +1,7 @@
 CHARACTER.Reference = "mark"
 
-CHARACTER.Name = "Mark"
-CHARACTER.Description = "Sleek gun. Sleek axe."
+CHARACTER.Name = "sog_character_mark_name"
+CHARACTER.Description = "sog_character_mark_desc"
 
 CHARACTER.Health = 100
 CHARACTER.Speed = 380

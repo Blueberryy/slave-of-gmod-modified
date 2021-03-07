@@ -74,7 +74,7 @@ SCENE.Enemies = {
 SCENE.Characters = {
  "moderator" 
 }
-SCENE.Name = "goin postal"
+SCENE.Name = "scene_name_goin_postal"
 SCENE.Triggers = {
  ["t5"] = {
 	 ["pos"] = Vector( -670, -41, 1 ), ["size"] = 10, ["action"] = "spawn", ["CheckTriggers"] = {
@@ -87,7 +87,7 @@ SCENE.Triggers = {
 	}, ["t6"] = {
 	 ["pos"] = Vector( -713, -48, 1 ), ["size"] = 10, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t7" 
-		}, ["data"] = "Return to the office" 
+		}, ["data"] = "sog_hud_obj_return_to_the_office" 
 	}, ["t9"] = {
 	 ["pos"] = Vector( -1071, 14, 1 ), ["size"] = 10, ["event"] = "OnDialogueFinished", ["action"] = "event", ["data"] = {
 		 "d2" 
@@ -137,73 +137,73 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_goinpostal_2013_22_npc" 
 	} 
 }, {
  ["person"] = "e24", ["text"] = {
-	 "That'll show them, who is the big dog in here!" 
+	 "sog_dialogue_goinpostal_2013_23_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Are you. . .", ". . .alright?" 
+	 "sog_dialogue_goinpostal_2013_24_npc", "sog_dialogue_goinpostal_2013_25_npc" 
 	} 
 }, {
  ["person"] = "e24", ["text"] = {
-	 "I'm fine!", "I think I'm going to puke tho.", ". . .", "But we still have some work to do.", "I just. . .", ". . .need to finish my celebration." 
+	 "sog_dialogue_goinpostal_2013_26_npc", "sog_dialogue_goinpostal_2013_27_npc", "sog_dialogue_goinpostal_2013_28_npc", "sog_dialogue_goinpostal_2013_29_npc", "sog_dialogue_goinpostal_2013_30_npc", "sog_dialogue_goinpostal_2013_31_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "You look terrible.", "Maybe I should drive you to the doctor or something. . ." 
+	 "sog_dialogue_goinpostal_2013_32_npc", "sog_dialogue_goinpostal_2013_33_npc" 
 	} 
 }, {
  ["person"] = "e24", ["text"] = {
-	 "No, no, no. . .", "We have another dumbass,\\nwho thinks that he can outsmart us." 
+	 "sog_dialogue_goinpostal_2013_34_npc", "sog_dialogue_goinpostal_2013_35_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "I'll call Steve then." 
+	 "sog_dialogue_goinpostal_2013_36_npc", "sog_dialogue_goinpostal_2013_37_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e8", ["text"] = {
-	 "Look!!!", "Someone is coming!", ". . .", "It's a girl!!!!!" 
+	 "sog_dialogue_goinpostal_2013_1_npc", "sog_dialogue_goinpostal_2013_2_npc", "sog_dialogue_goinpostal_2013_3_npc", "sog_dialogue_goinpostal_2013_4_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Not this crap again.", "What is your problem?" 
+	 "sog_dialogue_goinpostal_2013_5_npc", "sog_dialogue_goinpostal_2013_6_npc", "sog_dialogue_goinpostal_2013_7_npc" 
 	} 
 }, {
  ["person"] = "e8", ["text"] = {
-	 "You monsters!!!" 
+	 "sog_dialogue_goinpostal_2013_8_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Sorry, what?" 
+	 "sog_dialogue_goinpostal_2013_9_npc" 
 	} 
 }, {
  ["person"] = "e8", ["text"] = {
-	 "You are ruining gmod!!!", "Your paid addons killed my brother!", "We have rights to protest against this plague!" 
+	 "sog_dialogue_goinpostal_2013_10_npc", "sog_dialogue_goinpostal_2013_11_npc", "sog_dialogue_goinpostal_2013_12_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "*sigh*", "I understand that you have your opinion and such. . .", "But this is not a reason to throw garbage\\nand other stuff at our office." 
+	 "sog_dialogue_goinpostal_2013_13_npc", "sog_dialogue_goinpostal_2013_14_npc", "sog_dialogue_goinpostal_2013_15_npc" 
 	} 
 }, {
  ["person"] = "e8", ["text"] = {
-	 "You monsters, will never learn!" 
+	 "sog_dialogue_goinpostal_2013_16_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Come on, I'm trying to be nice!" 
+	 "sog_dialogue_goinpostal_2013_17_npc" 
 	} 
 }, {
  ["person"] = "e8", ["text"] = {
-	 "LIES!!!", "Comrades!!!", "Kill this greedy scum!!!!!" 
+	 "sog_dialogue_goinpostal_2013_18_npc", "sog_dialogue_goinpostal_2013_19_npc", "sog_dialogue_goinpostal_2013_20_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Oh for christ's sake. . ." 
+	 "sog_dialogue_goinpostal_2013_21_npc" 
 	} 
 } 
 	} 

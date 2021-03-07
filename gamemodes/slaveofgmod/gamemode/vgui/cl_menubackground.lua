@@ -39,7 +39,7 @@ function CreateMenuBackground( parent )
 	local p = parent:Add( "DPanel" )
 	p:SetSize( parent:GetSize() )
 	p:SetPos( 0, 0 )
-	p.TitleText = translate.Get("sog_gm_name")
+	p.TitleText = "sog_gm_name"
 	
 	if SOG_MENU_MUSIC then
 		if game.SinglePlayer() then
@@ -77,7 +77,7 @@ function CreateMenuBackground( parent )
 	
 	if dead then
 		for i = 0, p.lines do	
-			p.shittags[i] = " Server is not responding | Server is not responding | Server is not responding | Server is not responding | Server is not responding | Server is not responding | Server is not responding | Server is not responding |"
+			p.shittags[i] = "sog_dev_hell_tags"
 		end
 	end
 	
@@ -146,7 +146,7 @@ function CreateMenuBackground( parent )
 		end
 		
 		if self.OverrideCurWord then
-			self.CurWord = self.OverrideCurWord
+			self.CurWord = translate.Get(self.OverrideCurWord)
 		end
 		
 		local step = 1
@@ -154,8 +154,8 @@ function CreateMenuBackground( parent )
 		
 		for i=0, self.lines do
 			if self.shittags then
-				draw.ScrollingTextRotated( self.shittags[i], sw/4-130 - add * i , sh/2, sw, -1*(50 + 15 * i ), Color( 10, 10, 10, math.Clamp(85 - 5*i,0,255 )), "PixelSmall", 50, 1)
-				draw.ScrollingTextRotated( self.shittags[i], 3*sw/4+130 + add * i, sh/2, sw, 50 + 15 * i, Color( 10, 10, 10, math.Clamp(85 - 5*i,0,255 )), "PixelSmall", -50, 1)
+				draw.ScrollingTextRotated( translate.Get(self.shittags[i]), sw/4-130 - add * i , sh/2, sw, -1*(50 + 15 * i ), Color( 10, 10, 10, math.Clamp(85 - 5*i,0,255 )), "PixelSmall", 50, 1)
+				draw.ScrollingTextRotated( translate.Get(self.shittags[i]), 3*sw/4+130 + add * i, sh/2, sw, 50 + 15 * i, Color( 10, 10, 10, math.Clamp(85 - 5*i,0,255 )), "PixelSmall", -50, 1)
 			end	
 		end
 		
@@ -200,15 +200,15 @@ function CreateMenuBackground( parent )
 			end
 			
 			if i == 0 or i == am then
-				draw.TextRotated( self.TitleText, sw/2, sh/5 - 30, Color(r,g,b,250), "MenuHeader",textspin(1,2,0.9*i/am), 1.5 + 0.01*i, 1 )
+				draw.TextRotated( translate.Get(self.TitleText), sw/2, sh/5 - 30, Color(r,g,b,250), "MenuHeader",textspin(1,2,0.9*i/am), 1.5 + 0.01*i, 1 )
 			else
-				draw.TextRotated( self.TitleText, sw/2, sh/5 - 30, Color(r,g,b,250), "MenuHeader",textspin(1,2,0.9*i/am), 1.5 + 0.01*i, false )
+				draw.TextRotated( translate.Get(self.TitleText), sw/2, sh/5 - 30, Color(r,g,b,250), "MenuHeader",textspin(1,2,0.9*i/am), 1.5 + 0.01*i, false )
 			end
 		end
 		
-		local gametype = GAMEMODE:GetGametype() and GAMEMODE.AvalaibleGametypes[GAMEMODE:GetGametype()] and GAMEMODE.AvalaibleGametypes[GAMEMODE:GetGametype()].name
+		local gametype = GAMEMODE:GetGametype() and GAMEMODE.AvalaibleGametypes[GAMEMODE:GetGametype()] and translate.Get(GAMEMODE.AvalaibleGametypes[GAMEMODE:GetGametype()].name)
 		if SINGLEPLAYER then
-			gametype = "Story Mode"
+			gametype = translate.Get("sog_gametype_name_single_player")
 		end
 		draw.SimpleText( translate.Get(GAMEMODE.Version) or translate.Get("sog_menu_error"), "PixelSmaller", sw-10, 25, Color(10, 10, 10, 155), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
 		draw.SimpleText( gametype or translate.Get("sog_menu_error"), "PixelSmaller", sw-10, 50, Color(10, 10, 10, 155), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )

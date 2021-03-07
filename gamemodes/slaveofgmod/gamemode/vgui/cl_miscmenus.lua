@@ -182,7 +182,7 @@ function DrawVoteMenu( time )
 			local shift = math.sin(RealTime()*3)*1.5 + 3
 			
 			local vote = v.votes
-			local text = vote == 0 and v.name or v.name.." ("..vote..")"
+			local text = vote == 0 and translate.Get(v.name) or translate.Get(v.name).." ("..vote..")"
 			
 			if self.Overed and !gametypeVoted then
 				draw.SimpleText( text, "PixelSmall", 7 , th/2, gettextcolor( 55 ), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
@@ -674,118 +674,11 @@ local function CheckFontSize()
 	
 end
 
-local CreditsText = [[
-SLAVE OF GMOD
-by Necrossin
+local CreditsText = "sog_credits_text"
 
+local SuperhotText = "sog_superhot_mode_unlocked"
 
-
-
-
-
-
-
-
-
-
-Inspired by Hotline Miami
-and based on all the horrors/drama in this game
-
-
-
-
-
-
-
-
-
-
-Maps by
-
-Pufulet
-Danny Judas
-Stelk
-RzDat (their map was unused, but still)
-
-
-
-Music by
-
-Various music artists, that are shown in menu
-Current one is: "It's Raining Knives" by Espectrostatic
-
-
-
-Special thanks to
-(playtesters, ideas, feedback, etc...)
-
-_Kilburn
-Clavus
-Pufulet
-Danny Judas
--Milbor-
-Chubakus
-Gorma
-Ben
-Braindawg
-MarshmallowTophat
-The Darker One
-Revenge
-Triviality
-B1LP0
-DN-Reznov
-All other people I've forgot to add here
-
-Mr. Green community (for hosting it back then)
-Knockout community (former Facepunch community)
-
-
-
-And you, for still playing
-
-
-
-
-
-
-
-
-
-
-
-The End
-]]
-
-local SuperhotText = [[
-SUPERHOT MODE
-unlocked
-
-
-"Time moves when you move"
-
-Type !superhot in chat to toggle
-
-
-
-
-(Story Mode only)
-]]
-
-local FirstpersonText = [[
-FIRSTPERSON MODE
-unlocked
-
-
-"You were given a revelation"
-
-Type !firstperson in chat to toggle
-
-NOTE: this might look weird on certain maps/levels,
-so use it at your own risk
-
-
-(Story Mode only)
-]]
+local FirstpersonText = "sog_firstperson_mode_unlocked"
 
 local col_in_game = Color( 115, 190, 62 )
 local undo_shrink = false
@@ -996,7 +889,7 @@ function DrawEnding()
 	
 		surface.SetFont( credits_font )
 		local spacing_w, spacing_h = surface.GetTextSize( "WWWWWWWW" ) 
-		local textw, texth = surface.GetTextSize( CreditsText )
+		local textw, texth = surface.GetTextSize( translate.Get(CreditsText) )
 		
 		local scroll = 0
 		
@@ -1016,10 +909,10 @@ function DrawEnding()
 		local col_delta = math.Clamp( 1 - ( self.WindupTime - CurTime() ) / self.WindupDuration, 0, 1 )
 		col_delta = col_delta ^ 0.5
 			
-		draw.DrawText( CreditsText, credits_font, tw/2, th/2 - texth * scroll - ( spacing_h - spacing_h * scroll * 2  ), Color(210, 210, 210, 255 * col_delta ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.DrawText( translate.Get(CreditsText), credits_font, tw/2, th/2 - texth * scroll - ( spacing_h - spacing_h * scroll * 2  ), Color(210, 210, 210, 255 * col_delta ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	
 		if self.DoText and self.Players then
-			draw.DrawText( math.floor( self.Players * ( 1 - scroll ) ).." In-Game", "TargetID", tw - 30, th - 30, col_in_game, TEXT_ALIGN_RIGHT, TEXT_ALIGN_BOTTOM )
+			draw.DrawText( translate.Format("sog_x_ingame_left", math.floor( self.Players * ( 1 - scroll ) )), "TargetID", tw - 30, th - 30, col_in_game, TEXT_ALIGN_RIGHT, TEXT_ALIGN_BOTTOM )
 		end
 		
 		if self.ShowCheats then
@@ -1029,7 +922,7 @@ function DrawEnding()
 			
 			surface.SetFont( credits_font )
 			
-			local text = self.ShowCheats == 1 and SuperhotText or FirstpersonText
+			local text = self.ShowCheats == 1 and translate.Get(SuperhotText) or translate.Get(FirstpersonText)
 			local textw, texth = surface.GetTextSize( text )
 			
 			

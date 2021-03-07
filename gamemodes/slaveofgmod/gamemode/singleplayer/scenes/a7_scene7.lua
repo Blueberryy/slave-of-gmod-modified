@@ -124,55 +124,55 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Now, where was this stupid old gmod thing. . ." 
+	 "sog_dialogue_whitekingdom_2016_24_npc", "sog_dialogue_whitekingdom_2016_25_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e2", ["text"] = {
-	 "Nice job on this one, dude!", "Your second day and you are already\\nproving yourself useful." 
+	 "sog_dialogue_whitekingdom_2016_1_npc", "sog_dialogue_whitekingdom_2016_2_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Thanks. . .", "So uh. . .", "Dean is dead. . .again. . ." 
+	 "sog_dialogue_whitekingdom_2016_3_npc", "sog_dialogue_whitekingdom_2016_4_npc", "sog_dialogue_whitekingdom_2016_5_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "What the. . .", "How?" 
+	 "sog_dialogue_whitekingdom_2016_6_npc", "sog_dialogue_whitekingdom_2016_7_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "He went mad and uh. . .", ". . .told our chopper to ram the train.", "So yeah. . ." 
+	 "sog_dialogue_whitekingdom_2016_8_npc", "sog_dialogue_whitekingdom_2016_9_npc", "sog_dialogue_whitekingdom_2016_10_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "What the hell. . .", "After all that bullshit that coderfired did to him. . ." 
+	 "sog_dialogue_whitekingdom_2016_11_npc", "sog_dialogue_whitekingdom_2016_12_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . .", "Where did everyone go?" 
+	 "sog_dialogue_whitekingdom_2016_13_npc", "sog_dialogue_whitekingdom_2016_14_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Not sure. . .", "There are less and less people since. . .", "Well. . .", "Since we brought that thing back there.", "Apparently it was thrown into a dumpster\\nbehind garry's office." 
+	 "sog_dialogue_whitekingdom_2016_15_npc", "sog_dialogue_whitekingdom_2016_16_npc", "sog_dialogue_whitekingdom_2016_17_npc", "sog_dialogue_whitekingdom_2016_18_npc", "sog_dialogue_whitekingdom_2016_19_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Damn. . ." 
+	 "sog_dialogue_whitekingdom_2016_20_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "You guys don't even bother closing cell doors, do you?" 
+	 "sog_dialogue_whitekingdom_2016_21_npc", "sog_dialogue_whitekingdom_2016_22_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Wait, what?!" 
+	 "sog_dialogue_whitekingdom_2016_23_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Hm. . .", "So much for keeping it secured.", "!g. . .", "!gG̸o̶ ̸a̴w̶a̸y̴,̵ ̸J̴a̴m̶e̴s̵.̴ ̵.̶ ̶.̵", ". . .", "!gK̸i̴l̶l̷ ̴h̸i̷m̶.̵ ̸.̴ ̵.̵" 
+	 "sog_dialogue_whitekingdom_2016_26_npc", "sog_dialogue_whitekingdom_2016_27_npc", "sog_dialogue_whitekingdom_2016_28_npc", "sog_dialogue_whitekingdom_2016_29_npc", "sog_dialogue_whitekingdom_2016_30_npc", "sog_dialogue_whitekingdom_2016_31_npc", "sog_dialogue_whitekingdom_2016_32_npc" 
 	} 
 } 
 	} 
@@ -182,7 +182,7 @@ SCENE.NoPickups = true
 SCENE.Characters = {
  "james" 
 }
-SCENE.Name = "white kingdom"
+SCENE.Name = "scene_name_white_kingdom"
 SCENE.EndAt = 124500
 SCENE.Triggers = {
  ["t16"] = {
@@ -308,7 +308,7 @@ SCENE.Triggers = {
 		 ["start"] = 134000, ["endpos"] = 156500 
 		}, ["trigger_once"] = true 
 	}, ["t23"] = {
-	 ["pos"] = Vector( 536, -389, 1 ), ["size"] = 10, ["data"] = "Go Ahead. . .", ["action"] = "hudmessage", ["CheckTriggers"] = {
+	 ["pos"] = Vector( 536, -389, 1 ), ["size"] = 10, ["data"] = "sog_hud_go_ahead", ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t24" 
 		}, ["trigger_once"] = true 
 	}, ["t22"] = {

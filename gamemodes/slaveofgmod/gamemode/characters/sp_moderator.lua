@@ -1,7 +1,7 @@
 CHARACTER.Reference = "moderator"
 
-CHARACTER.Name = "Moderator"
-CHARACTER.Description = "Gunslinger. Too soft for executions."
+CHARACTER.Name = "sog_character_moderator_name"
+CHARACTER.Description = "sog_character_moderator_desc"
 
 CHARACTER.Health = 100
 CHARACTER.Speed = 380

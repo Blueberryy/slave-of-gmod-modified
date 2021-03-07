@@ -383,7 +383,7 @@ function meta:AddScore( toadd, ent )
 	if IsValid( ent ) then
 		local pos = ent:GetPos() + vector_up * 58
 		
-		self:AddScoreMessage( translate.Format("sog_hud_x_points_screen", toadd), pos, 1 )
+		self:AddScoreMessage( translate.ClientFormat(self, "sog_hud_x_points_screen", toadd), pos, 1 )
 		
 	end
 	
@@ -479,7 +479,7 @@ function meta:FinishCombo()
 	
 	local pos = self:GetPos() + vector_up * 68
 		
-	self:AddScoreMessage( self:GetComboCounter().."xcombo", pos, 1.3 )
+	self:AddScoreMessage( translate.ClientFormat(self, "sog_hud_x_combo_screen", self:GetComboCounter()), pos, 1.3 )
 	
 	self:ResetComboTime()
 	self:SetComboCounter( 0 )
@@ -515,12 +515,12 @@ function meta:RTV()
 	local desired = math.Round(#player.GetAll()*0.8)
 	
 	for k,v in pairs(player.GetAll()) do
-		v:ChatPrint("Player "..self:Nick().." wants to rock the vote ("..RTV_NUM.."/"..desired.."). Press F3 to participate.")
+		v:ChatPrint(translate.Format("sog_rtv_player_x_rocked_x_map", self:Nick(), RTV_NUM, desired))
 	end
 	
 	if RTV_NUM >= desired then
 		for k,v in pairs(player.GetAll()) do
-			v:ChatPrint("Rock the vote has started!")
+			v:ChatPrint(translate.Get("sog_rtv_started"))
 		end
 		GAMEMODE:StartVoting( VOTING_TIME )
 	end
@@ -560,7 +560,7 @@ util.AddNetworkString( "SetGoal" )
 
 function meta:SetGoal( goal, time )
 	net.Start( "SetGoal" )
-		net.WriteString( goal )
+		net.WriteString( translate.Get(goal) )
 		net.WriteInt( time or -1, 32 )
 	net.Send( self )
 end
@@ -576,7 +576,7 @@ util.AddNetworkString( "HUDMessage" )
 
 function meta:PopHUDMessage( txt )
 	net.Start( "HUDMessage" )
-		net.WriteString( txt )
+		net.WriteString( translate.ClientGet(self, txt) )
 	net.Send( self )
 end
 
@@ -630,7 +630,7 @@ util.AddNetworkString( "RecScoreMessage" )
 function meta:AddScoreMessage( text, pos, decay )
 	
 	net.Start( "RecScoreMessage" )
-		net.WriteString( text )
+		net.WriteString( translate.ClientFormat(self, text) )
 		net.WriteVector( pos )
 		net.WriteFloat( decay )
 	net.Send( self )

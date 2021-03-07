@@ -106,69 +106,69 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "e41", ["text"] = {
-	 "Oh my. . .", "What about our souvenirs?" 
+	 "sog_dialogue_legacy_act_bonus_27_npc", "sog_dialogue_legacy_act_bonus_28_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "No souvenirs, boy!", "I had to close this place. . .", "*puts sunglasses on again*", ". . .forever!" 
+	 "sog_dialogue_legacy_act_bonus_29_npc", "sog_dialogue_legacy_act_bonus_30_npc", "sog_dialogue_legacy_act_bonus_31_npc", "sog_dialogue_legacy_act_bonus_32_npc" 
 	} 
 }, {
  ["person"] = "e41", ["text"] = {
-	 ". . .", "But. . ." 
+	 "sog_dialogue_legacy_act_bonus_33_npc", "sog_dialogue_legacy_act_bonus_34_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Shut up and get in the car." 
+	 "sog_dialogue_legacy_act_bonus_35_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Holy shit, this place is huge!", ". . .", "Now you see, why I brought this chair with me?" 
+	 "sog_dialogue_legacy_act_bonus_1_npc", "sog_dialogue_legacy_act_bonus_2_npc", "sog_dialogue_legacy_act_bonus_3_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 "Brothers!", "The Second Torturing of GMod is upon us!", "We will avenge His death!", "Because His legacy lives on!", ". . ." 
+	 "sog_dialogue_legacy_act_bonus_4_npc", "sog_dialogue_legacy_act_bonus_5_npc", "sog_dialogue_legacy_act_bonus_6_npc", "sog_dialogue_legacy_act_bonus_7_npc", "sog_dialogue_legacy_act_bonus_8_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hey, you!" 
+	 "sog_dialogue_legacy_act_bonus_9_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 ". . .this is what we will do to heretics!", "This filth of a human. . .", ". . .who doesn't wants to subscribe to our God!" 
+	 "sog_dialogue_legacy_act_bonus_10_npc", "sog_dialogue_legacy_act_bonus_11_npc", "sog_dialogue_legacy_act_bonus_12_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 "Burn him!" 
+	 "sog_dialogue_legacy_act_bonus_13_npc" 
 	} 
 }, {
  ["person"] = "e11", ["text"] = {
-	 "Torture!" 
+	 "sog_dialogue_legacy_act_bonus_14_npc" 
 	} 
 }, {
  ["person"] = "e13", ["text"] = {
-	 "Torture him!" 
+	 "sog_dialogue_legacy_act_bonus_15_npc" 
 	} 
 }, {
  ["person"] = "e12", ["text"] = {
-	 "Burn the heretic!" 
+	 "sog_dialogue_legacy_act_bonus_16_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 "That's right!" 
+	 "sog_dialogue_legacy_act_bonus_17_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hey, shitface!", "Where I can buy some shitty souvenirs?" 
+	 "sog_dialogue_legacy_act_bonus_18_npc", "sog_dialogue_legacy_act_bonus_19_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 "You. . .", "Who are you?", "Do you have time to talk about our lord and savior. . .", "LetsTortureGMod!" 
+	 "sog_dialogue_legacy_act_bonus_20_npc", "sog_dialogue_legacy_act_bonus_21_npc", "sog_dialogue_legacy_act_bonus_22_npc", "sog_dialogue_legacy_act_bonus_23_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What?", "Fuck this, I didn't ask for this shit!", "Chaaaargeee!" 
+	 "sog_dialogue_legacy_act_bonus_24_npc", "sog_dialogue_legacy_act_bonus_25_npc", "sog_dialogue_legacy_act_bonus_26_npc" 
 	} 
 } 
 	} 
@@ -177,7 +177,7 @@ SCENE.AmbientStartFrom = 17500
 SCENE.Vehicle = {
  ["type"] = 10, ["pos"] = Vector( 845, -1056, 36 ), ["mdl"] = "models/props_vehicles/car005a.mdl", ["ang"] = Angle( 0, -19, 0 ) 
 }
-SCENE.Name = "legacy"
+SCENE.Name = "scene_name_legacy"
 SCENE.Characters = {
  "watch" 
 }
@@ -221,7 +221,7 @@ SCENE.Triggers = {
 		 "t6" 
 		} 
 	}, ["t6"] = {
-	 ["pos"] = Vector( 1014, -827, 1 ), ["size"] = 10, ["data"] = translate.Get("sog_hud_obj_leave_area"), ["action"] = "hudmessage", ["CheckTriggers"] = {
+	 ["pos"] = Vector( 1014, -827, 1 ), ["size"] = 10, ["data"] = "sog_hud_obj_leave_area", ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t7" 
 		}, ["trigger_once"] = true 
 	}, ["t8"] = {

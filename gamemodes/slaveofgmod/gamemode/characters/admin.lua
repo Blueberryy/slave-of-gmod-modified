@@ -17,9 +17,9 @@ CHARACTER.Model = Model( "models/player/combine_super_soldier.mdl" )
 function CHARACTER:OnSpawn( pl )
 	if GAMEMODE:GetGametype() == "none" then
 		if math.random(2) == 2 then
-			pl:SetGoal( "[RMB] to pick up/throw. [SPACEBAR] to execute.", 10 )
+			pl:SetGoal( translate.Get("sog_play_tip_admin"), 10 )
 		else
-			pl:SetGoal( "Use [MOUSE WHEEL] to adjust volume. [F2] to enable/disable music.", 10 )
+			pl:SetGoal( translate.Get("sog_play_tip_music"), 10 )
 		end
 	end
 	if pl:IsNextBot() and DARKRP_TAG then

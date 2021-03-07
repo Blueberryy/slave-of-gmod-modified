@@ -2,7 +2,7 @@ SCENE.Order = 2
 SCENE.Act = 1
 SCENE.Cover = Material( "sog/covers/dvd_disk_2.png" , "alphatest")
 SCENE.Map = "sog_disco"
-SCENE.Name = "takedown"
+SCENE.Name = "scene_name_takedown"
 SCENE.Enemies = {
  ["e3"] = {
 	 ["pos"] = Vector( -109, -840, 73 ), ["CheckTriggers"] = {
@@ -138,7 +138,7 @@ SCENE.Triggers = {
 	}, ["t8"] = {
 	 ["pos"] = Vector( 84, -514, 1 ), ["CheckTriggers"] = {
 		 "t12" 
-		}, ["action"] = "hudmessage", ["data"] = "Check the control panel", ["size"] = 60 
+		}, ["action"] = "hudmessage", ["data"] = "sog_hud_obj_check_the_control_panel", ["size"] = 60 
 	}, ["t19"] = {
 	 ["pos"] = Vector( 912, -456, 73 ), ["size"] = 34, ["event"] = "OnDialogueFinished", ["action"] = "event", ["data"] = {
 		 "d3" 
@@ -190,7 +190,7 @@ SCENE.Triggers = {
 	}, ["t14"] = {
 	 ["pos"] = Vector( 826, -241, 73 ), ["size"] = 42, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t15" 
-		}, ["data"] = "Get back to the bar" 
+		}, ["data"] = "sog_hud_obj_get_back_to_the_bar" 
 	}, ["t13"] = {
 	 ["pos"] = Vector( -388, -198, 1 ), ["size"] = 42, ["action"] = "spawn", ["CheckTriggers"] = {
 		 "t15" 
@@ -208,7 +208,7 @@ SCENE.Triggers = {
 	}, ["t20"] = {
 	 ["pos"] = Vector( -488, -307, -7 ), ["CheckTriggers"] = {
 		 "t21" 
-		}, ["action"] = "hudmessage", ["data"] = translate.Get("sog_hud_obj_leave_area"), ["size"] = 34 
+		}, ["action"] = "hudmessage", ["data"] = "sog_hud_obj_leave_area", ["size"] = 34 
 	}, ["t11"] = {
 	 ["pos"] = Vector( 876, -42, 73 ), ["size"] = 42, ["action"] = "spawn", ["CheckTriggers"] = {
 		 "t12" 
@@ -258,93 +258,93 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Weird. . .", "Where is the wave 2?" 
+	 "sog_dialogue_outside_2013_16_npc", "sog_dialogue_outside_2013_17_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "No idea.", "Maybe server bugged out.", "Let me check the control panel. . ." 
+	 "sog_dialogue_outside_2013_18_npc", "sog_dialogue_outside_2013_19_npc", "sog_dialogue_outside_2013_20_npc", "sog_dialogue_outside_2013_21_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 translate.Get("sog_dialogue_outide_2013_1_npc"), "sog_dialogue_outide_2013_2_npc", "Wanna play a wave or two?" 
+	 "sog_dialogue_outside_2013_1_npc", "sog_dialogue_outside_2013_2_npc", "sog_dialogue_outside_2013_3_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Sure.", "How have you been, Carl?" 
+	 "sog_dialogue_outside_2013_4_npc", "sog_dialogue_outside_2013_5_npc", "sog_dialogue_outside_2013_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Mostly bored, to be honest.", ". . .", "Heard of that recent update?", "A lot of servers went down for reconstruction,\\nI suppose. . .", "Gonna try joining that one DarkRP server tomorrow. . .", "Just to see what they can offer.", ". . .", "Looks like the wave is about to start!", "There should be some weapons near the bar." 
+	 "sog_dialogue_outside_2013_7_npc", "sog_dialogue_outside_2013_8_npc", "sog_dialogue_outside_2013_9_npc", "sog_dialogue_outside_2013_10_npc", "sog_dialogue_outside_2013_11_npc", "sog_dialogue_outside_2013_12_npc", "sog_dialogue_outside_2013_13_npc", "sog_dialogue_outside_2013_14_npc", "sog_dialogue_outside_2013_15_npc" 
 	} 
 } 
 	}, ["d4"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_outside_2013_28_npc" 
 	} 
 }, {
  ["person"] = "e29", ["text"] = {
-	 "Nobody move!" 
+	 "sog_dialogue_outside_2013_29_npc" 
 	} 
 }, {
  ["person"] = "e30", ["text"] = {
-	 "Shut up, Ase.", ". . .", "Fun time is over, kids." 
+	 "sog_dialogue_outside_2013_30_npc", "sog_dialogue_outside_2013_31_npc", "sog_dialogue_outside_2013_32_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "What's going on?" 
+	 "sog_dialogue_outside_2013_33_npc" 
 	} 
 }, {
  ["person"] = "e29", ["text"] = {
-	 "We are taking this server down!" 
+	 "sog_dialogue_outside_2013_34_npc" 
 	} 
 }, {
  ["person"] = "e30", ["text"] = {
-	 "Using all-mighty DMCA takedown." 
+	 "sog_dialogue_outside_2013_35_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "But this is Frankie's server, isn't it?" 
+	 "sog_dialogue_outside_2013_36_npc" 
 	} 
 }, {
  ["person"] = "e29", ["text"] = {
-	 "Yes! And he is guilty of using copyrighted code!" 
+	 "sog_dialogue_outside_2013_37_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "That's bullshit." 
+	 "sog_dialogue_outside_2013_38_npc", "sog_dialogue_outside_2013_39_npc" 
 	} 
 }, {
  ["person"] = "e30", ["text"] = {
-	 "Be careful with your words.", "Anything I say - can be used against you!" 
+	 "sog_dialogue_outside_2013_40_npc", "sog_dialogue_outside_2013_41_npc" 
 	} 
 }, {
  ["person"] = "e29", ["text"] = {
-	 "Now get the fuck out of this server." 
+	 "sog_dialogue_outside_2013_42_npc" 
 	} 
 }, {
  ["person"] = "e30", ["text"] = {
-	 "Before I change my mind." 
+	 "sog_dialogue_outside_2013_43_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Everything seems to be fine." 
+	 "sog_dialogue_outside_2013_22_npc", "sog_dialogue_outside_2013_23_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "*sigh*", "Maybe update broke something." 
+	 "sog_dialogue_outside_2013_24_npc", "sog_dialogue_outside_2013_25_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Could be. . ." 
+	 "sog_dialogue_outside_2013_26_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Let's head back to the bar, then." 
+	 "sog_dialogue_outside_2013_27_npc" 
 	} 
 } 
 	} 

@@ -93,63 +93,63 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "A truck, huh?", "I was expecting something better. . ." 
+	 "sog_dialogue_the_bottom_server_browser_3_npc", "sog_dialogue_the_bottom_server_browser_4_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e19", ["text"] = {
-	 "I don't think this is a good idea, boss. . ." 
+	 "sog_dialogue_the_bottom_server_browser_1_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Shut up and follow me." 
+	 "sog_dialogue_the_bottom_server_browser_2_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "e20", ["text"] = {
-	 "See?", "That was not so bad, don't you think?" 
+	 "sog_dialogue_the_bottom_server_browser_5_npc", "sog_dialogue_the_bottom_server_browser_6_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "So. . .", "This truck. . ." 
+	 "sog_dialogue_the_bottom_server_browser_7_npc", "sog_dialogue_the_bottom_server_browser_8_npc", "sog_dialogue_the_bottom_server_browser_9_npc" 
 	} 
 }, {
  ["person"] = "e20", ["text"] = {
-	 "Yeah.", "I have to admit. . .", "Mark did a good job at poisoning\\nthe shit out of this game.", ". . .", "But it's not enough." 
+	 "sog_dialogue_the_bottom_server_browser_10_npc", "sog_dialogue_the_bottom_server_browser_11_npc", "sog_dialogue_the_bottom_server_browser_12_npc", "sog_dialogue_the_bottom_server_browser_13_npc", "sog_dialogue_the_bottom_server_browser_14_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hang on.", ". . .", "You are supposed to help me.", "We had a deal, remember?" 
+	 "sog_dialogue_the_bottom_server_browser_15_npc", "sog_dialogue_the_bottom_server_browser_16_npc", "sog_dialogue_the_bottom_server_browser_17_npc", "sog_dialogue_the_bottom_server_browser_18_npc" 
 	} 
 }, {
  ["person"] = "e20", ["text"] = {
-	 "Of course!", "Do you really wanna know\\nwhat we need all this waste for?" 
+	 "sog_dialogue_the_bottom_server_browser_19_npc", "sog_dialogue_the_bottom_server_browser_20_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_the_bottom_server_browser_21_npc" 
 	} 
 }, {
  ["person"] = "e20", ["text"] = {
-	 "We will pour this stuff all over the server browser.", "And garry will be proud." 
+	 "sog_dialogue_the_bottom_server_browser_22_npc", "sog_dialogue_the_bottom_server_browser_23_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Wait, what the fuck?" 
+	 "sog_dialogue_the_bottom_server_browser_24_npc" 
 	} 
 }, {
  ["person"] = "e20", ["text"] = {
-	 "Pfthahahahaha!", ". . .", "Oh man. You are really optimistic for a server owner." 
+	 "sog_dialogue_the_bottom_server_browser_25_npc", "sog_dialogue_the_bottom_server_browser_26_npc", "sog_dialogue_the_bottom_server_browser_27_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "How is all this going to help me?!" 
+	 "sog_dialogue_the_bottom_server_browser_28_npc" 
 	} 
 }, {
  ["person"] = "e20", ["text"] = {
-	 "The funny thing is. . .", "It wont." 
+	 "sog_dialogue_the_bottom_server_browser_29_npc", "sog_dialogue_the_bottom_server_browser_30_npc" 
 	} 
 } 
 	} 
@@ -160,7 +160,7 @@ SCENE.NextLevelTrigger = {
 SCENE.Characters = {
  "server owner" 
 }
-SCENE.Name = "the bottom"
+SCENE.Name = "scene_name_the_bottom"
 SCENE.Triggers = {
  ["t9"] = {
 	 ["pos"] = Vector( 2131, -472, 1 ), ["size"] = 34, ["event"] = "OnDialogueStarted", ["action"] = "event", ["data"] = {
@@ -181,7 +181,7 @@ SCENE.Triggers = {
 	}, ["t15"] = {
 	 ["pos"] = Vector( 2183, -526, 1 ), ["size"] = 21, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t16" 
-		}, ["data"] = "Check out the truck" 
+		}, ["data"] = "sog_hud_obj_check_out_the_truck" 
 	}, ["t12"] = {
 	 ["pos"] = Vector( -1230, -365, 1 ), ["size"] = 60, ["event"] = "OnLevelLoaded", ["action"] = "event", ["objects"] = {
 		 "t4" 
@@ -223,7 +223,7 @@ SCENE.Triggers = {
 		 "e20", "t1" 
 		} 
 	}, ["t2"] = {
-	 ["pos"] = Vector( 2272, -166, 1 ), ["data"] = "Talk to sponsor guy", ["action"] = "hudmessage", ["size"] = 34, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 2272, -166, 1 ), ["data"] = "sog_hud_obj_talk_to_sponsor_guy", ["action"] = "hudmessage", ["size"] = 34, ["CheckTriggers"] = {
 		 "t3" 
 		} 
 	}, ["t1"] = {

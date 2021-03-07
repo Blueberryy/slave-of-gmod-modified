@@ -1031,5 +1031,5 @@ function GM:CoOpInitialize()
 
 end
 
-GM:AddAvalaibleGametype( "nemesis", translate.Get("sog_gametype_name_nemesis_help") )
+GM:AddAvalaibleGametype( "nemesis", "sog_gametype_name_nemesis_help" )
 GM.Gametypes["nemesis"] = GM.CoOpInitialize

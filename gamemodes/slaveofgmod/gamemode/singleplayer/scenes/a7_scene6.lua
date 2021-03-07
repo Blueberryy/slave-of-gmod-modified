@@ -168,121 +168,121 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_wildride_2016_4_npc" 
 	} 
 }, {
  ["person"] = "e35", ["text"] = {
-	 "What's the matter, bitch?", "Think you can go around and murder my men?", ". . .bitch." 
+	 "sog_dialogue_wildride_2016_5_npc", "sog_dialogue_wildride_2016_6_npc", "sog_dialogue_wildride_2016_7_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_wildride_2016_8_npc" 
 	} 
 }, {
  ["person"] = "e35", ["text"] = {
-	 "I know what you are after. . .", "I know who is giving you orders. . .", ". . .behind that keyboard. . ." 
+	 "sog_dialogue_wildride_2016_9_npc", "sog_dialogue_wildride_2016_10_npc", "sog_dialogue_wildride_2016_11_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_wildride_2016_12_npc" 
 	} 
 }, {
  ["person"] = "e35", ["text"] = {
-	 "It's funny, isn't it?", "Knowing such things. . .", ". . .bitch." 
+	 "sog_dialogue_wildride_2016_13_npc", "sog_dialogue_wildride_2016_14_npc", "sog_dialogue_wildride_2016_15_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_wildride_2016_16_npc" 
 	} 
 }, {
  ["person"] = "e35", ["text"] = {
-	 "You think you can just kill me and go on?", "Go ahead. . .", "He gave me a blessing. . .", "The power of god mode. . .", "So I can do right things. . ." 
+	 "sog_dialogue_wildride_2016_17_npc", "sog_dialogue_wildride_2016_18_npc", "sog_dialogue_wildride_2016_19_npc", "sog_dialogue_wildride_2016_20_npc", "sog_dialogue_wildride_2016_21_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "What's you problem?" 
+	 "sog_dialogue_wildride_2016_22_npc", "sog_dialogue_wildride_2016_23_npc" 
 	} 
 }, {
  ["person"] = "e35", ["text"] = {
-	 "Shut up, bitch!!!", "You and your kind of corrupt players!", "You fucked up my face!" 
+	 "sog_dialogue_wildride_2016_24_npc", "sog_dialogue_wildride_2016_25_npc", "sog_dialogue_wildride_2016_26_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_wildride_2016_27_npc" 
 	} 
 }, {
  ["person"] = "e35", ["text"] = {
-	 "!gW̷h̷a̷t̴ ̵a̶r̶e̵ ̸y̵o̶u̸ ̴w̶a̵i̸t̶i̸n̶g̵ ̸f̵o̷r̸?̸" 
+	 "sog_dialogue_wildride_2016_28_npc" 
 	} 
 }, {
  ["person"] = "e35", ["text"] = {
-	 "!gK̷i̵l̸l̸ ̷h̷i̸m̶" 
+	 "sog_dialogue_wildride_2016_29_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "*spits coffee*", "What the hell you think you are doing?!", "Intruder!!!" 
+	 "sog_dialogue_wildride_2016_1_npc", "sog_dialogue_wildride_2016_2_npc", "sog_dialogue_wildride_2016_3_npc" 
 	} 
 } 
 	}, ["d4"] = {
 	 {
  ["person"] = "e36", ["text"] = {
-	 "Ah, what in the goddamn!", "So much for the second day at work!", "What do you want?" 
+	 "sog_dialogue_wildride_2016_39_npc", "sog_dialogue_wildride_2016_40_npc", "sog_dialogue_wildride_2016_41_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "You boys got your hands on old gmod.", "Where is it?" 
+	 "sog_dialogue_wildride_2016_42_npc", "sog_dialogue_wildride_2016_43_npc", "sog_dialogue_wildride_2016_44_npc" 
 	} 
 }, {
  ["person"] = "e36", ["text"] = {
-	 ". . .", "How did you. . ." 
+	 "sog_dialogue_wildride_2016_45_npc", "sog_dialogue_wildride_2016_46_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_wildride_2016_47_npc" 
 	} 
 }, {
  ["person"] = "e36", ["text"] = {
-	 "Alright, alright. . .", "It's somewhere at our headquarters. . .", "but. . ." 
+	 "sog_dialogue_wildride_2016_48_npc", "sog_dialogue_wildride_2016_49_npc", "sog_dialogue_wildride_2016_50_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "but?" 
+	 "sog_dialogue_wildride_2016_51_npc" 
 	} 
 }, {
  ["person"] = "e36", ["text"] = {
-	 ". . .", "You can't get in there!", "Not unless I arrest you.", "Our place is heavily armed\\nand is just cool in general. . .", "So even if you try your best. . ." 
+	 "sog_dialogue_wildride_2016_52_npc", "sog_dialogue_wildride_2016_53_npc", "sog_dialogue_wildride_2016_54_npc", "sog_dialogue_wildride_2016_55_npc", "sog_dialogue_wildride_2016_56_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Go ahead then." 
+	 "sog_dialogue_wildride_2016_57_npc" 
 	} 
 }, {
  ["person"] = "e36", ["text"] = {
-	 ". . .", "What?" 
+	 "sog_dialogue_wildride_2016_58_npc", "sog_dialogue_wildride_2016_59_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Arrest me." 
+	 "sog_dialogue_wildride_2016_60_npc" 
 	} 
 }, {
  ["person"] = "e36", ["text"] = {
-	 ". . .", "Well. . .", "Whatever you say then!" 
+	 "sog_dialogue_wildride_2016_61_npc", "sog_dialogue_wildride_2016_62_npc", "sog_dialogue_wildride_2016_63_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "e35", ["text"] = {
-	 "*cough*", "hahahahaha. . .", "I told you, bitch.", "You can't kill me!" 
+	 "sog_dialogue_wildride_2016_30_npc", "sog_dialogue_wildride_2016_31_npc", "sog_dialogue_wildride_2016_32_npc", "sog_dialogue_wildride_2016_33_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_wildride_2016_34_npc" 
 	} 
 }, {
  ["person"] = "e35", ["text"] = {
-	 "Still don't believe me, bitch?!", "Watch this.", "I'm going to show you something beautiful!", "ACTIVATE IT!" 
+	 "sog_dialogue_wildride_2016_35_npc", "sog_dialogue_wildride_2016_36_npc", "sog_dialogue_wildride_2016_37_npc", "sog_dialogue_wildride_2016_38_npc" 
 	} 
 } 
 	} 
@@ -293,7 +293,7 @@ SCENE.NoPickups = true
 SCENE.Characters = {
  "james" 
 }
-SCENE.Name = "wild ride"
+SCENE.Name = "scene_name_wild_ride"
 SCENE.SoundTrack = 454614336
 SCENE.Triggers = {
  ["t10"] = {

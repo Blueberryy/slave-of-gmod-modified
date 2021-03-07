@@ -11,8 +11,8 @@ AddCSLuaFile("vgui/cl_loading.lua")
 AddCSLuaFile("vgui/cl_miscmenus.lua")
 
 include( "shared.lua" )
-include("sh_translate.lua")
 include("sv_obj_player_extend.lua")
+include("sh_translate.lua")
 
 include("boneanimlib_v2/sh_boneanimlib.lua")
 include("boneanimlib_v2/boneanimlib.lua")
@@ -97,14 +97,14 @@ end)
 function GM:AddResources()
 	
 
-	resource.AddSingleFile("resource/fonts/minecraftia_sup.ttf")
-	resource.AddSingleFile("resource/fonts/ShogunsClan_chr.ttf")
+	resource.AddSingleFile("resource/fonts/minecraftia_fix.ttf")
+	resource.AddSingleFile("resource/fonts/ShogunsClan_sup.ttf")
 	resource.AddSingleFile("resource/fonts/super_retro_italic.ttf")
 	resource.AddSingleFile("resource/fonts/wnd.ttf")
 	
 	//additional check for dedicated serevrs
-	resource.AddSingleFile("cache/workshop/resource/fonts/minecraftia_sup.ttf")
-	resource.AddSingleFile("cache/workshop/resource/fonts/ShogunsClan_chr.ttf")
+	resource.AddSingleFile("cache/workshop/resource/fonts/minecraftia_fix.ttf")
+	resource.AddSingleFile("cache/workshop/resource/fonts/ShogunsClan_sup.ttf")
 	resource.AddSingleFile("cache/workshop/resource/fonts/super_retro_italic.ttf")
 	resource.AddSingleFile("cache/workshop/resource/fonts/wnd.ttf")
 
@@ -142,7 +142,7 @@ GM.GlobalHints = {
 }
 
 function GM:GetRandomHint()
-	return translate.Get(self.GlobalHints[math.random(#self.GlobalHints)])
+	return self.GlobalHints[math.random(#self.GlobalHints)]
 end
 
 function GM:RestartRoundIn( time, args )
@@ -377,7 +377,7 @@ function GM:ShowTeam(pl)
 
 	else
 		pl:SendLua("GAMEMODE:ToggleRadio()")
-		pl:SetGoal( "Use [MOUSE WHEEL] to adjust volume. Use [NUM4] and [NUM6] to change track.", 10 )
+		pl:SetGoal( translate.Get("sog_play_tip2_music"), 10 )
 	end
 	
 end
@@ -449,7 +449,7 @@ function GM:EndVoting()
 	
 	for k,v in pairs(player.GetAll()) do
 		v:SendLua("surface.PlaySound(\"buttons/button14.wav\")")
-		v:ChatPrint("Voting has ended! Next gametype will be "..self.AvalaibleGametypes[NEXT_GAMETYPE].name..".")
+		v:ChatPrint("Voting has ended! Next gametype will be "..translate.Get(self.AvalaibleGametypes[NEXT_GAMETYPE].name)..".")
 		v:ChatPrint("Changing map to "..NEXT_MAP.." in "..t.." seconds!")
 	end
 	
@@ -1801,7 +1801,7 @@ end
 
 GM.BlockedAreas = {}
 
-local nav_meta = FindMetaTable( "CNavArea" )
+/*local nav_meta = FindMetaTable( "CNavArea" )
 if nav_meta then 
 	
 	nav_meta.OldIsBlocked = nav_meta.IsBlocked
@@ -1816,7 +1816,7 @@ if nav_meta then
 		
 	end
 	
-end 
+end */
 
 
 function GM:BlockNavAreas( ent )

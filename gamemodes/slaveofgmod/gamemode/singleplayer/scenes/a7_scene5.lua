@@ -159,63 +159,63 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_thisisfine_act_bonus2_8_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 "Dude!", "Duuuuudeeee!!!" 
+	 "sog_dialogue_thisisfine_act_bonus2_9_npc", "sog_dialogue_thisisfine_act_bonus2_10_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Enjoying the horse show, I see?" 
+	 "sog_dialogue_thisisfine_act_bonus2_11_npc", "sog_dialogue_thisisfine_act_bonus2_12_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 "Dude, I don't know!", "This is real bad!", "I. . .", "I was trying to find that. . .", "Oh shit!", "Oh no!" 
+	 "sog_dialogue_thisisfine_act_bonus2_13_npc", "sog_dialogue_thisisfine_act_bonus2_14_npc", "sog_dialogue_thisisfine_act_bonus2_15_npc", "sog_dialogue_thisisfine_act_bonus2_16_npc", "sog_dialogue_thisisfine_act_bonus2_17_npc", "sog_dialogue_thisisfine_act_bonus2_18_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "So. . .", "Where is that thing?" 
+	 "sog_dialogue_thisisfine_act_bonus2_19_npc", "sog_dialogue_thisisfine_act_bonus2_20_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 "Dude!", "The GMod Justice Force knows!!!", "That's all I could found out. . ." 
+	 "sog_dialogue_thisisfine_act_bonus2_21_npc", "sog_dialogue_thisisfine_act_bonus2_22_npc", "sog_dialogue_thisisfine_act_bonus2_23_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_thisisfine_act_bonus2_24_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 "But dude!", "Have you seen this shit?!", "These fucking horses!!!", "They are everywhere!!!", "They knocked me out and. . .", "Dude!!!", "They won't get away with this!", "Wooo!!!", "This is war, baby!!!", "We gonna shoot them!!!", "I just need. . .", "I need to. . .", ". . ." 
+	 "sog_dialogue_thisisfine_act_bonus2_25_npc", "sog_dialogue_thisisfine_act_bonus2_26_npc", "sog_dialogue_thisisfine_act_bonus2_27_npc", "sog_dialogue_thisisfine_act_bonus2_28_npc", "sog_dialogue_thisisfine_act_bonus2_29_npc", "sog_dialogue_thisisfine_act_bonus2_30_npc", "sog_dialogue_thisisfine_act_bonus2_31_npc", "sog_dialogue_thisisfine_act_bonus2_32_npc", "sog_dialogue_thisisfine_act_bonus2_33_npc", "sog_dialogue_thisisfine_act_bonus2_34_npc", "sog_dialogue_thisisfine_act_bonus2_35_npc", "sog_dialogue_thisisfine_act_bonus2_36_npc", "sog_dialogue_thisisfine_act_bonus2_37_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_thisisfine_act_bonus2_38_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_thisisfine_act_bonus2_4_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "* h o r s e   s t a r e *" 
+	 "sog_dialogue_thisisfine_act_bonus2_5_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_thisisfine_act_bonus2_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "* h o r s e   a n g e r *" 
+	 "sog_dialogue_thisisfine_act_bonus2_7_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "e11", ["text"] = {
-	 ". . .", "Dude. . .", "What kind of monster would build this club?" 
+	 "sog_dialogue_thisisfine_act_bonus2_1_npc", "sog_dialogue_thisisfine_act_bonus2_2_npc", "sog_dialogue_thisisfine_act_bonus2_3_npc" 
 	} 
 } 
 	} 
@@ -342,7 +342,7 @@ SCENE.StartFrom = 33000
 SCENE.EndAt = 281000
 SCENE.Ambient = 429688131
 SCENE.AmbientVolume = 20
-SCENE.Name = "this is fine"
+SCENE.Name = "scene_name_this_is_fine"
 
 SCENE.Initialize = function()
 end

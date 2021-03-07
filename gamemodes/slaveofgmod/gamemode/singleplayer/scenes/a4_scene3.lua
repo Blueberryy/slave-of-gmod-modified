@@ -78,59 +78,59 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Fucking headache!!!" 
+	 "sog_dialogue_avarice_2013_18_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Shit. . .", "My head. . ." 
+	 "sog_dialogue_avarice_2013_1_npc", "sog_dialogue_avarice_2013_2_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Celebrating already?", "But what about your best friend?!" 
+	 "sog_dialogue_avarice_2013_3_npc", "sog_dialogue_avarice_2013_4_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "We are rich!", "We can afford to celebrate!" 
+	 "sog_dialogue_avarice_2013_5_npc", "sog_dialogue_avarice_2013_6_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "It's laggy as shit. . .", "Help!" 
+	 "sog_dialogue_avarice_2013_7_npc", "sog_dialogue_avarice_2013_8_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What the fuck is going on?" 
+	 "sog_dialogue_avarice_2013_9_npc" 
 	} 
 }, {
  ["person"] = "e4", ["text"] = {
-	 "Leakers are dead!\\nWe won, once again!", "Come on, mark.", "Just one more." 
+	 "sog_dialogue_avarice_2013_10_npc", "sog_dialogue_avarice_2013_11_npc", "sog_dialogue_avarice_2013_12_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Yeah.", "One more would not hurt!" 
+	 "sog_dialogue_avarice_2013_13_npc", "sog_dialogue_avarice_2013_14_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "This place is heavily guarded!" 
+	 "sog_dialogue_avarice_2013_15_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "So we can walk in and say 'Hi'!" 
+	 "sog_dialogue_avarice_2013_16_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Christ. . .shut up, you freaks!!!" 
+	 "sog_dialogue_avarice_2013_17_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_avarice_2013_19_npc" 
 	} 
 }, {
  ["person"] = "e18", ["text"] = {
-	 "How can I help you?" 
+	 "sog_dialogue_avarice_2013_20_npc" 
 	} 
 } 
 	} 
@@ -138,7 +138,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "mark" 
 }
-SCENE.Name = "avarice"
+SCENE.Name = "scene_name_avarice"
 SCENE.Triggers = {
  ["t5"] = {
 	 ["pos"] = Vector( -62, -174, 1 ), ["size"] = 10, ["action"] = "dialogue", ["CheckTriggers"] = {
@@ -201,7 +201,7 @@ SCENE.Triggers = {
 	}, ["t4"] = {
 	 ["pos"] = Vector( -48, -231, 1 ), ["CheckTriggers"] = {
 		 "t7" 
-		}, ["action"] = "hudmessage", ["data"] = "Get back to the office", ["size"] = 10 
+		}, ["action"] = "hudmessage", ["data"] = "sog_hud_obj_get_back_to_the_office", ["size"] = 10 
 	}, ["t3"] = {
 	 ["pos"] = Vector( -861, -192, 1 ), ["size"] = 10, ["event"] = "OnLevelLoaded", ["action"] = "event", ["objects"] = {
 		 "t2" 

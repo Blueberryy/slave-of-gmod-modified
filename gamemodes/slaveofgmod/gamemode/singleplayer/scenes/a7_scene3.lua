@@ -103,86 +103,86 @@ SCENE.Pickups = {
 	 ["wep"] = "sogm_pot", ["pos"] = Vector( 3238, 3083, 9 ) 
 	} 
 }
-SCENE.MusicText = "THE ENCOUNTER - Pure"
+SCENE.MusicText = "Vêtu de Noir - Midnight In Hell (Feat. Chien Lune)"
 SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "e5", ["text"] = {
-	 "FUCK YOU, WATCH!!!!!" 
+	 "sog_dialogue_bigservermen_2016_26_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 ". . .and so I'm like. . .", "\"Boy, your server can't even reach 800 player limit. . .\"", ". . .and he is like. . .", ". . ." 
+	 "sog_dialogue_bigservermen_2016_1_npc", "sog_dialogue_bigservermen_2016_2_npc", "sog_dialogue_bigservermen_2016_3_npc", "sog_dialogue_bigservermen_2016_4_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Hi." 
+	 "sog_dialogue_bigservermen_2016_5_npc", "sog_dialogue_bigservermen_2016_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Well, well, well. . .", "Look who we have got there, boys!", "Looks like some random. . .", ". . .", "Wait a second. . .", "Your face!", "It's upside down!" 
+	 "sog_dialogue_bigservermen_2016_7_npc", "sog_dialogue_bigservermen_2016_8_npc", "sog_dialogue_bigservermen_2016_9_npc", "sog_dialogue_bigservermen_2016_10_npc", "sog_dialogue_bigservermen_2016_11_npc", "sog_dialogue_bigservermen_2016_12_npc", "sog_dialogue_bigservermen_2016_13_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "That's right, you shady bastards!", "King watch here!", "And you are all under arrest!" 
+	 "sog_dialogue_bigservermen_2016_14_npc", "sog_dialogue_bigservermen_2016_15_npc", "sog_dialogue_bigservermen_2016_16_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . .", "Hahahahahahaha!", "Not so fast, chinboy.", "Do you seriously think, you can take\\non big server men all by yourself?" 
+	 "sog_dialogue_bigservermen_2016_17_npc", "sog_dialogue_bigservermen_2016_18_npc", "sog_dialogue_bigservermen_2016_19_npc", "sog_dialogue_bigservermen_2016_20_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "That's right!", "I know all your dirty tricks,\\nand I know that you only attack 2 times. . .", "Now shut up and let me handcuff you!" 
+	 "sog_dialogue_bigservermen_2016_21_npc", "sog_dialogue_bigservermen_2016_22_npc", "sog_dialogue_bigservermen_2016_23_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Hahahahaha!!!", "Big server men, attack!" 
+	 "sog_dialogue_bigservermen_2016_24_npc", "sog_dialogue_bigservermen_2016_25_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Hey, what the shit?!", "You are not supposed to send a 3rd wave at me!", "You cheating bastards!" 
+	 "sog_dialogue_bigservermen_2016_27_npc", "sog_dialogue_bigservermen_2016_28_npc", "sog_dialogue_bigservermen_2016_29_npc", "sog_dialogue_bigservermen_2016_30_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . .", "Oh boy. . ." 
+	 "sog_dialogue_bigservermen_2016_31_npc", "sog_dialogue_bigservermen_2016_32_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "You really like to say \"boy\" a lot." 
+	 "sog_dialogue_bigservermen_2016_33_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "I will say it as much as I please. . .", ". . .boy." 
+	 "sog_dialogue_bigservermen_2016_34_npc", "sog_dialogue_bigservermen_2016_35_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "*sigh*" 
+	 "sog_dialogue_bigservermen_2016_36_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Don't worry, boy.", "We gonna take you to marishka for a dinner.", "Since master is not in mood to eat lately. . .", "We gonna serve you good. . ." 
+	 "sog_dialogue_bigservermen_2016_37_npc", "sog_dialogue_bigservermen_2016_38_npc", "sog_dialogue_bigservermen_2016_39_npc", "sog_dialogue_bigservermen_2016_40_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Cool.", "You gonna feed me to death?" 
+	 "sog_dialogue_bigservermen_2016_41_npc", "sog_dialogue_bigservermen_2016_42_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . .", "No.", "Big server men!", "Take him to our secret hideout. . ." 
+	 "sog_dialogue_bigservermen_2016_43_npc", "sog_dialogue_bigservermen_2016_44_npc", "sog_dialogue_bigservermen_2016_45_npc", "sog_dialogue_bigservermen_2016_46_npc" 
 	} 
 } 
 	} 
 }
-SCENE.StartFrom = 28500
+SCENE.StartFrom = 30400 //28500
 SCENE.Characters = {
  "watch" 
 }
 SCENE.AmbientStartFrom = 3000
-SCENE.Volume = 85
+SCENE.Volume = 55
 SCENE.ShowLastEnemies = true
 SCENE.Triggers = {
  ["t10"] = {
@@ -215,7 +215,7 @@ SCENE.Triggers = {
 		} 
 	}, ["t18"] = {
 	 ["pos"] = Vector( 3765, 2887, 1 ), ["data"] = {
-		 ["start"] = 116100, ["endpos"] = 252000 
+		 ["start"] = 229500, ["endpos"] = 429000 
 		}, ["action"] = "music_time", ["size"] = 10, ["CheckTriggers"] = {
 		 "t19" 
 		} 
@@ -341,14 +341,14 @@ SCENE.Triggers = {
 		} 
 	} 
 }
-SCENE.EndAt = 115500
-SCENE.SoundTrack = 309414904
+SCENE.EndAt = 182200//115500
+SCENE.SoundTrack = 927953923//309414904
 SCENE.Ambient = 298081381
 SCENE.Vehicle = {
  ["type"] = 10, ["pos"] = Vector( 4061, 3099, 36 ), ["mdl"] = "models/props_vehicles/car005a.mdl", ["ang"] = Angle( 0, -77, 0 ) 
 }
 SCENE.AmbientVolume = 75
-SCENE.Name = "big server men"
+SCENE.Name = "scene_name_big_server_men"
 SCENE.FlipPlayerIcon = true
 
 SCENE.Initialize = function()

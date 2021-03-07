@@ -17,7 +17,7 @@ CHARACTER.Model = Model( "models/player/kleiner.mdl" )
 
 function CHARACTER:OnSpawn( pl )
 	if GAMEMODE:GetGametype() == "none" then
-		pl:SetGoal( GAMEMODE:GetRandomHint(), 10 )
+		pl:SetGoal( translate.Get(GAMEMODE:GetRandomHint()), 10 )
 	end
 	
 	if pl:IsNextBot() and DARKRP_TAG then

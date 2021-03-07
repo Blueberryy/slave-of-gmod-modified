@@ -70,7 +70,7 @@ function DrawCharacterMenu( func, char )
 			local owner = Row.Btn[ self.SelectedID ] and Row.Btn[ self.SelectedID ].Owner
 		
 			local shift = math.sin(RealTime()*3.2)*9 + 11
-			local text = self.Selected.Name or "Error"
+			local text = translate.Get(self.Selected.Name) or translate.Get("sog_menu_error2")
 			
 			text = string.upper( text )
 			
@@ -93,7 +93,7 @@ function DrawCharacterMenu( func, char )
 			
 			//desc
 			shift = shift*3
-			text = self.Selected.Description or "Error"
+			text = translate.Get(self.Selected.Description) or translate.Get("sog_menu_error2")
 			
 			y = sh/2.1
 			
@@ -114,7 +114,7 @@ function DrawCharacterMenu( func, char )
 			
 			/*local shift = math.cos(RealTime()*3)*2 + 5
 			
-			local text = self.Selected.Name or "Error"
+			local text = translate.Get(self.Selected.Name) or translate.Get("sog_menu_error2")
 			
 			draw.SimpleText( text, "Numbers", x + 3, y + 3, Color( 10, 10, 10, 185), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 			draw.SimpleText( text, "Numbers", x, y, Color( 97, 0, 27, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
@@ -123,7 +123,7 @@ function DrawCharacterMenu( func, char )
 			
 			shift = math.sin(RealTime()*3)*2 + 5
 			
-			text = self.Selected.Description or "Error"
+			text = translate.Get(self.Selected.Description) or translate.Get("sog_menu_error2")
 			y = 3*sh/4
 			
 			draw.SimpleText( text, "NumbersSmall", x + 3, y + 3, Color( 10, 10, 10, 185), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)

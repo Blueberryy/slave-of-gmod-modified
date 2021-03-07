@@ -83,7 +83,7 @@ SCENE.Triggers = {
 SCENE.Characters = {
  "garry" 
 }
-SCENE.Name = "bad idea"
+SCENE.Name = "scene_name_bad_idea"
 SCENE.EndAt = 244000
 SCENE.BloodMoonScreen = true
 SCENE.AmbientEndAt = 34000
@@ -91,17 +91,17 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Hahahahahaha!!!", "See what happens to the crybabies like you?!", "*cough*", "I'm not done with you yet. . .", "Oh, I'm not. . ." 
+	 "sog_dialogue_badidea_2014_1_npc", "sog_dialogue_badidea_2014_2_npc", "sog_dialogue_badidea_2014_3_npc", "sog_dialogue_badidea_2014_4_npc", "sog_dialogue_badidea_2014_5_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Are you okay?" 
+	 "sog_dialogue_badidea_2014_6_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "You idiots do not learn. . .", ". . .that complaining changes nothing!" 
+	 "sog_dialogue_badidea_2014_7_npc", "sog_dialogue_badidea_2014_8_npc" 
 	} 
 } 
 	} 

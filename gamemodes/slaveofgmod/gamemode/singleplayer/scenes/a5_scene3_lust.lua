@@ -43,107 +43,107 @@ SCENE.Dialogues = {
  ["d5"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "I dont think it is a good idea. . .", "Bending over just to get these hooks. . .", ". . .sounds dangerous." 
+	 "sog_dialogue_mutilation_2014_7_npc", "sog_dialogue_mutilation_2014_8_npc", "sog_dialogue_mutilation_2014_9_npc" 
 	} 
 } 
 	}, ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_mutilation_2014_10_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Yesssss. . ." 
+	 "sog_dialogue_mutilation_2014_11_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Oh yessss. . ." 
+	 "sog_dialogue_mutilation_2014_12_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "The Sacrificccccceee is almossst complete. . ." 
+	 "sog_dialogue_mutilation_2014_13_npc" 
 	} 
 }, {
  ["person"] = "e4", ["text"] = {
-	 "Your flesh and wallet. . .", ". . .will help our Massster. . ." 
+	 "sog_dialogue_mutilation_2014_14_npc", "sog_dialogue_mutilation_2014_15_npc" 
 	} 
 }, {
  ["person"] = "e5", ["text"] = {
-	 "So he can continue helping ussss. . ." 
+	 "sog_dialogue_mutilation_2014_16_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Yesssss, Thomasssss. . .", "Soon you will become the top donator. . ." 
+	 "sog_dialogue_mutilation_2014_17_npc", "sog_dialogue_mutilation_2014_18_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Yesss. . ." 
+	 "sog_dialogue_mutilation_2014_19_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "Jussst like usss. . ." 
+	 "sog_dialogue_mutilation_2014_20_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hey!" 
+	 "sog_dialogue_mutilation_2014_21_npc" 
 	} 
 }, {
  ["person"] = "e5", ["text"] = {
-	 "Whatssss that?!" 
+	 "sog_dialogue_mutilation_2014_22_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "The mortal!" 
+	 "sog_dialogue_mutilation_2014_23_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Leave this guy alone!", "He didn't do anything!" 
+	 "sog_dialogue_mutilation_2014_24_npc", "sog_dialogue_mutilation_2014_25_npc" 
 	} 
 }, {
  ["person"] = "e4", ["text"] = {
-	 "It's none of your businessss, human!" 
+	 "sog_dialogue_mutilation_2014_26_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "It'ssss Mastersssss. . ." 
+	 "sog_dialogue_mutilation_2014_27_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "You are nothing, compared to usss. . ." 
+	 "sog_dialogue_mutilation_2014_28_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Die, mortal!!!" 
+	 "sog_dialogue_mutilation_2014_29_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Christ. . .", "What is that smell?", ". . .", "I'd better find the server owner.", ". . .", "Or anyone, at least. . ." 
+	 "sog_dialogue_mutilation_2014_1_npc", "sog_dialogue_mutilation_2014_2_npc", "sog_dialogue_mutilation_2014_3_npc", "sog_dialogue_mutilation_2014_4_npc", "sog_dialogue_mutilation_2014_5_npc", "sog_dialogue_mutilation_2014_6_npc" 
 	} 
 } 
 	}, ["d4"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Is this Carl's shotgun?", "It looks really familiar. . ." 
+	 "sog_dialogue_mutilation_2014_33_npc", "sog_dialogue_mutilation_2014_34_npc", "sog_dialogue_mutilation_2014_35_npc" 
 	} 
 }, {
  ["person"] = "e7", ["text"] = {
-	 "The Massssster awaaaitsssssssssss. . ." 
+	 "sog_dialogue_mutilation_2014_36_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What?!" 
+	 "sog_dialogue_mutilation_2014_37_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "What have they done. . .", "Are you alright?" 
+	 "sog_dialogue_mutilation_2014_30_npc", "sog_dialogue_mutilation_2014_31_npc" 
 	} 
 }, {
  ["person"] = "e6", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_mutilation_2014_32_npc" 
 	} 
 } 
 	} 
@@ -310,7 +310,7 @@ SCENE.Triggers = {
 	}, ["t28"] = {
 	 ["pos"] = Vector( 1215, 219, 1 ), ["size"] = 10, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t29" 
-		}, ["data"] = "Go to Thomas" 
+		}, ["data"] = "sog_hud_obj_go_to_thomas" 
 	}, ["t32"] = {
 	 ["pos"] = Vector( 1869, -360, 1 ), ["size"] = 10, ["action"] = "disarm", ["CheckTriggers"] = {
 		 "t33" 
@@ -342,7 +342,7 @@ SCENE.Triggers = {
 SCENE.Characters = {
  "protagonist" 
 }
-SCENE.Name = "mutilation"
+SCENE.Name = "scene_name_mutilation"
 SCENE.PickupsPersistance = true
 SCENE.BloodMoonScreen = true
 SCENE.SoundTrack = 163817496

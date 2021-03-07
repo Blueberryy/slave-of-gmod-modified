@@ -61,23 +61,23 @@ SCENE.Dialogues = {
  ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Fuck, I don't see him in there." 
+	 "sog_dialogue_backstab_2013_1_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Why are you looking at me like that?!", "You want to RDM me!" 
+	 "sog_dialogue_backstab_2013_2_npc", "sog_dialogue_backstab_2013_3_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Where is that asshole with a camera?!", "Where the fuck did he go?" 
+	 "sog_dialogue_backstab_2013_4_npc", "sog_dialogue_backstab_2013_5_npc", "sog_dialogue_backstab_2013_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Stop looking at me!!!", "ADMIN!!!", "RDM! RDM! RDM!" 
+	 "sog_dialogue_backstab_2013_7_npc", "sog_dialogue_backstab_2013_8_npc", "sog_dialogue_backstab_2013_9_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "You stupid pieces of shit. . ." 
+	 "sog_dialogue_backstab_2013_10_npc" 
 	} 
 } 
 	} 
@@ -85,10 +85,10 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "axe guy" 
 }
-SCENE.Name = "backstab"
+SCENE.Name = "scene_name_backstab"
 SCENE.Triggers = {
  ["t7"] = {
-	 ["pos"] = Vector( 367, -267, 17 ), ["data"] = translate.Get("sog_hud_obj_leave_area"), ["action"] = "hudmessage", ["size"] = 42, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 367, -267, 17 ), ["data"] = "sog_hud_obj_leave_area", ["action"] = "hudmessage", ["size"] = 42, ["CheckTriggers"] = {
 		 "t8" 
 		} 
 	}, ["t6"] = {

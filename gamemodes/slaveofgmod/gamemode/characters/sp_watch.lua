@@ -12,7 +12,7 @@ CHARACTER.Icon = Material( "sog/watch.png", "smooth" )
 
 CHARACTER.Model = Model( "models/player/magnusson.mdl" )
 
-if SCENE and SCENE.Name == "legacy" then
+if SCENE and SCENE.Name == "scene_name_legacy" then
 	CHARACTER.StartingWeapon = "sogm_villainchair"
 end
 

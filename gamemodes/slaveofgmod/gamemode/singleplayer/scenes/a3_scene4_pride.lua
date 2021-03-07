@@ -37,65 +37,65 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "No. . .", "Stay the fuck back from me!!!" 
+	 "sog_dialogue_clickbait_2013_24_npc", "sog_dialogue_clickbait_2013_25_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_clickbait_2013_26_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Don't you even dare!!!", "Do you know who are you messing with?!", "*cough*", "I am LetsTortureGMod!!!", "I am famous, and you are not!!!!", "You hear me??!!!", "I am a motherfucking god!!!!!!!!!!!!!!" 
+	 "sog_dialogue_clickbait_2013_27_npc", "sog_dialogue_clickbait_2013_28_npc", "sog_dialogue_clickbait_2013_29_npc", "sog_dialogue_clickbait_2013_30_npc", "sog_dialogue_clickbait_2013_31_npc", "sog_dialogue_clickbait_2013_32_npc", "sog_dialogue_clickbait_2013_33_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_clickbait_2013_34_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Whats up, my little slaves??!!" ,"This is LetsTortureGMod, and welcome to the. . .", "'The second torturing of GMod' show!!!!"
+	 "sog_dialogue_clickbait_2013_1_npc" ,"sog_dialogue_clickbait_2013_2_npc", "sog_dialogue_clickbait_2013_3_npc"
 	} 
 }, {
  ["person"] = "e4", ["text"] = {
-	 "yay!!!" 
+	 "sog_dialogue_clickbait_2013_4_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "You rule, LetsTortureGMod!!!" 
+	 "sog_dialogue_clickbait_2013_5_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "The winner will be able to spend a night\\nin the bed with me!", "So, hold onto your butts, my little slaves!" 
+	 "sog_dialogue_clickbait_2013_6_npc", "sog_dialogue_clickbait_2013_7_npc" 
 	} 
 }, {
  ["person"] = "e5", ["text"] = {
-	 "yay!!!!!!" 
+	 "sog_dialogue_clickbait_2013_8_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "As always, remember to like and subscribe. . .", ". . .while I'm looking for a winner's name!" 
+	 "sog_dialogue_clickbait_2013_9_npc", "sog_dialogue_clickbait_2013_10_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "There you are, you bag of shit!!!", "You will pay for what your fucktards\\ndid to my car!" 
+	 "sog_dialogue_clickbait_2013_11_npc", "sog_dialogue_clickbait_2013_12_npc" 
 	} 
 }, {
  ["person"] = "e4", ["text"] = {
-	 "Noo. . .the haters!" 
+	 "sog_dialogue_clickbait_2013_13_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Looks like someone is unhappy about my job!", "I am a motherfucking god\\nwhen my slaves are here!", "Literally!", "New contest, my little slaves!", "The lucky one, who stops this unhappy guy. . .", ". . .will spend night in the bed with me. . .", ". . .plus a chance to pinch my mighty butt!", "What do you think, my little slaves?!!" 
+	 "sog_dialogue_clickbait_2013_14_npc", "sog_dialogue_clickbait_2013_15_npc", "sog_dialogue_clickbait_2013_16_npc", "sog_dialogue_clickbait_2013_17_npc", "sog_dialogue_clickbait_2013_18_npc", "sog_dialogue_clickbait_2013_19_npc", "sog_dialogue_clickbait_2013_20_npc", "sog_dialogue_clickbait_2013_21_npc" 
 	} 
 }, {
  ["person"] = "e5", ["text"] = {
-	 "Kill him!" 
+	 "sog_dialogue_clickbait_2013_22_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "The prize is going to be mine!!!" 
+	 "sog_dialogue_clickbait_2013_23_npc" 
 	} 
 } 
 	} 
@@ -103,7 +103,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "axe guy" 
 }
-SCENE.Name = "clickbait"
+SCENE.Name = "scene_name_clickbait"
 SCENE.BloodMoonScreen = true
 SCENE.Volume = 40
 SCENE.LightStyle = "c"
@@ -139,7 +139,7 @@ SCENE.Triggers = {
 	}, ["t7"] = {
 	 ["pos"] = Vector( 2272, -196, 65 ), ["CheckTriggers"] = {
 		 "t8" 
-		}, ["action"] = "hudmessage", ["data"] = "Go to car", ["size"] = 10 
+		}, ["action"] = "hudmessage", ["data"] = "sog_hud_obj_go_to_car", ["size"] = 10 
 	}, ["t2"] = {
 	 ["pos"] = Vector( 2103, -707, 65 ), ["size"] = 10, ["action"] = "dialogue", ["CheckTriggers"] = {
 		 "t3" 

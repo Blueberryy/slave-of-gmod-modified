@@ -17,7 +17,7 @@ CHARACTER.Model = Model( "models/player/group03/male_03.mdl" )
 
 if BADASS_MODE then
 	CHARACTER.CantExecute = false
-	if SCENE and SCENE.Name == "return end" then
+	if SCENE and SCENE.Name == "scene_name_return_end" then
 		CHARACTER.StartingWeapon = "sogm_m4_cursed"
 	end
 else
@@ -271,7 +271,7 @@ CHARACTER.WElements = {
 
 function CHARACTER:PostSpawn( pl )
 
-	if SCENE and SCENE.Name == "flashbacks" and CUR_STAGE == 1 then
+	if SCENE and SCENE.Name == "scene_name_flashbacks" and CUR_STAGE == 1 then
 		local override = pl:AddOverrideAnimation( pl:LookupSequence( "run_all_protected" ) )
 		override:SetOverrideSpeed( 160 )
 		
@@ -279,7 +279,7 @@ function CHARACTER:PostSpawn( pl )
 		k:SetRecoveryTime( 3.2 )
 	end
 	
-	if SCENE and SCENE.Name == "return end" then
+	if SCENE and SCENE.Name == "scene_name_return_end" then
 		if CUR_STAGE == 1 then
 			local override = pl:AddOverrideAnimation( pl:LookupSequence( "run_passive" ) )
 			override:SetOverrideSpeed( 120 )
@@ -295,13 +295,13 @@ function CHARACTER:PostSpawn( pl )
 		end
 	end
 	
-	if SCENE and SCENE.Name == "this is fine" then
-		pl:SetGoal( "Hold [RMB] for melee stance. Dropped guns will refill your ammunition", 25 )
+	if SCENE and SCENE.Name == "scene_name_this_is_fine" then
+		pl:SetGoal( translate.Get("sog_play_tip_james"), 25 )
 	end
 
 end
 
-if SCENE and SCENE.Name == "return end" then
+if SCENE and SCENE.Name == "scene_name_return_end" then
 	function CHARACTER:OverrideDeathEffects( pl, attacker, dmginfo )
 		
 		if CUR_STAGE == 2 then

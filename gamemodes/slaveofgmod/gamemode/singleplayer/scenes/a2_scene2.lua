@@ -125,98 +125,98 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_descent_2013_30_npc" 
 	} 
 }, {
  ["person"] = "e32", ["text"] = {
-	 "Get in!", "Quickly!" 
+	 "sog_dialogue_descent_2013_31_npc", "sog_dialogue_descent_2013_32_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What. . ." 
+	 "sog_dialogue_descent_2013_33_npc" 
 	} 
 }, {
  ["person"] = "e32", ["text"] = {
-	 "Hurry up!" 
+	 "sog_dialogue_descent_2013_34_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Okay, okay. . .", ". . .", "Where are we going?" 
+	 "sog_dialogue_descent_2013_35_npc", "sog_dialogue_descent_2013_36_npc", "sog_dialogue_descent_2013_37_npc" 
 	} 
 }, {
  ["person"] = "e33", ["text"] = {
-	 "To hell!" 
+	 "sog_dialogue_descent_2013_38_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Looks like it's working.", "Carl!", ". . .", "Can you hear me?!" 
+	 "sog_dialogue_descent_2013_1_npc", "sog_dialogue_descent_2013_2_npc", "sog_dialogue_descent_2013_3_npc", "sog_dialogue_descent_2013_4_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What's going on?", "Where am I?" 
+	 "sog_dialogue_descent_2013_5_npc", "sog_dialogue_descent_2013_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Neat, he is not responding." 
+	 "sog_dialogue_descent_2013_7_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hey, I am here!" 
+	 "sog_dialogue_descent_2013_8_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Does this mean that these paid addons are working?" 
+	 "sog_dialogue_descent_2013_9_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "What the hell is that thing?!", "What is going on?!" 
+	 "sog_dialogue_descent_2013_10_npc", "sog_dialogue_descent_2013_11_npc", "sog_dialogue_descent_2013_12_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Seems so. . .", "I'm not sure if I gave him the right dose. . .", "But it's not my problem anyway." 
+	 "sog_dialogue_descent_2013_13_npc", "sog_dialogue_descent_2013_14_npc", "sog_dialogue_descent_2013_15_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "How so?" 
+	 "sog_dialogue_descent_2013_16_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "I'm selling him to \"ShitGamers\"." 
+	 "sog_dialogue_descent_2013_17_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What. . ." 
+	 "sog_dialogue_descent_2013_18_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Oh dear.", "Are you serious?" 
+	 "sog_dialogue_descent_2013_19_npc", "sog_dialogue_descent_2013_20_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Yeah, why not.", "We'll get the money, they'll get him and his organs." 
+	 "sog_dialogue_descent_2013_21_npc", "sog_dialogue_descent_2013_22_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_descent_2013_23_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hey, I'm not going to \"ShitGamers\"!!!" 
+	 "sog_dialogue_descent_2013_24_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Wonder, for how long this thing will last. . .", "*scary paid addon sounds*", "Now that should be enough." 
+	 "sog_dialogue_descent_2013_25_npc", "sog_dialogue_descent_2013_26_npc", "sog_dialogue_descent_2013_27_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Nooo!!! Stop that!!!", "My head!!!" 
+	 "sog_dialogue_descent_2013_28_npc", "sog_dialogue_descent_2013_29_npc" 
 	} 
 } 
 	} 
 }
-SCENE.Name = "descent"
+SCENE.Name = "scene_name_descent"
 SCENE.Characters = {
  "carl" 
 }
@@ -256,7 +256,7 @@ SCENE.Triggers = {
 	}, ["t6"] = {
 	 ["pos"] = Vector( 1586, 626, -159 ), ["CheckTriggers"] = {
 		 "t7", "t11" 
-		}, ["action"] = "hudmessage", ["data"] = "Get out", ["size"] = 60 
+		}, ["action"] = "hudmessage", ["data"] = "sog_hud_obj_get_out", ["size"] = 60 
 	}, ["t8"] = {
 	 ["action"] = "dialogue", ["pos"] = Vector( -1191, -1406, -335 ), ["size"] = 145, ["objects"] = {
 		 "d2" 

@@ -2,7 +2,7 @@ SCENE.Order = 1
 SCENE.Act = 1
 SCENE.Cover = Material( "sog/covers/dvd_disk_1.png" , "alphatest")
 SCENE.Map = "sog_fullfrontal_v3"
-SCENE.Name = "lesson"
+SCENE.Name = "scene_name_lesson"
 SCENE.ShowLastEnemies = true
 SCENE.Enemies = {
  ["e13"] = {
@@ -80,7 +80,7 @@ SCENE.PickupsPersistance = true
 SCENE.SoundTrack = 209251402//107188096
 SCENE.Triggers = {
  ["t2"] = {
-	 ["pos"] = Vector( 546, 1356, 3 ), ["data"] = translate.Get("sog_hud_obj_leave_area"), ["action"] = "hudmessage", ["CheckTriggers"] = {
+	 ["pos"] = Vector( 546, 1356, 3 ), ["data"] = "sog_hud_obj_leave_area", ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t3" 
 		}, ["size"] = 60 
 	}, ["t1"] = {

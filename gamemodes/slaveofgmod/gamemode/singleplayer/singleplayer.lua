@@ -2,13 +2,13 @@ ACTS = ACTS or {}
 SCENES = SCENES or {}
 
 local ActNames = {
-	"sog_act_name_dmca",
-	"sog_act_name_ddos",
-	"sog_act_name_pride",
-	"sog_act_name_greed",
-	"sog_act_name_terror",
-	"sog_act_name_dead_end",
-	"sog_act_name_development_hell"
+	"DMCA",
+	"DDOS",
+	"Pride",
+	"Greed",
+	"Terror",
+	"Dead End",
+	"Development Hell"
 }
 
 local ActCovers = {
@@ -102,7 +102,7 @@ for k, v in pairs( SCENES ) do
 		if not ACTS[ SCENES[ k ].Act ] then
 			ACTS[ SCENES[ k ].Act ] = {}
 			if ActNames[ SCENES[ k ].Act ] then
-				ACTS[ SCENES[ k ].Act ].Name = translate.Get(ActNames[ SCENES[ k ].Act ])
+				ACTS[ SCENES[ k ].Act ].Name = ActNames[ SCENES[ k ].Act ]
 			else
 				ACTS[ SCENES[ k ].Act ].Name = "Untitled"
 			end
@@ -347,7 +347,7 @@ if game.SinglePlayer() and SINGLEPLAYER then
 				self:UnlockAchievement( SCENE.Achievement )
 			end
 			
-			if SCENE and SCENE.Name == "legacy" then
+			if SCENE and SCENE.Name == "scene_name_legacy" then
 				local wep = Entity(1):GetActiveWeapon()
 				if IsValid( wep ) and wep:GetClass() == "sogm_villainchair" then
 					self:UnlockAchievement( "comfy" )
@@ -358,7 +358,7 @@ if game.SinglePlayer() and SINGLEPLAYER then
 			
 		end)
 		
-		//Entity(1):PopHUDMessage( translate.Get("sog_hud_obj_leave_area") )
+		//Entity(1):PopHUDMessage( "sog_hud_obj_leave_area" )
 		
 	end
 	
@@ -955,15 +955,15 @@ if game.SinglePlayer() and SINGLEPLAYER then
 		end
 		
 		if SCENE then
-			if SCENE.Name == "mutilation" and CUR_DIALOGUE == "d5" then
+			if SCENE.Name == "scene_name_mutilation" and CUR_DIALOGUE == "d5" then
 				self:UnlockAchievement( "safety" )
 			end
 			
-			if SCENE.Name == "bad idea" and CUR_DIALOGUE == "d2" then
+			if SCENE.Name == "scene_name_bad_idea" and CUR_DIALOGUE == "d2" then
 				self:UnlockAchievement( "sog" )
 			end
 			
-			if SCENE.Name == "the bottom" and CUR_DIALOGUE == "d3" then
+			if SCENE.Name == "scene_name_the_bottom" and CUR_DIALOGUE == "d3" then
 				for _, p in pairs( NEXTBOTS ) do
 					if IsValid( p ) and p:Alive() and p.Tag == "e19" then
 						self:UnlockAchievement( "sorry" )
@@ -1428,15 +1428,15 @@ if game.SinglePlayer() and SINGLEPLAYER then
 			end
 		end
 		
-		if SCENE and SCENE.Name == "big server men" and pl.Tag and pl.Tag == "e5" then
+		if SCENE and SCENE.Name == "scene_name_big_server_men" and pl.Tag and pl.Tag == "e5" then
 			self:UnlockAchievement( "shadycar" )
 		end
 		
-		if SCENE and SCENE.Name == "served cold" and pl.Tag and pl.Tag == "e17" then
+		if SCENE and SCENE.Name == "scene_name_served_cold" and pl.Tag and pl.Tag == "e17" then
 			self:UnlockAchievement( "bsm" )
 		end
 		
-		if SCENE and SCENE.Name == "wild ride" and pl.Tag and pl.Tag == "e35" then
+		if SCENE and SCENE.Name == "scene_name_wild_ride" and pl.Tag and pl.Tag == "e35" then
 			self:UnlockAchievement( "cptedge" )
 		end
 				
@@ -1444,7 +1444,7 @@ if game.SinglePlayer() and SINGLEPLAYER then
 			self:DoEvents( "OnAllEnemiesKilled" )
 			
 			if SCENE then
-				if SCENE.Name == "mutilation" then
+				if SCENE.Name == "scene_name_mutilation" then
 					self:UnlockAchievement( "lust" )
 				end
 			end

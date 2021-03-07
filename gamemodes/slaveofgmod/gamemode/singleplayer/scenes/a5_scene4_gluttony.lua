@@ -25,65 +25,65 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "You are a fool. . .", "You have destroyed my sanctuary. . ." 
+	 "sog_dialogue_evasion_2014_18_npc", "sog_dialogue_evasion_2014_19_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Why are you doing this?", "Why are you taking down servers?", "Hell. . .", "What did you do to all these players. . .", ". . .", "Why the hell that kind of stuff\\nis even allowed in GMod?!" 
+	 "sog_dialogue_evasion_2014_20_npc", "sog_dialogue_evasion_2014_21_npc", "sog_dialogue_evasion_2014_22_npc", "sog_dialogue_evasion_2014_23_npc", "sog_dialogue_evasion_2014_24_npc", "sog_dialogue_evasion_2014_25_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "How pathetic. . .", "There is nothing you can change!" 
+	 "sog_dialogue_evasion_2014_26_npc", "sog_dialogue_evasion_2014_27_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_evasion_2014_28_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Look at you. . .", "What are you going to do?", "Complain to garry?", "Kill me?", "You can't truly kill me. . .", "Nothing can." 
+	 "sog_dialogue_evasion_2014_29_npc", "sog_dialogue_evasion_2014_30_npc", "sog_dialogue_evasion_2014_31_npc", "sog_dialogue_evasion_2014_32_npc", "sog_dialogue_evasion_2014_33_npc", "sog_dialogue_evasion_2014_34_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Talking to garry doesn't seem like a bad idea." 
+	 "sog_dialogue_evasion_2014_35_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Go ahead!", "Cry before him." 
+	 "sog_dialogue_evasion_2014_36_npc", "sog_dialogue_evasion_2014_37_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_evasion_2014_38_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "You don't know this yet.", "But you are already dead. . .", ". . .", "You are all dead!!!", "Now get the fuck out of my sight!", "You fucking monster. . ." 
+	 "sog_dialogue_evasion_2014_39_npc", "sog_dialogue_evasion_2014_40_npc", "sog_dialogue_evasion_2014_41_npc", "sog_dialogue_evasion_2014_42_npc", "sog_dialogue_evasion_2014_43_npc", "sog_dialogue_evasion_2014_44_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Holy shit. . ." 
+	 "sog_dialogue_evasion_2014_1_npc", "sog_dialogue_evasion_2014_2_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "So. . .", "You thought you can get away. . .", "After all you have done. . ." 
+	 "sog_dialogue_evasion_2014_3_npc", "sog_dialogue_evasion_2014_4_npc", "sog_dialogue_evasion_2014_5_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "I just. . ." 
+	 "sog_dialogue_evasion_2014_6_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "You have killed my henchmen.", "You have murdered my children. . .", "My top 5 donators. . .", "And now, you came for my lamb!" 
+	 "sog_dialogue_evasion_2014_7_npc", "sog_dialogue_evasion_2014_8_npc", "sog_dialogue_evasion_2014_9_npc", "sog_dialogue_evasion_2014_10_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "I. . ." 
+	 "sog_dialogue_evasion_2014_11_npc", "sog_dialogue_evasion_2014_12_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Silence!!!", "Don't you dare interrupt me!", "I am The Master!", "The glorious owner of \"ShitGamers\"!", "Your life ends here. . ." 
+	 "sog_dialogue_evasion_2014_13_npc", "sog_dialogue_evasion_2014_14_npc", "sog_dialogue_evasion_2014_15_npc", "sog_dialogue_evasion_2014_16_npc", "sog_dialogue_evasion_2014_17_npc" 
 	} 
 } 
 	} 
@@ -91,7 +91,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "protagonist" 
 }
-SCENE.Name = "tax evasion"
+SCENE.Name = "scene_name_tax_evasion"
 SCENE.Triggers = {
  ["t14"] = {
 	 ["CheckTriggers"] = {
@@ -120,7 +120,7 @@ SCENE.Triggers = {
 		 "d1" 
 		} 
 	}, ["t10"] = {
-	 ["pos"] = Vector( 1037, 106, 7 ), ["data"] = translate.Get("sog_hud_obj_leave_area"), ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 1037, 106, 7 ), ["data"] = "sog_hud_obj_leave_area", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
 		 "t11" 
 		} 
 	}, ["t13"] = {
@@ -164,7 +164,7 @@ SCENE.Triggers = {
 		 "d2" 
 		} 
 	}, ["t3"] = {
-	 ["pos"] = Vector( 940, 374, 1 ), ["data"] = "Return to master", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 940, 374, 1 ), ["data"] = "sog_hud_obj_return_to_master", ["action"] = "hudmessage", ["size"] = 10, ["CheckTriggers"] = {
 		 "t6" 
 		} 
 	} 

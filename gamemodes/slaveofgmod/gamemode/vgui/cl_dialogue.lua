@@ -107,7 +107,7 @@ function DrawDialogue( req_finish )
 		
 		if text then
 			for k, v in pairs( DialogueKeywords ) do
-				if string.find( text, k, 1, true ) then
+				if string.find( translate.Get(text), k, 1, true ) then
 					v()
 				end
 			end
@@ -140,7 +140,7 @@ function DrawDialogue( req_finish )
 		
 			if text then
 				for k, v in pairs( DialogueKeywords ) do
-					if string.find( text, k, 1, true ) then
+					if string.find( translate.Get(text), k, 1, true ) then
 						v()
 					end
 				end
@@ -170,7 +170,7 @@ function DrawDialogue( req_finish )
 		
 					if text then
 						for k, v in pairs( DialogueKeywords ) do
-							if string.find( text, k, 1, true ) then
+							if string.find( translate.Get(text), k, 1, true ) then
 								v()
 							end
 						end
@@ -353,14 +353,14 @@ function DrawDialogue( req_finish )
 		
 		if Dialogues[ self.CurrentLine ] then
 		
-			local text = Dialogues[ self.CurrentLine ].text and Dialogues[ self.CurrentLine ].text[ self.CurrentSubLine ] or "error"
+			local text = Dialogues[ self.CurrentLine ].text and Dialogues[ self.CurrentLine ].text[ self.CurrentSubLine ] or translate.Get("sog_menu_error")
 			
 			//fix some stuff
 			text = string.gsub( text, "\\n", "\n" )
-			text = string.gsub( text, "!g", "" )
+			text = string.gsub( translate.Get(text), "!g", "" )
 			text = string.gsub( text, "!i", "" )
-			text = string.gsub( text, "!PLAYERNAME", LocalPlayer():Name() or "" )
-			text = string.upper( text )
+			text = string.gsub( translate.Get(text), "!PLAYERNAME", LocalPlayer():Name() or "" )
+			text = string.upper( translate.Get(text) )
 		
 			local tx, ty = 130, sh-(sh/4 * delta)+40
 			

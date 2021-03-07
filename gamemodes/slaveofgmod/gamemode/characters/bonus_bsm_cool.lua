@@ -24,7 +24,7 @@ function CHARACTER:OnThink( pl )
 			if Entity(1):IsValid() and Entity(1):Alive() then
 				pl.NextTaunt = pl.NextTaunt or 0
 				if pl.NextTaunt < CurTime() then
-					Entity(1):AddScoreMessage( "ha", pl:GetPos() + VectorRand() * 30, math.Rand( 0.3, 0.5 ) )
+					Entity(1):AddScoreMessage( "sog_hud_bsm_haha", pl:GetPos() + VectorRand() * 30, math.Rand( 0.3, 0.5 ) )
 					pl.NextTaunt = CurTime() + math.Rand( 0.3, 0.8 )
 				end
 			end

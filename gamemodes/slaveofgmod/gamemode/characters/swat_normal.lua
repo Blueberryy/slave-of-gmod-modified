@@ -19,7 +19,7 @@ CHARACTER.Icon = Material( "sog/gasmask.png", "smooth" )
 
 function CHARACTER:OnThink( pl )
 	
-	if SCENE and SCENE and SCENE.Name == "wild ride" and pl.Tag and pl.Tag == "e1" and pl:GetBehaviour() == BEHAVIOUR_DUMB and CUR_DIALOGUE then
+	if SCENE and SCENE and SCENE.Name == "scene_name_wild_ride" and pl.Tag and pl.Tag == "e1" and pl:GetBehaviour() == BEHAVIOUR_DUMB and CUR_DIALOGUE then
 		
 		if not pl.SpitCoffee then
 			pl.SpitCoffee = CurTime() + 3

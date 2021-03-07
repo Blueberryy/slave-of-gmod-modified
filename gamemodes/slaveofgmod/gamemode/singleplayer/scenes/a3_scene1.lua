@@ -56,49 +56,49 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Fucking fanboys. . .", "Someone is going to pay for that." 
+	 "sog_dialogue_fanboys_2013_15_npc", "sog_dialogue_fanboys_2013_16_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "hehehehehehe. . .", "Are you recording?" 
+	 "sog_dialogue_fanboys_2013_1_npc", "sog_dialogue_fanboys_2013_2_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "Yessss. . .", "This is gonna be good!" 
+	 "sog_dialogue_fanboys_2013_3_npc", "sog_dialogue_fanboys_2013_4_npc" 
 	} 
 }, {
  ["person"] = "e4", ["text"] = {
-	 "This video will let us win a night in the bed\\nwith 'LetsTortureGMod'!!!" 
+	 "sog_dialogue_fanboys_2013_5_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Yesssss. . ." 
+	 "sog_dialogue_fanboys_2013_6_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Oh yessss. . ." 
+	 "sog_dialogue_fanboys_2013_7_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Looking pretty good, ms. car!", "Mind if I 'inspect' you?" 
+	 "sog_dialogue_fanboys_2013_8_npc", "sog_dialogue_fanboys_2013_9_npc" 
 	} 
 }, {
  ["person"] = "e3", ["text"] = {
-	 "Hahahahaha" 
+	 "sog_dialogue_fanboys_2013_10_npc" 
 	} 
 }, {
  ["person"] = "e4", ["text"] = {
-	 "Hahahahahahahaha" 
+	 "sog_dialogue_fanboys_2013_11_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hands off my car, you little fucks!!!" 
+	 "sog_dialogue_fanboys_2013_12_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Nooo!!!", "He wants to ruin our chance!" 
+	 "sog_dialogue_fanboys_2013_13_npc", "sog_dialogue_fanboys_2013_14_npc" 
 	} 
 } 
 	} 
@@ -106,12 +106,12 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "axe guy" 
 }
-SCENE.Name = "fanboys"
+SCENE.Name = "scene_name_fanboys"
 SCENE.Triggers = {
  ["t5"] = {
 	 ["pos"] = Vector( 678, -1477, 65 ), ["CheckTriggers"] = {
 		 "t6" 
-		}, ["action"] = "hudmessage", ["data"] = "Go to car", ["size"] = 10 
+		}, ["action"] = "hudmessage", ["data"] = "sog_hud_obj_go_to_car", ["size"] = 10 
 	}, ["t1"] = {
 	 ["pos"] = Vector( 221, -1118, 65 ), ["data"] = "true", ["action"] = "pauseenemies", ["size"] = 60, ["trigger_once"] = true 
 	}, ["t10"] = {

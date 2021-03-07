@@ -682,7 +682,7 @@ function DrawCutscene( scene, func, cv )
 				surface.SetFont("PixelCutsceneBiggerScaled")
 				local textw, texth = surface.GetTextSize(sc.Scenery.Intro)
 			
-				draw.DrawText( sc.Scenery.Act, "PixelCutsceneBiggerScaled", tw/2, th/5-texth/2, Color(210, 210, 210, 255*(self.TextFadeInTime >= CurTime() and delta1 or delta2) ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+				draw.DrawText( translate.Get(sc.Scenery.Act), "PixelCutsceneBiggerScaled", tw/2, th/5-texth/2, Color(210, 210, 210, 255*(self.TextFadeInTime >= CurTime() and delta1 or delta2) ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 			end
 			
 		end
@@ -738,7 +738,7 @@ for k,v in pairs(GM.Cutscenes) do
 end
 
 GM.Cutscenes["_sog_demo1"][0] = {
-	Intro = "sog_intro_the_bottom_2013",
+	Intro = "2013\nThe Bottom",
 	SoundTrack = 111429172,
 	Volume = 25,
 	Main = { mdl = Model( "models/hunter/plates/plate5x6.mdl" ), seq = "idle"},
@@ -2577,9 +2577,9 @@ GM.Cutscenes["_sog_demo4"][4] = {
 	end
 }
 
-GM.SingleplayerCutscenes["lesson"] = {
-	Act = "ACT 1: DMCA",
-	Intro = "2013\nGreedMobile of \"CoderFired\" Corporation",
+GM.SingleplayerCutscenes["scene_name_lesson"] = {
+	Act = "sog_intro_lesson_act1",
+	Intro = "sog_intro_the_greenmobile_2013",
 	SoundTrack = 61194784,//201132377,
 	Volume = 45,
 	Main = { mdl = Model( "models/hunter/plates/plate4x4.mdl" ), seq = "idle", mat = ""},
@@ -2612,32 +2612,32 @@ GM.SingleplayerCutscenes["lesson"] = {
 				end
 			end
 		end
-		AddDialogueLine( sc.mark, ". . ." )
-		AddDialogueLine( sc.mark, "And this is why we do not tolerate leakers, steve." )
-		AddDialogueLine( sc.steve, "Uhh. . .", "I see." )
-		AddDialogueLine( sc.mark, "Hey, who is driving this van today?" )
-		AddDialogueLine( sc.moderator, ". . ." )
-		AddDialogueLine( sc.mark, "Oh. . .", "Wow. . .", "Never thought I would ever see you again." )
-		AddDialogueLine( sc.moderator, "What do you mean?" )
-		AddDialogueLine( sc.mark, "Well, I barely saw you at the office\nfor past few weeks." )
-		AddDialogueLine( sc.moderator, ". . .", "Because this stupid van won't drive itself.", "And since I'm pretty much the only one,\nwho is able to drive cars. . ." )
-		AddDialogueLine( sc.moderator, ". . .instead of just bragging about how many cars\nI've bought by selling scripts. . ." )
-		AddDialogueLine( sc.steve, "Who is that?" )
-		AddDialogueLine( sc.mark, "It's the moderator, Steve. . .", "Her name is. . .", "Uhh. . ." )
-		AddDialogueLine( sc.moderator, "*sigh*", "You can't even remember my name again." )
-		AddDialogueLine( sc.mark, "Nevermind then.", ". . .", "Are we there yet?" )
-		AddDialogueLine( sc.moderator, "The road is pitch black. . .", "But I think we should arrive in a few minutes." )
-		AddDialogueLine( sc.mark, "Nice!", "You know the drill.", "We gently negotiate with the owner\nand prove him wrong." )
-		AddDialogueLine( sc.steve, "Gently?" )
-		AddDialogueLine( sc.moderator, "This means shoot first, ask later." )
-		AddDialogueLine( sc.mark, "Exactly!" )
-		AddDialogueLine( sc.moderator, "Almost here!" )
-		AddDialogueLine( sc.mark, "So. . .", "Any volunteers?", ". . .or do I have to do this stuff on my own?" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_1" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_2" )
+		AddDialogueLine( sc.steve, "sog_dialogue_the_greenmobile_2013_3", "sog_dialogue_the_greenmobile_2013_4" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_5" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_the_greenmobile_2013_6" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_7", "sog_dialogue_the_greenmobile_2013_8", "sog_dialogue_the_greenmobile_2013_9" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_the_greenmobile_2013_10" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_11" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_the_greenmobile_2013_12", "sog_dialogue_the_greenmobile_2013_13", "sog_dialogue_the_greenmobile_2013_14" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_the_greenmobile_2013_15" )
+		AddDialogueLine( sc.steve, "sog_dialogue_the_greenmobile_2013_16" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_17", "sog_dialogue_the_greenmobile_2013_18", "sog_dialogue_the_greenmobile_2013_19" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_the_greenmobile_2013_20", "sog_dialogue_the_greenmobile_2013_21" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_22", "sog_dialogue_the_greenmobile_2013_23", "sog_dialogue_the_greenmobile_2013_24" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_the_greenmobile_2013_25", "sog_dialogue_the_greenmobile_2013_26" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_27", "sog_dialogue_the_greenmobile_2013_28", "sog_dialogue_the_greenmobile_2013_29" )
+		AddDialogueLine( sc.steve, "sog_dialogue_the_greenmobile_2013_30" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_the_greenmobile_2013_31" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_32" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_the_greenmobile_2013_33" )
+		AddDialogueLine( sc.mark, "sog_dialogue_the_greenmobile_2013_34", "sog_dialogue_the_greenmobile_2013_35", "sog_dialogue_the_greenmobile_2013_36" )
 	end
 }
 
-GM.SingleplayerCutscenes["takedown"] = {
-	Intro = "sog_intro_outide_2013",
+GM.SingleplayerCutscenes["scene_name_takedown"] = {
+	Intro = "sog_intro_outside_2013",
 	SoundTrack = 95416884,
 	Volume = 40,
 	Main = { mdl = Model( "models/hunter/plates/plate3x3.mdl" ), seq = "idle", mat = ""},
@@ -2659,28 +2659,28 @@ GM.SingleplayerCutscenes["takedown"] = {
 		{ mdl = Model( "models/props_trainstation/bench_indoor001a.mdl"), offset = Vector(-35, -37, 24) , ang = Angle(0, -90, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.pr, translate.Get("sog_dialogue_outide_2013_1"), "sog_dialogue_outide_2013_2" )
-		AddDialogueLine( sc.phone, translate.Get("sog_dialogue_outide_2013_3"), "sog_dialogue_outide_2013_4", "sog_dialogue_outide_2013_5", "sog_dialogue_outide_2013_6" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_7", "sog_dialogue_outide_2013_8" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_9" )
-		AddDialogueLine( sc.phone, "sog_dialogue_outide_2013_10", "sog_dialogue_outide_2013_11" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_12" )
-		AddDialogueLine( sc.phone, "sog_dialogue_outide_2013_13", "sog_dialogue_outide_2013_14", "sog_dialogue_outide_2013_15", "sog_dialogue_outide_2013_16" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_17", "sog_dialogue_outide_2013_18" )
-		AddDialogueLine( sc.phone, "sog_dialogue_outide_2013_19", "sog_dialogue_outide_2013_20" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_21", "sog_dialogue_outide_2013_22" )
-		AddDialogueLine( sc.dude, "sog_dialogue_outide_2013_23", "sog_dialogue_outide_2013_24", "sog_dialogue_outide_2013_25", "sog_dialogue_outide_2013_26" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_27" )
-		AddDialogueLine( sc.dude, "sog_dialogue_outide_2013_28", "sog_dialogue_outide_2013_29", "sog_dialogue_outide_2013_30" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_31", "sog_dialogue_outide_2013_32" )
-		AddDialogueLine( sc.dude, "sog_dialogue_outide_2013_33", "sog_dialogue_outide_2013_34", "sog_dialogue_outide_2013_35", "sog_dialogue_outide_2013_36", "sog_dialogue_outide_2013_37" )
-		AddDialogueLine( sc.pr, "sog_dialogue_outide_2013_38" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_1", "sog_dialogue_outside_2013_2" )
+		AddDialogueLine( sc.phone, "sog_dialogue_outside_2013_3", "sog_dialogue_outside_2013_4", "sog_dialogue_outside_2013_5", "sog_dialogue_outside_2013_6" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_7", "sog_dialogue_outside_2013_8" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_9" )
+		AddDialogueLine( sc.phone, "sog_dialogue_outside_2013_10", "sog_dialogue_outside_2013_11" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_12" )
+		AddDialogueLine( sc.phone, "sog_dialogue_outside_2013_13", "sog_dialogue_outside_2013_14", "sog_dialogue_outside_2013_15", "sog_dialogue_outside_2013_16" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_17", "sog_dialogue_outside_2013_18" )
+		AddDialogueLine( sc.phone, "sog_dialogue_outside_2013_19", "sog_dialogue_outside_2013_20" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_21", "sog_dialogue_outside_2013_22" )
+		AddDialogueLine( sc.dude, "sog_dialogue_outside_2013_23", "sog_dialogue_outside_2013_24", "sog_dialogue_outside_2013_25", "sog_dialogue_outside_2013_26" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_27" )
+		AddDialogueLine( sc.dude, "sog_dialogue_outside_2013_28", "sog_dialogue_outside_2013_29", "sog_dialogue_outside_2013_30" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_31", "sog_dialogue_outside_2013_32" )
+		AddDialogueLine( sc.dude, "sog_dialogue_outside_2013_33", "sog_dialogue_outside_2013_34", "sog_dialogue_outside_2013_35", "sog_dialogue_outside_2013_36", "sog_dialogue_outside_2013_37" )
+		AddDialogueLine( sc.pr, "sog_dialogue_outside_2013_38" )
 	end
 }
 
 
-GM.SingleplayerCutscenes["competition"] = {
-	Intro = "2013\nSome shitty roleplay server. . .",
+GM.SingleplayerCutscenes["scene_name_competition"] = {
+	Intro = "sog_intro_competition_2013",
 	SoundTrack = 241356191,//194760777,
 	//StartFrom = 11000,
 	Volume = 35,
@@ -2734,38 +2734,38 @@ GM.SingleplayerCutscenes["competition"] = {
 		{ mdl = Model( "models/props/cs_office/file_box.mdl"), offset = Vector(19, 103, 6) , ang = Angle(0, -69, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.owner, ". . .", "This chess game is annoying. . ." )
-		AddDialogueLine( sc.cop, ". . .", "So, where have you been?" )
-		AddDialogueLine( sc.owner, "It's a shitty story.", "I kept waiting for these fucking sponsors. . .", "What a waste of time." )
-		AddDialogueLine( sc.cop, ". . ." )
-		AddDialogueLine( sc.owner, "Because of that, I've decided to visit CoderFired.", "I was running low on paid addons, and. . ." )
-		AddDialogueLine( sc.cop, "And?" )
-		AddDialogueLine( sc.owner, "These fucking idiots!", "I walked into their office. . .", "And then someone tied me to a chair,\nwhile accusing me for being a leaker." )
-		AddDialogueLine( sc.cop, "Woah. . ." )
-		AddDialogueLine( sc.owner, "Thankfully I sort of managed to escape.", "Ugh. . ." )
-		AddDialogueLine( sc.cop, "That's shitty." )
-		AddDialogueLine( sc.owner, "It sure is. . .", "Now we are losing players." )
-		AddDialogueLine( sc.cop, "Why?" )
-		AddDialogueLine( sc.owner, "Do I really have to explain how it works again?" )
-		AddDialogueLine( sc.cop, "You never did in the first place." )
-		AddDialogueLine( sc.owner, "Ugh. . .", "In short. . .", "You have paid addons.", "You inject these into players.", "Players are mindless and happy.", "You get rich." )
-		AddDialogueLine( sc.cop, ". . ." )
-		AddDialogueLine( sc.owner, "Is that clear?" )
-		AddDialogueLine( sc.cop, "Yeah. . .", "So what are you going to do?" )
-		AddDialogueLine( sc.owner, "I still have one canister of paid addons. . .", ". . .but I think it's way out of date.", "I need someone to test it on." )
-		AddDialogueLine( sc.cop, "What about that guy?", "You know, one that was talking to you\na day or two ago." )
-		AddDialogueLine( sc.owner, "Oh. . .", "Carl?", "Hm. . .", "That might work.", "I'll try it in a few days, but for now. . ." )
-		AddDialogueLine( sc.cop, ". . ." )
-		AddDialogueLine( sc.owner, "I need to persuade that idiot owner\nto give up on his community." )
-		AddDialogueLine( sc.owner, "Maybe this will let us get more players." )
-		AddDialogueLine( sc.cop, "Do you need any assistance, boss?" )
-		AddDialogueLine( sc.owner, "I'll handle this.", "You stay here and watch over the server." )
-		AddDialogueLine( sc.cop, "Understood!" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_1", "sog_dialogue_competition_2013_2" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_3", "sog_dialogue_competition_2013_4" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_5", "sog_dialogue_competition_2013_6", "sog_dialogue_competition_2013_7" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_8" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_9", "sog_dialogue_competition_2013_10" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_11" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_12", "sog_dialogue_competition_2013_13", "sog_dialogue_competition_2013_14" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_15" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_16", "sog_dialogue_competition_2013_17" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_18" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_19", "sog_dialogue_competition_2013_20" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_21" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_22" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_23" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_24", "sog_dialogue_competition_2013_25", "sog_dialogue_competition_2013_26", "sog_dialogue_competition_2013_27", "sog_dialogue_competition_2013_28", "sog_dialogue_competition_2013_29" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_30" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_31" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_32", "sog_dialogue_competition_2013_33" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_34", "sog_dialogue_competition_2013_35", "sog_dialogue_competition_2013_36" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_37", "sog_dialogue_competition_2013_38" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_39", "sog_dialogue_competition_2013_40", "sog_dialogue_competition_2013_41", "sog_dialogue_competition_2013_42", "sog_dialogue_competition_2013_43" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_44" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_45" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_46" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_47" )
+		AddDialogueLine( sc.owner, "sog_dialogue_competition_2013_48", "sog_dialogue_competition_2013_49" )
+		AddDialogueLine( sc.cop, "sog_dialogue_competition_2013_50" )
 	end
 }
 
-GM.SingleplayerCutscenes["underscore"] = {
-	Intro = "2013\nOutside",
+GM.SingleplayerCutscenes["scene_name_underscore"] = {
+	Intro = "sog_intro_underscore_2013",
 	SoundTrack = 95416884,
 	Volume = 40,
 	Main = { mdl = Model( "models/hunter/plates/plate3x3.mdl" ), seq = "idle", mat = ""},
@@ -2785,28 +2785,28 @@ GM.SingleplayerCutscenes["underscore"] = {
 		{ mdl = Model( "models/props_trainstation/bench_indoor001a.mdl"), offset = Vector(-35, -37, 24) , ang = Angle(0, -90, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.phone, "*beep*", "'This client is not responding. . .'", "'Please wait few minutes and try again.'" )
-		AddDialogueLine( sc.pr, "Where the hell did he go again?" )
-		AddDialogueLine( sc.phone, "*beep*" )
-		AddDialogueLine( sc.pr, "Carl!" )
-		AddDialogueLine( sc.phone, "'This client is not responding. . .'" )
-		AddDialogueLine( sc.pr, "*sigh*", "Think. . .", "Maybe he lost his phone.", "Or. . .", "Maybe he is on that ZS server." )
-		AddDialogueLine( sc.phone, "*beep*", "'This is Frankie's ZS server!'", "'We are always happy to. . .'", "*chkt*" )
-		AddDialogueLine( sc.pr, ". . ." )
-		AddDialogueLine( sc.phone, "'What the fuck is wrong with this thing?!'", "'What?. . .Yeah I know. . .'" )
-		AddDialogueLine( sc.pr, "Hello?" )
-		AddDialogueLine( sc.phone, "'Stop pushing me, you idiot!'", "'. . .Give me that phone!'", "*chkt*", "'Fuck you, Lick. I want to be cool as well!'" )
-		AddDialogueLine( sc.pr, "Anyone?" )
-		AddDialogueLine( sc.phone, "*chkt*", "'Who is that?!'", "'Stan?! Is that you?!'" )
-		AddDialogueLine( sc.pr, "Listen, I just want to ask if. . ." )
-		AddDialogueLine( sc.phone, "'This server was taken down!'", "'Now, fuck off!!!'", "*beep*" )
-		AddDialogueLine( sc.pr, ". . .", "The hell was that?" )
+		AddDialogueLine( sc.phone, "sog_dialogue_underscore_2013_1", "sog_dialogue_underscore_2013_2", "sog_dialogue_underscore_2013_3" )
+		AddDialogueLine( sc.pr, "sog_dialogue_underscore_2013_4" )
+		AddDialogueLine( sc.phone, "sog_dialogue_underscore_2013_5" )
+		AddDialogueLine( sc.pr, "sog_dialogue_underscore_2013_6" )
+		AddDialogueLine( sc.phone, "sog_dialogue_underscore_2013_7" )
+		AddDialogueLine( sc.pr, "sog_dialogue_underscore_2013_8", "sog_dialogue_underscore_2013_9", "sog_dialogue_underscore_2013_10", "sog_dialogue_underscore_2013_11", "sog_dialogue_underscore_2013_12" )
+		AddDialogueLine( sc.phone, "sog_dialogue_underscore_2013_13", "sog_dialogue_underscore_2013_14", "sog_dialogue_underscore_2013_15", "sog_dialogue_underscore_2013_16" )
+		AddDialogueLine( sc.pr, "sog_dialogue_underscore_2013_17" )
+		AddDialogueLine( sc.phone, "sog_dialogue_underscore_2013_18", "sog_dialogue_underscore_2013_19" )
+		AddDialogueLine( sc.pr, "sog_dialogue_underscore_2013_20" )
+		AddDialogueLine( sc.phone, "sog_dialogue_underscore_2013_21", "sog_dialogue_underscore_2013_22", "sog_dialogue_underscore_2013_23", "sog_dialogue_underscore_2013_24" )
+		AddDialogueLine( sc.pr, "sog_dialogue_underscore_2013_25" )
+		AddDialogueLine( sc.phone, "sog_dialogue_underscore_2013_26", "sog_dialogue_underscore_2013_27", "sog_dialogue_underscore_2013_28" )
+		AddDialogueLine( sc.pr, "sog_dialogue_underscore_2013_29" )
+		AddDialogueLine( sc.phone, "sog_dialogue_underscore_2013_30", "sog_dialogue_underscore_2013_31", "sog_dialogue_underscore_2013_32" )
+		AddDialogueLine( sc.pr, "sog_dialogue_underscore_2013_33", "sog_dialogue_underscore_2013_34" )
 	end
 }
 
-GM.SingleplayerCutscenes["sponsors"] = {
-	Act = "ACT 2: DDOS",
-	Intro = "2013\nSomewhere outside. . .",
+GM.SingleplayerCutscenes["scene_name_sponsors"] = {
+	Act = "sog_intro_sponsors_act2",
+	Intro = "sog_intro_sponsors_2013",
 	SoundTrack = 205465270,
 	Volume = 45,
 	Main = { mdl = Model( "models/hunter/plates/plate4x5.mdl" ), seq = "idle", mat = ""},
@@ -2838,29 +2838,29 @@ GM.SingleplayerCutscenes["sponsors"] = {
 		{ mdl = Model( "models/props_c17/trappropeller_lever.mdl"), offset = Vector(-17, -28, 22) , ang = Angle(88, 101, 59), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.dude, ". . .", "Goddamnit!" )
-		AddDialogueLine( sc.matthias, "Goddamnit, indeed!", "Who knew that this thing would weigh so much?" )
-		AddDialogueLine( sc.dude, ". . ." )
-		AddDialogueLine( sc.matthias, "We don't have all day. . .", "So hurry the fuck up!" )
-		AddDialogueLine( sc.dude, "I'm on it, just give me some time.", ". . .", "Where are we heading next?" )
-		AddDialogueLine( sc.matthias, "I've been thinking. . .", "Remember that dude, who called us few months ago?" )
-		AddDialogueLine( sc.dude, "Barely.", "What was it all about?" )
-		AddDialogueLine( sc.matthias, "Power.", "Money.", "Players.", "The stuff that every shitty server owner dreams about." )
-		AddDialogueLine( sc.dude, ". . .", "So, why bother us then?" )
-		AddDialogueLine( sc.matthias, "Obviously he is lazy as fuck.", "They all are.", ". . .", "But the thing is. . ." )
-		AddDialogueLine( sc.dude, "Hm?" )
-		AddDialogueLine( sc.matthias, "We can make it work in our favour.", "I think. . .", "I'll explain it later.", "We need to contact that guy first." )
-		AddDialogueLine( sc.dude, "Why don't you just call him?" )
-		AddDialogueLine( sc.matthias, "I don't like to waste cash on non-important calls.", "Besides. . .", "I bet he has recorded his squeaky\nvoice on the answering machine." )
-		AddDialogueLine( sc.dude, "Squeak squeak" )
-		AddDialogueLine( sc.matthias, "Yeah.", ". . .", "Are you done yet?" )
-		AddDialogueLine( sc.dude, ". . .", "I guess. . .", "But if that fucking wheel pops again. . .", "It's not going to be my fault." )
-		AddDialogueLine( sc.matthias, "Yeah, yeah. . .", "Just get to the fucking car.", ". . .", "We have an appointment with a righteous server owner.", ". . .once again." )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_1", "sog_dialogue_sponsors_2013_2" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_3", "sog_dialogue_sponsors_2013_4" )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_5" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_6", "sog_dialogue_sponsors_2013_7" )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_8", "sog_dialogue_sponsors_2013_9", "sog_dialogue_sponsors_2013_10" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_11", "sog_dialogue_sponsors_2013_12" )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_13", "sog_dialogue_sponsors_2013_14" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_15", "sog_dialogue_sponsors_2013_16", "sog_dialogue_sponsors_2013_17", "sog_dialogue_sponsors_2013_18" )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_19", "sog_dialogue_sponsors_2013_20" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_21", "sog_dialogue_sponsors_2013_22", "sog_dialogue_sponsors_2013_23", "sog_dialogue_sponsors_2013_24" )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_25" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_26", "sog_dialogue_sponsors_2013_27", "sog_dialogue_sponsors_2013_28", "sog_dialogue_sponsors_2013_29" )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_30" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_31", "sog_dialogue_sponsors_2013_32", "sog_dialogue_sponsors_2013_33" )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_34" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_35", "sog_dialogue_sponsors_2013_36", "sog_dialogue_sponsors_2013_37" )
+		AddDialogueLine( sc.dude, "sog_dialogue_sponsors_2013_38", "sog_dialogue_sponsors_2013_39", "sog_dialogue_sponsors_2013_40", "sog_dialogue_sponsors_2013_41" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_sponsors_2013_42", "sog_dialogue_sponsors_2013_43", "sog_dialogue_sponsors_2013_44", "sog_dialogue_sponsors_2013_45", "sog_dialogue_sponsors_2013_46" )
 	end
 }
 
-GM.SingleplayerCutscenes["descent"] = {
-	Intro = "Few hours earlier\nCarl's room",
+GM.SingleplayerCutscenes["scene_name_descent"] = {
+	Intro = "sog_intro_descent_2013",
 	SoundTrack = 241356191,//194760777,
 	//StartFrom = 11000,
 	Volume = 35,
@@ -2901,24 +2901,24 @@ GM.SingleplayerCutscenes["descent"] = {
 		{ mdl = Model( "models/props_junk/trashdumpster02b.mdl"), offset = Vector(17, 84, 3) , ang = Angle(-0, 97, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.owner, "Caaaaarl!", "Ohhh, caaaaaaarl!" )
-		AddDialogueLine( sc.cop, ". . .", "Damn. . .", ". . .that's creepy, boss." )
-		AddDialogueLine( sc.owner, "Oh yeah.", ". . .", "Can you hear me, carl?", "Do you want to try some new addons?", ". . .", "Hmmmmmmm?", "Fresh paid addons!", "Yummy!" )
-		AddDialogueLine( sc.cop, ". . ." )
-		AddDialogueLine( sc.owner, "What did you say, carl?", ". . .", "'Yes, I do!'?", "Is that right, caaaarl?" )
-		AddDialogueLine( sc.cop, "Yup, that's what I heard too!" )
-		AddDialogueLine( sc.owner, "Good!", "Very good!", ". . .", "And you are totally fine with all\npossible side-effects?", ". . .", "What was that?" )
-		AddDialogueLine( sc.cop, "I think he said: 'Absolutely fine!'" )
-		AddDialogueLine( sc.owner, "Good boy, Carl!", ". . .", "Now you will feel a little prick. . .", ". . .", ". . .so you can. . .]&^AD675A%&GD*AD. . . " )
-		AddDialogueLine( sc.cop, "*^(A&DHADshA*SDkj*^%$%h", ". . ." )
+		AddDialogueLine( sc.owner, "sog_dialogue_descent_2013_1", "sog_dialogue_descent_2013_2" )
+		AddDialogueLine( sc.cop, "sog_dialogue_descent_2013_3", "sog_dialogue_descent_2013_4", "sog_dialogue_descent_2013_5" )
+		AddDialogueLine( sc.owner, "sog_dialogue_descent_2013_6", "sog_dialogue_descent_2013_7", "sog_dialogue_descent_2013_8", "sog_dialogue_descent_2013_9", "sog_dialogue_descent_2013_10", "sog_dialogue_descent_2013_11", "sog_dialogue_descent_2013_12", "sog_dialogue_descent_2013_13" )
+		AddDialogueLine( sc.cop, "sog_dialogue_descent_2013_14" )
+		AddDialogueLine( sc.owner, "sog_dialogue_descent_2013_15", "sog_dialogue_descent_2013_16", "sog_dialogue_descent_2013_17", "sog_dialogue_descent_2013_18" )
+		AddDialogueLine( sc.cop, "sog_dialogue_descent_2013_19" )
+		AddDialogueLine( sc.owner, "sog_dialogue_descent_2013_20", "sog_dialogue_descent_2013_21", "sog_dialogue_descent_2013_22", "sog_dialogue_descent_2013_23", "sog_dialogue_descent_2013_24", "sog_dialogue_descent_2013_25" )
+		AddDialogueLine( sc.cop, "sog_dialogue_descent_2013_26" )
+		AddDialogueLine( sc.owner, "sog_dialogue_descent_2013_27", "sog_dialogue_descent_2013_28", "sog_dialogue_descent_2013_29", "sog_dialogue_descent_2013_30", "sog_dialogue_descent_2013_31" )
+		AddDialogueLine( sc.cop, "sog_dialogue_descent_2013_32", "sog_dialogue_descent_2013_33" )
 		AddDialogueAction( sc.owner, function( me ) surface.PlaySound( "ambient/levels/prison/inside_battle_zombie2.wav" ) end )
-		AddDialogueLine( sc.owner, "&^%ADjlks**&56s" )
+		AddDialogueLine( sc.owner, "sog_dialogue_descent_2013_34" )
 		AddDialogueAction( sc.cop, function( me ) surface.PlaySound( "ambient/levels/prison/inside_battle_zombie3.wav" ) end )
 	end,
 }
 
-GM.SingleplayerCutscenes["the bottom"] = {
-	Intro = "2013\nBottom of the server browser. . .",
+GM.SingleplayerCutscenes["scene_name_the_bottom"] = {
+	Intro = "sog_intro_the_bottom_server_browser_2013",
 	SoundTrack = 241356191,//194760777,
 	//StartFrom = 11000,
 	Volume = 35,
@@ -2941,26 +2941,26 @@ GM.SingleplayerCutscenes["the bottom"] = {
 		{ mdl = Model( "models/props_interiors/pot02a.mdl"), offset = Vector(74, 43, 9) , ang = Angle(-1, -123, -2), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.cop, ". . ." )
-		AddDialogueLine( sc.owner, "Here we are.", ". . .", "At least I hope so." )
-		AddDialogueLine( sc.cop, ". . .", "So, uh. . .", "Why are we here?" )
-		AddDialogueLine( sc.owner, "Well. . .", "That sponsor guy told me about some stuff." )
-		AddDialogueLine( sc.cop, "Some stuff?" )
-		AddDialogueLine( sc.owner, "Yeah. . .", "Some toxic shit, that CoderFired keeps here.", ". . .", "Apparently we can use these to destroy servers." )
-		AddDialogueLine( sc.cop, "Terrifying. . ." )
-		AddDialogueLine( sc.owner, "Except we have to clean up this place first.", ". . .", "He will wait for us in the car nearby.", "And contact us, when we are done, of course." )
-		AddDialogueLine( sc.cop, ". . .", "That guy has a lot of shit in his truck.", "Why wont he just do it himself?" )
-		AddDialogueLine( sc.owner, "No fucking idea!" )
-		AddDialogueLine( sc.owner, ". . .", "Did you hear that?" )
+		AddDialogueLine( sc.cop, "sog_dialogue_the_bottom_server_browser_1" )
+		AddDialogueLine( sc.owner, "sog_dialogue_the_bottom_server_browser_2", "sog_dialogue_the_bottom_server_browser_3", "sog_dialogue_the_bottom_server_browser_4" )
+		AddDialogueLine( sc.cop, "sog_dialogue_the_bottom_server_browser_5", "sog_dialogue_the_bottom_server_browser_6", "sog_dialogue_the_bottom_server_browser_7" )
+		AddDialogueLine( sc.owner, "sog_dialogue_the_bottom_server_browser_8", "sog_dialogue_the_bottom_server_browser_9" )
+		AddDialogueLine( sc.cop, "sog_dialogue_the_bottom_server_browser_10" )
+		AddDialogueLine( sc.owner, "sog_dialogue_the_bottom_server_browser_11", "sog_dialogue_the_bottom_server_browser_12", "sog_dialogue_the_bottom_server_browser_13", "sog_dialogue_the_bottom_server_browser_14" )
+		AddDialogueLine( sc.cop, "sog_dialogue_the_bottom_server_browser_15" )
+		AddDialogueLine( sc.owner, "sog_dialogue_the_bottom_server_browser_16", "sog_dialogue_the_bottom_server_browser_17", "sog_dialogue_the_bottom_server_browser_18", "sog_dialogue_the_bottom_server_browser_19" )
+		AddDialogueLine( sc.cop, "sog_dialogue_the_bottom_server_browser_20", "sog_dialogue_the_bottom_server_browser_21", "sog_dialogue_the_bottom_server_browser_22" )
+		AddDialogueLine( sc.owner, "sog_dialogue_the_bottom_server_browser_23" )
+		AddDialogueLine( sc.owner, "sog_dialogue_the_bottom_server_browser_24", "sog_dialogue_the_bottom_server_browser_25" )
 		AddDialogueAction( sc.owner, function( me ) surface.PlaySound( "ambient/creatures/town_muffled_cry1.wav" ) end )
-		AddDialogueLine( sc.cop, ". . .", "What?" )
-		AddDialogueLine( sc.owner, "Nevermind. . .", "This place is creepy as shit.", ". . .", "So let's just get over with it." )
-		AddDialogueLine( sc.cop, ". . ." )
+		AddDialogueLine( sc.cop, "sog_dialogue_the_bottom_server_browser_26", "sog_dialogue_the_bottom_server_browser_27" )
+		AddDialogueLine( sc.owner, "sog_dialogue_the_bottom_server_browser_28", "sog_dialogue_the_bottom_server_browser_29", "sog_dialogue_the_bottom_server_browser_30", "sog_dialogue_the_bottom_server_browser_31" )
+		AddDialogueLine( sc.cop, "sog_dialogue_the_bottom_server_browser_32" )
 	end
 }
 
-GM.SingleplayerCutscenes["devnull"] = {
-	Intro = "2013\nOutside of \"Happy Torturer\" factory",
+GM.SingleplayerCutscenes["scene_name_devnull"] = {
+	Intro = "sog_intro_devnull_2013",
 	SoundTrack = 95416884,
 	Volume = 40,
 	Main = { mdl = Model( "models/hunter/plates/plate5x5.mdl" ), seq = "idle", mat = ""},
@@ -2982,16 +2982,16 @@ GM.SingleplayerCutscenes["devnull"] = {
 		{ mdl = Model( "models/props/cs_assault/meter.mdl"), offset = Vector(-26, -61, 16) , ang = Angle(0, 0, 0), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.pr, ". . .", "Well. . ." )
-		AddDialogueLine( sc.pr, "That note better be correct about the address." )
-		AddDialogueLine( sc.pr, ". . .", "I guess. . .", ". . .I'll have to go inside.", ". . .", "Instead of talking to myself." )
-		AddDialogueLine( sc.pr, ". . .", "Here I come, then!" )
+		AddDialogueLine( sc.pr, "sog_dialogue_devnull_2013_1", "sog_dialogue_devnull_2013_2" )
+		AddDialogueLine( sc.pr, "sog_dialogue_devnull_2013_3" )
+		AddDialogueLine( sc.pr, "sog_dialogue_devnull_2013_4", "sog_dialogue_devnull_2013_5", "sog_dialogue_devnull_2013_6", "sog_dialogue_devnull_2013_7", "sog_dialogue_devnull_2013_8" )
+		AddDialogueLine( sc.pr, "sog_dialogue_devnull_2013_9", "sog_dialogue_devnull_2013_10" )
 	end
 }
 
-GM.SingleplayerCutscenes["fanboys"] = {
-	Act = "ACT 3: PRIDE",
-	Intro = "2013\n\"Stay Rusty\" bar",
+GM.SingleplayerCutscenes["scene_name_fanboys"] = {
+	Act = "sog_intro_fanboys_act3",
+	Intro = "sog_intro_fanboys_2013",
 	SoundTrack = 142830412,
 	Volume = 30,
 	//StartFrom = 60000,
@@ -3064,46 +3064,46 @@ GM.SingleplayerCutscenes["fanboys"] = {
 		{ mdl = Model( "models/props/cs_militia/toilet.mdl"), offset = Vector(-127, -111, 7) , ang = Angle(0, -1, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.barguy, ". . ." )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.barguy, "Dude, it's been a while since you've been outside.", ". . .", "Is it really that bad?" )
-		AddDialogueLine( sc.axeguy, ". . .", "Yeah. . .", "The weather is going nuts as well." )
-		AddDialogueLine( sc.barguy, ". . .", "I heard it has to do something\nwith the broken weather mod.", ". . .", "Either creator abandoned it. . .", "Or he started to sell it,\ninstead of fixing the older version." )
-		AddDialogueLine( sc.barguy, ". . ." )
-		AddDialogueLine( sc.axeguy, "That's one more reason to not to go outside. . ." )
-		AddDialogueLine( sc.barguy, "Wonder if tv still works. . ." )
-		AddDialogueLine( sc.tv, "*chtk*", "hGdSGgfS5rIADDh;as", "*chkt*" )
-		AddDialogueLine( sc.tv, "'What's up my little slaves???!!!!'", "'This is LetsTortureGMod. . .'", "'. . .in the second season of\n\"The second torturing of GMod\" show!'" )
-		AddDialogueLine( sc.axeguy, ". . .", "How is this piece of shit still not banned from GMod?" )
-		AddDialogueLine( sc.barguy, ". . .", "No idea.", ". . .", "But kids love attention whores." )
-		AddDialogueLine( sc.tv, "'. . .the rules are simple! You record something funny. . .'" )
-		AddDialogueLine( sc.axeguy, "You'd better turn this shit off.", "Before I do. . ." )
-		AddDialogueLine( sc.tv, "'. . .a chance to spend a night in the bed with me!!!'", "'. . .as always, remember to lick and suckscribe for more. . .'" )
-		AddDialogueLine( sc.barguy, "Fine. . ." )
-		AddDialogueLine( sc.tv, "*chkt*" )
-		AddDialogueLine( sc.barguy, ". . .", "It's kinda shitty that other channels don't work anymore.", ". . .", "Back in my days there used to be some good machinimas." )
-		AddDialogueLine( sc.axeguy, ". . .", "You still have this channel full of bear porn. . ." )
-		AddDialogueLine( sc.barguy, "Oh, fuck you.", "It's not even funny!" )
-		AddDialogueLine( sc.barguy, ". . ." )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_1" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_2" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_3", "sog_dialogue_fanboys_2013_4", "sog_dialogue_fanboys_2013_5" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_6", "sog_dialogue_fanboys_2013_7", "sog_dialogue_fanboys_2013_8" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_9", "sog_dialogue_fanboys_2013_10", "sog_dialogue_fanboys_2013_11", "sog_dialogue_fanboys_2013_12", "sog_dialogue_fanboys_2013_13" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_14" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_15" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_16" )
+		AddDialogueLine( sc.tv, "sog_dialogue_fanboys_2013_17", "sog_dialogue_fanboys_2013_18", "sog_dialogue_fanboys_2013_19" )
+		AddDialogueLine( sc.tv, "sog_dialogue_fanboys_2013_20", "sog_dialogue_fanboys_2013_21", "sog_dialogue_fanboys_2013_22" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_23", "sog_dialogue_fanboys_2013_24" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_25", "sog_dialogue_fanboys_2013_26", "sog_dialogue_fanboys_2013_27", "sog_dialogue_fanboys_2013_28" )
+		AddDialogueLine( sc.tv, "sog_dialogue_fanboys_2013_29" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_30", "sog_dialogue_fanboys_2013_31" )
+		AddDialogueLine( sc.tv, "sog_dialogue_fanboys_2013_32", "sog_dialogue_fanboys_2013_33" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_34" )
+		AddDialogueLine( sc.tv, "sog_dialogue_fanboys_2013_35" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_36", "sog_dialogue_fanboys_2013_37", "sog_dialogue_fanboys_2013_38", "sog_dialogue_fanboys_2013_39" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_40", "sog_dialogue_fanboys_2013_41" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_42", "sog_dialogue_fanboys_2013_43" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_44" )
 		AddDialogueAction( sc.weird, function( me ) me.Hide = false surface.PlaySound( "doors/wood_move1.wav" ) end )
-		AddDialogueLine( sc.barguy, "Look at that. . ." )
-		AddDialogueLine( sc.weird, ". . .", "Dudes. . .", "Dudes!!!" )
-		AddDialogueLine( sc.barguy, ". . ." )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.barguy, "What's wrong?" )
-		AddDialogueLine( sc.weird, "There are some fucked up kids outside. . .", ". . .", "They. . ." )
-		AddDialogueLine( sc.barguy, ". . ." )
-		AddDialogueLine( sc.weird, "They are trying to fuck someone's car. . ." )
-		AddDialogueLine( sc.barguy, "A car?" )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.weird, "Yeah. . .", "The black one, I thi. . ." )
-		AddDialogueLine( sc.axeguy, "Oh, fucking hell!!!", "I'm going outside!" )
-		AddDialogueLine( sc.barguy, "Dude, wait. . " )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_45" )
+		AddDialogueLine( sc.weird, "sog_dialogue_fanboys_2013_46", "sog_dialogue_fanboys_2013_47", "sog_dialogue_fanboys_2013_48" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_49" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_50" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_51" )
+		AddDialogueLine( sc.weird, "sog_dialogue_fanboys_2013_52", "sog_dialogue_fanboys_2013_53", "sog_dialogue_fanboys_2013_54" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_55" )
+		AddDialogueLine( sc.weird, "sog_dialogue_fanboys_2013_56" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_57" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_58" )
+		AddDialogueLine( sc.weird, "sog_dialogue_fanboys_2013_59", "sog_dialogue_fanboys_2013_60" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_fanboys_2013_61", "sog_dialogue_fanboys_2013_62" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_fanboys_2013_63" )
 	end
 }
 
-GM.SingleplayerCutscenes["backstab"] = {
-	Intro = "2013\nSomewhere on a highway. . .",
+GM.SingleplayerCutscenes["scene_name_backstab"] = {
+	Intro = "sog_intro_backstab_2013",
 	SoundTrack = 142830412,
 	Volume = 30,
 	Main = { mdl = Model( "models/hunter/plates/plate2x2.mdl" ), seq = "idle", mat = ""},
@@ -3135,39 +3135,39 @@ GM.SingleplayerCutscenes["backstab"] = {
 				end
 			end
 		end
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.radio, "*bzzzz*", ". . .reported that unknown server owner. . .", ". . .found dead at the bottom of. . ." )
-		AddDialogueLine( sc.radio, "*bzzzzzzzzz*", ". . .acts of violence for past few months have been. . .", ". . .instead of commenting, garry told them to fuck off. . ." )
-		AddDialogueLine( sc.radio, "*bzzzzzz*" )
-		AddDialogueLine( sc.axeguy, "Where the fuck are you hiding. . ." )
-		AddDialogueLine( sc.radio, "*bzzzzzzz*", ". . .fans of the famous youtuber 'LetsTortureGMod'\nwere brutally murdered this morning. . ." )
-		AddDialogueLine( sc.radio, "*bzzzz*", ". . .it appears that he didn't really care,\nduring the interview. . .", ". . .oh his way to CustomGaming's TTT server. . ." )
-		AddDialogueLine( sc.axeguy, "A TTT server. . .", ". . .", "I'm coming for you, you fuck. . .", "So enjoy your 'funny' RDMing while you can. . ." )
-		AddDialogueLine( sc.radio, "*bzzzzzz*", ". . .as for the weather. . .", ". . .rainy with a bits of LetsTortureGMod. . ." )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.radio, "*bzzzzzz*", ". . .so you'd better check your settings and. . ." )
-		AddDialogueLine( sc.radio, "*bzzzzzzzzzzzzzzzzzzzz*" )
-		AddDialogueLine( sc.axe, "Funny RDMing, you say. . ." )
-		AddDialogueLine( sc.axeguy, "Oh for fucks sake. . .", "Not this talking axe shit again." )
-		AddDialogueLine( sc.axe, "That was a one funny rdming back in the garage. . ." )
-		AddDialogueLine( sc.axeguy, "Shut up!", ". . ." )
-		AddDialogueLine( sc.radio, "*bzzzzzz*" )
-		AddDialogueLine( sc.axe, "Do you even know what you're gonna do. . .", ". . .once you find that youtuber?" )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.axe, "Do you expect people will appreciate it, if you stop\nincome of retarded kids from flooding this game?" )
-		AddDialogueLine( sc.axeguy, "I said: Shut up!" )
-		AddDialogueLine( sc.radio, "*bzzzzzz*", "And now switching back to your playlist. . ." )
-		AddDialogueLine( sc.axe, "If players are gone. . .", ". . .server owners will have noone to feast upon. . ." )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.axeguy, "There it is. . .", "CustomGaming TTT server. . .", "This fucker better be here." )
-		AddDialogueLine( sc.radio, "*bzzzzzz*", "And now playing 'Enthusiasm' by Sulumi. . ." )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_1" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_2", "sog_dialogue_backstab_2013_3", "sog_dialogue_backstab_2013_4" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_5", "sog_dialogue_backstab_2013_6", "sog_dialogue_backstab_2013_7" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_8" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_9" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_10", "sog_dialogue_backstab_2013_11" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_12", "sog_dialogue_backstab_2013_13", "sog_dialogue_backstab_2013_14" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_15", "sog_dialogue_backstab_2013_16", "sog_dialogue_backstab_2013_18", "sog_dialogue_backstab_2013_19" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_20", "sog_dialogue_backstab_2013_21", "sog_dialogue_backstab_2013_22" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_23" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_24", "sog_dialogue_backstab_2013_25" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_26" )
+		AddDialogueLine( sc.axe, "sog_dialogue_backstab_2013_27" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_28", "sog_dialogue_backstab_2013_29" )
+		AddDialogueLine( sc.axe, "sog_dialogue_backstab_2013_30" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_31", "sog_dialogue_backstab_2013_32" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_33" )
+		AddDialogueLine( sc.axe, "sog_dialogue_backstab_2013_34", "sog_dialogue_backstab_2013_35" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_36" )
+		AddDialogueLine( sc.axe, "sog_dialogue_backstab_2013_37" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_38" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_39", "sog_dialogue_backstab_2013_40" )
+		AddDialogueLine( sc.axe, "sog_dialogue_backstab_2013_41", "sog_dialogue_backstab_2013_42" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_43" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_backstab_2013_44", "sog_dialogue_backstab_2013_45", "sog_dialogue_backstab_2013_46" )
+		AddDialogueLine( sc.radio, "sog_dialogue_backstab_2013_47", "sog_dialogue_backstab_2013_48" )
 		
 	end
 }
 
 
-GM.SingleplayerCutscenes["whistleblower"] = {
-	Intro = "2013\n\"24/7 GASSTASTION | NEED CUSTOMERS | M9K\"",
+GM.SingleplayerCutscenes["scene_name_whistleblower"] = {
+	Intro = "sog_intro_whisteblower_2013",
 	SoundTrack = 142830412,
 	Volume = 30,
 	Main = { mdl = Model( "models/hunter/plates/plate3x3.mdl" ), seq = "idle", mat = ""},
@@ -3187,26 +3187,26 @@ GM.SingleplayerCutscenes["whistleblower"] = {
 		{ mdl = Model( "models/props_wasteland/gaspump001a.mdl"), offset = Vector(24, -19, 18) , ang = Angle(-1, -180, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.radio, "*bzzzz*", ". . .and we are back with more custom news. . .", "*dubstep music as 'news' logo fades in*" )
-		AddDialogueLine( sc.radio, "A huge crowd of people outside of CoderFired's office. . .", ". . .yelling and demanding to stop the 'shady' business. . ." )
-		AddDialogueLine( sc.radio, "*bzzzzzzz*", ". . .a self-proclaimed investigator\nkeeps searching for evidence. . .", ". . .when we asked about his opinion, he said. . ." )
-		AddDialogueLine( sc.radio, "*bzzzz*", "'I know what they did. . .'", "'They think they can get away with it!'", "'But it seems there is only one option left. . .'" )
-		AddDialogueLine( sc.radio, "'I'll have to put them. . .'" )
-		AddDialogueLine( sc.radio, "*puts on sunglasses*" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_whisteblower_2013_1" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_2", "sog_dialogue_whisteblower_2013_3", "sog_dialogue_whisteblower_2013_4" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_5", "sog_dialogue_whisteblower_2013_6" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_7", "sog_dialogue_whisteblower_2013_8", "sog_dialogue_whisteblower_2013_9" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_10", "sog_dialogue_whisteblower_2013_11", "sog_dialogue_whisteblower_2013_12", "sog_dialogue_whisteblower_2013_13" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_14" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_15" )
 		AddDialogueAction( sc.radio, function( me ) surface.PlaySound( "weapons/shotgun/shotgun_cock.wav" ) end )
-		AddDialogueLine( sc.radio, "'. . .on watch!'" )
-		AddDialogueLine( sc.radio, "*bzzzz*", ". . .with these words he rocketed through the roof. . ." )
-		AddDialogueLine( sc.radio, "*bzzzz*", ". . .the famous LetsTortureGMod is still travelling\nacross gmod servers. . ." )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.radio, ". . .was seen at '3-year old gaming' a hour ago. . .", ". . .but it seems like. . ." )
-		AddDialogueLine( sc.axeguy, "Third time better be a fucking charm!" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_16" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_17", "sog_dialogue_whisteblower_2013_18" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_19", "sog_dialogue_whisteblower_2013_20" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_whisteblower_2013_21" )
+		AddDialogueLine( sc.radio, "sog_dialogue_whisteblower_2013_22", "sog_dialogue_whisteblower_2013_23" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_whisteblower_2013_24" )
 	end
 }
 
 
-GM.SingleplayerCutscenes["clickbait"] = {
-	Intro = "2013\n\"Stay Rusty\" bar",
+GM.SingleplayerCutscenes["scene_name_clickbait"] = {
+	Intro = "sog_intro_clickbait_2013",
 	SoundTrack = 142830412,
 	Volume = 30,
 	Main = { mdl = Model( "models/hunter/plates/plate8x8.mdl" ), seq = "idle", mat = ""},
@@ -3271,21 +3271,21 @@ GM.SingleplayerCutscenes["clickbait"] = {
 		{ mdl = Model( "models/player/group03/male_09.mdl"), offset = Vector(95, 54, 6) , ang = Angle(0, -166, 0), seq = "idle_suitcase", mat = "", tag = "axeguy" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.barguy, "Help. . ." )
-		AddDialogueLine( sc.axeguy, "Dude!", "Are you alright?!", ". . .", "What the fuck happened in here?!" )
-		AddDialogueLine( sc.barguy, "*cough*", ". . .the sellout. . .", "*cough*", ". . .letstorturegmod and his fuckers. . ." )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.barguy, ". . .they fucking ruined my bar!", "*cough*", ". . .motherfuckers!!!" )
-		AddDialogueLine( sc.axeguy, "God fucking damnit!", ". . .", "Where did he go?"	)
-		AddDialogueLine( sc.barguy, "*cough*", ". . .he is still. . .", ". . .outside. . ." )
-		AddDialogueLine( sc.axeguy, "Hang in there, buddy. . .", "I'm going to head outside. . .", ". . .and cut his fucking head off!!!" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_clickbait_2013_1" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_clickbait_2013_2" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_clickbait_2013_3", "sog_dialogue_clickbait_2013_4", "sog_dialogue_clickbait_2013_5", "sog_dialogue_clickbait_2013_6" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_clickbait_2013_7", "sog_dialogue_clickbait_2013_8", "sog_dialogue_clickbait_2013_9", "sog_dialogue_clickbait_2013_10" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_clickbait_2013_11" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_clickbait_2013_12", "sog_dialogue_clickbait_2013_13", "sog_dialogue_clickbait_2013_14" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_clickbait_2013_15", "sog_dialogue_clickbait_2013_16", "sog_dialogue_clickbait_2013_17"	)
+		AddDialogueLine( sc.barguy, "sog_dialogue_clickbait_2013_18", "sog_dialogue_clickbait_2013_19", "sog_dialogue_clickbait_2013_20" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_clickbait_2013_21", "sog_dialogue_clickbait_2013_22", "sog_dialogue_clickbait_2013_23" )
 	end
 }
 
-GM.SingleplayerCutscenes["goin postal"] = {
-	Act = "ACT 4: GREED",
-	Intro = "2013\nLair of \"CoderFired\" Corporation",
+GM.SingleplayerCutscenes["scene_name_goin_postal"] = {
+	Act = "sog_intro_goinpostal_act4",
+	Intro = "sog_intro_goinpostal_2013",
 	SoundTrack = 122124893,
 	StartFrom = 8900,
 	EndAt = 141000,
@@ -3339,39 +3339,39 @@ GM.SingleplayerCutscenes["goin postal"] = {
 		{ mdl = Model( "models/props/cs_militia/caseofbeer01.mdl"), offset = Vector(8, -99, 5) , ang = Angle(0, 17, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.moderator, ". . ." )
-		AddDialogueLine( sc.mark, "There you are!", "Wanna join our celebration?" )
-		AddDialogueLine( sc.moderator, "Celebration?", ". . .", "What exactly am I supposed to celebrate?" )
-		AddDialogueLine( sc.mark, "We've killed all of the leakers!", "Every single one of them!", ". . .", "Even this one, chillin' on the floor!" )
-		AddDialogueLine( sc.moderator, "Oh dear. . ." )
-		AddDialogueLine( sc.mark, "So, what ya gonna drink?" )
-		AddDialogueLine( sc.moderator, "I can't drink, I'm a driver. . .", "Wait, where did you got so much booze?" )
-		AddDialogueLine( sc.mark, ". . .", "It's not just a booze, baby!", "And not even the free peasant filth.\nIt's the 'Crystal Alcoload'!" )
-		AddDialogueLine( sc.moderator, "Liquid paid addons. . ." )
-		AddDialogueLine( sc.mark, "Exactly!!!" )
-		AddDialogueLine( sc.moderator, "Well. . .", "Maybe you should be careful with\nthis kind of stuff?", "It's easy to lose your mind from these. . ." )
-		AddDialogueLine( sc.mark, "Relax!", "It's all tested and approved!", ". . .", "Zero casualities, as they say!" )
-		AddDialogueLine( sc.moderator, ". . ." )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_1" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_2", "sog_dialogue_goinpostal_2013_3" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_4", "sog_dialogue_goinpostal_2013_5", "sog_dialogue_goinpostal_2013_6" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_7", "sog_dialogue_goinpostal_2013_8", "sog_dialogue_goinpostal_2013_9", "sog_dialogue_goinpostal_2013_10" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_11" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_12" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_13", "sog_dialogue_goinpostal_2013_14" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_15", "sog_dialogue_goinpostal_2013_16", "sog_dialogue_goinpostal_2013_17" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_18" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_19" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_20", "sog_dialogue_goinpostal_2013_21", "sog_dialogue_goinpostal_2013_22" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_23", "sog_dialogue_goinpostal_2013_24", "sog_dialogue_goinpostal_2013_25", "sog_dialogue_goinpostal_2013_26" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_27" )
 		AddDialogueAction( sc.moderator, function( me ) surface.PlaySound( "physics/glass/glass_largesheet_break1.wav" ) end )
-		AddDialogueLine( sc.mark, "The hell was that?!" )
-		AddDialogueLine( sc.moderator, "I dunno. . .", "There seems to be a huge hole in our window." )
-		AddDialogueLine( sc.mark, "Well, thats just. . ." )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_28" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_29", "sog_dialogue_goinpostal_2013_30" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_31" )
 		AddDialogueAction( sc.moderator, function( me ) surface.PlaySound( "physics/concrete/boulder_impact_hard4.wav" ) end )
-		AddDialogueLine( sc.moderator, ". . .", "I'll go check outside.", "Sounds like someone is yelling." )
-		AddDialogueLine( sc.mark, "Just a heads up then. . ." )
-		AddDialogueLine( sc.moderator, "Hm?" )
-		AddDialogueLine( sc.mark, "If it gonna be these guys again,\njust shoot them in the face." )
-		AddDialogueLine( sc.moderator, "'These guys'?" )
-		AddDialogueLine( sc.mark, "Idiots that disrespect us 'for ruining gmod'." )
-		AddDialogueLine( sc.moderator, "Isn't that true, tho?" )
-		AddDialogueLine( sc.mark, "Of course not!" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_32", "sog_dialogue_goinpostal_2013_33", "sog_dialogue_goinpostal_2013_34" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_35" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_36" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_37" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_38" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_39" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_40" )
+		AddDialogueLine( sc.mark, "sog_dialogue_goinpostal_2013_41" )
 		AddDialogueAction( sc.moderator, function( me ) surface.PlaySound( "physics/metal/metal_box_break2.wav" ) end )
-		AddDialogueLine( sc.moderator, "Oh christ!", "Alright, I'm coming down." )
+		AddDialogueLine( sc.moderator, "sog_dialogue_goinpostal_2013_42", "sog_dialogue_goinpostal_2013_43" )
 	end
 }
 
-GM.SingleplayerCutscenes["influence"] = {
-	Intro = "2013\nGreedMobile of \"CoderFired\" Corporation",
+GM.SingleplayerCutscenes["scene_name_influence"] = {
+	Intro = "sog_intro_influence_2013",
 	SoundTrack = 286966255,//181517562,//181430421,
 	Volume = 33,
 	StartFrom = 10000,
@@ -3406,27 +3406,27 @@ GM.SingleplayerCutscenes["influence"] = {
 				end
 			end
 		end
-		AddDialogueLine( sc.mark, "*cough*" )
-		AddDialogueLine( sc.moderator, "I can't see a damn thing!" )
-		AddDialogueLine( sc.steve, "Hey. . .", "Are you alright?" )
-		AddDialogueLine( sc.mark, "*cough*" )
-		AddDialogueLine( sc.mark, "I am. . ." )
-		AddDialogueLine( sc.mark, "*some nice barfing sounds*" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_1" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_influence_2013_2" )
+		AddDialogueLine( sc.steve, "sog_dialogue_influence_2013_3", "sog_dialogue_influence_2013_4" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_5" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_6" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_7" )
 		AddDialogueAction( sc.mark, function( me ) surface.PlaySound( "npc/barnacle/barnacle_die1.wav" ) end )
-		AddDialogueLine( sc.mark, "Oh, fuck. . ." )
-		AddDialogueLine( sc.moderator, "Ewww!" )
-		AddDialogueLine( sc.steve, "Damn." )
-		AddDialogueLine( sc.mark, "I said. . .", "I'm alright!", "It's just a bug, or. . .", ". . .something. . ." )
-		AddDialogueLine( sc.steve, "Where are we going?" )
-		AddDialogueLine( sc.moderator, "To the doctor.", "Because this can't go on like this!" )
-		AddDialogueLine( sc.mark, "*cough*", "No!!!", "We are not going to a doctor!", "Noone is going to. . .", ". . .", "Oh shit!" )
-		AddDialogueLine( sc.steve, ". . ." )
-		AddDialogueLine( sc.mark, "Stop the van!" )
-		AddDialogueLine( sc.moderator, "What?" )
-		AddDialogueLine( sc.mark, "It's the server that owes us money!" )
-		AddDialogueLine( sc.moderator, "We can do that after. . ." )
-		AddDialogueLine( sc.mark, "Stop the fucking van!!!" )
-		AddDialogueLine( sc.moderator, "Alright, alright. . ." )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_8" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_influence_2013_9" )
+		AddDialogueLine( sc.steve, "sog_dialogue_influence_2013_10" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_11", "sog_dialogue_influence_2013_12", "sog_dialogue_influence_2013_13", "sog_dialogue_influence_2013_14" )
+		AddDialogueLine( sc.steve, "sog_dialogue_influence_2013_15" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_influence_2013_16", "sog_dialogue_influence_2013_17" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_18", "sog_dialogue_influence_2013_19", "sog_dialogue_influence_2013_20", "sog_dialogue_influence_2013_21", "sog_dialogue_influence_2013_22", "sog_dialogue_influence_2013_23" )
+		AddDialogueLine( sc.steve, "sog_dialogue_influence_2013_24" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_25" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_influence_2013_26" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_27" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_influence_2013_28" )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_29" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_influence_2013_30" )
 		AddDialogueAction( sc.moderator, function( me ) 
 			surface.PlaySound( "vehicles/v8/skid_lowfriction.wav" )
 			surface.PlaySound( "vehicles/v8/v8_stop1.wav" )
@@ -3439,14 +3439,14 @@ GM.SingleplayerCutscenes["influence"] = {
 			end
 			
 		end )
-		AddDialogueLine( sc.mark, "You two, stay here. . .", "I'm just gonna. . .", "*burp*", "Do something. . ." )
-		AddDialogueLine( sc.moderator, ". . ." )
-		AddDialogueLine( sc.steve, ". . ." )
+		AddDialogueLine( sc.mark, "sog_dialogue_influence_2013_31", "sog_dialogue_influence_2013_32", "sog_dialogue_influence_2013_33", "sog_dialogue_influence_2013_34" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_influence_2013_35" )
+		AddDialogueLine( sc.steve, "sog_dialogue_influence_2013_36" )
 	end
 }
 
-GM.SingleplayerCutscenes["avarice"] = {
-	Intro = "2013\nLair of \"CoderFired\" Corporation",
+GM.SingleplayerCutscenes["scene_name_avarice"] = {
+	Intro = "sog_intro_avarice_2013",
 	SoundTrack = 122124893,
 	StartFrom = 8900,
 	EndAt = 141000,
@@ -3499,26 +3499,26 @@ GM.SingleplayerCutscenes["avarice"] = {
 		{ mdl = Model( "models/props_junk/garbage_carboard002a.mdl"), offset = Vector(26, -81, 4) , ang = Angle(-2, 14, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.moderator, "Yeah, I think. . .", ". . ." )
-		AddDialogueLine( sc.steve, ". . ." )
-		AddDialogueLine( sc.mark, "*zzzzzzzzzzzzzzzzzzzzzzz. . .*" )
-		AddDialogueLine( sc.steve, "Well. . .", "That's a change of plans. . ." )
-		AddDialogueLine( sc.moderator, ". . .", "That's it.", "I'm taking a vacation." )
-		AddDialogueLine( sc.steve, "Huh.", "For how long?" )
-		AddDialogueLine( sc.moderator, "Until he gets his stuff together!", "I knew that crap in these bottles is not healthy at all." )
-		AddDialogueLine( sc.steve, "Welp. . .", "I might as well get some sleep at home." )
-		AddDialogueLine( sc.moderator, "*sigh*", "What the hell was he thinking. . ." )
-		AddDialogueLine( sc.mark, "*zzzzzzzzzzzzzzzz. . .*" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_avarice_2013_1", "sog_dialogue_avarice_2013_2" )
+		AddDialogueLine( sc.steve, "sog_dialogue_avarice_2013_3" )
+		AddDialogueLine( sc.mark, "sog_dialogue_avarice_2013_4" )
+		AddDialogueLine( sc.steve, "sog_dialogue_avarice_2013_5", "sog_dialogue_avarice_2013_6" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_avarice_2013_7", "sog_dialogue_avarice_2013_8", "sog_dialogue_avarice_2013_9" )
+		AddDialogueLine( sc.steve, "sog_dialogue_avarice_2013_10", "sog_dialogue_avarice_2013_11" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_avarice_2013_12", "sog_dialogue_avarice_2013_13" )
+		AddDialogueLine( sc.steve, "sog_dialogue_avarice_2013_14", "sog_dialogue_avarice_2013_15" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_avarice_2013_16", "sog_dialogue_avarice_2013_17" )
+		AddDialogueLine( sc.mark, "sog_dialogue_avarice_2013_18" )
 		AddDialogueAction( sc.mark, function( me ) 
 			sc.steve.Hide = true 
 			sc.moderator.Hide = true
 			surface.PlaySound("UI/hint.wav") 
 		end )
-		AddDialogueLine( sc.mark, "j#5:mf'kds76%&*ADiasdihallf;'l;" )
+		AddDialogueLine( sc.mark, "sog_dialogue_avarice_2013_19" )
 		AddDialogueAction( sc.mark, function( me ) 
 			sc.mark.Icon = mark2 
 		end )
-		AddDialogueLine( sc.mark, "*&()Aduasf'g&^%7hgdfsjalsfl" )
+		AddDialogueLine( sc.mark, "sog_dialogue_avarice_2013_20" )
 		AddDialogueAction( sc.mark, function( me ) 
 			sc.spooky:SetParent( sc.mark )
 			sc.spooky:AddEffects( EF_BONEMERGE )
@@ -3533,8 +3533,8 @@ GM.SingleplayerCutscenes["avarice"] = {
 	end
 }
 
-GM.SingleplayerCutscenes["chargeback"] = {
-	Intro = "2013\nSomewhere on a highway. . .",
+GM.SingleplayerCutscenes["scene_name_chargeback"] = {
+	Intro = "sog_intro_chargeback_2013",
 	SoundTrack = 205465270,
 	Volume = 45,
 	Main = { mdl = Model( "models/hunter/plates/plate4x4.mdl" ), seq = "idle", mat = ""},
@@ -3579,33 +3579,33 @@ GM.SingleplayerCutscenes["chargeback"] = {
 			end
 		end
 	
-		AddDialogueLine( sc.matthias, "You should've seen that. . .", "His head was like 'poof!' with all his stupid brains\nall over the place!", "Man, that was awesome!" )
-		AddDialogueLine( sc.dude, ". . .", "I guess.", "What do we have next on the list?" )
-		AddDialogueLine( sc.matthias, "Let's see. . ." )
-		AddDialogueLine( sc.dude, "Yo, watch the fucking road!" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_chargeback_2013_1", "sog_dialogue_chargeback_2013_2", "sog_dialogue_chargeback_2013_3" )
+		AddDialogueLine( sc.dude, "sog_dialogue_chargeback_2013_4", "sog_dialogue_chargeback_2013_5", "sog_dialogue_chargeback_2013_6" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_chargeback_2013_7" )
+		AddDialogueLine( sc.dude, "sog_dialogue_chargeback_2013_8" )
 		AddDialogueAction( sc.dude, function( me ) 
 			surface.PlaySound("vehicles/v8/vehicle_impact_heavy3.wav") 
 			//surface.PlaySound("vo/npc/male01/pain07.wav") 
 		end )
-		AddDialogueLine( sc.matthias, "Whoops!", ". . .", "Oh shit!", "Have a look. . ." )
-		AddDialogueLine( sc.dude, ". . .", "Woah!", "Is he fucking serious?" )
-		AddDialogueLine( sc.matthias, "He certainly is!" )
-		AddDialogueLine( sc.dude, "How are we going to pull this off, tho?" )
-		AddDialogueLine( sc.matthias, "As usual.", "You might wanna grab more guys on our way." )
-		AddDialogueLine( sc.dude, "Damn. . .", "What about the building?" )
-		AddDialogueLine( sc.matthias, "I'm pretty sure we can keep it as a trophy.", "Who knows. . .", "Maybe we can even get some profit from it." )
-		AddDialogueLine( sc.dude, "Hang on. . ", "Isn't he supposed to be your old friend?" )
-		AddDialogueLine( sc.matthias, "Yeah!", "But you know how life works.", "Who needs friends. . .", ". . .when you got gold bars for a toilet paper." )
-		AddDialogueLine( sc.dude, "Hehehehehe!" )
-		AddDialogueLine( sc.matthias, "Anyway, get ready.", "Shit is about to get real!" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_chargeback_2013_9", "sog_dialogue_chargeback_2013_10", "sog_dialogue_chargeback_2013_11", "sog_dialogue_chargeback_2013_12" )
+		AddDialogueLine( sc.dude, "sog_dialogue_chargeback_2013_13", "sog_dialogue_chargeback_2013_14", "sog_dialogue_chargeback_2013_15" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_chargeback_2013_16" )
+		AddDialogueLine( sc.dude, "sog_dialogue_chargeback_2013_17" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_chargeback_2013_18", "sog_dialogue_chargeback_2013_19" )
+		AddDialogueLine( sc.dude, "sog_dialogue_chargeback_2013_20", "sog_dialogue_chargeback_2013_21" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_chargeback_2013_22", "sog_dialogue_chargeback_2013_23", "sog_dialogue_chargeback_2013_24" )
+		AddDialogueLine( sc.dude, "sog_dialogue_chargeback_2013_25", "sog_dialogue_chargeback_2013_26" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_chargeback_2013_27", "sog_dialogue_chargeback_2013_28", "sog_dialogue_chargeback_2013_29", "sog_dialogue_chargeback_2013_30" )
+		AddDialogueLine( sc.dude, "sog_dialogue_chargeback_2013_31" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_chargeback_2013_32", "sog_dialogue_chargeback_2013_33" )
 		
 	end
 	
 }
 
-GM.SingleplayerCutscenes["sanctuary"] = {
-	Act = "ACT 5: TERROR",
-	Intro = "2014\n\"ShitGamers\" Community",
+GM.SingleplayerCutscenes["scene_name_sanctuary"] = {
+	Act = "sog_intro_sanctuary_act5",
+	Intro = "sog_intro_sanctuary_2014",
 	SoundTrack = 191639729,
 	StartFrom = 44000,
 	EndAt = 190000,
@@ -3653,25 +3653,25 @@ GM.SingleplayerCutscenes["sanctuary"] = {
 		{ mdl = Model( "models/kleiner.mdl"), offset = Vector(95, -34, 59) , ang = Angle(7, 142, -39), seq = "injured3", mat = "", tag = "kid1", mat = "models/zombie_fast_players/fast_zombie_sheet", icon = Material( "sog/victim2.png", "smooth" ) },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.master, "Thomasssss, my child. . ." )
-		AddDialogueLine( sc.thomas, "Nooooooooooo!!!" )
-		AddDialogueLine( sc.master, "There is no need to hide, thomasss.", "The sacrifice must be done!" )
-		AddDialogueLine( sc.kid1, "Yessssssss. . ." )
-		AddDialogueLine( sc.kid2, "Strip hissssss wallet. . ." )
-		AddDialogueLine( sc.thomas, "Nooooooooooooooooo!!!!!" )
-		AddDialogueLine( sc.master, "In order to help our family. . .", ". . .you must make a small donation, thomas.", "All I ask. . .", ". . .is your wallet. . .", ". . .and your flesshhh." )
-		AddDialogueLine( sc.kid2, "Yessss. . ." )
-		AddDialogueLine( sc.thomas, "I. . .", "I don't want to be a donator. . ." )
-		AddDialogueLine( sc.master, "This is the only way, my child.", "I'll give you 10 minutes. . .", "So you can say 'goodbye' to all of your friendsssss. . ." )
-		AddDialogueLine( sc.master, "For now. . .", "I need to check our donations page. . ." )
-		AddDialogueLine( sc.thomas, ". . ." )
-		AddDialogueLine( sc.master, "Don't you dare dissapoint me, my child!", "Avoiding contribution is not tolerated in my sanctuary!" )
+		AddDialogueLine( sc.master, "sog_dialogue_sanctuary_2014_1" )
+		AddDialogueLine( sc.thomas, "sog_dialogue_sanctuary_2014_2" )
+		AddDialogueLine( sc.master, "sog_dialogue_sanctuary_2014_3", "sog_dialogue_sanctuary_2014_4" )
+		AddDialogueLine( sc.kid1, "sog_dialogue_sanctuary_2014_5" )
+		AddDialogueLine( sc.kid2, "sog_dialogue_sanctuary_2014_6" )
+		AddDialogueLine( sc.thomas, "sog_dialogue_sanctuary_2014_7" )
+		AddDialogueLine( sc.master, "sog_dialogue_sanctuary_2014_8", "sog_dialogue_sanctuary_2014_9", "sog_dialogue_sanctuary_2014_10", "sog_dialogue_sanctuary_2014_11", "sog_dialogue_sanctuary_2014_12" )
+		AddDialogueLine( sc.kid2, "sog_dialogue_sanctuary_2014_13" )
+		AddDialogueLine( sc.thomas, "sog_dialogue_sanctuary_2014_14", "sog_dialogue_sanctuary_2014_15" )
+		AddDialogueLine( sc.master, "sog_dialogue_sanctuary_2014_16", "sog_dialogue_sanctuary_2014_17", "sog_dialogue_sanctuary_2014_18" )
+		AddDialogueLine( sc.master, "sog_dialogue_sanctuary_2014_19", "sog_dialogue_sanctuary_2014_20" )
+		AddDialogueLine( sc.thomas, "sog_dialogue_sanctuary_2014_21" )
+		AddDialogueLine( sc.master, "sog_dialogue_sanctuary_2014_22", "sog_dialogue_sanctuary_2014_23" )
 		
 	end
 }
 
-GM.SingleplayerCutscenes["cough"] = {
-	Intro = "2014\nInside shitty server browser",
+GM.SingleplayerCutscenes["scene_name_cough"] = {
+	Intro = "sog_intro_cough_2014",
 	SoundTrack = 205465270,
 	Volume = 45,
 	Main = { mdl = Model( "models/hunter/plates/plate5x5.mdl" ), seq = "idle", mat = ""},
@@ -3729,33 +3729,33 @@ GM.SingleplayerCutscenes["cough"] = {
 			end
 		end
 
-		AddDialogueLine( sc.dude, ". . ." )
-		AddDialogueLine( sc.matthias, "Keep going. . ." )
-		AddDialogueLine( sc.dude, "That's some nasty shit in these barrels.", ". . .", "That's the last thing we had to do, right?" )
-		AddDialogueLine( sc.matthias, "Pretty much.", "He did said that we have a bonus choice. . ." )
-		AddDialogueLine( sc.dude, "A bonus choice?" )
-		AddDialogueLine( sc.matthias, "Yeah.", "Basically we can do one more thing.", "And it is entirely up to us." )
-		AddDialogueLine( sc.dude, "Do you have any ideas, then?" )
-		AddDialogueLine( sc.matthias, "Oh yeah.", "I can't waste such opportunity, can I?" )
-		AddDialogueLine( sc.dude, "Nah." )
-		AddDialogueLine( sc.matthias, "Do you know GMod Power community?" )
-		AddDialogueLine( sc.dude, "Yeah.", "I used to play there some time ago.", "These were good times before I. . .", "um. . .", ". . .got banned for something." )
-		AddDialogueLine( sc.matthias, ". . .", "They have got casino and a lobby.", "Now think. . ." )
-		AddDialogueLine( sc.dude, ". . .", "We gonna gamble at their casino?" )
-		AddDialogueLine( sc.matthias, "Even better!", "Some people see this community as the only\n'sacred place' in gmod.", "Hah!", "The only sacred place here is my ass!" )
-		AddDialogueLine( sc.dude, "So what will we do, then?" )
-		AddDialogueLine( sc.matthias, "Ohhh, you will see. . ." )
-		AddDialogueLine( sc.dude, "As if destroying CoderFired was not enough." )
-		AddDialogueLine( sc.matthias, ". . .", "It's a real shame this game has to die. . .", "So I'll be doing it a huge favor." )
-		AddDialogueLine( sc.dude, ". . .", "What about their lobby?" )
-		AddDialogueLine( sc.matthias, "You are taking care of it, as we speak." )
-		AddDialogueLine( sc.dude, ". . ." )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_1" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_2" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_3", "sog_dialogue_cough_2014_4", "sog_dialogue_cough_2014_5" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_6", "sog_dialogue_cough_2014_7" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_8" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_9", "sog_dialogue_cough_2014_10", "sog_dialogue_cough_2014_11" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_12" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_13", "sog_dialogue_cough_2014_13" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_14" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_15" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_16", "sog_dialogue_cough_2014_17", "sog_dialogue_cough_2014_18", "sog_dialogue_cough_2014_19", "sog_dialogue_cough_2014_20" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_21", "sog_dialogue_cough_2014_22", "sog_dialogue_cough_2014_23" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_24", "sog_dialogue_cough_2014_25" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_26", "sog_dialogue_cough_2014_27", "sog_dialogue_cough_2014_28", "sog_dialogue_cough_2014_29" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_30" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_31" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_32" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_33", "sog_dialogue_cough_2014_34", "sog_dialogue_cough_2014_35" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_36", "sog_dialogue_cough_2014_37" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_cough_2014_38" )
+		AddDialogueLine( sc.dude, "sog_dialogue_cough_2014_39" )
 	end
 }
 
 
-GM.SingleplayerCutscenes["mutilation"] = {
-	Intro = "2014\nEntrance to the ShitGamers Community",
+GM.SingleplayerCutscenes["scene_name_mutilation"] = {
+	Intro = "sog_intro_mutilation_2014",
 	SoundTrack = 95416884,
 	Volume = 40,
 	Main = { mdl = Model( "models/hunter/plates/plate3x3.mdl" ), seq = "idle", mat = ""},
@@ -3773,17 +3773,17 @@ GM.SingleplayerCutscenes["mutilation"] = {
 		{ mdl = Model( "models/props_debris/walldestroyed09f.mdl"), offset = Vector(-209, -43, 45) , ang = Angle(-1, 95, -4), seq = "", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.pr, "Huff. . ." )
-		AddDialogueLine( sc.pr, "Looks like gamemode browser was not lying after all. . ." )
-		AddDialogueLine( sc.pr, "'ShitGamers' Community\n910347 players on 1 server. . ." )
-		AddDialogueLine( sc.pr, "This place looks creepy as hell.", "Hello?", ". . .", "Is anybody here?" )
-		AddDialogueLine( sc.pr, "Hm. . .", "Oh right, there is a sign. . .", "'Jump down this hole for free hat.'", ". . .", "That's a one way to gain a lot of players." )
-		AddDialogueLine( sc.pr, "Well. . .", "I guess that's only one way in." )
+		AddDialogueLine( sc.pr, "sog_dialogue_mutilation_2014_1" )
+		AddDialogueLine( sc.pr, "sog_dialogue_mutilation_2014_2" )
+		AddDialogueLine( sc.pr, "sog_dialogue_mutilation_2014_3" )
+		AddDialogueLine( sc.pr, "sog_dialogue_mutilation_2014_4", "sog_dialogue_mutilation_2014_5", "sog_dialogue_mutilation_2014_6", "sog_dialogue_mutilation_2014_7" )
+		AddDialogueLine( sc.pr, "sog_dialogue_mutilation_2014_8", "sog_dialogue_mutilation_2014_9", "sog_dialogue_mutilation_2014_10", "sog_dialogue_mutilation_2014_11", "sog_dialogue_mutilation_2014_12" )
+		AddDialogueLine( sc.pr, "sog_dialogue_mutilation_2014_13", "sog_dialogue_mutilation_2014_14" )
 	end
 }
 
-GM.SingleplayerCutscenes["tax evasion"] = {
-	Intro = "2014\n\"ShitGamers\" Community",
+GM.SingleplayerCutscenes["scene_name_tax_evasion"] = {
+	Intro = "sog_intro_evasion_2014",
 	SoundTrack = 191639729,
 	StartFrom = 44000,
 	EndAt = 190000,
@@ -3805,27 +3805,27 @@ GM.SingleplayerCutscenes["tax evasion"] = {
 		{ mdl = Model( "models/player/kleiner.mdl"), offset = Vector(70, 74, 21) , ang = Angle(-1, 135, -1), seq = "zombie_run_fast", mat = "models/zombie_fast_players/fast_zombie_sheet", tag = "kid2", icon = Material( "sog/victim2.png", "smooth" ) },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.pr, ". . ." )
-		AddDialogueLine( sc.kid1, "Yesssssss. . ." )
-		AddDialogueLine( sc.kid2, ". . ." )
-		AddDialogueLine( sc.kid3, "Oh yesssssss. . ." )
-		AddDialogueLine( sc.pr, ". . .", ". . .what's going on. . ." )
-		AddDialogueLine( sc.kid1, "Shhhhhh. . .", "The masssster is coming." )
-		AddDialogueLine( sc.kid2, "Yessss. . .", "The massssssster. . ." )
-		AddDialogueLine( sc.pr, "Carl. . .", ". . .", "Where the hell are you?" )
-		AddDialogueLine( sc.kid3, ". . ." )
+		AddDialogueLine( sc.pr, "sog_dialogue_evasion_2014_1" )
+		AddDialogueLine( sc.kid1, "sog_dialogue_evasion_2014_2" )
+		AddDialogueLine( sc.kid2, "sog_dialogue_evasion_2014_3" )
+		AddDialogueLine( sc.kid3, "sog_dialogue_evasion_2014_4" )
+		AddDialogueLine( sc.pr, "sog_dialogue_evasion_2014_5", "sog_dialogue_evasion_2014_6" )
+		AddDialogueLine( sc.kid1, "sog_dialogue_evasion_2014_7", "sog_dialogue_evasion_2014_8" )
+		AddDialogueLine( sc.kid2, "sog_dialogue_evasion_2014_9", "sog_dialogue_evasion_2014_10" )
+		AddDialogueLine( sc.pr, "sog_dialogue_evasion_2014_11", "sog_dialogue_evasion_2014_12", "sog_dialogue_evasion_2014_13" )
+		AddDialogueLine( sc.kid3, "sog_dialogue_evasion_2014_14" )
 		AddDialogueAction( sc.kid3, function( me ) surface.PlaySound( "ambient/machines/wall_move3.wav" ) end )
-		AddDialogueLine( sc.pr, "Oh no. . .", "That doesn't sound good!" )	
-		AddDialogueLine( sc.kid2, "He isss here. . ." )
+		AddDialogueLine( sc.pr, "sog_dialogue_evasion_2014_15", "sog_dialogue_evasion_2014_16" )	
+		AddDialogueLine( sc.kid2, "sog_dialogue_evasion_2014_17" )
 		AddDialogueAction( sc.kid2, function( me ) surface.PlaySound( "ambient/machines/wall_move4.wav" ) end )
 		
 	end
 }
 
 
-GM.SingleplayerCutscenes["hatred"] = {
-	Act = "ACT 6: DEAD END",
-	Intro = "2014\n\"GMod Power\" Community casino",
+GM.SingleplayerCutscenes["scene_name_hatred"] = {
+	Act = "sog_intro_hatred_act6",
+	Intro = "sog_intro_hatred_2014",
 	SoundTrack = 302326040,//215669659,
 	StartFrom = 69500,
 	Volume = 35,
@@ -3858,25 +3858,25 @@ GM.SingleplayerCutscenes["hatred"] = {
 		{ mdl = Model( "models/props/cs_office/computer.mdl"), offset = Vector(-109, 10, 50) , ang = Angle(-1, -135, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )	
-		AddDialogueLine( sc.owner, "Greetings, my lovely friends!", "Thank you all for coming!", "Because we are celebrating yet another day\nin our awesome community!" )
-		AddDialogueLine( sc.owner, "Also, we have increased safety measures on our server!", "So there is nothing to worry, my darlings!", "This is all for your own safety!" )
-		AddDialogueLine( sc.owner, "Even in hard times like these. . .", "We always stay positive and happy!" )
-		AddDialogueLine( sc.owner, "So have fun, my friends!", "Poker or slot machines. . .", "Drinks or some good talk. . .", "Anything that you desire!", ". . .", "I've even ordered some pizza, just for all of you!" )
-		AddDialogueLine( sc.owner, "And feel free to. . ." )
-		AddDialogueLine( sc.phone, "*beep*" )
-		AddDialogueLine( sc.owner, "Oh. . .", "It looks like our pizza have arrived!", "You guys, can come in.", "I'm just going to go outside and grab the pizza!", "Just don't have too much fun without me!" )
-		AddDialogueLine( sc.matthias, ". . ." )
-		AddDialogueLine( sc.dude, "Hehehe. . ." )
-		AddDialogueLine( sc.matthias, "Are your suits on?" )
-		AddDialogueLine( sc.dude, "Yeah!" )
-		AddDialogueLine( sc.matthias, ". . ." )
+		AddDialogueLine( sc.owner, "sog_dialogue_hatred_2014_1", "sog_dialogue_hatred_2014_2", "sog_dialogue_hatred_2014_3" )
+		AddDialogueLine( sc.owner, "sog_dialogue_hatred_2014_4", "sog_dialogue_hatred_2014_5", "sog_dialogue_hatred_2014_6" )
+		AddDialogueLine( sc.owner, "sog_dialogue_hatred_2014_7", "sog_dialogue_hatred_2014_8" )
+		AddDialogueLine( sc.owner, "sog_dialogue_hatred_2014_9", "sog_dialogue_hatred_2014_10", "sog_dialogue_hatred_2014_11", "sog_dialogue_hatred_2014_12", "sog_dialogue_hatred_2014_13", "sog_dialogue_hatred_2014_14" )
+		AddDialogueLine( sc.owner, "sog_dialogue_hatred_2014_15" )
+		AddDialogueLine( sc.phone, "sog_dialogue_hatred_2014_16" )
+		AddDialogueLine( sc.owner, "sog_dialogue_hatred_2014_17", "sog_dialogue_hatred_2014_18", "sog_dialogue_hatred_2014_19", "sog_dialogue_hatred_2014_20", "sog_dialogue_hatred_2014_21" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_hatred_2014_22" )
+		AddDialogueLine( sc.dude, "sog_dialogue_hatred_2014_23" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_hatred_2014_24" )
+		AddDialogueLine( sc.dude, "sog_dialogue_hatred_2014_25" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_hatred_2014_26" )
 		AddDialogueAction( sc.matthias, function( me ) 
 				surface.PlaySound( "ambient/machines/sputter1.wav" ) 
 				sc.car.Shake = true
 				sc.car2.Shake = true
 				sc.dude2.Shake = true
 			end )
-		AddDialogueLine( sc.mathias, "Vroom vroom, motherfuckers!" )
+		AddDialogueLine( sc.mathias, "sog_dialogue_hatred_2014_27" )
 		AddDialogueAction( sc.matthias, function( me ) 
 			sc.vCamPos.x = 818
 			sc.vCamPos.y = -65
@@ -3886,8 +3886,8 @@ GM.SingleplayerCutscenes["hatred"] = {
 	end
 }
 
-GM.SingleplayerCutscenes["resort"] = {
-	Intro = "2014\n\"Stay Rusty\" bar",
+GM.SingleplayerCutscenes["scene_name_resort"] = {
+	Intro = "sog_intro_resort_2014",
 	SoundTrack = 300939921,
 	Volume = 40,
 	StartFrom = 8000,
@@ -3957,54 +3957,54 @@ GM.SingleplayerCutscenes["resort"] = {
 		{ mdl = Model( "models/props/cs_militia/housefence.mdl"), offset = Vector(-123, 19, 6) , ang = Angle(-90, -180, 0), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )	
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.barguy, ". . .", "Well. . .", "Looks like it can't get any worse than this.", "Can it?" )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.barguy, "Hey, at least this piece of shit is no more!", "The sellout guy. . ." )
-		AddDialogueLine( sc.axeguy, "It's too good to be true. . .", "You've seen what's outside." )
-		AddDialogueLine( sc.barguy, "Yeah. . .", "Now I regret it." )
-		AddDialogueLine( sc.axeguy, "At least you got all your bones safe." )
-		AddDialogueLine( sc.barguy, "True. . .", "Mind if I turn on the tv?" )
-		AddDialogueLine( sc.axeguy, "Go ahead. . ." )
-		AddDialogueLine( sc.tv, "*chkt*", "Bzzzzzzzzzzzz" )
-		AddDialogueLine( sc.barguy, "Come on. . ." )
-		AddDialogueLine( sc.tv, "Breaking news!" )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.tv, "A horrifying shooting took place in GMod Power casino. . ." )
-		AddDialogueLine( sc.barguy, ". . ." )
-		AddDialogueLine( sc.tv, ". . .have reported gunshots and explosions this morning. . ." )
-		AddDialogueLine( sc.axeguy, "GMod Power. . ." )
-		AddDialogueLine( sc.barguy, "Holy fuck, that's horrible!" )
-		AddDialogueLine( sc.tv, ". . .attackers brutally murdered everyone inside. . .", ". . .and ran away with all the money. . ." )
-		AddDialogueLine( sc.tv, ". . .by the time the police arrived. . .", ". . .there was nothing but corpses and scorched rooms." )
-		AddDialogueLine( sc.tv, "Another reports came from. . ." )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_1" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_2", "sog_dialogue_resort_2014_3", "sog_dialogue_resort_2014_4", "sog_dialogue_resort_2014_5" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_6" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_7", "sog_dialogue_resort_2014_8" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_9", "sog_dialogue_resort_2014_10" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_11", "sog_dialogue_resort_2014_12" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_13" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_14", "sog_dialogue_resort_2014_15" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_16" )
+		AddDialogueLine( sc.tv, "sog_dialogue_resort_2014_17", "sog_dialogue_resort_2014_18" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_19" )
+		AddDialogueLine( sc.tv, "sog_dialogue_resort_2014_20" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_21" )
+		AddDialogueLine( sc.tv, "sog_dialogue_resort_2014_22" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_23" )
+		AddDialogueLine( sc.tv, "sog_dialogue_resort_2014_24" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_25" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_26" )
+		AddDialogueLine( sc.tv, "sog_dialogue_resort_2014_27", "sog_dialogue_resort_2014_28" )
+		AddDialogueLine( sc.tv, "sog_dialogue_resort_2014_29", "sog_dialogue_resort_2014_30" )
+		AddDialogueLine( sc.tv, "sog_dialogue_resort_2014_31" )
 		AddDialogueAction( sc.pr, function( me ) me.Hide = false surface.PlaySound( "doors/wood_move1.wav" ) end )
-		AddDialogueLine( sc.pr, "Hello?" )
-		AddDialogueLine( sc.barguy, "Shhh. . ." )
-		AddDialogueLine( sc.tv, ". . .famous youtuber LetsTortureGMod was found dead. . .", ". . .his fans are storming forums in blind revenge. . ." )
-		AddDialogueLine( sc.axeguy, ". . ." )
-		AddDialogueLine( sc.barguy, ". . .so yeah, do you need anything?", "A drink, perhaps?" )
-		AddDialogueLine( sc.pr, ". . .", "Thanks, but. . .", "I was wondering if you know the shortest way\nto garry's office. . ." )
-		AddDialogueLine( sc.barguy, "Hm. . .", "Let me think." )
-		AddDialogueLine( sc.axeguy, "You look like you've been through some fucking shit. . ." )
-		AddDialogueLine( sc.pr, "Sort of. . ." )
-		AddDialogueLine( sc.barguy, "I think you can get there by simply. . .", ". . .um. . .", ". . .going through GMod Power's resort center." )
-		AddDialogueLine( sc.pr, "Isn't it supposed to be called lobby?" )
-		AddDialogueLine( sc.barguy, "Same thing.", "I suggest you to be careful, tho. . .", "Seen what have happened to their casino?" )
-		AddDialogueLine( sc.pr, "No." )
-		AddDialogueLine( sc.axeguy, "It got fucked!" )
-		AddDialogueLine( sc.pr, "Oh god. . .", "Alright, thanks for the help, I guess. . ." )
-		AddDialogueLine( sc.axeguy, ". . ." )
+		AddDialogueLine( sc.pr, "sog_dialogue_resort_2014_32" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_33" )
+		AddDialogueLine( sc.tv, "sog_dialogue_resort_2014_34", "sog_dialogue_resort_2014_35" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_36" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_37", "sog_dialogue_resort_2014_38" )
+		AddDialogueLine( sc.pr, "sog_dialogue_resort_2014_39", "sog_dialogue_resort_2014_40", "sog_dialogue_resort_2014_41" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_42", "sog_dialogue_resort_2014_43" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_44" )
+		AddDialogueLine( sc.pr, "sog_dialogue_resort_2014_45" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_46", "sog_dialogue_resort_2014_47", "sog_dialogue_resort_2014_48" )
+		AddDialogueLine( sc.pr, "sog_dialogue_resort_2014_49" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_50", "sog_dialogue_resort_2014_51", "sog_dialogue_resort_2014_52" )
+		AddDialogueLine( sc.pr, "sog_dialogue_resort_2014_53" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_54" )
+		AddDialogueLine( sc.pr, "sog_dialogue_resort_2014_55", "sog_dialogue_resort_2014_56" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_57" )
 		AddDialogueAction( sc.pr, function( me ) me.Hide = true surface.PlaySound( "doors/wood_move1.wav" ) end )
-		AddDialogueLine( sc.axeguy, "Garry's office. . .", "You didn't even bother to warn him." )
-		AddDialogueLine( sc.barguy, "What?" )
-		AddDialogueLine( sc.axeguy, "Nevermind.", ". . .", "This guy has a fucking death wish." )
-		AddDialogueLine( sc.barguy, ". . ." )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_58", "sog_dialogue_resort_2014_59" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_60" )
+		AddDialogueLine( sc.axeguy, "sog_dialogue_resort_2014_61", "sog_dialogue_resort_2014_62", "sog_dialogue_resort_2014_63" )
+		AddDialogueLine( sc.barguy, "sog_dialogue_resort_2014_64" )
 	end
 }
 
-GM.SingleplayerCutscenes["paywall"] = {
-	Intro = "2014\nGreedMobile of \"CoderFired\" Corporation",
+GM.SingleplayerCutscenes["scene_name_paywall"] = {
+	Intro = "sog_intro_paywall_2014",
 	SoundTrack = 672568949,
 	Volume = 40,
 	//StartFrom = 10000,
@@ -4037,25 +4037,25 @@ GM.SingleplayerCutscenes["paywall"] = {
 				end
 			end
 		end
-		AddDialogueLine( sc.moderator, ". . ." )
-		AddDialogueLine( sc.phone, "*beep*", "This client is not responding. . ." )
-		AddDialogueLine( sc.moderator, "Come on, Mark. . .", "Where did you go again?" )
-		AddDialogueLine( sc.phone, "This client is not responding. . ." )
-		AddDialogueLine( sc.moderator, "*sigh*", "What if. . ." )
-		AddDialogueLine( sc.phone, "*beep*", "This client is not responding. . ." )
-		AddDialogueLine( sc.moderator, ". . .", "Are you kidding me?!", "Even steve is not responding!", "Uhhhhhh. . .", "Come on, at least office should work. . ." )
-		AddDialogueLine( sc.phone, "*beep*", "Dialing. . ." )
-		AddDialogueLine( sc.moderator, "Aha!" )
-		AddDialogueLine( sc.phone, "*beep*", "Welcome to the ScriptToddler!", "If you want to sell a script - press one." )
-		AddDialogueLine( sc.moderator, ". . ." )
-		AddDialogueLine( sc.phone, "If you want to refund or make a complaint. . .", ". . .you can fuck off and have a nice day!" )
-		AddDialogueLine( sc.phone, "*beep*" )
-		AddDialogueLine( sc.moderator, ". . ." )
+		AddDialogueLine( sc.moderator, "sog_dialogue_paywall_2014_1" )
+		AddDialogueLine( sc.phone, "sog_dialogue_paywall_2014_2", "sog_dialogue_paywall_2014_3" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_paywall_2014_4", "sog_dialogue_paywall_2014_5" )
+		AddDialogueLine( sc.phone, "sog_dialogue_paywall_2014_6" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_paywall_2014_7", "sog_dialogue_paywall_2014_8" )
+		AddDialogueLine( sc.phone, "sog_dialogue_paywall_2014_9", "sog_dialogue_paywall_2014_10" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_paywall_2014_11", "sog_dialogue_paywall_2014_12", "sog_dialogue_paywall_2014_13", "sog_dialogue_paywall_2014_14", "sog_dialogue_paywall_2014_15" )
+		AddDialogueLine( sc.phone, "sog_dialogue_paywall_2014_16", "sog_dialogue_paywall_2014_17" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_paywall_2014_18" )
+		AddDialogueLine( sc.phone, "sog_dialogue_paywall_2014_19", "sog_dialogue_paywall_2014_20", "sog_dialogue_paywall_2014_21" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_paywall_2014_22" )
+		AddDialogueLine( sc.phone, "sog_dialogue_paywall_2014_23", "sog_dialogue_paywall_2014_24" )
+		AddDialogueLine( sc.phone, "sog_dialogue_paywall_2014_25" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_paywall_2014_26" )
 	end
 }
 
-GM.SingleplayerCutscenes["bad idea"] = {
-	Intro = "2014\ngarry's office",
+GM.SingleplayerCutscenes["scene_name_bad_idea"] = {
+	Intro = "sog_intro_badidea_2014",
 	SoundTrack = 451818870,
 	Volume = 35,
 	//EndAt = 195000,
@@ -4083,76 +4083,76 @@ GM.SingleplayerCutscenes["bad idea"] = {
 		{ mdl = Model( "models/player/eli.mdl"), offset = Vector(-64, 16, 10) , ang = Angle(0, -151, 0), seq = "pose_standing_01", mat = "", tag = "matthias" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.garry, ". . ." )
-		AddDialogueLine( sc.matthias, "As you can see. . ." )
-		AddDialogueLine( sc.garry, "Yeah. . .", "Splendid work.", ". . .", "Now they won't have any excuse." )
-		AddDialogueLine( sc.matthias, "Yeah, I've noticed that things have been getting 'rusty'. . ." )
-		AddDialogueLine( sc.garry, "Way too 'rusty'. . .", "Hahahahaha!" )
-		AddDialogueLine( sc.matthias, "Hahahah!", ". . .", "So, what about my payment?" )
-		AddDialogueLine( sc.garry, "Payment. . .", "There should be a truck around the corner.", "I think you will like what's inside." )
-		AddDialogueLine( sc.matthias, "Nice.", "Before I leave. . ." )
-		AddDialogueLine( sc.garry, ". . ." )
-		AddDialogueLine( sc.matthias, "Take this. . ." )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_1" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_2" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_3", "sog_dialogue_badidea_2014_4", "sog_dialogue_badidea_2014_5", "sog_dialogue_badidea_2014_6" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_7" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_8", "sog_dialogue_badidea_2014_9" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_10", "sog_dialogue_badidea_2014_11", "sog_dialogue_badidea_2014_12" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_13", "sog_dialogue_badidea_2014_14", "sog_dialogue_badidea_2014_15" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_16", "sog_dialogue_badidea_2014_17" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_18" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_19" )
 		AddDialogueAction( sc.garry, function( me ) surface.PlaySound( "items/ammo_pickup.wav" ) end )
-		AddDialogueLine( sc.matthias, "Something that we've found in CoderFired's office. . ." )
-		AddDialogueLine( sc.garry, "What's this?" )
-		AddDialogueLine( sc.matthias, "'Power Trip' addon.", "Have not got time to try it myself.", "So I thought you might like it." )
-		AddDialogueLine( sc.garry, "Let's see. . ." )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_20" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_21" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_22", "sog_dialogue_badidea_2014_23", "sog_dialogue_badidea_2014_24" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_25" )
 		AddDialogueAction( sc.garry, function( me ) surface.PlaySound( "weapons/crossbow/bolt_skewer1.wav" ) end )
-		AddDialogueLine( sc.matthias, "You should've not used entire dose at once. . .", ". . .but whatever.", "I've gotta go, soooo. . ." )
-		AddDialogueLine( sc.garry, ". . ." )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_26", "sog_dialogue_badidea_2014_27", "sog_dialogue_badidea_2014_28" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_29" )
 		AddDialogueAction( sc.garry, function( me ) surface.PlaySound( "ambient/levels/citadel/strange_talk1.wav" ) end )
-		AddDialogueLine( sc.matthias, "It was nice doing business with you!" )
-		AddDialogueLine( sc.garry, ". . ." )
+		AddDialogueLine( sc.matthias, "sog_dialogue_badidea_2014_30" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_31" )
 		AddDialogueAction( sc.matthias, function( me ) me.Hide = true surface.PlaySound( "doors/wood_move1.wav" ) end )
-		AddDialogueLine( sc.garry, "That thing feels strange. . ." )
-		AddDialogueLine( sc.pr, "Hello?" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_32" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badidea_2014_33" )
 		AddDialogueAction( sc.pr, function( me ) me.Hide = false surface.PlaySound( "doors/door_latch3.wav" ) end )
-		AddDialogueLine( sc.garry, ". . .", "Who are you?" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_34", "sog_dialogue_badidea_2014_35" )
 		AddDialogueAction( sc.garry, function( me )
 				local ang = me:GetAngles()
 				ang:RotateAroundAxis( vector_up, 180 )
 				me:SetAngles( ang ) 
 				surface.PlaySound("UI/hint.wav")
 			end )
-		AddDialogueLine( sc.pr, "I just wanted to ask if. . ." )
-		AddDialogueLine( sc.garry, "It's about gmod, isn't it?" )
-		AddDialogueLine( sc.pr, "Yeah, I. . ." )
-		AddDialogueLine( sc.garry, ". . .", "Go away.", "I don't give a shit." )
-		AddDialogueLine( sc.pr, "No, wait! Hear me out. . ." )
-		AddDialogueLine( sc.garry, "I said. . .", ". . ." )
+		AddDialogueLine( sc.pr, "sog_dialogue_badidea_2014_36" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_37" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badidea_2014_38" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_39", "sog_dialogue_badidea_2014_40", "sog_dialogue_badidea_2014_41" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badidea_2014_42" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_43", "sog_dialogue_badidea_2014_44" )
 		AddDialogueAction( sc.pr1, function( me ) me.Hide = false surface.PlaySound( "npc/stalker/breathing3.wav" ) end )
-		AddDialogueLine( sc.pr1, "People are taking down servers left and right. . ." )
-		AddDialogueLine( sc.garry, "No. . ." )
+		AddDialogueLine( sc.pr1, "sog_dialogue_badidea_2014_45" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_46" )
 		AddDialogueAction( sc.pr2, function( me ) me.Hide = false surface.PlaySound( "npc/stalker/breathing3.wav" ) end )
-		AddDialogueLine( sc.pr2, "DDOS attacks are all over the place. . ." )
-		AddDialogueLine( sc.garry, "What the fuck. . ." )
+		AddDialogueLine( sc.pr2, "sog_dialogue_badidea_2014_47" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_48" )
 		AddDialogueAction( sc.pr3, function( me ) me.Hide = false surface.PlaySound( "npc/stalker/breathing3.wav" ) end )
-		AddDialogueLine( sc.pr3, "Servers are being overrun by little kids. . ." )
-		AddDialogueLine( sc.garry, "Stop!" )
+		AddDialogueLine( sc.pr3, "sog_dialogue_badidea_2014_49" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_50" )
 		AddDialogueAction( sc.pr4, function( me ) me.Hide = false surface.PlaySound( "npc/stalker/breathing3.wav" ) end )
-		AddDialogueLine( sc.pr4, "People using paid addons to hide\ntheir own lazyness. . ." )
-		AddDialogueLine( sc.garry, "How many of you are there?!" )
+		AddDialogueLine( sc.pr4, "sog_dialogue_badidea_2014_51" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_52" )
 		AddDialogueAction( sc.pr5, function( me ) me.Hide = false surface.PlaySound( "npc/stalker/breathing3.wav" ) end )
-		AddDialogueLine( sc.pr5, "I've seen a slavery camp in one of the communities. . ." )
-		AddDialogueLine( sc.garry, ". . .", "Stop joining, you whiners!" )
+		AddDialogueLine( sc.pr5, "sog_dialogue_badidea_2014_53" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_54", "sog_dialogue_badidea_2014_55" )
 		AddDialogueAction( sc.pr6, function( me ) me.Hide = false surface.PlaySound( "npc/stalker/breathing3.wav" ) end )
-		AddDialogueLine( sc.pr6, "And you just want to walk away. . .", ". . .from all this!" )
-		AddDialogueLine( sc.garry, "Leave me alone!" )
-		AddDialogueLine( sc.pr1, "DMCA. . ." )
+		AddDialogueLine( sc.pr6, "sog_dialogue_badidea_2014_56", "sog_dialogue_badidea_2014_57" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_58" )
+		AddDialogueLine( sc.pr1, "sog_dialogue_badidea_2014_59" )
 		AddDialogueAction( sc.pr1, function( me ) surface.PlaySound( "ambient/misc/brass_bell_c.wav" )  end )
-		AddDialogueLine( sc.pr2, "DDOS. . ." )
+		AddDialogueLine( sc.pr2, "sog_dialogue_badidea_2014_60" )
 		AddDialogueAction( sc.pr2, function( me ) surface.PlaySound( "ambient/misc/brass_bell_d.wav" )  end )
-		AddDialogueLine( sc.pr3, "Pride and idiocy. . ." )
+		AddDialogueLine( sc.pr3, "sog_dialogue_badidea_2014_61" )
 		AddDialogueAction( sc.pr3, function( me ) surface.PlaySound( "ambient/misc/brass_bell_e.wav" )  end )
-		AddDialogueLine( sc.pr4, "Greed and abuse. . ." )
+		AddDialogueLine( sc.pr4, "sog_dialogue_badidea_2014_62" )
 		AddDialogueAction( sc.pr4, function( me ) surface.PlaySound( "ambient/misc/brass_bell_f.wav" )  end )
-		AddDialogueLine( sc.pr5, "Bloated communities. . ." )
+		AddDialogueLine( sc.pr5, "sog_dialogue_badidea_2014_63" )
 		AddDialogueAction( sc.pr5, function( me ) surface.PlaySound( "ambient/misc/brass_bell_e.wav" )  end )
-		AddDialogueLine( sc.pr6, "What happened to the old gmod?!" )
+		AddDialogueLine( sc.pr6, "sog_dialogue_badidea_2014_64" )
 		AddDialogueAction( sc.pr6, function( me ) surface.PlaySound( "ambient/misc/brass_bell_d.wav" )  end )
-		AddDialogueLine( sc.garry, "Shut up!!!" )
-		AddDialogueLine( sc.pr, "Wait, who are you talking to?" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_65" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badidea_2014_66" )
 		AddDialogueAction( sc.pr, function( me ) 
 				sc.pr1.Hide = true
 				sc.pr2.Hide = true
@@ -4162,23 +4162,23 @@ GM.SingleplayerCutscenes["bad idea"] = {
 				sc.pr6.Hide = true
 				surface.PlaySound( "physics/glass/glass_largesheet_break1.wav" ) 
 			end )
-		AddDialogueLine( sc.garry, ". . ." )
-		AddDialogueLine( sc.pr, "Hello?" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_67" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badidea_2014_68" )
 		AddDialogueAction( sc.pr, function( me ) surface.PlaySound( "ambient/levels/streetwar/strider_distant2.wav" ) end )
-		AddDialogueLine( sc.garry, ". . ." )
+		AddDialogueLine( sc.garry, "sog_dialogue_badidea_2014_69" )
 		AddDialogueAction( sc.garry, function( me )
 				local ang = me:GetAngles()
 				ang:RotateAroundAxis( vector_up, 180 )
 				me:SetAngles( ang ) 
 				surface.PlaySound("UI/hint.wav")
 			end )
-		AddDialogueLine( sc.pr, "Mr. Newman?" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badidea_2014_70" )
 		AddDialogueAction( sc.pr, function( me ) surface.PlaySound( "ambient/levels/streetwar/strider_distant3.wav" ) end )
 	end,
 }
 
 GM.SingleplayerCutscenes["bad idea outro"] = {
-	Intro = "2014\nOld garrysmod.com",
+	Intro = "sog_intro_badideaoutro_2014",
 	SoundTrack = 262493467,//181430429,
 	Volume = 28,//35,
 	StartFrom = 3000,
@@ -4250,30 +4250,30 @@ GM.SingleplayerCutscenes["bad idea outro"] = {
 		{ mdl = Model( "models/hunter/plates/plate1x1.mdl"), offset = Vector(-2, -24, 3) , ang = Angle(-1, 1, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.pr, ". . .", "What. . .", "What happened?" )
-		AddDialogueLine( sc.garry, "I killed you." )
-		AddDialogueLine( sc.pr, "Why am I. . ." )
-		AddDialogueLine( sc.garry, "But then I thought. . .", "That was way too kind of me.", "Since you want to be that 'special snowflake'. . ." )
-		AddDialogueLine( sc.pr, ". . ." )
-		AddDialogueLine( sc.garry, "Among all these idiots, that keep annoying me. . ." )
-		AddDialogueLine( sc.pr, "This place looks familiar. . ." )
-		AddDialogueLine( sc.garry, ". . .you are going to spend rest of your days in here.", "Next to your 'good old gmod'.", ". . .", "That's gonna hurt. . .", ". . .knowing that it will never come back.", "Yet it's here, behind you." )
-		AddDialogueLine( sc.pr, ". . .", "No. . ." )
-		AddDialogueLine( sc.garry, "So yeah. . .", "Have fun with your very personal torture. . .", ". . .being a slave of gmod.", "I've got better things to do. . .", ". . .than babysitting with this community." )
-		AddDialogueLine( sc.pr, ". . ." )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_1", "sog_dialogue_badideaoutro_2014_2", "sog_dialogue_badideaoutro_2014_3" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badideaoutro_2014_4" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_5" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badideaoutro_2014_6", "sog_dialogue_badideaoutro_2014_7", "sog_dialogue_badideaoutro_2014_8" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_9" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badideaoutro_2014_10" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_11" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badideaoutro_2014_12", "sog_dialogue_badideaoutro_2014_13", "sog_dialogue_badideaoutro_2014_14", "sog_dialogue_badideaoutro_2014_15", "sog_dialogue_badideaoutro_2014_16", "sog_dialogue_badideaoutro_2014_17" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_18", "sog_dialogue_badideaoutro_2014_19" )
+		AddDialogueLine( sc.garry, "sog_dialogue_badideaoutro_2014_20", "sog_dialogue_badideaoutro_2014_21", "sog_dialogue_badideaoutro_2014_22", "sog_dialogue_badideaoutro_2014_23", "sog_dialogue_badideaoutro_2014_24" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_25" )
 		AddDialogueAction( sc.garry, function( me ) me.Hide = true surface.PlaySound( "UI/hint.wav" ) end )
-		AddDialogueLine( sc.pr, "That's not fair. . .", "*sigh*" )
-		AddDialogueLine( sc.pr, "If only I could. . ." )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_26", "sog_dialogue_badideaoutro_2014_27" )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_28" )
 		AddDialogueAction( sc.ohno, function( me ) me.Hide = false surface.PlaySound( "UI/hint.wav" ) end )
-		AddDialogueLine( sc.pr, ". . .", "Oh no. . ." )
+		AddDialogueLine( sc.pr, "sog_dialogue_badideaoutro_2014_29", "sog_dialogue_badideaoutro_2014_30" )
 	end,
 	
 }
 
 
-GM.SingleplayerCutscenes["legacy"] = {
-	Act = "BONUS ACT, PART ONE:\n'BIG SERVER MEN'",
-	Intro = "2016\nLovely pier of feels and safety",
+GM.SingleplayerCutscenes["scene_name_legacy"] = {
+	Act = "sog_intro_legacy_act_bonus",
+	Intro = "sog_intro_legacy_2016",
 	SoundTrack = 426293556,//281230919,
 	StartFrom = 18900,//35500,
 	Volume = 65,
@@ -4332,17 +4332,17 @@ GM.SingleplayerCutscenes["legacy"] = {
 				end
 			end
 		end
-		AddDialogueLine( sc.moderator, ". . .", "This is such a lovely evening.", "If only we could enjoy it forever. . ." )
-		AddDialogueLine( sc.mark, "Oh yes!" )
-		AddDialogueLine( sc.moderator, "Ah. . .", "Reminds me of my younger days. . .", ". . .when I used to have fun. . ." )
-		AddDialogueLine( sc.mark, "Oh yes!" )
-		AddDialogueLine( sc.moderator, "Oh my. . .", "Look over there!", ". . .", "It's a seagull!", "Isn't it beautiful?" )
-		AddDialogueLine( sc.mark, "Oh yes!" )
-		AddDialogueLine( sc.moderator, "*sigh*", "You know. . .", ". . .", "I have to tell you something. . .", "I have this strange feeling. . ." )
-		AddDialogueLine( sc.moderator, "It's like. . .", "Sometimes I feel like there is something. . .", ". . .something changed inside me. . .", ". . .that makes me feel. . .", ". . .like a car." )
-		AddDialogueLine( sc.mark, ". . .", ". . .a car?" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_legacy_act_bonus_1", "sog_dialogue_legacy_act_bonus_2", "sog_dialogue_legacy_act_bonus_3" )
+		AddDialogueLine( sc.mark, "sog_dialogue_legacy_act_bonus_4" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_legacy_act_bonus_5", "sog_dialogue_legacy_act_bonus_6", "sog_dialogue_legacy_act_bonus_7" )
+		AddDialogueLine( sc.mark, "sog_dialogue_legacy_act_bonus_8" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_legacy_act_bonus_9", "sog_dialogue_legacy_act_bonus_10", "sog_dialogue_legacy_act_bonus_11", "sog_dialogue_legacy_act_bonus_12", "sog_dialogue_legacy_act_bonus_13" )
+		AddDialogueLine( sc.mark, "sog_dialogue_legacy_act_bonus_14" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_legacy_act_bonus_15", "sog_dialogue_legacy_act_bonus_16", "sog_dialogue_legacy_act_bonus_17", "sog_dialogue_legacy_act_bonus_18", "sog_dialogue_legacy_act_bonus_19" )
+		AddDialogueLine( sc.moderator, "sog_dialogue_legacy_act_bonus_20", "sog_dialogue_legacy_act_bonus_21", "sog_dialogue_legacy_act_bonus_22", "sog_dialogue_legacy_act_bonus_23", "sog_dialogue_legacy_act_bonus_24" )
+		AddDialogueLine( sc.mark, "sog_dialogue_legacy_act_bonus_25", "sog_dialogue_legacy_act_bonus_26" )
 		
-		AddDialogueLine( sc.car1, "Whoops!" )
+		AddDialogueLine( sc.car1, "sog_dialogue_legacy_act_bonus_27" )
 		AddDialogueAction( sc.car1, function( me )
 				me.Hide = false
 				me.lerp = true
@@ -4361,30 +4361,30 @@ GM.SingleplayerCutscenes["legacy"] = {
 				end
 				
 			end )
-		AddDialogueLine( sc.watch, ". . .", "Oh. . .", "Hi, there!", "What was your name again?", "!PLAYERNAME. . .", "What a weird name!" )
-		AddDialogueLine( sc.watch, "Anyway. . .", "I bet you are wondering. . .", "'Aren't these guys supposed to be dead already?'", "Well, the answer is 'Yes'!" )
-		AddDialogueLine( sc.watch, "As for me. . .", "Well, lets just say. . .", "I'm pursuing the true evil of this game!", "The unspeakable syndicate of greed and corruption!" )
-		AddDialogueLine( sc.watch, "The Big Server Men!", ". . .", "Oh yeah!", "And how I like to say. . ." )
-		AddDialogueLine( sc.watch, "I'm gonna put them. . ." )
-		AddDialogueLine( sc.watch, ". . .on watch!" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_28", "sog_dialogue_legacy_act_bonus_29", "sog_dialogue_legacy_act_bonus_30", "sog_dialogue_legacy_act_bonus_31", "sog_dialogue_legacy_act_bonus_32", "sog_dialogue_legacy_act_bonus_33" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_34", "sog_dialogue_legacy_act_bonus_35", "sog_dialogue_legacy_act_bonus_36", "sog_dialogue_legacy_act_bonus_37" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_38", "sog_dialogue_legacy_act_bonus_39", "sog_dialogue_legacy_act_bonus_40", "sog_dialogue_legacy_act_bonus_41" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_42", "sog_dialogue_legacy_act_bonus_43", "sog_dialogue_legacy_act_bonus_44", "sog_dialogue_legacy_act_bonus_45" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_46" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_47" )
 		AddDialogueAction( sc.watch, function( me ) surface.PlaySound( "weapons/shotgun/shotgun_cock.wav" ) end )
-		AddDialogueLine( sc.dude1, "Nooo, stop that!", "I told you, my letstorturegmod doll is better!" )
-		AddDialogueLine( sc.dude2, "No, it's not!", "My letstorturegmod doll has rockets!" )
-		AddDialogueLine( sc.dude1, "Nooo!" )
-		AddDialogueLine( sc.watch, "What the. . .", "What are you both doing in my car?!" )
-		AddDialogueLine( sc.dude1, "But don't you remember, watch. . ." )
-		AddDialogueLine( sc.watch, "It's Detective Watch to you, boy!" )
-		AddDialogueLine( sc.dude1, ". . ." )
-		AddDialogueLine( sc.dude2, "Mom asked you to take us home\nfrom darkrp server, remember?" )
-		AddDialogueLine( sc.watch, "Oh. . .", "Damn it!" )
-		AddDialogueLine( sc.dude1, "Wait, stop the car!", "It's letstorturegmod's mansion!" )
-		AddDialogueLine( sc.dude2, "Sweet! It is!", "Can we get some souvenirs?!" )
-		AddDialogueLine( sc.dude1, "Pleeeeeeaaseeeee!!!" )
-		AddDialogueLine( sc.watch, "Argh!", "If I do that, will you both shut up?!" )
-		AddDialogueLine( sc.dude1, "Yes!" )
-		AddDialogueLine( sc.watch, "Fine!", "But I'm not gonna walk there, so. . ." )
-		AddDialogueLine( sc.dude2, ". . ." )
-		AddDialogueLine( sc.watch, ". . .get that stupid chair out of the trunk!" )
+		AddDialogueLine( sc.dude1, "sog_dialogue_legacy_act_bonus_48", "sog_dialogue_legacy_act_bonus_49" )
+		AddDialogueLine( sc.dude2, "sog_dialogue_legacy_act_bonus_50", "sog_dialogue_legacy_act_bonus_51" )
+		AddDialogueLine( sc.dude1, "sog_dialogue_legacy_act_bonus_52" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_53", "sog_dialogue_legacy_act_bonus_54" )
+		AddDialogueLine( sc.dude1, "sog_dialogue_legacy_act_bonus_55" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_56" )
+		AddDialogueLine( sc.dude1, "sog_dialogue_legacy_act_bonus_57" )
+		AddDialogueLine( sc.dude2, "sog_dialogue_legacy_act_bonus_58" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_59", "sog_dialogue_legacy_act_bonus_60" )
+		AddDialogueLine( sc.dude1, "sog_dialogue_legacy_act_bonus_61", "sog_dialogue_legacy_act_bonus_62" )
+		AddDialogueLine( sc.dude2, "sog_dialogue_legacy_act_bonus_63", "sog_dialogue_legacy_act_bonus_64" )
+		AddDialogueLine( sc.dude1, "sog_dialogue_legacy_act_bonus_65" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_66", "sog_dialogue_legacy_act_bonus_67" )
+		AddDialogueLine( sc.dude1, "sog_dialogue_legacy_act_bonus_68" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_69", "sog_dialogue_legacy_act_bonus_70" )
+		AddDialogueLine( sc.dude2, "sog_dialogue_legacy_act_bonus_71" )
+		AddDialogueLine( sc.watch, "sog_dialogue_legacy_act_bonus_72" )
 		
 		
 		AddDialogueAction( sc.watch, function( me )
@@ -4399,8 +4399,8 @@ GM.SingleplayerCutscenes["legacy"] = {
 	
 }
 
-GM.SingleplayerCutscenes["overdrive"] = {
-	Intro = "2016\nSomewhere on a highway",
+GM.SingleplayerCutscenes["scene_name_overdrive"] = {
+	Intro = "sog_intro_overdrive_2016",
 	SoundTrack = 238014896,
 	StartFrom = 10500,
 	Volume = 60,
@@ -4433,15 +4433,15 @@ GM.SingleplayerCutscenes["overdrive"] = {
 				end
 			end
 		end
-		AddDialogueLine( sc.watch, ". . .", "Oh. . .", "It's you again.", "Now, where was I. . ."  )
-		AddDialogueLine( sc.watch, "Oh, right!", "The Big Server Men!", "If you still have not realised why they are bad. . .", ". . .that means you have not been paying attention!" )	
-		AddDialogueLine( sc.watch, "I mean, if you need proof. . .", "Just look at this shitty server browser!" )
-		AddDialogueLine( sc.watch, "Now you look at it and tell me that this shit\nis not rigged?", "So it only shows shitty servers on top." )
-		AddDialogueLine( sc.watch, "Because it is!", "Oh yeah!" )
-		AddDialogueLine( sc.watch, "Perhaps you are going to ask. . .", "'But Mister Watch, how do you know\nif someone is a big server men?", ". . ." )
-		AddDialogueLine( sc.watch, "That is a good question, young !PLAYERNAME!", "Firstly: they treat this game like business\nand will always talk shit!" )
-		AddDialogueLine( sc.watch, "Secondly. . .", "They have very luxurous cars,\njust like ones I can see on my right. . ." )
-		AddDialogueLine( sc.watch, "Hold the fuck up!!!" )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_1", "sog_dialogue_overdrive_2016_2", "sog_dialogue_overdrive_2016_3", "sog_dialogue_overdrive_2016_4"  )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_5", "sog_dialogue_overdrive_2016_6", "sog_dialogue_overdrive_2016_7", "sog_dialogue_overdrive_2016_8" )	
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_9", "sog_dialogue_overdrive_2016_10" )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_11", "sog_dialogue_overdrive_2016_12" )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_13", "sog_dialogue_overdrive_2016_14" )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_15", "sog_dialogue_overdrive_2016_16", "sog_dialogue_overdrive_2016_17" )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_18", "sog_dialogue_overdrive_2016_19" )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_20", "sog_dialogue_overdrive_2016_21" )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_22" )
 		AddDialogueAction( sc.watch, function( me ) 
 			surface.PlaySound( "vehicles/v8/skid_lowfriction.wav" )
 			surface.PlaySound( "vehicles/v8/v8_stop1.wav" )
@@ -4454,7 +4454,7 @@ GM.SingleplayerCutscenes["overdrive"] = {
 			end
 			
 		end )
-		AddDialogueLine( sc.watch, "These are some very nice cars, indeed!", "Gentlemen, it is time to investigate!" )
+		AddDialogueLine( sc.watch, "sog_dialogue_overdrive_2016_23", "sog_dialogue_overdrive_2016_24" )
 		
 	end
 	
@@ -4462,8 +4462,8 @@ GM.SingleplayerCutscenes["overdrive"] = {
 }
 
 
-GM.SingleplayerCutscenes["big server men"] = {
-	Intro = "2016\nTotally not suspicious yard",
+GM.SingleplayerCutscenes["scene_name_big_server_men"] = {
+	Intro = "sog_intro_bigservermen_2016",
 	SoundTrack = 238014896,
 	StartFrom = 10500,
 	Volume = 60,
@@ -4490,14 +4490,14 @@ GM.SingleplayerCutscenes["big server men"] = {
 		{ mdl = Model( "models/props/cs_assault/barrelwarning.mdl"), offset = Vector(-169, -66, 6) , ang = Angle(0, 19, -1), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.watch, ". . .", "Oh, you are back.", "Shhhh!" )
-		AddDialogueLine( sc.watch, "Do you see what I see?", ". . .", "Have a look!" )
-		AddDialogueLine( sc.watch2, "See?", "I think I have found them!", "Black slick suits. . .", "Shit eating grin on the face. . .", "And extremely expensive cars!" )
-		AddDialogueLine( sc.watch, "You don't have to be a detective to figure it out.", "But thankfully. . .", "I have completed my trial detective course online." )
-		AddDialogueLine( sc.watch, "This is it, big server men!", "Soon you will have my permission to be die!", ". . .", "What?", "Who cares that I took it from a cool youtube video!" )
-		AddDialogueLine( sc.watch2, "Hm. . .", "I can't just walk in there though." )
-		AddDialogueLine( sc.watch, "So. . .", "Let's put the game face on!" )
-		AddDialogueLine( sc.watch, ". . ." )
+		AddDialogueLine( sc.watch, "sog_dialogue_bigservermen_2016_1", "sog_dialogue_bigservermen_2016_2", "sog_dialogue_bigservermen_2016_3" )
+		AddDialogueLine( sc.watch, "sog_dialogue_bigservermen_2016_4", "sog_dialogue_bigservermen_2016_5", "sog_dialogue_bigservermen_2016_6" )
+		AddDialogueLine( sc.watch2, "sog_dialogue_bigservermen_2016_7", "sog_dialogue_bigservermen_2016_8", "sog_dialogue_bigservermen_2016_9", "sog_dialogue_bigservermen_2016_10", "sog_dialogue_bigservermen_2016_11" )
+		AddDialogueLine( sc.watch, "sog_dialogue_bigservermen_2016_12", "sog_dialogue_bigservermen_2016_13", "sog_dialogue_bigservermen_2016_14" )
+		AddDialogueLine( sc.watch, "sog_dialogue_bigservermen_2016_15", "sog_dialogue_bigservermen_2016_16", "sog_dialogue_bigservermen_2016_17", "sog_dialogue_bigservermen_2016_18", "sog_dialogue_bigservermen_2016_19" )
+		AddDialogueLine( sc.watch2, "sog_dialogue_bigservermen_2016_20", "sog_dialogue_bigservermen_2016_21" )
+		AddDialogueLine( sc.watch, "sog_dialogue_bigservermen_2016_22", "sog_dialogue_bigservermen_2016_23" )
+		AddDialogueLine( sc.watch, "sog_dialogue_bigservermen_2016_24" )
 		AddDialogueAction( sc.watch, function( me ) 
 			surface.PlaySound( "physics/body/body_medium_break4.wav" )
 			if Dialogue then Dialogue.SpinPortrait = true end
@@ -4505,8 +4505,8 @@ GM.SingleplayerCutscenes["big server men"] = {
 	end
 }
 
-GM.SingleplayerCutscenes["served cold"] = {
-	Intro = "2016\nShitGamers basement\nalso known as Big Server Men Secret Hideout",
+GM.SingleplayerCutscenes["scene_name_served_cold"] = {
+	Intro = "sog_intro_servedcold_2016",
 	SoundTrack = 324892532,
 	StartFrom = 26500,
 	Volume = 70,
@@ -4525,25 +4525,25 @@ GM.SingleplayerCutscenes["served cold"] = {
 		{ mdl = Model( "models/props_lab/monitor02.mdl"), offset = Vector(-55, -112, 37) , ang = Angle(-9, -106, 81), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.watch, ". . .", "What the. . .", "Let me go, you shady bastards!" )
-		AddDialogueLine( sc.watch, "You won't get away with this!" )
-		AddDialogueLine( sc.dude, "Nooo!", "Shut up!", "And stop wiggling around like a worm." )
-		AddDialogueLine( sc.watch, ". . .", "And where is my food?", "Your stupid leader said something about feeding." )
-		AddDialogueLine( sc.dude, "Yes, but not for you.", ". . .", "You are gonna be the dessert." )
-		AddDialogueLine( sc.watch, "Argh!", ". . .", "Think, captain watch, think. . .", "Aha!", "Hey, you!" )
-		AddDialogueLine( sc.dude, ". . .", "What is it?" )
-		AddDialogueLine( sc.watch, "Since I'm tied and stuff. . .", "Can I take a piss really quick, at least?" )
-		AddDialogueLine( sc.dude, ". . .", "Go ahead." )
-		AddDialogueLine( sc.watch, ". . .", "I mean, you have to untie me.", "You know how this works!" )
-		AddDialogueLine( sc.dude, "*picks nose*", ". . .", "Fine. . .", "But make it quick.", "Marishka is about to come back." )
-		AddDialogueLine( sc.watch, "Oh. . .", "Yeah!", "Don't worry!" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcold_2016_1", "sog_dialogue_servedcold_2016_2", "sog_dialogue_servedcold_2016_3" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcold_2016_4" )
+		AddDialogueLine( sc.dude, "sog_dialogue_servedcold_2016_5", "sog_dialogue_servedcold_2016_6", "sog_dialogue_servedcold_2016_7" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcold_2016_8", "sog_dialogue_servedcold_2016_9", "sog_dialogue_servedcold_2016_10" )
+		AddDialogueLine( sc.dude, "sog_dialogue_servedcold_2016_11", "sog_dialogue_servedcold_2016_12", "sog_dialogue_servedcold_2016_13" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcold_2016_14", "sog_dialogue_servedcold_2016_15", "sog_dialogue_servedcold_2016_16", "sog_dialogue_servedcold_2016_17", "sog_dialogue_servedcold_2016_18" )
+		AddDialogueLine( sc.dude, "sog_dialogue_servedcold_2016_19", "sog_dialogue_servedcold_2016_20" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcold_2016_21", "sog_dialogue_servedcold_2016_22" )
+		AddDialogueLine( sc.dude, "sog_dialogue_servedcold_2016_23", "sog_dialogue_servedcold_2016_24" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcold_2016_25", "sog_dialogue_servedcold_2016_26", "sog_dialogue_servedcold_2016_27" )
+		AddDialogueLine( sc.dude, "sog_dialogue_servedcold_2016_28", "sog_dialogue_servedcold_2016_29", "sog_dialogue_servedcold_2016_30", "sog_dialogue_servedcold_2016_31", "sog_dialogue_servedcold_2016_32" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcold_2016_33", "sog_dialogue_servedcold_2016_34", "sog_dialogue_servedcold_2016_35" )
 	end
 	
 	
 }
 
 GM.SingleplayerCutscenes["served cold outro"] = {
-	Intro = "2016\nHighway of Victory",
+	Intro = "sog_intro_servedcoldoutro_2016",
 	SoundTrack = 328167987,
 	StartFrom = 11500,
 	Volume = 60,
@@ -4577,23 +4577,23 @@ GM.SingleplayerCutscenes["served cold outro"] = {
 				end
 			end
 		end
-		AddDialogueLine( sc.watch, ". . .", "And that is how I've beaten big server men!" )
-		AddDialogueLine( sc.watch, "Pretty cool, huh?", ". . .", "Of course, it is!" )
-		AddDialogueLine( sc.watch, "Now that this game is free from terror. . .", "Everyone can safely play and have fun!" )
-		AddDialogueLine( sc.watch, ". . .", "Well. . .", "At least these, who didn't die during cough outbreak." )
-		AddDialogueLine( sc.watch, "As for me. . .", "Hah!", "You are always curious about me, aren't you?", "I have got more things to save!" )
-		AddDialogueLine( sc.watch, "Damn, this track is so good!", "Let's crank it up, shall we?" )
-		AddDialogueLine( sc.radio, "*chkt*" )
-		AddDialogueLine( sc.watch, ". . ." )
-		AddDialogueLine( sc.radio, "Breaking news!", "The entire population of g. . .", "!g̴ ̸ ̷ ̸ ̸ ̴ ̷ ̸ ̵ ̵ ̶ ̶ ̷ ̴" )
-		AddDialogueLine( sc.watch, "Hm?" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcoldoutro_2016_1", "sog_dialogue_servedcoldoutro_2016_2" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcoldoutro_2016_3", "sog_dialogue_servedcoldoutro_2016_4", "sog_dialogue_servedcoldoutro_2016_5" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcoldoutro_2016_6", "sog_dialogue_servedcoldoutro_2016_7" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcoldoutro_2016_8", "sog_dialogue_servedcoldoutro_2016_9", "sog_dialogue_servedcoldoutro_2016_10" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcoldoutro_2016_11", "sog_dialogue_servedcoldoutro_2016_12", "sog_dialogue_servedcoldoutro_2016_13", "sog_dialogue_servedcoldoutro_2016_14" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcoldoutro_2016_15", "sog_dialogue_servedcoldoutro_2016_16" )
+		AddDialogueLine( sc.radio, "sog_dialogue_servedcoldoutro_2016_17" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcoldoutro_2016_18" )
+		AddDialogueLine( sc.radio, "sog_dialogue_servedcoldoutro_2016_19", "sog_dialogue_servedcoldoutro_2016_20", "sog_dialogue_servedcoldoutro_2016_21" )
+		AddDialogueLine( sc.watch, "sog_dialogue_servedcoldoutro_2016_22" )
 		
 	end
 } 
 
-GM.SingleplayerCutscenes["this is fine"] = {
-	Act = "BONUS ACT, PART TWO:\n'DEATH OF GMOD'",
-	Intro = "Few days earlier\nSAMSARA Bar",
+GM.SingleplayerCutscenes["scene_name_this_is_fine"] = {
+	Act = "sog_intro_thisisfine_act_bonus2",
+	Intro = "sog_intro_this_is_fine",
 	SoundTrack = 484695585,
 	StartFrom = 23000,
 	Volume = 60,
@@ -4630,43 +4630,43 @@ GM.SingleplayerCutscenes["this is fine"] = {
 		{ mdl = Model( "models/dav0r/camera.mdl"), offset = Vector(7, -43, 246) , ang = Angle(89, 137, -6), seq = "Idle", mat = "" },
 	},	
 	Dialogues = function( sc )
-		AddDialogueLine( sc.matthias, ". . .", "Goddamn!", "This place still smells like a damn zoo!" )
-		AddDialogueLine( sc.dude, ". . .", "Yup.", "By the way. . .", "What even happened to garry's money in the end?")
-		AddDialogueLine( sc.matthias, "Oh these. . .", "I can't fucking believe it!", ". . .", "Truck that garry has told me about. . ." )
-		AddDialogueLine( sc.matthias, "It was full of shit!" )
-		AddDialogueLine( sc.dude, "Huh?" )
-		AddDialogueLine( sc.matthias, "Literally!", "It was a truck that drains shit from sewers!" )
-		AddDialogueLine( sc.dude, "Wow. . ." )
-		AddDialogueLine( sc.matthias, "Don't even mention it.", "At least now we have one last thing to do.", "Speaking of which. . .", "James." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.matthias, "I think you know why I have called you here." )
-		AddDialogueLine( sc.james, ". . .", "To take down all these cats?" )
-		AddDialogueLine( sc.matthias, "Well yes, but not just that. . .", "Are you ready to do one last job?" )
-		AddDialogueLine( sc.james, "Hm?" )
-		AddDialogueLine( sc.matthias, "I mean, I'd do it myself, but. . ." )
-		AddDialogueLine( sc.dude, ". . ." )
-		AddDialogueLine( sc.matthias, ". . .but I ain't gonna.", "It might be too dangerous.", ". . .", "So all you need to do. . .", ". . .is to kill the gmod!" )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.dude, "Hold up.", "I thought we have done this before?" )
-		AddDialogueLine( sc.matthias, "Yes, yes.\nI know it doesnt sound like it makes sense, but. . .", "This time it is going to be for real!" )
-		AddDialogueLine( sc.dude, "I still don't get it." )
-		AddDialogueLine( sc.matthias, "There is a thing out there. . .", "The so-called good old gmod.", "I believe if we find it and take it down.", "This is going to put an end to everything." )
-		AddDialogueLine( sc.james, "And where is it?" )
-		AddDialogueLine( sc.matthias, "About that. . .", "One of our boys got his hands on some info, but. . .", "Well. . .", "How do I even say that. . ." )
-		AddDialogueLine( sc.dude, ". . ." )
-		AddDialogueLine( sc.matthias, "You.", "Tell him about the the iccident!" )
-		AddDialogueLine( sc.dude, "What?", "Oh. . .", "Oh no. . .", "So, um. . .", "That guy with info. . .", "He got lost at PonyRP server. . ." )
-		AddDialogueLine( sc.james, "What?" )
-		AddDialogueLine( sc.matthias, "HORSES!!!", "BIG RAINBOW COLORED HORSES!!!", "Sorry, I just could not say it without dying from laughter.", "Anyway. . .", "You gotta go there and rescue the poor guy." )
-		AddDialogueLine( sc.james, "*sigh*", "Whatever you say, boss." )
-		AddDialogueLine( sc.matthias, "I knew, I could count on you!", "Anyway. . .", "All this talk is making me hungry again. . .", "I swear, I could eat a horse. . .", "Hey!" )
-		AddDialogueLine( sc.dude, "What can I get you, boss?" )
-		AddDialogueLine( sc.matthias, "A horse." )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_1", "sog_dialogue_thisisfine_act_bonus2_2", "sog_dialogue_thisisfine_act_bonus2_3" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_4", "sog_dialogue_thisisfine_act_bonus2_5", "sog_dialogue_thisisfine_act_bonus2_6", "sog_dialogue_thisisfine_act_bonus2_7")
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_8", "sog_dialogue_thisisfine_act_bonus2_9", "sog_dialogue_thisisfine_act_bonus2_10", "sog_dialogue_thisisfine_act_bonus2_11" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_12" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_13" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_14", "sog_dialogue_thisisfine_act_bonus2_15" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_16" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_17", "sog_dialogue_thisisfine_act_bonus2_18", "sog_dialogue_thisisfine_act_bonus2_19", "sog_dialogue_thisisfine_act_bonus2_20" )
+		AddDialogueLine( sc.james, "sog_dialogue_thisisfine_act_bonus2_21" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_22" )
+		AddDialogueLine( sc.james, "sog_dialogue_thisisfine_act_bonus2_23", "sog_dialogue_thisisfine_act_bonus2_24" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_25", "sog_dialogue_thisisfine_act_bonus2_26" )
+		AddDialogueLine( sc.james, "sog_dialogue_thisisfine_act_bonus2_27" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_28" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_29" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_30", "sog_dialogue_thisisfine_act_bonus2_31", "sog_dialogue_thisisfine_act_bonus2_32", "sog_dialogue_thisisfine_act_bonus2_33", "sog_dialogue_thisisfine_act_bonus2_34" )
+		AddDialogueLine( sc.james, "sog_dialogue_thisisfine_act_bonus2_35" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_36", "sog_dialogue_thisisfine_act_bonus2_37" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_38", "sog_dialogue_thisisfine_act_bonus2_39" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_40" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_41", "sog_dialogue_thisisfine_act_bonus2_42", "sog_dialogue_thisisfine_act_bonus2_43", "sog_dialogue_thisisfine_act_bonus2_44" )
+		AddDialogueLine( sc.james, "sog_dialogue_thisisfine_act_bonus2_45" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_46", "sog_dialogue_thisisfine_act_bonus2_47", "sog_dialogue_thisisfine_act_bonus2_48", "sog_dialogue_thisisfine_act_bonus2_49" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_50" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_51", "sog_dialogue_thisisfine_act_bonus2_52" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_53", "sog_dialogue_thisisfine_act_bonus2_54", "sog_dialogue_thisisfine_act_bonus2_55", "sog_dialogue_thisisfine_act_bonus2_56", "sog_dialogue_thisisfine_act_bonus2_57", "sog_dialogue_thisisfine_act_bonus2_58" )
+		AddDialogueLine( sc.james, "sog_dialogue_thisisfine_act_bonus2_59" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_60", "sog_dialogue_thisisfine_act_bonus2_61", "sog_dialogue_thisisfine_act_bonus2_62", "sog_dialogue_thisisfine_act_bonus2_63", "sog_dialogue_thisisfine_act_bonus2_64" )
+		AddDialogueLine( sc.james, "sog_dialogue_thisisfine_act_bonus2_65", "sog_dialogue_thisisfine_act_bonus2_66" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_67", "sog_dialogue_thisisfine_act_bonus2_68", "sog_dialogue_thisisfine_act_bonus2_69", "sog_dialogue_thisisfine_act_bonus2_70", "sog_dialogue_thisisfine_act_bonus2_71" )
+		AddDialogueLine( sc.dude, "sog_dialogue_thisisfine_act_bonus2_72" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_thisisfine_act_bonus2_73" )
 	end
 }
 
-GM.SingleplayerCutscenes["wild ride"] = {
-	Intro = "2016\nSomewhere next to a railroad. . .",
+GM.SingleplayerCutscenes["scene_name_wild_ride"] = {
+	Intro = "sog_intro_wildride_2016",
 	SoundTrack = 454614336,
 	Volume = 60,
 	StartFrom = 48000,
@@ -4701,24 +4701,24 @@ GM.SingleplayerCutscenes["wild ride"] = {
 				end
 			end
 			
-		AddDialogueLine( sc.dude, "Gmod Justice Force. . .", "Who keeps coming up with such dumb names?" )
-		AddDialogueLine( sc.james, ". . .", "That's what he said." )
-		AddDialogueLine( sc.dude, "I know. . .", "These guys are a real pain in the ass.", "Aren't they?" )
-		AddDialogueLine( sc.james, "How come I don't remember them?" )
-		AddDialogueLine( sc.dude, "Because they always went after boss.", "Back when we brought that coderfired shit in barrels." )
-		AddDialogueLine( sc.james, "Who are these guys anyway. . ." )
-		AddDialogueLine( sc.dude, "A mix of various weird players.", ". . .", "Cry babies, angry dudes, hell. . . even white knights. . .", "An angry weaponized mob, so to say.", "A mob that does all kinds of stupid things\nin the name of justice." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.dude, "A hour ago they have boarded a getaway train.", "Full of GMPower players and stuff. . .", "This is where im taking you to, as we speak." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.dude, "Aaaaand there it is!", "Once you are aboard - you are on your own.", ". . .", "Ready to go?" )
-		AddDialogueLine( sc.james, "Yeah." )
+		AddDialogueLine( sc.dude, "sog_dialogue_wildride_2016_1", "sog_dialogue_wildride_2016_2" )
+		AddDialogueLine( sc.james, "sog_dialogue_wildride_2016_3", "sog_dialogue_wildride_2016_4" )
+		AddDialogueLine( sc.dude, "sog_dialogue_wildride_2016_5", "sog_dialogue_wildride_2016_6", "sog_dialogue_wildride_2016_7" )
+		AddDialogueLine( sc.james, "sog_dialogue_wildride_2016_8" )
+		AddDialogueLine( sc.dude, "sog_dialogue_wildride_2016_9", "sog_dialogue_wildride_2016_10" )
+		AddDialogueLine( sc.james, "sog_dialogue_wildride_2016_11" )
+		AddDialogueLine( sc.dude, "sog_dialogue_wildride_2016_12", "sog_dialogue_wildride_2016_13", "sog_dialogue_wildride_2016_14", "sog_dialogue_wildride_2016_15", "sog_dialogue_wildride_2016_16" )
+		AddDialogueLine( sc.james, "sog_dialogue_wildride_2016_17" )
+		AddDialogueLine( sc.dude, "sog_dialogue_wildride_2016_18", "sog_dialogue_wildride_2016_19", "sog_dialogue_wildride_2016_20" )
+		AddDialogueLine( sc.james, "sog_dialogue_wildride_2016_21" )
+		AddDialogueLine( sc.dude, "sog_dialogue_wildride_2016_22", "sog_dialogue_wildride_2016_23", "sog_dialogue_wildride_2016_24", "sog_dialogue_wildride_2016_25" )
+		AddDialogueLine( sc.james, "sog_dialogue_wildride_2016_26" )
 	end
 	
 }
 
-GM.SingleplayerCutscenes["white kingdom"] = {
-	Intro = "2016\nCan't really see anything. . .",
+GM.SingleplayerCutscenes["scene_name_white_kingdom"] = {
+	Intro = "sog_intro_whitekingdom_2016",
 	SoundTrack = 290559075,
 	Volume = 60,
 	Main = { mdl = Model( "models/hunter/blocks/cube05x075x025.mdl" ), seq = "idle", mat = ""},
@@ -4750,15 +4750,15 @@ GM.SingleplayerCutscenes["white kingdom"] = {
 				end
 			end
 			
-		AddDialogueLine( sc.swat, ". . .eventually he has lost his human appearance. . .", ". . .and ended up looking like oversized poison zombie.", ". . .", "At least that's what I have heard." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.swat, "Alright, so here is one more creepy story. . .", "There was this server owner, called Heks. . .", "Can't remember his exact name. . .", "He made a huge ass banlist to help other server owners.", "But. . ." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.swat, "It contained like 70 or 80 percent\nof all gmod population.", "You mention scripts and stuff?", "Banned.", "You have at least one common friend with banned person?", "Banned!", "Banned, Banned, Banned!", "And so on. . ." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.swat, "In the end, he went insane too. . .", "And garry personally banished him.", "So noone have heard of him for almost 4 years or so.", ". . .", "Now that was a real spooker, wasn't it?" )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.swat, "Oh well. . ." )
+		AddDialogueLine( sc.swat, "sog_dialogue_whitekingdom_2016_1", "sog_dialogue_whitekingdom_2016_2", "sog_dialogue_whitekingdom_2016_3", "sog_dialogue_whitekingdom_2016_4" )
+		AddDialogueLine( sc.james, "sog_dialogue_whitekingdom_2016_5" )
+		AddDialogueLine( sc.swat, "sog_dialogue_whitekingdom_2016_6", "sog_dialogue_whitekingdom_2016_7", "sog_dialogue_whitekingdom_2016_8", "sog_dialogue_whitekingdom_2016_9", "sog_dialogue_whitekingdom_2016_10" )
+		AddDialogueLine( sc.james, "sog_dialogue_whitekingdom_2016_11" )
+		AddDialogueLine( sc.swat, "sog_dialogue_whitekingdom_2016_12", "sog_dialogue_whitekingdom_2016_13", "sog_dialogue_whitekingdom_2016_14", "sog_dialogue_whitekingdom_2016_15", "sog_dialogue_whitekingdom_2016_16", "sog_dialogue_whitekingdom_2016_17", "sog_dialogue_whitekingdom_2016_18" )
+		AddDialogueLine( sc.james, "sog_dialogue_whitekingdom_2016_19" )
+		AddDialogueLine( sc.swat, "sog_dialogue_whitekingdom_2016_20", "sog_dialogue_whitekingdom_2016_21", "sog_dialogue_whitekingdom_2016_22", "sog_dialogue_whitekingdom_2016_23", "sog_dialogue_whitekingdom_2016_24" )
+		AddDialogueLine( sc.james, "sog_dialogue_whitekingdom_2016_25" )
+		AddDialogueLine( sc.swat, "sog_dialogue_whitekingdom_2016_26" )
 	end
 	
 	
@@ -4766,20 +4766,8 @@ GM.SingleplayerCutscenes["white kingdom"] = {
 }
 
 
-GM.SingleplayerCutscenes["flashbacks"] = {
-	Intro = [[
-      ___     
-     /\  \    
-    /::\  \   
-   /:/\:\  \  
-  /:/  \:\  \ 
- /:/__/_\:\__\
- \:\  /\ \/__/
-  \:\ \:\__\  
-   \:\/:/  /  
-    \::/  /   
-     \/__/    
-	]],
+GM.SingleplayerCutscenes["scene_name_flashbacks"] = {
+	Intro = translate.Get("sog_intro_flashbacks"),
 	SoundTrack = 282363627,
 	Volume = 60,
 	OverridePaint = function( self, sw, sh  )
@@ -4850,37 +4838,37 @@ GM.SingleplayerCutscenes["flashbacks"] = {
 		{ mdl = Model( "models/props/cs_militia/barstool01.mdl"), offset = Vector(46, -2, 17) , ang = Angle(-88, -74, 2), seq = "idle", mat = "" },
 	},
 	Dialogues = function( sc )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.matthias, "Goddamn!", "This place still smells like a damn bar!" )
-		AddDialogueLine( sc.dude, ". . ." )
-		AddDialogueLine( sc.james, ". . .", "What the. . ." )
-		AddDialogueLine( sc.dude, "So what ever happened to the money. . ." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.specialguest, ". . .", "Oh. . .", "Don't mind me.", "I usually order myself a cup of coffee in this place.", "Or at least, used to. . ." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.specialguest, ". . .", "Don't worry, we have not met before.", "I highly doubt your friends will recognize me either. . ." )
-		AddDialogueLine( sc.matthias, "It was a truck that drains money from sewers!" )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.specialguest, "I used to help with development for this game. . .", "But I had to quit before it got too late. . .", ". . .", "Which can't be really said about you." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.specialguest, "I mean, look around. . ." )
-		AddDialogueLine( sc.james, ". . .", "Where are we?" )
-		AddDialogueLine( sc.specialguest, "It's hard to tell.", "However. . .","Where you are going to is a better question." )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.specialguest, "That place. . .", "Well. . .", "It's where all good things end up.", "Kind of like garry's locker.", "Not sure what to even call it.", ". . .", "You will understand, once you'll see it." )
-		AddDialogueLine( sc.matthias, "James!" )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.matthias, "Are you ready to die one last time?" )
-		AddDialogueLine( sc.specialguest, "And I suppose, whatever you are looking for is also there." )
-		AddDialogueLine( sc.dude, ". . .", "Hold up.", "I thought we have done this before?" )
-		AddDialogueLine( sc.james, ". . ." )
-		AddDialogueLine( sc.specialguest, "Well. . .", "Sorry, but I have to go now.", "Coffee is good and all. . .", "But it's getting pretty cold outside." )
-		AddDialogueLine( sc.james, ". . ." )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_1" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_flashbacks_2", "sog_dialogue_flashbacks_3" )
+		AddDialogueLine( sc.dude, "sog_dialogue_flashbacks_4" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_5", "sog_dialogue_flashbacks_6" )
+		AddDialogueLine( sc.dude, "sog_dialogue_flashbacks_7" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_8" )
+		AddDialogueLine( sc.specialguest, "sog_dialogue_flashbacks_9", "sog_dialogue_flashbacks_10", "sog_dialogue_flashbacks_11", "sog_dialogue_flashbacks_12", "sog_dialogue_flashbacks_13" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_14" )
+		AddDialogueLine( sc.specialguest, "sog_dialogue_flashbacks_15", "sog_dialogue_flashbacks_16", "sog_dialogue_flashbacks_17" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_flashbacks_18" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_19" )
+		AddDialogueLine( sc.specialguest, "sog_dialogue_flashbacks_20", "sog_dialogue_flashbacks_21", "sog_dialogue_flashbacks_22", "sog_dialogue_flashbacks_23" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_24" )
+		AddDialogueLine( sc.specialguest, "sog_dialogue_flashbacks_25" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_26", "sog_dialogue_flashbacks_27" )
+		AddDialogueLine( sc.specialguest, "sog_dialogue_flashbacks_28", "sog_dialogue_flashbacks_29","sog_dialogue_flashbacks_30" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_31" )
+		AddDialogueLine( sc.specialguest, "sog_dialogue_flashbacks_32", "sog_dialogue_flashbacks_33", "sog_dialogue_flashbacks_34", "sog_dialogue_flashbacks_35", "sog_dialogue_flashbacks_36", "sog_dialogue_flashbacks_37", "sog_dialogue_flashbacks_38" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_flashbacks_39" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_40" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_flashbacks_41" )
+		AddDialogueLine( sc.specialguest, "sog_dialogue_flashbacks_42" )
+		AddDialogueLine( sc.dude, "sog_dialogue_flashbacks_43", "sog_dialogue_flashbacks_44", "sog_dialogue_flashbacks_45" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_46" )
+		AddDialogueLine( sc.specialguest, "sog_dialogue_flashbacks_47", "sog_dialogue_flashbacks_48", "sog_dialogue_flashbacks_49", "sog_dialogue_flashbacks_50" )
+		AddDialogueLine( sc.james, "sog_dialogue_flashbacks_51" )
 		AddDialogueAction( sc.specialguest, function( me ) me.Hide = true sc.cup.Hide = true surface.PlaySound( "UI/hint.wav" ) end )
-		AddDialogueLine( sc.matthias, "All this talk is making me hungry again. . .", "I swear, I could eat a human. . .", "Hey!" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_flashbacks_52", "sog_dialogue_flashbacks_53", "sog_dialogue_flashbacks_54" )
 		//AddDialogueAction( sc.cup, function( me ) me.Hide = true end )
-		AddDialogueLine( sc.dude, "What can I get you, boss?" )
-		AddDialogueLine( sc.matthias, "A human." )
+		AddDialogueLine( sc.dude, "sog_dialogue_flashbacks_55" )
+		AddDialogueLine( sc.matthias, "sog_dialogue_flashbacks_56" )
 	end
 
 }

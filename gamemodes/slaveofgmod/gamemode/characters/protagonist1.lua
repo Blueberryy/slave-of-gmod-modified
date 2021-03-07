@@ -20,7 +20,7 @@ CHARACTER.Model = Model( "models/player/barney.mdl" )
 
 function CHARACTER:OnSpawn( pl )
 	
-	pl:SetGoal( "Hold [RMB] to shoot left-right. Release to shoot forward.", 25 )
+	pl:SetGoal( translate.Get("sog_play_tip_protagonist1"), 25 )
 
 	local armor = pl:SpawnBodywear( "models/player/barney.mdl" )
 end

@@ -56,7 +56,7 @@ SCENE.Nightmare = false
 SCENE.Vehicle = {
  ["pos"] = Vector( 368, 672, 17 ), ["mdl"] = "models/props/cs_militia/van.mdl", ["type"] = 2, ["glass_mdl"] = "models/props/cs_militia/van_glass.mdl", ["ang"] = Angle( 0, 0, 0 ) 
 }
-SCENE.Name = "influence"
+SCENE.Name = "scene_name_influence"
 //SCENE.StartFrom = 45000
 SCENE.Triggers = {
  ["t5"] = {
@@ -68,7 +68,7 @@ SCENE.Triggers = {
 	}, ["t6"] = {
 	 ["pos"] = Vector( 65, 452, 17 ), ["CheckTriggers"] = {
 		 "t7" 
-		}, ["action"] = "hudmessage", ["size"] = 38, ["data"] = translate.Get("sog_hud_obj_leave_area") 
+		}, ["action"] = "hudmessage", ["size"] = 38, ["data"] = "sog_hud_obj_leave_area" 
 	}, ["t9"] = {
 	 ["pos"] = Vector( -956, -623, 17 ), ["size"] = 42, ["event"] = "OnAllEnemiesKilled", ["action"] = "event", ["objects"] = {
 		 "t8" 
@@ -98,7 +98,7 @@ SCENE.Triggers = {
 	}, ["t3"] = {
 	 ["pos"] = Vector( -802, -399, 17 ), ["CheckTriggers"] = {
 		 "t5" 
-		}, ["action"] = "hudmessage", ["size"] = 38, ["data"] = "Get the briefcase" 
+		}, ["action"] = "hudmessage", ["size"] = 38, ["data"] = "sog_hud_obj_get_the_briefcase" 
 	} 
 }
 //SCENE.EndAt = 209000

@@ -24,19 +24,19 @@ SCENE.Dialogues = {
  ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_flashbacks_1_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "!g. . .", "Please. . .", "!gd̶o̴n̵'̷t̶ ̸y̶o̶u̴ ̷d̶a̴r̷e̶" 
+	 "sog_dialogue_flashbacks_2_npc", "sog_dialogue_flashbacks_3_npc", "sog_dialogue_flashbacks_4_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_flashbacks_5_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Make it stop. . .", "This voice in my head. . .", "I can't take it. . .", "!g. . .", "I. . .", "!ga̴r̵g̵h̷!̸!̷!̷" 
+	 "sog_dialogue_flashbacks_6_npc", "sog_dialogue_flashbacks_7_npc", "sog_dialogue_flashbacks_8_npc", "sog_dialogue_flashbacks_9_npc", "sog_dialogue_flashbacks_10_npc", "sog_dialogue_flashbacks_11_npc" 
 	} 
 } 
 	} 
@@ -48,7 +48,7 @@ SCENE.Pickups = {
 	} 
 }
 SCENE.MusicPlayback = 1
-SCENE.Name = "flashbacks"
+SCENE.Name = "scene_name_flashbacks"
 SCENE.BloodMoonScreen = true
 SCENE.Characters = {
  "james" 

@@ -341,11 +341,11 @@ if SERVER then
 else
 
 	local names = {
-		"H̸e̵k̵s̴",
-		"H̶e̴k̶s̸",
-		"H̵͙͠e̶̙̕k̴̙̾ṣ̶͊",
-		"H̸e̸k̶s̷",
-		"H̵e̶k̴s̵"
+		"sog_boss_chatname_heks",
+		"sog_boss_chatname_heks2",
+		"sog_boss_chatname_heks3",
+		"sog_boss_chatname_heks4",
+		"sog_boss_chatname_heks5"
 	}
 
 	net.Receive( "HeksSay", function(len)
@@ -353,7 +353,7 @@ else
 		local text = net.ReadString()
 		
 		if text then
-			chat.AddText( names[ math.random( #names ) ], Color( 255, 255, 255 ), ": ", text )
+			chat.AddText( translate.Get(names[ math.random( translate.Get(#names) ) ]), Color( 255, 255, 255 ), ": ", translate.Get(text) )
 		end
 		
 	end )
@@ -406,11 +406,11 @@ local function StartDeathSequence( pl )
 	
 	GAMEMODE:UnlockAchievement( "remnant" )
 	
-	timer.Simple( 1, function()  SayText( "You are a fool" ) end )
-	timer.Simple( 4, function()  SayText( "It is not supposed to end like this!" ) end )
-	timer.Simple( 7, function()  SayText( "*cough*" ) end )
-	timer.Simple( 10, function()  SayText( "Do you realise what will be left of gmod now?" ) end )
-	timer.Simple( 15, function()  SayText( "NOT A GODDAMN THING!!!" ) end )
+	timer.Simple( 1, function()  SayText( "sog_boss_chatmessage_dead" ) end )
+	timer.Simple( 4, function()  SayText( "sog_boss_chatmessage2_dead" ) end )
+	timer.Simple( 7, function()  SayText( "sog_boss_chatmessage3_dead" ) end )
+	timer.Simple( 10, function()  SayText( "sog_boss_chatmessage4_dead" ) end )
+	timer.Simple( 15, function()  SayText( "sog_boss_chatmessage5_dead" ) end )
 	
 end
 
@@ -459,9 +459,9 @@ function CHARACTER:OnSpawn( pl )
 		else
 			SetHeksHealth( math.Clamp( GetHeksHealth() + GetHeksMaxHealth() / 3, 0, GetHeksMaxHealth() ) )
 			if not HESK_SAY_FIRSTDEATH then
-				timer.Simple( 1.4, function()  SayText( "Huh" ) end )
-				timer.Simple( 2.5, function()  SayText( "Still respawning?" ) end )
-				timer.Simple( 4, function()  SayText( "Then I'll kill you as many times as it takes" ) end )
+				timer.Simple( 1.4, function()  SayText( "sog_boss_chatmessage_respawn" ) end )
+				timer.Simple( 2.5, function()  SayText( "sog_boss_chatmessage2_respawn" ) end )
+				timer.Simple( 4, function()  SayText( "sog_boss_chatmessage3_respawn" ) end )
 				HESK_SAY_FIRSTDEATH = true
 			end
 		end
@@ -581,8 +581,8 @@ function CHARACTER:OnThink( pl )
 		
 		pl.LastPillar = 2//#pillar_tops - 1
 		
-		timer.Simple( 6, function()  SayText( "What's the matter?" ) end )
-		timer.Simple( 8.5, function()  SayText( "This perspective is not what you have signed up for?" ) end )
+		timer.Simple( 6, function()  SayText( "sog_boss_chatmessage_stage2" ) end )
+		timer.Simple( 8.5, function()  SayText( "sog_boss_chatmessage2_stage2" ) end )
 		
 		HEKS_NEW_MODE = true
 	end
@@ -1041,9 +1041,9 @@ function CHARACTER:OnLandOnGround( pl, ground_ent )
 			if not pl.CanFireMidAir then
 				SpawnPlayers( pl )
 				pl.CanFireMidAir = true 
-				timer.Simple( 2, function()  SayText( "How nice" ) end )
-				timer.Simple( 4.5, function()  SayText( "Some of these players, that you have killed..." ) end )
-				timer.Simple( 6.5, function()  SayText( "They still remember what you did to them" ) end )
+				timer.Simple( 2, function()  SayText( "sog_boss_chatmessage_last_players" ) end )
+				timer.Simple( 4.5, function()  SayText( "sog_boss_chatmessage2_last_players" ) end )
+				timer.Simple( 6.5, function()  SayText( "sog_boss_chatmessage3_last_players" ) end )
 			end
 		end
 		pl.NextJump = CurTime() + ( IsHexVulnerable() and 0.15 or 4 )
@@ -1469,14 +1469,14 @@ function CreateAlternateHUD()
 		
 		// boss healthbar
 		
-		local boss_header = "H̴e̸k̵s̶,̴ ̵T̴h̴e̴ ̸S̶a̵v̵i̴o̵r̶ ̷o̶f̶ ̵G̷M̴o̸d̷"
+		local boss_header = "sog_boss_tag_heks_savior_of_gmod"
 		
 		if math_random( 300 ) == 300 and name_glitch < CurTime() then
 			name_glitch = CurTime() + 0.4
 		end
 		
 		if name_glitch >= CurTime() then
-			boss_header = "H̴e̸k̵s̶,̴ ̵T̴h̴e̴ ̵D̴e̴a̶t̴h̷ ̷o̶f̶ ̵G̷M̴o̸d̷"
+			boss_header = "sog_boss_tag_heks_death_of_gmod"
 		end
 		local boss_health_text = "|"
 		local boss_health_lock_text = ""
@@ -1540,9 +1540,9 @@ function CreateAlternateHUD()
 		x = x - tw/2
 		y = y - th
 		
-		//draw_SimpleText( boss_header, "PixelSmall", x + 2 + shake_y, y - 2 + shake_x, col_shadow, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
-		draw_SimpleText( boss_header, "PixelSmall", x + 2 + shake_y, y + 2 + shake_x, col_shadow, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
-		draw_SimpleText( boss_header, "PixelSmall", x + shake_y, y + shake_x, col_text, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+		//draw_SimpleText( translate.Get(boss_header), "PixelSmall", x + 2 + shake_y, y - 2 + shake_x, col_shadow, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+		draw_SimpleText( translate.Get(boss_header), "PixelSmall", x + 2 + shake_y, y + 2 + shake_x, col_shadow, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+		draw_SimpleText( translate.Get(boss_header), "PixelSmall", x + shake_y, y + shake_x, col_text, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 		
 		
 	end

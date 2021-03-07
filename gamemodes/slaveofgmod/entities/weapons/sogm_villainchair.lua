@@ -332,9 +332,9 @@ function SWEP:DrawHUD()
 	
 	local clips = self.MaxReloads - self:GetReloads()
 	
-	self.OverrideAmmoText = clip > 0 and clip.." rnd"..(clip == 1 and "" or "s") or "Empty"
-	self.OverrideAmmoText = self.OverrideAmmoText.."    "..( clips > 0 and ( clips.." clips" ) or "" )
-	self.OverrideAmmoText = self.OverrideAmmoText.."    "..( clip2 > 0 and ( clip2.." rockets" ) or "" )
+	self.OverrideAmmoText = clip > 0 and translate.Format("sog_hud_x_rnd", clip)..(clip == 1 and "" or translate.Get("sog_hud_x_rnds")) or translate.Get("sog_hud_empty")
+	self.OverrideAmmoText = self.OverrideAmmoText.."    "..( clips > 0 and ( translate.Format("sog_hud_x_clips", clips) ) or "" )
+	self.OverrideAmmoText = self.OverrideAmmoText.."    "..( clip2 > 0 and ( translate.Format("sog_hud_x_rockets", clip2) ) or "" )
 	
 end
 

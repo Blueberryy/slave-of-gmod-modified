@@ -104,12 +104,12 @@ end
 if CLIENT then
 
 local shitty_ads = {
-	"Lick and suckscribe!", "Buy my t-shirts!", "Time to become my little slave!", "Watch my other nude videos!!!",
-	"Donate to me at sellout dot com!!!", "Your mom says that my videos are healthy!", "Thumbs up = <3",
-	"Random clickbait phrase", "Top donations today: Little Tim: 4000$ and a kidney.", "I'm the god, and you know that!",
-	"Stay tuned for the cleavage camera!", "^ True scare expressions ^", "Today will be a cloudy day with a bits of LetsTortureGMod!", 
-	"Pay attention to the game, my little slave!", "Oh snap, this window is actually growing!", "My little slaves make me immortal!!!", 
-	"Having troubles killing me, my little slave?", "I bet you keep staring at this text!"
+	"sog_hud_clickbait_2013_boss_cam_ad1", "sog_hud_clickbait_2013_boss_cam_ad2", "sog_hud_clickbait_2013_boss_cam_ad3", "sog_hud_clickbait_2013_boss_cam_ad4",
+	"sog_hud_clickbait_2013_boss_cam_ad5", "sog_hud_clickbait_2013_boss_cam_ad6", "sog_hud_clickbait_2013_boss_cam_ad7",
+	"sog_hud_clickbait_2013_boss_cam_ad8", "sog_hud_clickbait_2013_boss_cam_ad9", "sog_hud_clickbait_2013_boss_cam_ad10",
+	"sog_hud_clickbait_2013_boss_cam_ad11", "sog_hud_clickbait_2013_boss_cam_ad12", "sog_hud_clickbait_2013_boss_cam_ad13", 
+	"sog_hud_clickbait_2013_boss_cam_ad14", "sog_hud_clickbait_2013_boss_cam_ad15", "sog_hud_clickbait_2013_boss_cam_ad16", 
+	"sog_hud_clickbait_2013_boss_cam_ad17", "sog_hud_clickbait_2013_boss_cam_ad18"
 }
 
 function RemoveShittyFacecam()
@@ -156,7 +156,7 @@ function CreateShittyFacecam()
 	
 	
 	for _, shit in ipairs( GAMEMODE.Facecam.Ads ) do
-		GAMEMODE.Facecam.AdsString = shit.." "..GAMEMODE.Facecam.AdsString
+		GAMEMODE.Facecam.AdsString = translate.Format("sog_hud_clickbait_2013_boss_cam", translate.Get(shit), translate.Get(GAMEMODE.Facecam.AdsString))
 	end
 	
 	GAMEMODE.Facecam.SetModel = function( self )

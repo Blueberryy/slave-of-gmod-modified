@@ -47,13 +47,13 @@ function translate.AddTranslation(id, text)
 	Translations[AddingLanguage][id] = text
 end
 
-function translate.Get(id)
-	if not translate.GetTranslations(DefaultLanguage)[id] then
-		Msg( "The specified id (" .. id .. ") for (" .. DefaultLanguage .. ") does not exist.\n" )
+function translate.Get(id)   
+--[[if not translate.GetTranslations(DefaultLanguage)[id] then
+		Msg( "The specified id (" .. id .. ") for (" .. DefaultLanguage .. ") does not exist.\n" ) ---Just a dev feature to detect missing ID's
 	elseif not translate.GetTranslations(CurrentLanguage)[id] then
 		Msg( "The specified id (" .. id .. ") for (" .. CurrentLanguage .. ") does not exist.\n" )
-	end
-	return translate.GetTranslations(CurrentLanguage)[id] or translate.GetTranslations(DefaultLanguage)[id] or "#" .. id .. "#"
+	end]]--
+	return translate.GetTranslations(CurrentLanguage)[id] or translate.GetTranslations(DefaultLanguage)[id] or "" .. id .. ""
 end
 
 function translate.Format(id, ...)

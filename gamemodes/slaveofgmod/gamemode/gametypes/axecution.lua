@@ -465,9 +465,9 @@ function GM:AxecutionInitialize()
 				self:SetRoundState( ROUNDSTATE_ACTIVE )
 				
 				if math.random(2) == 2 then
-					pl:SetGoal( "Kill DarkRP kids or (and) break their shitty printers", 20 )
+					pl:SetGoal( translate.Get("sog_play_tip_assault_axecution"), 20 )
 				else
-					pl:SetGoal( self:GetRandomHint(), 10 )
+					pl:SetGoal( translate.Get(self:GetRandomHint()), 10 )
 				end
 				
 				
@@ -490,18 +490,18 @@ function GM:AxecutionInitialize()
 				pl:SetFlipView( true )
 				
 				if SERVER_OWNER and SERVER_OWNER ~= Entity( CURRENT_AXE ) then
-					pl:SetGoal( "Protect your printers and server owner!", 20 )
+					pl:SetGoal( translate.Get("sog_play_tip_defense_axecution"), 20 )
 				else
 					if math.random(2) == 2 then
-						pl:SetGoal( "Protect your worthless money printers!", 20 )
+						pl:SetGoal( translate.Get("sog_play_tip2_defense_axecution"), 20 )
 					else
-						pl:SetGoal( self:GetRandomHint(), 10 )
+						pl:SetGoal( translate.Get(self:GetRandomHint()), 10 )
 					end
 				end
 				
 				if SERVER_OWNER and SERVER_OWNER == pl then
 					pl.CharacterPref = "server owner"
-					pl:SetGoal( "Protect your greedy ass!", 20 )
+					pl:SetGoal( translate.Get("sog_play_tip_defense_axecution_owner"), 20 )
 				end
 				
 				if pl.CharacterPref == "kid" then
@@ -1008,5 +1008,5 @@ function GM:AxecutionInitialize()
 
 end
 
-GM:AddAvalaibleGametype( "axecution", translate.Get("sog_gametype_name_axecution") )
+GM:AddAvalaibleGametype( "axecution", "sog_gametype_name_axecution" )
 GM.Gametypes["axecution"] = GM.AxecutionInitialize

@@ -149,13 +149,13 @@ function DrawMenu( background, gametype )
 		MainMenu.Background = CreateMenuBackground( MainMenu )
 	else
 		MainMenu.Paint = function( self, tw, th ) 
-			local gametype = GAMEMODE:GetGametype() and GAMEMODE.AvalaibleGametypes[GAMEMODE:GetGametype()] and GAMEMODE.AvalaibleGametypes[GAMEMODE:GetGametype()].name
+			local gametype = GAMEMODE:GetGametype() and GAMEMODE.AvalaibleGametypes[GAMEMODE:GetGametype()] and translate.Get(GAMEMODE.AvalaibleGametypes[GAMEMODE:GetGametype()].name)
 			if SINGLEPLAYER then
-				gametype = "Story Mode"
+				gametype = translate.Get("sog_gametype_name_single_player")
 			end
 			Derma_DrawBackgroundBlur( self, self.m_fCreateTime )
-			draw.SimpleText( translate.Get(GAMEMODE.Version) or "error", "PixelSmaller", tw-10, 25, Color(250, 250, 250, 205), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
-			draw.SimpleText( gametype or "error", "PixelSmaller", tw-10, 50, Color(250, 250, 250, 205), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
+			draw.SimpleText( translate.Get(GAMEMODE.Version) or translate.Get("sog_menu_error"), "PixelSmaller", tw-10, 25, Color(250, 250, 250, 205), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
+			draw.SimpleText( gametype or translate.Get("sog_menu_error"), "PixelSmaller", tw-10, 50, Color(250, 250, 250, 205), TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER )
 		end 
 	end
 	
@@ -210,9 +210,9 @@ function DrawMenu( background, gametype )
 			end
 			btn.Paint = function( self, sw, sh )
 			if self ~= name then
-				TextPaint( self, sw, sh, translate.Get(name) or "Error" )
+				TextPaint( self, sw, sh, translate.Get(name) or translate.Get("sog_menu_error2") )
 			else
-				TextPaint( self, sw, sh, translate.Format(name) or "Error" )
+				TextPaint( self, sw, sh, translate.Format(name) or translate.Get("sog_menu_error2") )
 				
 			end
 		end
@@ -263,7 +263,7 @@ function DrawMenu( background, gametype )
 		end
 		btn.Paint = function( self, sw, sh )
 		
-			TextPaint( self, sw, sh, name or "Error" )
+			TextPaint( self, sw, sh, name or translate.Get("sog_menu_error2") )
 			
 		end
 		
@@ -314,7 +314,7 @@ local function Resume( parent, list )
 				number = actual_cv
 			end
 			
-			CreateLoadingScreen( GAMEMODE.GametypeName, number + 1, 5.5, true, c )
+			CreateLoadingScreen( translate.Get(GAMEMODE.GametypeName), number + 1, 5.5, true, c )
 			
 			if IsValid( GAMEMODE.Music ) then
 				GAMEMODE.Music:Stop()
@@ -362,7 +362,7 @@ local function Campaign( parent, list )
 		drawstripes( pw/4, ph/2,  pw/2, 4, 6, 4, false )
 		
 		local x, y = pw/2, ph/2
-		local text = self.Text or "error"
+		local text = self.Text or translate.Get("sog_menu_error")
 		
 		local col_back_text = BLACK_AND_WHITE and Color( 23, 23, 23, 255 ) or Color( 186, 13, 190, 255 )
 		local col_text = BLACK_AND_WHITE and Color( 255 - shift, 255 - shift, 255 - shift, 255 ) or Color( 255 - shift, 136 - shift, 255 - shift, 255 )
@@ -391,7 +391,7 @@ local function Campaign( parent, list )
 		shift = shift*3
 		
 		local x, y = pw/2, ph/2
-		local text = self.Text or "error"
+		local text = self.Text or translate.Get("sog_menu_error")
 		
 		local col_back_text = BLACK_AND_WHITE and Color( 23, 23, 23, 255 ) or Color( 186, 13, 190, 255 )
 		local col_text = BLACK_AND_WHITE and Color( 255 - shift, 255 - shift, 255 - shift, 255 ) or Color( 255 - shift, 136 - shift, 255 - shift, 255 )
@@ -984,7 +984,7 @@ local function Options( parent, list )
 		desc.Text = ""
 	end
 	b.Paint = function( self, sw, sh )
-		TextPaint( self, sw, sh, translate.Format("sog_menu_crosshair_color_x", tostring(GAMEMODE.CrosshairColors[SOG_CROSSHAIR_COLOR]) and GAMEMODE.CrosshairColors[SOG_CROSSHAIR_COLOR].name or translate.Get("sog_crosshair_color_white").."", "Numbers" )) 
+		TextPaint( self, sw, sh, translate.Format("sog_menu_crosshair_color_x", tostring(GAMEMODE.CrosshairColors[SOG_CROSSHAIR_COLOR]) and translate.Get(GAMEMODE.CrosshairColors[SOG_CROSSHAIR_COLOR].name) or translate.Get("sog_crosshair_color_white").."", "Numbers" )) 
 	end
 	b.DoClick = function( self )
 		local new = SOG_CROSSHAIR_COLOR + 1
@@ -1253,15 +1253,15 @@ local fake_click = 0
 
 local replies = {
 	
-	[8] = { "James     ", "", "James", "", "         James. . ." },
-	[9] = { "You     ", "        should", "have        ", "     stayed", "at home     ", "     today" },
-	[10] = { "Now look   ", "        at", "what         ", "       you", "have     ", "          done. . ." },
-	[11] = { "What    ", "         did you", "even expect       ", "      at the end", "of all this. . .    " },
-	[12] = { "       a", "happy     ", "      end. . ." },
-	[13] = { "or      ", "       another", "     boss fight", "with garry. . .      " },
-	[14] = { "     there", "is nothing       ", "       left", "of gmod       ", "        now. . ." },
-	[15] = { "", "", "nothing. . .", },
-	[16] = { "", "", "but me. . .", },
+	[8] = { "sog_dev_hell_conversation1", "sog_dev_hell_conversation2", "sog_dev_hell_conversation3", "sog_dev_hell_conversation4", "sog_dev_hell_conversation5" },
+	[9] = { "sog_dev_hell_conversation6", "sog_dev_hell_conversation7", "sog_dev_hell_conversation8", "sog_dev_hell_conversation9", "sog_dev_hell_conversation10", "sog_dev_hell_conversation11" },
+	[10] = { "sog_dev_hell_conversation12", "sog_dev_hell_conversation13", "sog_dev_hell_conversation14", "sog_dev_hell_conversation15", "sog_dev_hell_conversation16", "sog_dev_hell_conversation17" },
+	[11] = { "sog_dev_hell_conversation18", "sog_dev_hell_conversation19", "sog_dev_hell_conversation20", "sog_dev_hell_conversation21", "sog_dev_hell_conversation22" },
+	[12] = { "sog_dev_hell_conversation23", "sog_dev_hell_conversation24", "sog_dev_hell_conversation25" },
+	[13] = { "sog_dev_hell_conversation26", "sog_dev_hell_conversation27", "sog_dev_hell_conversation28", "sog_dev_hell_conversation29" },
+	[14] = { "sog_dev_hell_conversation30", "sog_dev_hell_conversation31", "sog_dev_hell_conversation32", "sog_dev_hell_conversation33", "sog_dev_hell_conversation34" },
+	[15] = { "sog_dev_hell_conversation35", "sog_dev_hell_conversation36", "sog_dev_hell_conversation37", },
+	[16] = { "sog_dev_hell_conversation38", "sog_dev_hell_conversation39", "sog_dev_hell_conversation40", },
 }
 
 local function fake_element( parent, list )
@@ -1285,12 +1285,12 @@ local function fake_element( parent, list )
 		
 		GAMEMODE.GlitchTime = CurTime() + 2
 		
-		MenuElements[ 1 ][ 1 ] = "Stop game"
-		MenuElements[ 2 ][ 1 ] = "Multiplayer mode"
-		MenuElements[ 3 ][ 1 ] = "Shop"
-		MenuElements[ 4 ][ 1 ] = "Browse dlcs"
-		MenuElements[ 5 ][ 1 ] = "My account"
-		MenuElements[ 6 ][ 1 ] = "Locked"
+		MenuElements[ 1 ][ 1 ] = "sog_menu_stop_game"
+		MenuElements[ 2 ][ 1 ] = "sog_menu_multiplayer_mode"
+		MenuElements[ 3 ][ 1 ] = "sog_menu_shop"
+		MenuElements[ 4 ][ 1 ] = "sog_menu_browse_dlcs"
+		MenuElements[ 5 ][ 1 ] = "sog_menu_my_account"
+		MenuElements[ 6 ][ 1 ] = "sog_menu_locked"
 		
 		parent:BuildMenu()
 		
@@ -1300,12 +1300,12 @@ local function fake_element( parent, list )
 
 		GAMEMODE.GlitchTime = CurTime() + 2
 		
-		MenuElements[ 1 ][ 1 ] = "quit game"
-		MenuElements[ 2 ][ 1 ] = "quit game"
-		MenuElements[ 3 ][ 1 ] = "quit game"
-		MenuElements[ 4 ][ 1 ] = "quit game"
-		MenuElements[ 5 ][ 1 ] = "quit game"
-		MenuElements[ 6 ][ 1 ] = "quit game"
+		MenuElements[ 1 ][ 1 ] = "sog_menu_quit_game"
+		MenuElements[ 2 ][ 1 ] = "sog_menu_quit_game"
+		MenuElements[ 3 ][ 1 ] = "sog_menu_quit_game"
+		MenuElements[ 4 ][ 1 ] = "sog_menu_quit_game"
+		MenuElements[ 5 ][ 1 ] = "sog_menu_quit_game"
+		MenuElements[ 6 ][ 1 ] = "sog_menu_quit_game"
 		
 		parent:BuildMenu()
 		
@@ -1327,15 +1327,15 @@ local function fake_element( parent, list )
 		end
 		
 		if parent.Background then
-			parent.Background.TitleText = "Death of Gmod"
-			parent.Background.OverrideCurWord = "your last"
+			parent.Background.TitleText = "sog_gm_name_dev_hell"
+			parent.Background.OverrideCurWord = "sog_exp_dev_hell"
 			
 			parent.Background.BW = true
 			
 			for i = 0, parent.Background.lines do
 			
-				//parent.Background.shittags[i] = " -------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |"
-				parent.Background.shittags[i] = " Server is not responding | Server is not responding | Server is not responding | Server is not responding | Server is not responding | Server is not responding | Server is not responding | Server is not responding |"
+				//parent.Background.shittags[i] = "sog_dev_hell_tags2"
+				parent.Background.shittags[i] = "sog_dev_hell_tags"
 			
 			end
 			
@@ -1377,7 +1377,7 @@ function CallFakeMenu()
 		GAMEMODE.Ambient:Stop()
 	end
 	
-	if SCENE and SCENE.Name == "flashbacks" and SCENE.Order then
+	if SCENE and SCENE.Name == "scene_name_flashbacks" and SCENE.Order then
 		if SOG_PROGRESS < ( SCENE.Order + 1 ) then
 			RunConsoleCommand( "sog_progress", tostring( SCENE.Order + 1 ) )
 		end

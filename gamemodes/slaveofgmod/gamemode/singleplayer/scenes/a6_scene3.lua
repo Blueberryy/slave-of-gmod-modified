@@ -91,147 +91,147 @@ SCENE.Dialogues = {
  ["d5"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Oh snap!" 
+	 "sog_dialogue_paywall_2014_46_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Now tell me. . .", "Was that so hard to do?", "Without letting her kill. . .I dunno. . .", ". . .pretty much everyone in the park." 
+	 "sog_dialogue_paywall_2014_47_npc", "sog_dialogue_paywall_2014_48_npc", "sog_dialogue_paywall_2014_49_npc", "sog_dialogue_paywall_2014_50_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Dunno.", "It was a girl, after all. . ." 
+	 "sog_dialogue_paywall_2014_51_npc", "sog_dialogue_paywall_2014_52_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "\"It was a girl! Waaah!\"", "At the same time it could be some ugly as fuck guy. . .", ". . .using same playermodel." 
+	 "sog_dialogue_paywall_2014_53_npc", "sog_dialogue_paywall_2014_54_npc", "sog_dialogue_paywall_2014_55_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_paywall_2014_56_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Let's go back inside.", "Thankfully there are still some\\nuseful CoderFired 'employees' left. . .", "That won't care what they do,\\nas long as they are gettting paid." 
+	 "sog_dialogue_paywall_2014_57_npc", "sog_dialogue_paywall_2014_58_npc", "sog_dialogue_paywall_2014_59_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Neat." 
+	 "sog_dialogue_paywall_2014_60_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Now go!", "We have to milk the shit out of this game\\nwhile we can." 
+	 "sog_dialogue_paywall_2014_61_npc", "sog_dialogue_paywall_2014_62_npc" 
 	} 
 } 
 	}, ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_paywall_2014_3_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "This is a private property, sweetheart!", "No entry." 
+	 "sog_dialogue_paywall_2014_4_npc", "sog_dialogue_paywall_2014_5_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "I work here." 
+	 "sog_dialogue_paywall_2014_6_npc", "sog_dialogue_paywall_2014_7_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "There is no more CoderFired." 
+	 "sog_dialogue_paywall_2014_8_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What?" 
+	 "sog_dialogue_paywall_2014_9_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "It was closed down.", "So I think you'd better leave." 
+	 "sog_dialogue_paywall_2014_10_npc", "sog_dialogue_paywall_2014_11_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Closed?", "What the hell are you talking about?" 
+	 "sog_dialogue_paywall_2014_12_npc", "sog_dialogue_paywall_2014_13_npc", "sog_dialogue_paywall_2014_14_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "You heard that right.", "This is you last chance to leave.", "Don't make this worse than it needs to be. . ." 
+	 "sog_dialogue_paywall_2014_15_npc", "sog_dialogue_paywall_2014_16_npc", "sog_dialogue_paywall_2014_17_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Let me through." 
+	 "sog_dialogue_paywall_2014_18_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Welp.", "I warned you." 
+	 "sog_dialogue_paywall_2014_19_npc", "sog_dialogue_paywall_2014_20_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "That looks. . .", ". . .weird." 
+	 "sog_dialogue_paywall_2014_1_npc", "sog_dialogue_paywall_2014_2_npc" 
 	} 
 } 
 	}, ["d4"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Ugh. . ." 
+	 "sog_dialogue_paywall_2014_21_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "e1", ["text"] = {
-	 "Not bad." 
+	 "sog_dialogue_paywall_2014_22_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Now, let me th. . ." 
+	 "sog_dialogue_paywall_2014_23_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "What the fuck is all this noise?" 
+	 "sog_dialogue_paywall_2014_24_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "See for yourself. . ." 
+	 "sog_dialogue_paywall_2014_25_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Who are you?" 
+	 "sog_dialogue_paywall_2014_26_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Same question, my dear. . ." 
+	 "sog_dialogue_paywall_2014_27_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "Where the hell is Mark?!" 
+	 "sog_dialogue_paywall_2014_28_npc", "sog_dialogue_paywall_2014_29_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Mark. . .", "Oh right!", "Mark decided to take a long vacation. . ." 
+	 "sog_dialogue_paywall_2014_30_npc", "sog_dialogue_paywall_2014_31_npc", "sog_dialogue_paywall_2014_32_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Eternal vacation." 
+	 "sog_dialogue_paywall_2014_33_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Hahaha!", "It's funny, because it's true.", ". . .", "Anyway, what do you want?" 
+	 "sog_dialogue_paywall_2014_34_npc", "sog_dialogue_paywall_2014_35_npc", "sog_dialogue_paywall_2014_36_npc", "sog_dialogue_paywall_2014_37_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "I told you.", "I work here and I have some of my stuff in there.", "Now let me through!" 
+	 "sog_dialogue_paywall_2014_38_npc", "sog_dialogue_paywall_2014_39_npc", "sog_dialogue_paywall_2014_40_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "And that's it?" 
+	 "sog_dialogue_paywall_2014_41_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Yes!" 
+	 "sog_dialogue_paywall_2014_42_npc" 
 	} 
 }, {
  ["person"] = "e2", ["text"] = {
-	 "Why didn't you said so in a first place?", "Welcome to the team!", "Here is your very personal entry ticket." 
+	 "sog_dialogue_paywall_2014_43_npc", "sog_dialogue_paywall_2014_44_npc", "sog_dialogue_paywall_2014_45_npc" 
 	} 
 } 
 	} 
@@ -239,7 +239,7 @@ SCENE.Dialogues = {
 SCENE.Characters = {
  "moderator" 
 }
-SCENE.Name = "paywall"
+SCENE.Name = "scene_name_paywall"
 SCENE.Volume = 40
 SCENE.Triggers = {
  ["t16"] = {

@@ -20,6 +20,6 @@ CHARACTER.NoPickups = true
 
 function CHARACTER:OnSpawn( pl )
 	if GAMEMODE:GetGametype() == "none" then
-		pl:SetGoal( GAMEMODE:GetRandomHint(), 10 )
+		pl:SetGoal( translate.Get(GAMEMODE:GetRandomHint()), 10 )
 	end
 end

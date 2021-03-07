@@ -90,121 +90,121 @@ SCENE.Dialogues = {
  ["d2"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Is that all you've got?", ". . .boy." 
+	 "sog_dialogue_servedcold_2016_10_npc", "sog_dialogue_servedcold_2016_11_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 "You think you are smart, watch?", "Let's see how you can outsmart this!", ". . .", "Activate the manmelters!" 
+	 "sog_dialogue_servedcold_2016_12_npc", "sog_dialogue_servedcold_2016_13_npc", "sog_dialogue_servedcold_2016_14_npc", "sog_dialogue_servedcold_2016_15_npc" 
 	} 
 }, {
  ["person"] = "e13", ["text"] = {
-	 "Dude. . .", "Marishka and master told us not to tamper with these. . ." 
+	 "sog_dialogue_servedcold_2016_16_npc", "sog_dialogue_servedcold_2016_17_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 "Don't worry, they won't even notice." 
+	 "sog_dialogue_servedcold_2016_18_npc" 
 	} 
 }, {
  ["person"] = "e13", ["text"] = {
-	 "But. . ." 
+	 "sog_dialogue_servedcold_2016_19_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 "Do it!" 
+	 "sog_dialogue_servedcold_2016_20_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "Suckers!", "That was a part of my plan!", "All along. . ." 
+	 "sog_dialogue_servedcold_2016_1_npc", "sog_dialogue_servedcold_2016_2_npc", "sog_dialogue_servedcold_2016_3_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 "There he is!" 
+	 "sog_dialogue_servedcold_2016_4_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Oh shit. . ." 
+	 "sog_dialogue_servedcold_2016_5_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 "I'm done playing games with you, boy.", "Big server men, attack!" 
+	 "sog_dialogue_servedcold_2016_6_npc", "sog_dialogue_servedcold_2016_7_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Well. . .", "Now that's just a lazy boss design." 
+	 "sog_dialogue_servedcold_2016_8_npc", "sog_dialogue_servedcold_2016_9_npc" 
 	} 
 } 
 	}, ["d4"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_servedcold_2016_43_npc" 
 	} 
 }, {
  ["person"] = "e13", ["text"] = {
-	 "Hey, I think I fixe. . .", ". . .", "oh no. . ." 
+	 "sog_dialogue_servedcold_2016_44_npc", "sog_dialogue_servedcold_2016_45_npc", "sog_dialogue_servedcold_2016_46_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_servedcold_2016_47_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Har har!", "Take that, you stupid big server men!", "Looks like my job here is done." 
+	 "sog_dialogue_servedcold_2016_48_npc", "sog_dialogue_servedcold_2016_49_npc", "sog_dialogue_servedcold_2016_50_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "e10", ["text"] = {
-	 "What the. . ." 
+	 "sog_dialogue_servedcold_2016_21_npc" 
 	} 
 }, {
  ["person"] = "e13", ["text"] = {
-	 "Oh no, you broke the manmelters!", "Marishka is going to kill us!" 
+	 "sog_dialogue_servedcold_2016_22_npc", "sog_dialogue_servedcold_2016_23_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 "Shut up and fix these things!", "As for you. . ." 
+	 "sog_dialogue_servedcold_2016_24_npc", "sog_dialogue_servedcold_2016_25_npc" 
 	} 
 }, {
  ["person"] = "e17", ["text"] = {
-	 "Imbecils!!!" 
+	 "sog_dialogue_servedcold_2016_26_npc" 
 	} 
 }, {
  ["person"] = "e13", ["text"] = {
-	 "Oh shit!" 
+	 "sog_dialogue_servedcold_2016_27_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "What the fuck is that thing?" 
+	 "sog_dialogue_servedcold_2016_28_npc" 
 	} 
 }, {
  ["person"] = "e17", ["text"] = {
-	 "I told you not to touch manmelters!", "50 out of 80 our darkrp servers are down!!!", "You stupid fucks, I will. . ." 
+	 "sog_dialogue_servedcold_2016_29_npc", "sog_dialogue_servedcold_2016_30_npc", "sog_dialogue_servedcold_2016_31_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_servedcold_2016_32_npc" 
 	} 
 }, {
  ["person"] = "e17", ["text"] = {
-	 "You. . ." 
+	 "sog_dialogue_servedcold_2016_33_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Hi.", "Lord watch, here!", "You are under arrest!" 
+	 "sog_dialogue_servedcold_2016_34_npc", "sog_dialogue_servedcold_2016_35_npc", "sog_dialogue_servedcold_2016_36_npc" 
 	} 
 }, {
  ["person"] = "e17", ["text"] = {
-	 "You. . .", "Fuck you, watch!", "I'm gonna kill you and feed your wallet to my boyfriend!" 
+	 "sog_dialogue_servedcold_2016_37_npc", "sog_dialogue_servedcold_2016_38_npc", "sog_dialogue_servedcold_2016_39_npc" 
 	} 
 }, {
  ["person"] = "e13", ["text"] = {
-	 "Hey, I can try to  fix these things, to help. . ." 
+	 "sog_dialogue_servedcold_2016_40_npc" 
 	} 
 }, {
  ["person"] = "e17", ["text"] = {
-	 "Shut the fuck up!", "He is mine. . ." 
+	 "sog_dialogue_servedcold_2016_41_npc", "sog_dialogue_servedcold_2016_42_npc" 
 	} 
 } 
 	} 
@@ -213,7 +213,7 @@ SCENE.PickupsPersistance = true
 SCENE.SoundTrack = 299448796
 SCENE.AmbientEndAt = 18000
 SCENE.DisableNextbotLights = true
-SCENE.Name = "served cold"
+SCENE.Name = "scene_name_served_cold"
 SCENE.BloodMoonScreen = true
 SCENE.Triggers = {
  ["t12"] = {

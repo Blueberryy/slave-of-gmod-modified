@@ -161,7 +161,7 @@ SCENE.Volume = 40
 SCENE.Characters = {
  "thomas" 
 }
-SCENE.Name = "sanctuary"
+SCENE.Name = "scene_name_sanctuary"
 SCENE.PickupsPersistance = true
 SCENE.Triggers = {
  ["t46"] = {
@@ -319,7 +319,7 @@ SCENE.Triggers = {
 		 "d4" 
 		} 
 	}, ["t21"] = {
-	 ["pos"] = Vector( 2905, 126, 3 ), ["data"] = "Get back to buddy", ["action"] = "hudmessage", ["size"] = 36, ["CheckTriggers"] = {
+	 ["pos"] = Vector( 2905, 126, 3 ), ["data"] = "sog_hud_obj_get_back_to_buddy", ["action"] = "hudmessage", ["size"] = 36, ["CheckTriggers"] = {
 		 "t38" 
 		} 
 	}, ["t44"] = {
@@ -417,9 +417,9 @@ SCENE.Triggers = {
 	}, ["t2"] = {
 	 ["pos"] = Vector( 21, 45, 1 ), ["size"] = 10, ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t4" 
-		}, ["data"] = "Find buddy" 
+		}, ["data"] = "sog_hud_obj_find_buddy" 
 	}, ["t14"] = {
-	 ["pos"] = Vector( -543, -704, 1 ), ["data"] = "find the exit", ["action"] = "hudmessage", ["CheckTriggers"] = {
+	 ["pos"] = Vector( -543, -704, 1 ), ["data"] = "sog_hud_obj_find_the_exit", ["action"] = "hudmessage", ["CheckTriggers"] = {
 		 "t19" 
 		}, ["size"] = 10 
 	} 
@@ -429,143 +429,143 @@ SCENE.Dialogues = {
  ["d5"] = {
 	 {
  ["person"] = "e9", ["text"] = {
-	 "yesssssss. . .", "Want a candy?" 
+	 "sog_dialogue_sanctuary_2014_13_npc", "sog_dialogue_sanctuary_2014_14_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ":OOOO" 
+	 "sog_dialogue_sanctuary_2014_15_npc" 
 	} 
 }, {
  ["person"] = "e9", ["text"] = {
-	 "They come in packages behind you. . .", "Tastes like kittenssss. . ." 
+	 "sog_dialogue_sanctuary_2014_16_npc", "sog_dialogue_sanctuary_2014_17_npc" 
 	} 
 } 
 	}, ["d10"] = {
 	 {
  ["person"] = "e15", ["text"] = {
-	 "hehehehehe. . .", ". . .I lied!", "Noone can run from\\ntheee ssssacrificcceeeee. . ." 
+	 "sog_dialogue_sanctuary_2014_49_npc", "sog_dialogue_sanctuary_2014_50_npc", "sog_dialogue_sanctuary_2014_52_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "B-b-buddyy!!!" 
+	 "sog_dialogue_sanctuary_2014_53_npc" 
 	} 
 } 
 	}, ["d9"] = {
 	 {
  ["person"] = "e15", ["text"] = {
-	 ". . .", "hehehehe. . ." 
+	 "sog_dialogue_sanctuary_2014_42_npc", "sog_dialogue_sanctuary_2014_43_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ":o" 
+	 "sog_dialogue_sanctuary_2014_44_npc" 
 	} 
 }, {
  ["person"] = "e15", ["text"] = {
-	 ". . .the guard has been afk for 3 weeks already. . .", ". . .I think he is done for. . .", ". . .", "Slap him and get the keyssss. . ." 
+	 "sog_dialogue_sanctuary_2014_45_npc", "sog_dialogue_sanctuary_2014_46_npc", "sog_dialogue_sanctuary_2014_47_npc", "sog_dialogue_sanctuary_2014_48_npc" 
 	} 
 } 
 	}, ["d1"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . .", "I am. . .T-t-ho-mas. . .", "My name is c. . .", ". . .Thomas?", ". . .", ". . .w-w-where is b-b-buddy?. . ." 
+	 "sog_dialogue_sanctuary_2014_1_npc", "sog_dialogue_sanctuary_2014_2_npc", "sog_dialogue_sanctuary_2014_3_npc", "sog_dialogue_sanctuary_2014_4_npc", "sog_dialogue_sanctuary_2014_5_npc", "sog_dialogue_sanctuary_2014_6_npc" 
 	} 
 } 
 	}, ["d6"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_sanctuary_2014_26_npc" 
 	} 
 }, {
  ["person"] = "e10", ["text"] = {
-	 "shhhh. . .", ":D" 
+	 "sog_dialogue_sanctuary_2014_27_npc", "sog_dialogue_sanctuary_2014_28_npc" 
 	} 
 } 
 	}, ["d11"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 "B-b-b-buddy!!!!", "They knoooow!!!" 
+	 "sog_dialogue_sanctuary_2014_54_npc", "sog_dialogue_sanctuary_2014_55_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "I'm s-s-sorryyy Thomas-s-s-ss!", "The S-s-sacrific-c-ceee mussst be done. . ." 
+	 "sog_dialogue_sanctuary_2014_56_npc", "sog_dialogue_sanctuary_2014_57_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Noooooooooooo. . ." 
+	 "sog_dialogue_sanctuary_2014_58_npc" 
 	} 
 } 
 	}, ["d8"] = {
 	 {
  ["person"] = "player", ["text"] = {
-	 ":O", ". . .b-b-buddy. . ." 
+	 "sog_dialogue_sanctuary_2014_29_npc", "sog_dialogue_sanctuary_2014_30_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "Thomasssss. . .", "We have to run, thomasss." 
+	 "sog_dialogue_sanctuary_2014_31_npc", "sog_dialogue_sanctuary_2014_32_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . .", "The sacrifice. . .", ". . .Master wantsss to do it. . ." 
+	 "sog_dialogue_sanctuary_2014_33_npc", "sog_dialogue_sanctuary_2014_34_npc", "sog_dialogue_sanctuary_2014_35_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 ". . .", "You don't have much time, thomasss. . .", "Try ssssneaking into the doorssss. . .", "Just dont dissssturb the guard. . ." 
+	 "sog_dialogue_sanctuary_2014_36_npc", "sog_dialogue_sanctuary_2014_37_npc", "sog_dialogue_sanctuary_2014_38_npc", "sog_dialogue_sanctuary_2014_39_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ":O" 
+	 "sog_dialogue_sanctuary_2014_40_npc" 
 	} 
 }, {
  ["person"] = "e1", ["text"] = {
-	 "I'll ssstay hereeee. . ." 
+	 "sog_dialogue_sanctuary_2014_41_npc" 
 	} 
 } 
 	}, ["d7"] = {
 	 {
  ["person"] = "e11", ["text"] = {
-	 "Why am I here. . .", ". . .", "I'm not supposed to be here. . ." 
+	 "sog_dialogue_sanctuary_2014_18_npc", "sog_dialogue_sanctuary_2014_19_npc", "sog_dialogue_sanctuary_2014_20_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ":O" 
+	 "sog_dialogue_sanctuary_2014_21_npc" 
 	} 
 }, {
  ["person"] = "e11", ["text"] = {
-	 "Go away!!!" 
+	 "sog_dialogue_sanctuary_2014_22_npc" 
 	} 
 } 
 	}, ["d2"] = {
 	 {
  ["person"] = "e3", ["text"] = {
-	 ". . .", ". . .wanna lick my teddy bear?" 
+	 "sog_dialogue_sanctuary_2014_7_npc", "sog_dialogue_sanctuary_2014_8_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ":O" 
+	 "sog_dialogue_sanctuary_2014_9_npc" 
 	} 
 } 
 	}, ["d4"] = {
 	 {
  ["person"] = "e7", ["text"] = {
-	 "You look tasty!", ". . .can I sniff you?" 
+	 "sog_dialogue_sanctuary_2014_23_npc", "sog_dialogue_sanctuary_2014_24_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 "Nooo. . ." 
+	 "sog_dialogue_sanctuary_2014_25_npc" 
 	} 
 } 
 	}, ["d3"] = {
 	 {
  ["person"] = "e4", ["text"] = {
-	 "When I grow up - I wanna be like Master!" 
+	 "sog_dialogue_sanctuary_2014_10_npc" 
 	} 
 }, {
  ["person"] = "player", ["text"] = {
-	 ". . ." 
+	 "sog_dialogue_sanctuary_2014_11_npc" 
 	} 
 }, {
  ["person"] = "e4", ["text"] = {
-	 "He said I have potential. . ." 
+	 "sog_dialogue_sanctuary_2014_12_npc" 
 	} 
 } 
 	} 

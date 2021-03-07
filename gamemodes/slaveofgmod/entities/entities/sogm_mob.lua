@@ -986,7 +986,7 @@ function ENT:MoveToPos( pos, options )
 	
 		PF_SetMinLookAheadDistance( path, options.lookahead or 300 )
 		PF_SetGoalTolerance( path, options.tolerance or 20 )
-		PF_Compute( path, self, pos, self.PathGenerator )
+		PF_Compute( path, self, pos )//, self.PathGenerator
 		
 		self.NextMove = CurTime() + 0.25
 	end
@@ -1055,7 +1055,7 @@ function ENT:MoveToPos( pos, options )
 		end
 		
 		if ( options.repath ) then
-			if ( path:GetAge() > options.repath ) then PF_Compute( path, self, pos, self.PathGenerator ) end
+			if ( path:GetAge() > options.repath ) then PF_Compute( path, self, pos ) end //, self.PathGenerator
 		end
 
 		coroutine.yield()

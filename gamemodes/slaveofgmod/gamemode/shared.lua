@@ -37,7 +37,7 @@ function GM:AddAvalaibleGametype( key, n )
 	self.AvalaibleGametypes[key] = { name = n, votes = 0}
 end
 
-GM:AddAvalaibleGametype( "none", translate.Get("sog_gametype_name_rdm") )
+GM:AddAvalaibleGametype( "none", "sog_gametype_name_rdm" )
 
 ROUND_PLAY_TIME = 15*60//todo: use convars
 
@@ -80,8 +80,7 @@ STORY = true
 
 GM.Name 		= "Slave of GMod"
 GM.Author 		= "Necrossin"
-
-GM.Version		= "v 29/12/2020" 
+GM.Version		= "sog_gm_version" 
 
 GM.Email 		= ""
 GM.Website 		= ""
@@ -303,7 +302,7 @@ function GM:GetCharacterReferenceById( id )
 			return v.Reference
 		end
 	end
-	return "error"
+	return translate.Get("sog_menu_error")
 end
 
 

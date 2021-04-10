@@ -3826,7 +3826,7 @@ GM.SingleplayerCutscenes["scene_name_tax_evasion"] = {
 GM.SingleplayerCutscenes["scene_name_hatred"] = {
 	Act = "sog_intro_hatred_act6",
 	Intro = "sog_intro_hatred_2014",
-	SoundTrack = 302326040,//215669659,
+	SoundTrack = 295108870,//215669659,
 	StartFrom = 69500,
 	Volume = 35,
 	Main = { mdl = Model( "models/hunter/plates/plate2x2.mdl" ), seq = "idle", mat = ""},

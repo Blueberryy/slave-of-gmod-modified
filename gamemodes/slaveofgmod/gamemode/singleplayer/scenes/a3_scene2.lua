@@ -51,12 +51,9 @@ SCENE.Volume = 37
 SCENE.Pickups = {
  ["w1"] = {
 	 ["wep"] = "sogm_pipe", ["pos"] = Vector( -165, -240, 17 ) 
-	}, 
-	//["w2"] = {
-	// ["wep"] = "sogm_axe", ["pos"] = Vector( 63, -448, 17 ) 
-	//} 
+	},
 }
-SCENE.MusicText = "Sulumi - Enthusiasm"
+SCENE.MusicText = "Phil Gonzo - Gat"
 SCENE.Dialogues = {
  ["d1"] = {
 	 {
@@ -124,7 +121,9 @@ SCENE.Triggers = {
 SCENE.Vehicle = {
  ["pos"] = Vector( 213, -437, 17 ), ["mdl"] = "models/props/de_nuke/car_nuke_black.mdl", ["type"] = 1, ["glass_mdl"] = "models/props/de_nuke/car_nuke_glass.mdl", ["ang"] = Angle( 0, -79, 0 ) 
 }
-SCENE.SoundTrack = 205254613
+SCENE.SoundTrack = 850797700//205254613
+SCENE.StartFrom = 8900
+SCENE.EndAt = 224500
 SCENE.NoPickups = true
 SCENE.PickupsPersistance = true
 SCENE.LightStyle = "z"

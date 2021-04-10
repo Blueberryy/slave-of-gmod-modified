@@ -2,7 +2,7 @@ translate.AddLanguage("en", "English")
 
 --Title
 LANGUAGE.sog_gm_name                                     = "slave of Gmod"
-LANGUAGE.sog_gm_version                                  = "v 30/01/2021"
+LANGUAGE.sog_gm_version                                  = "v 03/04/2021"
 LANGUAGE.sog_menu_error                                  = "error"
 LANGUAGE.sog_menu_error2                                 = "Error"
 
@@ -1284,7 +1284,7 @@ LANGUAGE.sog_dialogue_backstab_2013_44                   = "There it is. . ."
 LANGUAGE.sog_dialogue_backstab_2013_45                   = "CustomGaming TTT server. . ."
 LANGUAGE.sog_dialogue_backstab_2013_46                   = "This fucker better be here."
 LANGUAGE.sog_dialogue_backstab_2013_47                   = "*bzzzzzz*"
-LANGUAGE.sog_dialogue_backstab_2013_48                   = "And now playing 'Enthusiasm' by Sulumi. . ."
+LANGUAGE.sog_dialogue_backstab_2013_48                   = "And now playing 'Gat' by Phil Gonzo. . ."
 
 LANGUAGE.sog_dialogue_backstab_2013_1_npc                = "Fuck, I don't see him in there."
 LANGUAGE.sog_dialogue_backstab_2013_2_npc                = "Why are you looking at me like that?!"
@@ -2709,7 +2709,7 @@ LANGUAGE.sog_dialogue_thisisfine_act_bonus2_48           = "Well. . ."
 LANGUAGE.sog_dialogue_thisisfine_act_bonus2_49           = "How do I even say that. . ."
 LANGUAGE.sog_dialogue_thisisfine_act_bonus2_50           = ". . ."
 LANGUAGE.sog_dialogue_thisisfine_act_bonus2_51           = "You."
-LANGUAGE.sog_dialogue_thisisfine_act_bonus2_52           = "Tell him about the accident!"
+LANGUAGE.sog_dialogue_thisisfine_act_bonus2_52           = "Tell him about the the accident!"
 LANGUAGE.sog_dialogue_thisisfine_act_bonus2_53           = "What?"
 LANGUAGE.sog_dialogue_thisisfine_act_bonus2_54           = "Oh. . ."
 LANGUAGE.sog_dialogue_thisisfine_act_bonus2_55           = "Oh no. . ."

@@ -1,5 +1,9 @@
-**ЯЗЫКИ:**<br /> 
-[English](https://github.com/Blueberryy/slave-of-gmod-modified/blob/translations/README.md)
+# Языки:
+Нажмите на один из флажков, чтобы просмотреть Readme на другой языковой версии.
+
+<a href="https://github.com/Blueberryy/slave-of-gmod-modified/blob/translations/README.md">
+  <img src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/gb.svg" alt="English" width="32">
+</a>
 
 # Ветка с переводами
 

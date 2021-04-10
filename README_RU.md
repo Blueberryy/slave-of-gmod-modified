@@ -1,9 +1,13 @@
-**ЯЗЫКИ:**<br /> 
-[English](https://github.com/Blueberryy/slave-of-gmod-modified/blob/main/README.md)
+# Языки:
+Нажмите на один из флажков, чтобы просмотреть Readme на другой языковой версии.
+
+<a href="https://github.com/Blueberryy/slave-of-gmod-modified/blob/main/README.md">
+  <img src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/gb.svg" alt="English" width="32">
+</a>
 
 Вы можете найти версию с поддержкой переводов в меню *branch'ей* или вы можете проверить *release'ы*.
 
-_**Текущая версия: 30/01/2021**_
+_**Текущая версия: 03/04/2021**_
 
 ![Логотоп игрового режима](https://i.imgur.com/ghHUKj8.png)
 

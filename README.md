@@ -1,9 +1,13 @@
-**LANGUAGES:**<br /> 
-[Русский](https://github.com/Blueberryy/slave-of-gmod-modified/blob/main/README_RU.md)
+# Languages:
+Click on one of the flag to see the Readme into another language version.
+
+<a href="https://github.com/Blueberryy/slave-of-gmod-modified/blob/main/README_RU.md">
+  <img src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/ru.svg" alt="Русский" width="32">
+</a>
 
 You can find version with translations support on *branches* selection or you can check the *releases*.
 
-_**Current version: 30/01/2021**_
+_**Current version: 03/04/2021**_
 
 ![Gamemode Icon](https://i.imgur.com/ghHUKj8.png)
 

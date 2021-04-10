@@ -12,7 +12,7 @@ CHARACTER.YellowBlood = true
 //CHARACTER.MeleeGesture = ACT_MELEE_ATTACK1
 
 CHARACTER.DeathModel = Model( "models/player/breen.mdl" )
-CHARACTER.HideOriginalModel = true
+CHARACTER.HideOriginalModel = false
 
 CHARACTER.NoMenu = true
 

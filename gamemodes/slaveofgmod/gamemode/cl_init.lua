@@ -4030,12 +4030,21 @@ net.Receive("CleanBodies", function(len)
 
 	for k, v in pairs( LocalPlayer().fake_bodies or {} ) do
 		if IsValid( v ) then
-			//ResetBoneScale( v )
+			for k2, v2 in pairs( v:GetChildren() ) do
+				if v2 and v2:GetClass() == "manipulate_bone" then
+					SafeRemoveEntity(v2)
+				end
+			end
 			SafeRemoveEntity( v )
 		end
 	end
 	for k, v in pairs( LocalPlayer().fake_bodies_sliced or {} ) do
 		if IsValid( v ) then
+			for k2, v2 in pairs( v:GetChildren() ) do
+				if v2 and v2:GetClass() == "manipulate_bone" then
+					SafeRemoveEntity(v2)
+				end
+			end
 			SafeRemoveEntity( v )
 		end
 	end

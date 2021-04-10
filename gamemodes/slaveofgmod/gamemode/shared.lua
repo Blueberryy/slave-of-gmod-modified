@@ -78,7 +78,7 @@ STORY = true
 
 GM.Name 		= "Slave of GMod"
 GM.Author 		= "Necrossin"
-GM.Version		= "v 29/01/2021" 
+GM.Version		= "v 03/04/2021" 
 GM.Email 		= ""
 GM.Website 		= ""
 

@@ -3160,7 +3160,7 @@ GM.SingleplayerCutscenes["backstab"] = {
 		AddDialogueLine( sc.axe, "If players are gone. . .", ". . .server owners will have noone to feast upon. . ." )
 		AddDialogueLine( sc.axeguy, ". . ." )
 		AddDialogueLine( sc.axeguy, "There it is. . .", "CustomGaming TTT server. . .", "This fucker better be here." )
-		AddDialogueLine( sc.radio, "*bzzzzzz*", "And now playing 'Enthusiasm' by Sulumi. . ." )
+		AddDialogueLine( sc.radio, "*bzzzzzz*", "And now playing 'Gat' by Phil Gonzo. . ." )
 		
 	end
 }
@@ -3826,7 +3826,7 @@ GM.SingleplayerCutscenes["tax evasion"] = {
 GM.SingleplayerCutscenes["hatred"] = {
 	Act = "ACT 6: DEAD END",
 	Intro = "2014\n\"GMod Power\" Community casino",
-	SoundTrack = 302326040,//215669659,
+	SoundTrack = 295108870,//215669659,
 	StartFrom = 69500,
 	Volume = 35,
 	Main = { mdl = Model( "models/hunter/plates/plate2x2.mdl" ), seq = "idle", mat = ""},
@@ -4654,7 +4654,7 @@ GM.SingleplayerCutscenes["this is fine"] = {
 		AddDialogueLine( sc.james, "And where is it?" )
 		AddDialogueLine( sc.matthias, "About that. . .", "One of our boys got his hands on some info, but. . .", "Well. . .", "How do I even say that. . ." )
 		AddDialogueLine( sc.dude, ". . ." )
-		AddDialogueLine( sc.matthias, "You.", "Tell him about the the iccident!" )
+		AddDialogueLine( sc.matthias, "You.", "Tell him about the the accident!" )
 		AddDialogueLine( sc.dude, "What?", "Oh. . .", "Oh no. . .", "So, um. . .", "That guy with info. . .", "He got lost at PonyRP server. . ." )
 		AddDialogueLine( sc.james, "What?" )
 		AddDialogueLine( sc.matthias, "HORSES!!!", "BIG RAINBOW COLORED HORSES!!!", "Sorry, I just could not say it without dying from laughter.", "Anyway. . .", "You gotta go there and rescue the poor guy." )

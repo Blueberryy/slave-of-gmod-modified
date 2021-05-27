@@ -63,3 +63,5 @@ _And another playlist for [story mode](https://soundcloud.com/necrossin/sets/the
 'Official' server in case if you are interested: 5.2.65.5:27015
 
 ***May contain content inappropriate for gmod fans and youtubers.***
+
+[Credits](https://github.com/Blueberryy/slave-of-gmod-modified/blob/main/credits.md)

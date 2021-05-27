@@ -5,7 +5,7 @@
   <img src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/gb.svg" alt="English" width="32">
 </a>
 
-Вы можете найти версию с поддержкой переводов в меню *branch'ей* или вы можете проверить *release'ы*.
+Вы можете найти версию с поддержкой переводов в меню *branch'ей*.
 
 _**Текущая версия: 03/04/2021**_
 

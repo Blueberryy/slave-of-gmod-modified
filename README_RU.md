@@ -16,3 +16,5 @@
 [Переводы здесь](https://github.com/Blueberryy/slave-of-gmod-modified/tree/translations) **Не стесняйтесь делать _pull request_ с новыми переводами.**
 
 Система перевода от [***Jetboom***](https://github.com/JetBoom)
+
+[Создатели режима(англ.)](https://github.com/Blueberryy/slave-of-gmod-modified/blob/translation-system/credits.md)

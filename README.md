@@ -16,3 +16,5 @@ Extract downloaded "slave-of-gmod-modified-translation-system" folder to your *a
 [Translations is here](https://github.com/Blueberryy/slave-of-gmod-modified/tree/translations) **Feel free to _pull request_ new translations.**
 
 Translation system by [***Jetboom***](https://github.com/JetBoom)
+
+[Credits](https://github.com/Blueberryy/slave-of-gmod-modified/blob/translation-system/credits.md)

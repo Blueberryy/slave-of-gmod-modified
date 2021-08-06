@@ -60,7 +60,7 @@ end
 
 function EFFECT:Render()
 
-	local MySelf = IsValid( LocalPlayer():GetObserverTarget() ) or LocalPlayer()
+	local MySelf = IsValid( LocalPlayer():GetObserverTarget() ) and LocalPlayer():GetObserverTarget() or LocalPlayer()
 	
 	local visible = MySelf:GetPos():DistToSqr(self:GetPos()) < DRAW_DISTANCE * DRAW_DISTANCE
 	

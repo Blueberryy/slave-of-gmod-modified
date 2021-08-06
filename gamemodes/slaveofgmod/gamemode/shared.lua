@@ -78,7 +78,7 @@ STORY = true
 
 GM.Name 		= "Slave of GMod"
 GM.Author 		= "Necrossin"
-GM.Version		= "v 03/04/2021" 
+GM.Version		= "v 18/06/2021" 
 GM.Email 		= ""
 GM.Website 		= ""
 
@@ -241,6 +241,9 @@ function GM:SetFirstPerson( bl )
 end
 
 function GM:GetFirstPerson()
+	// small hack to avoid errors on client
+	if !game.SinglePlayer() then return false end
+	
 	return game.GetWorld():GetDTBool( 0 )
 end
 

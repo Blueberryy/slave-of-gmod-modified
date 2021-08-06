@@ -2,7 +2,7 @@ translate.AddLanguage("en", "English")
 
 --Title
 LANGUAGE.sog_gm_name                                     = "slave of Gmod"
-LANGUAGE.sog_gm_version                                  = "v 03/04/2021"
+LANGUAGE.sog_gm_version                                  = "v 18/06/2021"
 LANGUAGE.sog_menu_error                                  = "error"
 LANGUAGE.sog_menu_error2                                 = "Error"
 

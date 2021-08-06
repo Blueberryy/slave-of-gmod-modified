@@ -1,9 +1,8 @@
 translate.AddLanguage("ru", "Russian")
 
-
 --Title
 LANGUAGE.sog_gm_name                                     = "раб Гмода"
-LANGUAGE.sog_gm_version                                  = "вер. 03/04/2021"
+LANGUAGE.sog_gm_version                                  = "вер. 18/06/2021"
 LANGUAGE.sog_menu_error                                  = "ошибка"
 LANGUAGE.sog_menu_error2                                 = "Ошибка"
 

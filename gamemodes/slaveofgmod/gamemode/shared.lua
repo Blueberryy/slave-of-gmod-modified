@@ -244,6 +244,9 @@ function GM:SetFirstPerson( bl )
 end
 
 function GM:GetFirstPerson()
+	// small hack to avoid errors on client
+	if !game.SinglePlayer() then return false end
+
 	return game.GetWorld():GetDTBool( 0 )
 end
 

@@ -7,7 +7,7 @@ Click on one of the flag to see the Readme into another language version.
 
 You can find version with translations support in *branches* selection.
 
-_**Current version: 03/04/2021**_
+_**Current version: 18/06/2021**_
 
 ![Gamemode Icon](https://i.imgur.com/ghHUKj8.png)
 
